@@ -1,0 +1,71 @@
+services:
+
+  timescaledb:
+    image: timescale/timescaledb:latest-pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - timescaledb_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "${POSTGRES_PORT_HOST:-5432}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  redis:
+    image: redis:alpine
+    restart: unless-stopped
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  collector:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      timescaledb:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      SYMBOLS: ${SYMBOLS:-BTCUSDT}
+      KLINE_INTERVAL: ${KLINE_INTERVAL:-1s}
+      BATCH_SIZE: ${BATCH_SIZE:-50}
+      BATCH_INTERVAL_SECONDS: ${BATCH_INTERVAL_SECONDS:-2}
+      COMPRESSION_AFTER: ${COMPRESSION_AFTER:-7 days}
+      RETENTION_PERIOD: ${RETENTION_PERIOD:-}
+      WS_BASE_URL: ${WS_BASE_URL:-wss://stream.binance.com:9443}
+      REST_BASE_URL: ${REST_BASE_URL:-https://api.binance.com}
+      RECONNECT_MAX_BACKOFF: ${RECONNECT_MAX_BACKOFF:-60}
+      HEARTBEAT_INTERVAL: ${HEARTBEAT_INTERVAL:-10}
+      HEALTHCHECK_URL: ${HEALTHCHECK_URL:-}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      POSTGRES_HOST: ${POSTGRES_HOST:-timescaledb}
+      POSTGRES_PORT: ${POSTGRES_PORT:-5432}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      REDIS_HOST: ${REDIS_HOST:-redis}
+      REDIS_PORT: ${REDIS_PORT:-6379}
+    healthcheck:
+      test: ["CMD", "python", "-c",
+        "import redis, os, time; r=redis.Redis(host=os.environ['REDIS_HOST'], port=int(os.environ['REDIS_PORT'])); v=r.get('ingester:last_beat'); exit(0 if v and (time.time()-float(v))<60 else 1)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+volumes:
+  timescaledb_data:
+  redis_data:
