@@ -37,7 +37,7 @@ No other local dependencies.
 
 ```bash
 # 1. Clone
-git clone https://github.com/your-org/klinehouse.git
+git clone https://github.com/giuseppeluvara/klinehouse.git
 cd klinehouse
 
 # 2. Configure
@@ -174,10 +174,22 @@ The same interval is used for both the WebSocket stream and REST gap-filling.
 
 The four materialized views (`klines_1m`, `klines_5m`, `klines_1h`, `klines_1d`) are defined in
 `db/init.sql`. To add or change a bucket:
-1. Edit `db/init.sql`.
-2. Drop and re-create the TimescaleDB volume: `docker compose down -v && docker compose up -d`.
 
-Note that existing views are created with `IF NOT EXISTS`, so schema changes require the volume to be reset.
+1. Edit `db/init.sql`.
+2. Apply the change to the database.
+
+**Fresh setup (simplest):** tear down and recreate the volume so `init.sql` runs from scratch:
+```bash
+docker compose down -v && docker compose up -d
+```
+
+**Existing deployment (no data loss):** alter the views in place via TimescaleDB without touching
+the raw `klines` hypertable:
+```sql
+DROP MATERIALIZED VIEW klines_1m CASCADE;
+CREATE MATERIALIZED VIEW klines_1m ...;  -- paste the updated definition from init.sql
+```
+Repeat for each view you changed. The raw tick data is never affected.
 
 ### Enabling data retention
 
@@ -219,7 +231,7 @@ To move an existing installation:
 
 ```bash
 # On the new host
-git clone https://github.com/your-org/klinehouse.git
+git clone https://github.com/giuseppeluvara/klinehouse.git
 cd klinehouse
 cp /path/to/old/.env .env   # copy your existing configuration
 docker compose up -d
