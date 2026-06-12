@@ -1,0 +1,197 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "links": [],
+  "liveNow": true,
+  "refresh": "10s",
+  "schemaVersion": 39,
+  "tags": ["klinehouse", "order-flow", "microstructure"],
+  "templating": {
+    "list": [
+      {
+        "name": "symbol",
+        "label": "Symbol",
+        "type": "query",
+        "datasource": { "type": "postgres", "uid": "timescaledb" },
+        "query": "SELECT DISTINCT symbol FROM klines ORDER BY symbol",
+        "refresh": 1,
+        "sort": 1,
+        "includeAll": false,
+        "multi": false,
+        "current": { "text": "BTCUSDT", "value": "BTCUSDT" }
+      }
+    ]
+  },
+  "time": { "from": "now-6h", "to": "now" },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "klinehouse — Order-flow & Volatility Radar",
+  "uid": "klinehouse-radar",
+  "version": 1,
+  "panels": [
+    {
+      "id": 1,
+      "title": "Price & cumulative order-flow imbalance — $symbol",
+      "type": "timeseries",
+      "datasource": { "type": "postgres", "uid": "timescaledb" },
+      "gridPos": { "h": 9, "w": 24, "x": 0, "y": 0 },
+      "fieldConfig": {
+        "defaults": { "custom": { "drawStyle": "line", "lineWidth": 1, "fillOpacity": 0 } },
+        "overrides": [
+          {
+            "matcher": { "id": "byName", "options": "cumulative signed flow" },
+            "properties": [
+              { "id": "custom.axisPlacement", "value": "right" },
+              { "id": "color", "value": { "mode": "fixed", "fixedColor": "blue" } },
+              { "id": "custom.fillOpacity", "value": 10 }
+            ]
+          },
+          {
+            "matcher": { "id": "byName", "options": "price" },
+            "properties": [ { "id": "color", "value": { "mode": "fixed", "fixedColor": "black" } } ]
+          }
+        ]
+      },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": { "type": "postgres", "uid": "timescaledb" },
+          "rawQuery": true,
+          "format": "time_series",
+          "rawSql": "SELECT bucket AS time, close AS \"price\" FROM flow_metrics_1m WHERE symbol = '$symbol' AND $__timeFilter(bucket) ORDER BY bucket"
+        },
+        {
+          "refId": "B",
+          "datasource": { "type": "postgres", "uid": "timescaledb" },
+          "rawQuery": true,
+          "format": "time_series",
+          "rawSql": "SELECT bucket AS time, sum(signed_volume) OVER (ORDER BY bucket) AS \"cumulative signed flow\" FROM flow_metrics_1m WHERE symbol = '$symbol' AND $__timeFilter(bucket) ORDER BY bucket"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Order-flow imbalance (ofi_norm) — buyers vs sellers in control",
+      "type": "timeseries",
+      "datasource": { "type": "postgres", "uid": "timescaledb" },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 9 },
+      "fieldConfig": {
+        "defaults": {
+          "min": -1, "max": 1,
+          "custom": { "drawStyle": "bars", "fillOpacity": 70, "gradientMode": "scheme", "axisCenteredZero": true },
+          "color": { "mode": "continuous-RdYlGr" }
+        },
+        "overrides": []
+      },
+      "options": { "legend": { "displayMode": "hidden" }, "tooltip": { "mode": "single" } },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": { "type": "postgres", "uid": "timescaledb" },
+          "rawQuery": true,
+          "format": "time_series",
+          "rawSql": "SELECT bucket AS time, ofi_norm FROM flow_metrics_1m WHERE symbol = '$symbol' AND $__timeFilter(bucket) ORDER BY bucket"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Realized volatility (bps / minute) — the vol radar",
+      "type": "timeseries",
+      "datasource": { "type": "postgres", "uid": "timescaledb" },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 9 },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none", "min": 0,
+          "custom": { "drawStyle": "line", "lineWidth": 1, "fillOpacity": 25, "gradientMode": "opacity" },
+          "color": { "mode": "fixed", "fixedColor": "orange" }
+        },
+        "overrides": []
+      },
+      "options": { "legend": { "displayMode": "hidden" }, "tooltip": { "mode": "single" } },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": { "type": "postgres", "uid": "timescaledb" },
+          "rawQuery": true,
+          "format": "time_series",
+          "rawSql": "SELECT bucket AS time, realized_vol_bps FROM realized_vol_1m WHERE symbol = '$symbol' AND $__timeFilter(bucket) ORDER BY bucket"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Taker buy ratio (0.5 = balanced)",
+      "type": "timeseries",
+      "datasource": { "type": "postgres", "uid": "timescaledb" },
+      "gridPos": { "h": 7, "w": 12, "x": 0, "y": 17 },
+      "fieldConfig": {
+        "defaults": {
+          "min": 0, "max": 1,
+          "custom": { "drawStyle": "line", "lineWidth": 1, "fillOpacity": 10, "thresholdsStyle": { "mode": "line" } },
+          "thresholds": { "mode": "absolute", "steps": [ { "color": "red", "value": null }, { "color": "green", "value": 0.5 } ] },
+          "color": { "mode": "thresholds" }
+        },
+        "overrides": []
+      },
+      "options": { "legend": { "displayMode": "hidden" }, "tooltip": { "mode": "single" } },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": { "type": "postgres", "uid": "timescaledb" },
+          "rawQuery": true,
+          "format": "time_series",
+          "rawSql": "SELECT bucket AS time, taker_buy_ratio FROM flow_metrics_1m WHERE symbol = '$symbol' AND $__timeFilter(bucket) ORDER BY bucket"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Current order-flow imbalance",
+      "type": "gauge",
+      "datasource": { "type": "postgres", "uid": "timescaledb" },
+      "gridPos": { "h": 7, "w": 6, "x": 12, "y": 17 },
+      "fieldConfig": {
+        "defaults": {
+          "min": -1, "max": 1, "unit": "none",
+          "thresholds": { "mode": "absolute", "steps": [ { "color": "red", "value": null }, { "color": "yellow", "value": -0.2 }, { "color": "green", "value": 0.2 } ] }
+        },
+        "overrides": []
+      },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"], "fields": "", "values": false }, "showThresholdMarkers": true },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": { "type": "postgres", "uid": "timescaledb" },
+          "rawQuery": true,
+          "format": "table",
+          "rawSql": "SELECT ofi_norm FROM flow_metrics_1m WHERE symbol = '$symbol' ORDER BY bucket DESC LIMIT 1"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Trades / min (activity)",
+      "type": "stat",
+      "datasource": { "type": "postgres", "uid": "timescaledb" },
+      "gridPos": { "h": 7, "w": 6, "x": 18, "y": 17 },
+      "fieldConfig": {
+        "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "purple" } },
+        "overrides": []
+      },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"], "fields": "", "values": false }, "graphMode": "area", "colorMode": "value" },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": { "type": "postgres", "uid": "timescaledb" },
+          "rawQuery": true,
+          "format": "time_series",
+          "rawSql": "SELECT bucket AS time, trades FROM flow_metrics_1m WHERE symbol = '$symbol' AND $__timeFilter(bucket) ORDER BY bucket"
+        }
+      ]
+    }
+  ]
+}

@@ -4,23 +4,30 @@
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
 [![Docker](https://img.shields.io/badge/docker-compose-2496ED?logo=docker&logoColor=white)](https://docs.docker.com/compose/)
 
-Real-time Binance OHLCV kline collector that streams closed candlesticks via WebSocket and persists them into TimescaleDB, building a complete, gap-free historical dataset that runs unattended.
+Real-time Binance OHLCV kline collector that streams closed candlesticks via WebSocket and persists them into TimescaleDB, building a complete, gap-free historical dataset that runs unattended — **plus a research layer that turns that data into honest, cost-aware microstructure analytics, a Grafana radar, and a delta-neutral funding-carry money tool.**
 
 ---
 
 ## Features
 
+**Collector**
 - **Multi-symbol**: collect any number of Binance symbols simultaneously over a single combined WebSocket.
 - **All intervals**: `1s`, `1m`, `5m`, `1h`, … — any Binance-supported interval, set via env var.
-- **Gap-free**: on every (re)connect the collector back-fills missing candles via REST before resuming the stream.
-- **Automatic reconnection**: exponential back-off (1 s → capped at `RECONNECT_MAX_BACKOFF`). Binance's ~24 h connection limit is handled transparently.
+- **Gap-free**: on every (re)connect the collector back-fills missing candles via REST before resuming the stream; `scripts/backfill.py` also heals *interior* gaps anywhere in history.
+- **Automatic reconnection**: exponential back-off for both the WebSocket and the **database connection** — a DB restart never loses in-flight candles (they are re-queued to Redis).
 - **Idempotent writes**: `ON CONFLICT DO NOTHING` — safe to restart at any time, no duplicate rows.
 - **Continuous aggregates**: pre-built 1 m / 5 m / 1 h / 1 d OHLCV materialized views with automatic refresh policies.
-- **Compression & retention**: TimescaleDB compression enabled by default; optional data-expiry policy.
-- **Graceful shutdown**: `SIGTERM` / `SIGINT` flushes the in-memory Redis buffer to the DB before exiting.
-- **Monitoring**: optional external ping (Healthchecks.io / Uptime Kuma) and a Docker `healthcheck` on the collector container.
-- **No API key required**: market data streams are public; authentication is never requested or stored.
-- **Multi-arch**: runs on Apple Silicon (`arm64`) and x86-64 Linux without changes.
+- **Compression, retention & backups**: TimescaleDB compression by default; optional retention; restore-tested logical backups (`scripts/backup.sh` + opt-in sidecar).
+- **Graceful shutdown / monitoring / no API key / multi-arch**: as you'd expect for a 24-7 unattended service.
+
+**Research & money layer** (`research/`, `db/analytics.sql`, `grafana/`)
+- **Microstructure analytics**: order-flow imbalance, taker pressure, realized-volatility — as Python features and queryable SQL views.
+- **Honest signal harness**: information coefficient, decile monotonicity, **cost-aware backtests** that always show the breakeven fee.
+- **Execution-alpha engine**: causal, order-aware child-order scheduler that beats TWAP on short windows (validated, ~+0.1 bps).
+- **Grafana radar**: provisioned order-flow & volatility dashboard.
+- **💰 Funding-carry tools**: a scanner that ranks live delta-neutral carry opportunities (the one genuinely profitable, market-neutral strategy found) and a paper carry book validated on real funding settlements.
+
+See **[`research/README.md`](research/README.md)** for the full, honest "can this make money?" write-up.
 
 ---
 
@@ -242,6 +249,100 @@ Gap recovery ensures no candles are missed during the migration window.
 For long-running production deployments:
 - Use a systemd service or a managed container platform to restart Docker Compose on host reboot.
 - Point `HEALTHCHECK_URL` at a monitoring service (Healthchecks.io, Uptime Kuma) to be alerted if the collector stops sending heartbeats.
+- After extended downtime, run `python scripts/backfill.py` to heal any **interior** gaps via REST. The collector's own recovery only fills the *trailing* gap (latest candle → now); this tool finds and fills holes anywhere in the history (idempotent, safe to run live, cron-friendly).
+
+---
+
+## Research, analytics & making money
+
+The `research/` layer turns the collected data into decisions. It is built on
+**intellectual honesty**: every profitability number is net of fees, and the
+search reports what *doesn't* work as loudly as what does.
+
+```bash
+pip install -r research/requirements.txt
+
+# Honest microstructure report (IC, deciles, cost-aware backtest, vol forecast)
+python -m research.report --symbol BTCUSDT          # -> research/out/report.md + figures
+
+# Execution-alpha engine (causal, order-aware) — beats TWAP on short windows
+python -m research.execution_engine --symbol BTCUSDT --side buy --qty 10 --window 60s
+
+# 💰 The money-maker: rank live delta-neutral funding-carry opportunities
+python -m research.funding_scanner --top 15
+python -m research.carry_book simulate DEXEUSDT --days 14 --notional 10000
+```
+
+**The honest verdict** (full detail in [`research/README.md`](research/README.md)):
+
+- Directional scalping, cross-asset stat-arb and retail market-making **do not
+  beat fees** on these efficient markets — proven, not assumed.
+- What *does* pay is **delta-neutral funding-carry** (long spot + short perp,
+  collect funding, no price view): a real, market-neutral risk premium, ~8 %/yr
+  net on liquid names in calm markets and far higher in leverage-frenzy regimes.
+- Plus two operational edges: **execution-cost reduction** (~+0.1 bps on flow you
+  already trade) and the **proprietary 1-second order-flow dataset** itself.
+
+No strategy here places real orders: the tools are paper/advisory by design (the
+collector never holds API keys).
+
+---
+
+## Dashboard (Grafana)
+
+A provisioned **order-flow & volatility radar** ships with the stack.
+
+```bash
+# 1. create the analytics views the dashboard reads
+docker compose exec -T timescaledb psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" < db/analytics.sql
+docker compose exec timescaledb psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" \
+  -c "CALL refresh_continuous_aggregate('flow_1m', NULL, NULL);"
+
+# 2. start Grafana
+docker compose up -d grafana
+open http://localhost:3000      # default login: admin / admin
+```
+
+The dashboard (folder *klinehouse*) has a `$symbol` selector and panels for
+price vs cumulative order-flow imbalance, the `ofi_norm` buyers-vs-sellers bar,
+the realized-volatility radar, taker-buy ratio, and live gauges. Datasource and
+dashboard are provisioned as code under `grafana/`. Set `GRAFANA_PORT` /
+`GRAFANA_ADMIN_PASSWORD` in `.env`.
+
+---
+
+## Durability & backups
+
+What is protected, and how:
+
+| Failure | Outcome | Mechanism |
+|---|---|---|
+| Collector crash / restart | No data loss | Closed candles are committed; on restart the collector back-fills any trailing gap via REST. |
+| **Database** restart / brief outage | No data loss, auto-recovery | The writer **re-queues** in-flight records to Redis and **reconnects** with backoff; committed data is on the named volume (WAL/ACID — a crash never truncates the table). |
+| `docker compose down` (no `-v`) | No data loss | Named volume `timescaledb_data` persists. |
+| `docker compose down -v`, volume removal, disk failure | Data lost **unless backed up** | Use the backups below. |
+
+**Automated backups** (logical, compressed, restore-tested):
+
+```bash
+# One-off (cron-friendly)
+scripts/backup.sh                         # -> ./backups/klines_<ts>.dump
+
+# Or run a backup sidecar with the stack (daily by default)
+docker compose --profile backup up -d
+```
+
+Tune via env: `BACKUP_INTERVAL_SECONDS` (default `86400`), `BACKUP_RETENTION` (default `14`).
+
+**Restore** into a side database (your live data is never overwritten):
+
+```bash
+scripts/restore.sh backups/klines_<ts>.dump            # -> <db>_restored
+# verify, then promote by stopping the collector and renaming databases
+```
+
+The restore script follows the official TimescaleDB `pre/post_restore` procedure,
+so hypertables, continuous aggregates and compression are all reinstated.
 
 ---
 

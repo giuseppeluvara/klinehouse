@@ -66,6 +66,75 @@ services:
       retries: 3
       start_period: 30s
 
+  # Grafana — order-flow & volatility radar over the analytics views.
+  # Apply db/analytics.sql first so flow_metrics_1m / realized_vol_1m exist.
+  grafana:
+    image: grafana/grafana:latest
+    restart: unless-stopped
+    ports:
+      - "${GRAFANA_PORT:-3000}:3000"
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:-admin}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      # Passed through to datasource provisioning YAML
+      POSTGRES_HOST:     ${POSTGRES_HOST:-timescaledb}
+      POSTGRES_PORT:     ${POSTGRES_PORT:-5432}
+      POSTGRES_DB:       ${POSTGRES_DB}
+      POSTGRES_USER:     ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
+    depends_on:
+      timescaledb:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:3000/api/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 20s
+
+  # Automated logical backups (opt-in): enable with
+  #   docker compose --profile backup up -d
+  # Dumps to ./backups every BACKUP_INTERVAL_SECONDS and keeps BACKUP_RETENTION
+  # of them. Protects against volume deletion / disk failure (the named volume
+  # already covers crashes & restarts).
+  backup:
+    image: timescale/timescaledb:latest-pg16
+    restart: unless-stopped
+    profiles: ["backup"]
+    depends_on:
+      timescaledb:
+        condition: service_healthy
+    environment:
+      PGHOST: ${POSTGRES_HOST:-timescaledb}
+      PGUSER: ${POSTGRES_USER}
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+      PGDATABASE: ${POSTGRES_DB}
+      BACKUP_INTERVAL_SECONDS: ${BACKUP_INTERVAL_SECONDS:-86400}
+      BACKUP_RETENTION: ${BACKUP_RETENTION:-14}
+    volumes:
+      - ./backups:/backups
+    entrypoint: ["sh", "-c"]
+    command:
+      - |
+        echo "[backup] sidecar started: every $${BACKUP_INTERVAL_SECONDS}s -> /backups (retain $${BACKUP_RETENTION})";
+        while true; do
+          TS=$$(date -u +%Y%m%dT%H%M%SZ);
+          OUT="/backups/klines_$${TS}.dump";
+          echo "[backup] $$(date -u) dumping -> $$OUT";
+          if pg_dump -Fc -f "$$OUT"; then
+            echo "[backup] ok $$(du -h $$OUT | cut -f1)";
+          else
+            echo "[backup] FAILED"; rm -f "$$OUT";
+          fi;
+          ls -1t /backups/klines_*.dump 2>/dev/null | tail -n +$$((BACKUP_RETENTION + 1)) | xargs -r rm -f;
+          sleep "$$BACKUP_INTERVAL_SECONDS";
+        done
+
 volumes:
   timescaledb_data:
   redis_data:
+  grafana_data:

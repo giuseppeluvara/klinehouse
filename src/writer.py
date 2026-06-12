@@ -1,11 +1,16 @@
-"""Writer: pops batches from Redis and persists them to TimescaleDB."""
+"""Writer: pops batches from Redis and persists them to TimescaleDB.
+
+Resilient to database outages: if a write fails (e.g. the database restarts or
+the connection drops), the popped records are pushed back to the head of the
+Redis queue *before* reconnecting, so no candle is ever lost — it is simply
+retried once the database is reachable again.
+"""
 
 from __future__ import annotations
 
 import asyncio
 import json
 import logging
-from datetime import datetime, timezone
 from typing import Any
 
 import psycopg
@@ -51,9 +56,10 @@ def _record_to_params(record: dict[str, Any]) -> dict[str, Any]:
 
 
 class Writer:
-    def __init__(self, redis_client: aioredis.Redis, db_conn: psycopg.AsyncConnection) -> None:
+    def __init__(self, redis_client: aioredis.Redis, dsn: str) -> None:
         self._redis = redis_client
-        self._db = db_conn
+        self._dsn = dsn
+        self._db: psycopg.AsyncConnection | None = None
         self._stop_event = asyncio.Event()
 
     def request_stop(self) -> None:
@@ -73,13 +79,47 @@ class Writer:
             except Exception as exc:
                 logger.error("writer error: %s", exc)
                 await asyncio.sleep(1)
+        # connection is closed by main() on shutdown path via _flush_remaining
+
+    # -- connection management -------------------------------------------------
+
+    async def _ensure_connection(self) -> None:
+        if self._db is None or self._db.closed:
+            await self._reconnect()
+
+    async def _reconnect(self) -> None:
+        """(Re)establish the DB connection with exponential backoff.
+
+        Blocks the writer loop while the database is unreachable; buffered
+        records stay safely in Redis until it returns.
+        """
+        backoff = 1.0
+        while not self._stop_event.is_set():
+            try:
+                if self._db is not None:
+                    try:
+                        await self._db.close()
+                    except Exception:
+                        pass
+                self._db = await psycopg.AsyncConnection.connect(self._dsn, autocommit=False)
+                logger.info("writer: connected to timescaledb")
+                return
+            except Exception as exc:
+                logger.error("writer: DB connect failed: %s — retry in %.0fs", exc, backoff)
+                try:
+                    await asyncio.wait_for(self._stop_event.wait(), timeout=backoff)
+                except asyncio.TimeoutError:
+                    pass
+                backoff = min(backoff * 2, config.RECONNECT_MAX_BACKOFF)
+
+    # -- batching --------------------------------------------------------------
 
     async def _run_batch_cycle(self) -> None:
         """Wait up to BATCH_INTERVAL_SECONDS then flush whatever is buffered."""
         deadline = asyncio.get_event_loop().time() + config.BATCH_INTERVAL_SECONDS
-        batch: list[dict[str, Any]] = []
+        raws: list[str] = []
 
-        while len(batch) < config.BATCH_SIZE:
+        while len(raws) < config.BATCH_SIZE:
             remaining = deadline - asyncio.get_event_loop().time()
             if remaining <= 0:
                 break
@@ -90,39 +130,80 @@ class Writer:
                     break
                 continue
             _, value = raw
+            raws.append(value)
+
+        if raws:
+            await self._write_raws(raws)
+
+    async def _write_raws(self, raws: list[str]) -> None:
+        """Parse and persist raw JSON records, re-queueing them on DB failure."""
+        batch: list[dict[str, Any]] = []
+        for value in raws:
             try:
-                record = json.loads(value)
-                batch.append(_record_to_params(record))
+                batch.append(_record_to_params(json.loads(value)))
             except (json.JSONDecodeError, KeyError, ValueError) as exc:
                 logger.warning("writer: invalid record dropped: %s", exc)
+        if not batch:
+            return
 
-        if batch:
-            await self._write_batch(batch)
+        try:
+            await self._ensure_connection()
+            assert self._db is not None
+            async with self._db.cursor() as cur:
+                await cur.executemany(_INSERT_SQL, batch)
+            await self._db.commit()
+            logger.info("writer: wrote %d rows to timescaledb", len(batch))
+        except Exception as exc:
+            # Never lose data: put the raw records back at the head of the queue,
+            # then reconnect so the next cycle retries them (ON CONFLICT makes
+            # this idempotent).
+            await self._requeue(raws)
+            logger.error("writer: DB write failed, re-queued %d records: %s", len(raws), exc)
+            await self._reconnect()
 
-    async def _write_batch(self, batch: list[dict[str, Any]]) -> None:
-        async with self._db.cursor() as cur:
-            await cur.executemany(_INSERT_SQL, batch)
-        await self._db.commit()
-        logger.info("writer: wrote %d rows to timescaledb", len(batch))
+    async def _requeue(self, raws: list[str]) -> None:
+        try:
+            await self._redis.lpush(config.REDIS_KLINES_KEY, *reversed(raws))
+        except Exception as exc:  # pragma: no cover - Redis itself down
+            logger.error("writer: re-queue failed (%d records at risk): %s", len(raws), exc)
 
     async def _flush_remaining(self) -> None:
-        """Drain the entire Redis buffer on shutdown."""
-        batch: list[dict[str, Any]] = []
+        """Drain the Redis buffer on shutdown, preserving data on DB failure."""
         while True:
-            raw = await self._redis.lpop(config.REDIS_KLINES_KEY)
-            if raw is None:
+            raws: list[str] = []
+            for _ in range(config.BATCH_SIZE):
+                raw = await self._redis.lpop(config.REDIS_KLINES_KEY)
+                if raw is None:
+                    break
+                raws.append(raw)
+            if not raws:
                 break
+
+            batch = []
+            for value in raws:
+                try:
+                    batch.append(_record_to_params(json.loads(value)))
+                except (json.JSONDecodeError, KeyError, ValueError) as exc:
+                    logger.warning("writer flush: invalid record dropped: %s", exc)
+            if not batch:
+                continue
             try:
-                record = json.loads(raw)
-                batch.append(_record_to_params(record))
-            except (json.JSONDecodeError, KeyError, ValueError) as exc:
-                logger.warning("writer flush: invalid record dropped: %s", exc)
+                await self._ensure_connection()
+                assert self._db is not None
+                async with self._db.cursor() as cur:
+                    await cur.executemany(_INSERT_SQL, batch)
+                await self._db.commit()
+                logger.info("writer: flushed %d rows to timescaledb", len(batch))
+            except Exception as exc:
+                # DB unreachable at shutdown: leave records in Redis (RDB-persisted)
+                # rather than dropping them, and stop trying.
+                await self._requeue(raws)
+                logger.error("writer: flush failed, %d records left in Redis: %s", len(raws), exc)
+                break
 
-            if len(batch) >= config.BATCH_SIZE:
-                await self._write_batch(batch)
-                batch = []
-
-        if batch:
-            await self._write_batch(batch)
-
+        if self._db is not None:
+            try:
+                await self._db.close()
+            except Exception:
+                pass
         logger.info("writer: graceful flush complete")

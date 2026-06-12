@@ -43,3 +43,9 @@ redis_data/
 # Parquet exports
 exports/
 *.parquet
+
+# Research layer generated artifacts (regenerable with: python -m research.report)
+research/out/
+
+# Database backups (created by scripts/backup.sh or the backup sidecar)
+backups/

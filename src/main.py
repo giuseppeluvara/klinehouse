@@ -77,8 +77,11 @@ async def main() -> None:
         config.KLINE_INTERVAL,
     )
 
+    # Wait for the DB and apply policies once; the ingester and writer then
+    # manage their own connections (and reconnect independently on failure).
     db_conn = await _wait_for_db(config.DB_DSN)
     await _apply_db_policies(db_conn)
+    await db_conn.close()
 
     redis_client: aioredis.Redis = aioredis.Redis(
         host=config.REDIS_HOST,
@@ -86,8 +89,8 @@ async def main() -> None:
         decode_responses=True,
     )
 
-    ingester = Ingester(redis_client, db_conn)
-    writer = Writer(redis_client, db_conn)
+    ingester = Ingester(redis_client, config.DB_DSN)
+    writer = Writer(redis_client, config.DB_DSN)
 
     loop = asyncio.get_running_loop()
     stop_event = asyncio.Event()
@@ -111,7 +114,6 @@ async def main() -> None:
     await asyncio.gather(ingester_task, writer_task, return_exceptions=True)
 
     await redis_client.aclose()
-    await db_conn.close()
     logger.info("shutdown complete")
 
 

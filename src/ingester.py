@@ -10,6 +10,7 @@ import time
 from typing import Any
 
 import httpx
+import psycopg
 import redis.asyncio as aioredis
 import websockets
 from websockets.exceptions import ConnectionClosed
@@ -59,9 +60,9 @@ def _kline_to_record(k: dict[str, Any]) -> dict[str, Any]:
 class GapFiller:
     """Fetches missing klines via REST and pushes them to Redis."""
 
-    def __init__(self, redis_client: aioredis.Redis, db_conn: Any) -> None:
+    def __init__(self, redis_client: aioredis.Redis, dsn: str) -> None:
         self._redis = redis_client
-        self._db = db_conn
+        self._dsn = dsn
 
     async def fill(self, symbol: str) -> None:
         last_ms = await self._latest_open_time_ms(symbol)
@@ -127,23 +128,25 @@ class GapFiller:
             logger.info("gap_fill symbol=%s recovered=%d candles", symbol, total)
 
     async def _latest_open_time_ms(self, symbol: str) -> int | None:
-        async with await self._db.cursor() as cur:
-            await cur.execute(
-                "SELECT EXTRACT(EPOCH FROM MAX(open_time))::BIGINT * 1000 "
-                "FROM klines WHERE symbol = %s",
-                (symbol,),
-            )
-            row = await cur.fetchone()
-            if row and row[0] is not None:
-                return int(row[0])
-            return None
+        # Open a short-lived connection per call so gap-fill is independent of
+        # the writer's connection and survives database restarts.
+        async with await psycopg.AsyncConnection.connect(self._dsn) as conn:
+            async with conn.cursor() as cur:
+                await cur.execute(
+                    "SELECT EXTRACT(EPOCH FROM MAX(open_time))::BIGINT * 1000 "
+                    "FROM klines WHERE symbol = %s",
+                    (symbol,),
+                )
+                row = await cur.fetchone()
+                if row and row[0] is not None:
+                    return int(row[0])
+                return None
 
 
 class Ingester:
-    def __init__(self, redis_client: aioredis.Redis, db_conn: Any) -> None:
+    def __init__(self, redis_client: aioredis.Redis, dsn: str) -> None:
         self._redis = redis_client
-        self._db = db_conn
-        self._filler = GapFiller(redis_client, db_conn)
+        self._filler = GapFiller(redis_client, dsn)
         self._stop_event = asyncio.Event()
 
     def request_stop(self) -> None:
