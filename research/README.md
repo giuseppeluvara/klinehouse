@@ -128,6 +128,24 @@ python -m research.report --symbol BTCUSDT --csv /tmp/klines.csv
 Output lands in `research/out/`: a `report.md` and PNG figures (information-
 coefficient curve, decile bars, fee-sweep, price-vs-cumulative-flow).
 
+### Frozen BTC sequence experiment
+
+`sequence_experiment.py` is the single path for the separate, predictive-only
+comparison specified in `../PLAN.md`. It uses Binance Spot 1-minute archives,
+hourly non-overlapping BTC labels, the same causal `120x12` tensor for every
+model, three fixed walk-forward folds and Transformer seeds 7/17/29.
+
+```bash
+python -m research.sequence_experiment prepare --cutoff 2026-08-07T00:00:00Z
+python -m research.sequence_experiment build
+python -m research.sequence_experiment run
+```
+
+`run` writes chronological OOF probabilities, trains the final models exactly
+once on the frozen pre-T0 sample IDs and leaves the prospective test pending.
+Only at T1, after preparing and building the extended source, run `final`; a
+second opening is refused. Generated material lives in `research/out/sequence/`.
+
 ### Making money — funding carry (no DB needed, live Binance data)
 
 ```bash

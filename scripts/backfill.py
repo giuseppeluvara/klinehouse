@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 import ssl
 import sys
 import time
@@ -45,6 +46,7 @@ _SSL_CTX = _ssl_context()
 ENV_PATH = Path(__file__).resolve().parent.parent / ".env"
 REST_PATH = "/api/v3/klines"
 PAGE = 1000
+MIN_FREE_BYTES = 20 * 1024**3
 _UNITS = {"s": 1_000, "m": 60_000, "h": 3_600_000, "d": 86_400_000, "w": 604_800_000}
 
 INSERT_SQL = """
@@ -116,7 +118,7 @@ def fetch_klines(base_url: str, symbol: str, interval: str,
             with urllib.request.urlopen(url, timeout=30, context=_SSL_CTX) as resp:
                 return json.loads(resp.read())
         except urllib.error.HTTPError as e:  # type: ignore[attr-defined]
-            if e.code == 429:  # rate limited
+            if e.code == 429:
                 wait = int(e.headers.get("Retry-After", "2"))
                 print(f"  rate-limited, sleeping {wait}s", flush=True)
                 time.sleep(wait)
@@ -139,7 +141,8 @@ def rest_row_to_tuple(symbol: str, row: list) -> tuple:
 
 
 def backfill_gap(conn, base_url: str, symbol: str, interval: str,
-                 step_ms: int, prev_ms: int, next_ms: int, sleep_s: float) -> int:
+                 step_ms: int, prev_ms: int, next_ms: int, sleep_s: float,
+                 max_db_bytes: int) -> int:
     """Fill (prev_ms, next_ms) exclusive. Returns candles inserted."""
     start = prev_ms + step_ms
     end = next_ms - step_ms
@@ -150,7 +153,7 @@ def backfill_gap(conn, base_url: str, symbol: str, interval: str,
             break
         tuples = [
             rest_row_to_tuple(symbol, r) for r in rows
-            if start <= r[0] <= end  # stay strictly inside the gap
+            if start <= r[0] <= end
         ]
         if tuples:
             with conn.cursor() as cur:
@@ -163,6 +166,13 @@ def backfill_gap(conn, base_url: str, symbol: str, interval: str,
                                page_size=len(tuples))
                 inserted += cur.rowcount
             conn.commit()
+            with conn.cursor() as cur:
+                cur.execute("SELECT pg_database_size(current_database())")
+                db_bytes = int(cur.fetchone()[0])
+            if db_bytes >= max_db_bytes:
+                raise RuntimeError(
+                    f"database size guardrail reached: {db_bytes:,} >= {max_db_bytes:,} bytes"
+                )
         last_open = rows[-1][0]
         nxt = last_open + step_ms
         if nxt <= start or len(rows) < PAGE:
@@ -182,11 +192,18 @@ def main() -> int:
     ap.add_argument("--interval", default=env.get("KLINE_INTERVAL", "1s"))
     ap.add_argument("--min-gap", type=int, default=1, help="min gap size in intervals (default 1)")
     ap.add_argument("--sleep", type=float, default=0.12, help="seconds between REST pages")
+    ap.add_argument("--max-db-bytes", type=int, default=15_000_000_000,
+                    help="stop backfill at this database size (default 15 GB)")
     ap.add_argument("--from", dest="from_ts", default=None,
                     help="seed history from this UTC time (e.g. 2026-06-10 or "
                          "2026-06-10T00:00:00) up to the earliest existing candle")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
+    free_bytes = shutil.disk_usage(Path(__file__).resolve().parent.parent).free
+    if free_bytes < MIN_FREE_BYTES:
+        ap.error(
+            f"host free-space guardrail failed: {free_bytes:,} < {MIN_FREE_BYTES:,} bytes"
+        )
 
     from_ms = None
     if args.from_ts:
@@ -208,6 +225,14 @@ def main() -> int:
     conn = connect(env)
     grand_total = 0
     try:
+        with conn.cursor() as cur:
+            cur.execute("SELECT pg_database_size(current_database())")
+            current_db_bytes = int(cur.fetchone()[0])
+        if current_db_bytes >= args.max_db_bytes:
+            ap.error(
+                f"database size guardrail failed: "
+                f"{current_db_bytes:,} >= {args.max_db_bytes:,} bytes"
+            )
         for symbol in symbols:
             gaps = find_gaps(conn, symbol, step_ms, args.min_gap)
             if from_ms is not None:
@@ -230,7 +255,10 @@ def main() -> int:
                           f"{time.strftime('%H:%M:%S', time.gmtime(n/1000))}")
                 continue
             for i, (p, n) in enumerate(gaps, 1):
-                got = backfill_gap(conn, base_url, symbol, args.interval, step_ms, p, n, args.sleep)
+                got = backfill_gap(
+                    conn, base_url, symbol, args.interval, step_ms,
+                    p, n, args.sleep, args.max_db_bytes,
+                )
                 grand_total += got
                 print(f"  [{i}/{len(gaps)}] gap {(n-p)/1000:.0f}s -> recovered {got:,} candles", flush=True)
         print(f"\nDone. Total recovered: {grand_total:,} candles.")

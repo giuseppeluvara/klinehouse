@@ -47,7 +47,7 @@ def _load_dotenv(path: Path = _ENV_PATH) -> dict[str, str]:
     return env
 
 
-def connect():
+def connect(*, read_only: bool = False):
     """Open a psycopg2 connection to the klines database.
 
     Host/port default to the host-published values (``localhost`` /
@@ -59,12 +59,14 @@ def connect():
             "psycopg2 is required for live DB access: pip install psycopg2-binary"
         )
     env = {**_load_dotenv(), **os.environ}
+    options = "-c default_transaction_read_only=on" if read_only else ""
     return psycopg2.connect(
         host=env.get("PGHOST", "localhost"),
         port=int(env.get("PGPORT", env.get("POSTGRES_PORT_HOST", "5432"))),
         user=env["POSTGRES_USER"],
         password=env["POSTGRES_PASSWORD"],
         dbname=env["POSTGRES_DB"],
+        options=options,
     )
 
 

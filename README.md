@@ -251,6 +251,16 @@ For long-running production deployments:
 - Point `HEALTHCHECK_URL` at a monitoring service (Healthchecks.io, Uptime Kuma) to be alerted if the collector stops sending heartbeats.
 - After extended downtime, run `python scripts/backfill.py` to heal any **interior** gaps via REST. The collector's own recovery only fills the *trailing* gap (latest candle → now); this tool finds and fills holes anywhere in the history (idempotent, safe to run live, cron-friendly).
 
+For a bounded leading-history seed, reuse the same tool:
+
+```bash
+python scripts/backfill.py --from 2026-05-09
+```
+
+The command keeps serial, idempotent writes and stops itself at 15 GB by
+default (`--max-db-bytes`) without stopping the live collector. It also refuses
+to start with less than 20 GiB free on the host.
+
 ---
 
 ## Research, analytics & making money
