@@ -3,12 +3,14 @@
 from __future__ import annotations
 
 from datetime import timedelta
+import fcntl
 import json
 from pathlib import Path
 import shutil
 import sys
 
 import pandas as pd
+import pyarrow as pa
 import pyarrow.parquet as pq
 import pytest
 
@@ -48,7 +50,7 @@ class Cursor:
         return self
 
     def __exit__(self, *args):
-        pass
+        self.connection.cursor_exits += 1
 
     def execute(self, sql, parameters):
         symbol, start, end = parameters
@@ -75,6 +77,7 @@ class Connection:
     def __init__(self, rows):
         self.rows, self.queries, self.sizes = list(rows), [], []
         self.closed = False
+        self.cursor_exits = 0
 
     def cursor(self, name=None):
         return Cursor(self, name)
@@ -356,3 +359,211 @@ def test_missing_backup_blocks_prune_before_drop(tmp_path, monkeypatch):
     with pytest.raises(ValueError, match="backup"):
         prune_archive.prune(root, backup, apply=True)
     assert not any("drop_chunks" in sql for sql in statements)
+
+
+@pytest.mark.parametrize("extra_backfill", [False, True])
+def test_backfill_cannot_exchange_archived_seconds_for_different_seconds(
+    tmp_path, extra_backfill
+):
+    rows = list(candles(120))
+    original = rows[:20] + rows[22:]
+    _, entries = export(tmp_path, original)
+    changed = rows[:5] + rows[6:21] + rows[22:]
+    if extra_backfill:
+        changed = rows[:5] + rows[6:]
+    assert len(changed) >= len(original)
+    with pytest.raises(ValueError, match="missing candles"):
+        export(tmp_path, changed)
+    assert archive.read_catalog(tmp_path) == entries
+    assert len(list(tmp_path.rglob("*.parquet"))) == 1
+    archive.verify_entry(tmp_path, entries[0])
+
+
+def test_backfill_adds_missing_seconds_and_permits_price_corrections(tmp_path):
+    rows = list(candles(120))
+    export(tmp_path, rows[:20] + rows[21:])
+    corrected = list(rows[5])
+    corrected[6] += 1
+    rows[5] = tuple(corrected)
+    _, entries = export(tmp_path, rows)
+    assert entries[0]["complete"]
+    frame = market.load_market(
+        "BTCUSDT", START, START + timedelta(seconds=120),
+        archive_root=tmp_path, source="archive",
+    )
+    assert len(frame) == 120 and frame.iloc[5].close == corrected[6]
+
+
+@pytest.mark.parametrize("value", [float("nan"), float("inf"), float("-inf"), None])
+def test_nonfinite_source_is_refused_and_cursor_and_partial_file_are_closed(tmp_path, value):
+    rows = list(candles(3))
+    broken = list(rows[1])
+    broken[6] = value
+    rows[1] = tuple(broken)
+    conn = Connection(rows)
+    with pytest.raises(ValueError, match="finite"):
+        archive.export_range(conn, "BTCUSDT", START, START + timedelta(seconds=3), tmp_path)
+    assert conn.cursor_exits == 1
+    assert not (tmp_path / "catalog.json").exists()
+    assert not list(tmp_path.rglob("*.partial"))
+
+
+@pytest.mark.parametrize("damage", ["missing", "truncated"])
+def test_damaged_complete_archive_never_silently_falls_back_to_database(tmp_path, damage):
+    _, entries = export(tmp_path, candles(120))
+    path = archive.file_path(tmp_path, entries[0])
+    if damage == "missing":
+        path.unlink()
+    else:
+        path.write_bytes(path.read_bytes()[:-8])
+    connection = Connection(candles(120))
+    with pytest.raises(ValueError, match="archive missing or changed"):
+        market.load_market(
+            "BTCUSDT", START, START + timedelta(seconds=120),
+            archive_root=tmp_path, conn=connection,
+        )
+    assert connection.queries == []
+
+
+@pytest.mark.parametrize("source", ["archive", "database"])
+def test_fractional_end_cannot_expose_unclosed_candle_or_minute(tmp_path, source):
+    rows = list(candles(60))
+    if source == "archive":
+        export(tmp_path, rows, seconds=60)
+    options = {"archive_root": tmp_path, "source": source, "conn": Connection(rows)}
+    end = START + timedelta(seconds=59, milliseconds=500)
+    frame = market.load_market("BTCUSDT", START, end, **options)
+    assert len(frame) == 59 and all(frame.close_time < end)
+    assert market.load_market("BTCUSDT", START, end, timeframe="1m", **options).empty
+
+
+@pytest.mark.parametrize("field,value", [
+    ("close", float("nan")),
+    ("volume", None),
+    ("close_time", START + timedelta(minutes=1)),
+    ("open_time", START + timedelta(milliseconds=1)),
+])
+def test_invalid_db_inputs_fail_before_aggregation_and_close_resources(
+    tmp_path, monkeypatch, field, value
+):
+    rows = list(candles(60))
+    broken = list(rows[0])
+    broken[archive.COLUMNS.index(field)] = value
+    rows[0] = tuple(broken)
+    connection = Connection(rows)
+    monkeypatch.setattr(market, "connect", lambda **_: connection)
+    monkeypatch.setenv("MARKET_TEMP_DIR", str(tmp_path))
+    with pytest.raises(ValueError):
+        market.load_market(
+            "BTCUSDT", START, START + timedelta(seconds=60),
+            source="database", archive_root=tmp_path, timeframe="1m",
+        )
+    assert connection.closed and connection.cursor_exits == 1
+    assert not list(tmp_path.glob("klinehouse-*"))
+
+
+def test_early_generator_close_releases_archive_lock_and_spool(tmp_path, monkeypatch):
+    connection = Connection(candles(120))
+    monkeypatch.setattr(market, "connect", lambda **_: connection)
+    monkeypatch.setenv("MARKET_TEMP_DIR", str(tmp_path))
+    iterator = market.iter_market(
+        "BTCUSDT", START, START + timedelta(seconds=120),
+        archive_root=tmp_path, batch_size=7,
+    )
+    assert next(iterator).num_rows == 7
+    assert list(tmp_path.glob("klinehouse-*/tail.parquet"))
+    assert connection.closed and connection.cursor_exits == 1
+    with (tmp_path / ".archive.lock").open("a+b") as lock:
+        with pytest.raises(BlockingIOError):
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        iterator.close()
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        fcntl.flock(lock, fcntl.LOCK_UN)
+    assert not list(tmp_path.glob("klinehouse-*"))
+
+
+def test_public_arrow_batch_import_matches_database_export(tmp_path):
+    rows = list(candles(120))
+    table = pa.Table.from_arrays(
+        [pa.array(values, type=field.type) for values, field in zip(zip(*rows), archive.SCHEMA)],
+        schema=archive.SCHEMA,
+    )
+    imported = archive.export_batches(
+        tmp_path / "imported", "BTCUSDT", START, START + timedelta(seconds=120),
+        table.to_batches(max_chunksize=19), batch_size=19,
+    )
+    _, exported = export(tmp_path / "database", rows)
+    assert imported["logical_sha256"] == exported[0]["logical_sha256"]
+    assert imported["complete"]
+    archive.verify_entry(tmp_path / "imported", imported)
+
+
+def test_interrupted_stream_preserves_catalog_and_removes_partial_file(tmp_path):
+    _, original = export(tmp_path, candles(60), seconds=60)
+    closed = []
+
+    def interrupted():
+        try:
+            yield list(candles(5, start=START + timedelta(seconds=60)))
+            raise OSError("source stream interrupted")
+        finally:
+            closed.append(True)
+
+    with pytest.raises(OSError, match="interrupted"):
+        archive.export_batches(
+            tmp_path, "BTCUSDT", START + timedelta(seconds=60),
+            START + timedelta(seconds=120), interrupted(),
+        )
+    assert closed == [True]
+    assert archive.read_catalog(tmp_path) == original
+    assert not list(tmp_path.rglob("*.partial"))
+    assert len(list(tmp_path.rglob("*.parquet"))) == 1
+    archive.verify_entry(tmp_path, original[0])
+
+
+@pytest.mark.parametrize("absolute", [False, True])
+def test_catalog_paths_remain_safe_when_rebased_to_a_backup(tmp_path, absolute):
+    _, entries = export(tmp_path, candles(3), seconds=3)
+    entry = entries[0]
+    # These resolve inside the source, but escape a differently named backup.
+    entry["path"] = (
+        str(tmp_path / entry["path"]) if absolute
+        else f"../{tmp_path.name}/{entry['path']}"
+    )
+    with pytest.raises(ValueError, match="relative without parent traversal"):
+        archive.file_path(tmp_path, entry)
+
+
+def test_parallel_multifile_reader_preserves_global_order_across_arrow_batches(tmp_path):
+    # More than one DuckDB scan task is necessary to expose parallel Arrow
+    # vector reordering; the small unit fixtures cannot exercise this path.
+    count = 2 * 86400
+    export(tmp_path, candles(count), seconds=count, batch=10000)
+    columns = ["open_time", "close_time", "close", "volume", "trades", "taker_buy_base"]
+    end = START + timedelta(seconds=count)
+    position = 0
+    iterator = market.iter_market(
+        "BTCUSDT", START, end, archive_root=tmp_path, source="archive",
+        columns=columns, batch_size=10000,
+    )
+    try:
+        for batch in iterator:
+            expected = range(position, position + batch.num_rows)
+            assert batch.column("open_time").to_pylist() == [
+                START + timedelta(seconds=i) for i in expected
+            ]
+            assert batch.column("close").to_pylist() == [101 + i for i in expected]
+            position += batch.num_rows
+    finally:
+        iterator.close()
+    assert position == count
+    minutes = market.load_market(
+        "BTCUSDT", START, end, archive_root=tmp_path, source="archive",
+        columns=columns, timeframe="1m", batch_size=1000,
+    )
+    assert len(minutes) == count // 60
+    assert minutes.open_time.tolist() == [
+        START + timedelta(minutes=i) for i in range(count // 60)
+    ]
+    assert minutes.close.tolist() == [160 + i * 60 for i in range(count // 60)]
+    assert (minutes.volume == 75).all() and (minutes.trades == 180).all()

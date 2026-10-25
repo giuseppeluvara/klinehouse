@@ -12,6 +12,7 @@ from datetime import datetime, timedelta, timezone
 import fcntl
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import re
@@ -100,6 +101,8 @@ class Fingerprint:
                 )
             if not stamp <= utc(row[2]) < stamp + timedelta(seconds=1):
                 raise ValueError("archive accepts closed 1-second candles only")
+            if any(value is None or not math.isfinite(value) for value in row[3:]):
+                raise ValueError("candle numeric fields must be finite and non-null")
             if self.last is not None and stamp != self.last + timedelta(seconds=1):
                 self.gaps += 1
             self.digest.update(symbol.encode() + b"\0")
@@ -168,7 +171,10 @@ def read_catalog(root: Path) -> list[dict]:
 
 
 def file_path(root: Path, entry: dict) -> Path:
-    path = (Path(root) / entry["path"]).resolve()
+    relative = Path(entry["path"])
+    if relative.is_absolute() or ".." in relative.parts:
+        raise ValueError("archive path must be relative without parent traversal")
+    path = (Path(root) / relative).resolve()
     if not path.is_relative_to(Path(root).resolve()):
         raise ValueError("archive path escapes root")
     return path
@@ -209,14 +215,14 @@ def inspect_file(
     end: datetime,
     batch_size: int = DEFAULT_BATCH,
 ) -> dict:
-    parquet = pq.ParquetFile(path)
-    if parquet.schema_arrow != SCHEMA:
-        raise ValueError(f"unexpected archive schema: {path}")
     fingerprint = Fingerprint()
-    for batch in parquet.iter_batches(batch_size=batch_size):
-        if any(batch.column(i).null_count for i in range(batch.num_columns)):
-            raise ValueError(f"null candle fields: {path}")
-        fingerprint.update(table_rows(batch), symbol=symbol, start=start, end=end)
+    with pq.ParquetFile(path) as parquet:
+        if parquet.schema_arrow != SCHEMA:
+            raise ValueError(f"unexpected archive schema: {path}")
+        for batch in parquet.iter_batches(batch_size=batch_size):
+            if any(batch.column(i).null_count for i in range(batch.num_columns)):
+                raise ValueError(f"null candle fields: {path}")
+            fingerprint.update(table_rows(batch), symbol=symbol, start=start, end=end)
     return {
         **fingerprint.result(start, end),
         "sha256": file_sha(path),
@@ -245,6 +251,12 @@ def _write_batches(root, symbol, start, end, batches, batch_size):
             temporary, SCHEMA, compression="zstd", compression_level=3
         ) as writer:
             for rows in batches:
+                if isinstance(rows, (pa.Table, pa.RecordBatch)):
+                    if rows.schema != SCHEMA:
+                        raise ValueError("unexpected source batch schema")
+                    rows = list(table_rows(rows))
+                if not rows:
+                    continue
                 expected.update(rows, symbol=symbol, start=start, end=end)
                 table = pa.Table.from_arrays(
                     [
@@ -271,7 +283,32 @@ def _write_batches(root, symbol, start, end, batches, batch_size):
             **actual,
         }
     finally:
-        temporary.unlink(missing_ok=True)
+        try:
+            close = getattr(batches, "close", None)
+            if close is not None:
+                close()
+        finally:
+            temporary.unlink(missing_ok=True)
+
+
+def _require_preserved_keys(root, previous, replacement, batch_size):
+    """A backfill may correct values, but must retain every archived observation."""
+
+    def keys(parquet):
+        for batch in parquet.iter_batches(batch_size=batch_size, columns=["open_time"]):
+            yield from batch.column(0).to_pylist()
+
+    with (
+        pq.ParquetFile(file_path(root, previous)) as old_file,
+        pq.ParquetFile(file_path(root, replacement)) as new_file,
+    ):
+        new_keys = iter(keys(new_file))
+        current = next(new_keys, None)
+        for stamp in keys(old_file):
+            while current is not None and current < stamp:
+                current = next(new_keys, None)
+            if current != stamp:
+                raise ValueError("source is missing candles from the existing archive")
 
 
 def db_batches(conn, symbol, start, end, columns=COLUMNS, batch_size=DEFAULT_BATCH):
@@ -286,6 +323,56 @@ def db_batches(conn, symbol, start, end, columns=COLUMNS, batch_size=DEFAULT_BAT
         )
         while rows := cur.fetchmany(batch_size):
             yield rows
+
+
+def _export_batches_locked(root, symbol, start, end, batches, batch_size, catalog):
+    overlap = [
+        entry
+        for entry in catalog
+        if entry["symbol"] == symbol
+        and utc(entry["start"]) < end
+        and utc(entry["end"]) > start
+    ]
+    if any(utc(e["start"]) != start or utc(e["end"]) != end for e in overlap):
+        raise ValueError(
+            "range overlaps a compacted or partial archive; use its exact range"
+        )
+    entry = _write_batches(root, symbol, start, end, batches, batch_size)
+    if overlap:
+        try:
+            verify_entry(root, overlap[0])
+            if overlap[0]["logical_sha256"] == entry["logical_sha256"]:
+                file_path(root, entry).unlink()
+                return overlap[0], catalog
+            if entry["rows"] < overlap[0]["rows"]:
+                raise ValueError("source has fewer rows than the existing archive")
+            # Counts alone miss a lost second replaced by a different one.
+            _require_preserved_keys(root, overlap[0], entry, batch_size)
+        except Exception:
+            file_path(root, entry).unlink(missing_ok=True)
+            raise
+    catalog = [e for e in catalog if e not in overlap] + [entry]
+    _publish_catalog(root, catalog)
+    return entry, catalog
+
+
+def export_batches(
+    root: Path, symbol: str, start, end, batches, batch_size: int = DEFAULT_BATCH
+) -> dict:
+    """Publish one range from bounded row or Arrow batches without a database.
+
+    Call once per UTC day for external daily sources. Row tuples use COLUMNS;
+    Arrow batches use SCHEMA. Source provenance belongs in a separate manifest.
+    """
+    symbol, root = symbol_name(symbol), Path(root)
+    start, end = utc(start), utc(end)
+    if start >= end or start.microsecond or end.microsecond or batch_size <= 0:
+        raise ValueError("invalid range or batch size")
+    with archive_lock(root, exclusive=True):
+        entry, _ = _export_batches_locked(
+            root, symbol, start, end, batches, batch_size, read_catalog(root)
+        )
+    return entry
 
 
 def export_range(
@@ -307,36 +394,15 @@ def export_range(
             stop = min(
                 end, start.replace(hour=0, minute=0, second=0) + timedelta(days=1)
             )
-            overlap = [
-                e
-                for e in catalog
-                if e["symbol"] == symbol
-                and utc(e["start"]) < stop
-                and utc(e["end"]) > start
-            ]
-            if any(utc(e["start"]) != start or utc(e["end"]) != stop for e in overlap):
-                raise ValueError(
-                    "range overlaps a compacted or partial archive; use its exact range"
-                )
-            entry = _write_batches(
+            entry, catalog = _export_batches_locked(
                 root,
                 symbol,
                 start,
                 stop,
                 db_batches(conn, symbol, start, stop, batch_size=batch_size),
                 batch_size,
+                catalog,
             )
-            if overlap and overlap[0]["logical_sha256"] == entry["logical_sha256"]:
-                verify_entry(root, overlap[0])
-                file_path(root, entry).unlink()
-                entry = overlap[0]
-            else:
-                # A shorter source after DB retention must never replace a fuller archive.
-                if overlap and entry["rows"] < overlap[0]["rows"]:
-                    file_path(root, entry).unlink()
-                    raise ValueError("source has fewer rows than the existing archive")
-                catalog = [e for e in catalog if e not in overlap] + [entry]
-                _publish_catalog(root, catalog)
             published.append(entry)
             start = stop
     return published
@@ -388,10 +454,9 @@ def compact_range(
 
         def batches():
             for entry in entries:
-                for batch in pq.ParquetFile(file_path(root, entry)).iter_batches(
-                    batch_size=batch_size
-                ):
-                    yield list(table_rows(batch))
+                with pq.ParquetFile(file_path(root, entry)) as parquet:
+                    for batch in parquet.iter_batches(batch_size=batch_size):
+                        yield list(table_rows(batch))
 
         merged = _write_batches(root, symbol, start, end, batches(), batch_size)
         _publish_catalog(root, [e for e in catalog if e not in entries] + [merged])

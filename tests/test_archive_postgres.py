@@ -111,13 +111,16 @@ def test_verified_prune_preserves_aggregates_and_refuses_stale_source(
         ),
     )
     plan = prune_archive.prune(root, backup)
-    assert plan and all(e["action"] == "would verify and drop" for e in plan)
+    assert plan and all(e["source_verified"] and e["backup_verified"] for e in plan)
+    assert plan[0]["symbols"] == ["BTCUSDT", "ETHUSDT"]
     with conn.cursor() as cur:
         cur.execute(
             "UPDATE klines SET close = close + 1 WHERE symbol = 'ETHUSDT' AND open_time = %s",
             (start,),
         )
     conn.commit()
+    with pytest.raises(ValueError, match="differs from current DB"):
+        prune_archive.prune(root, backup)
     with pytest.raises(ValueError, match="differs from current DB"):
         prune_archive.prune(root, backup, apply=True)
     with conn.cursor() as cur:

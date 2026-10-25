@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
-from contextlib import contextmanager
+from contextlib import closing, contextmanager
 from datetime import timedelta
+import math
 import os
 from pathlib import Path
 import tempfile
@@ -64,6 +65,31 @@ def _missing_ranges(start, end, entries):
         yield cursor, end
 
 
+def _closed_db_rows(rows, columns, symbol, start, end):
+    """Validate the projected inputs and exclude candles unavailable at query end."""
+    indices = {name: i for i, name in enumerate(columns)}
+    numeric = [i for name, i in indices.items() if name in COLUMNS[3:]]
+    closed = []
+    for row in rows:
+        if any(value is None for value in row):
+            raise ValueError("null candle fields in database")
+        stamp, close = utc(row[indices["open_time"]]), utc(row[indices["close_time"]])
+        if (
+            row[indices["symbol"]] != symbol
+            or not start <= stamp < end
+            or stamp.microsecond
+            or not stamp <= close < stamp + timedelta(seconds=1)
+        ):
+            raise ValueError(
+                "database must contain aligned 1-second candles in the query range"
+            )
+        if any(not math.isfinite(row[i]) for i in numeric):
+            raise ValueError("candle numeric fields must be finite")
+        if close < end:
+            closed.append(row)
+    return closed
+
+
 @contextmanager
 def _query(
     symbol,
@@ -90,13 +116,13 @@ def _query(
     ):
         raise ValueError("invalid or duplicate columns")
     seconds = TIMEFRAMES[timeframe]
-    needed = list(dict.fromkeys(["symbol", "open_time", *columns]))
+    needed = list(dict.fromkeys(["symbol", "open_time", "close_time", *columns]))
     env = {**_load_dotenv(), **os.environ}
     root = Path(archive_root or env.get("ARCHIVE_ROOT", "archive"))
     with (
         archive_lock(root),
         tempfile.TemporaryDirectory(
-            prefix="klinehouse-", dir=os.environ.get("MARKET_TEMP_DIR")
+            prefix="klinehouse-", dir=env.get("MARKET_TEMP_DIR")
         ) as temp,
     ):
         entries = (
@@ -121,7 +147,9 @@ def _query(
             engine.execute("SET TimeZone='UTC'")
             engine.execute("SET temp_directory = ?", [temp])
             engine.execute("SET max_temp_directory_size='20GB'")
-            engine.execute("SET preserve_insertion_order=false")
+            # Arrow streaming can reorder sorted vectors when this is disabled
+            # (DuckDB 1.5, parallel multi-file scans), despite the final ORDER BY.
+            engine.execute("SET preserve_insertion_order=true")
             select = ", ".join(f'"{name}"' for name in needed)
             parts = []
             if files:
@@ -130,9 +158,9 @@ def _query(
                 )
                 parts.append(
                     f"SELECT {select}, 0 AS priority FROM archive_files "
-                    "WHERE symbol = ? AND open_time >= ? AND open_time < ?"
+                    "WHERE symbol = ? AND open_time >= ? AND open_time < ? AND close_time < ?"
                 )
-            parameters = [symbol, start, end] if files else []
+            parameters = [symbol, start, end, end] if files else []
             ranges = (
                 []
                 if source == "archive"
@@ -146,17 +174,21 @@ def _query(
                     schema = pa.schema([SCHEMA.field(name) for name in needed])
                     with pq.ParquetWriter(spool, schema, compression="zstd") as writer:
                         for left, right in ranges:
-                            for rows in db_batches(
-                                connection, symbol, left, right, needed, batch_size
-                            ):
-                                table = pa.Table.from_arrays(
-                                    [
-                                        pa.array(values, type=field.type)
-                                        for values, field in zip(zip(*rows), schema)
-                                    ],
-                                    schema=schema,
-                                )
-                                writer.write_table(table, row_group_size=batch_size)
+                            with closing(
+                                db_batches(connection, symbol, left, right, needed, batch_size)
+                            ) as batches:
+                                for rows in batches:
+                                    rows = _closed_db_rows(rows, needed, symbol, left, right)
+                                    if not rows:
+                                        continue
+                                    table = pa.Table.from_arrays(
+                                        [
+                                            pa.array(values, type=field.type)
+                                            for values, field in zip(zip(*rows), schema)
+                                        ],
+                                        schema=schema,
+                                    )
+                                    writer.write_table(table, row_group_size=batch_size)
                     engine.read_parquet(
                         str(spool), hive_partitioning=False
                     ).create_view("db_tail")
@@ -173,8 +205,9 @@ def _query(
             # A DB candle wins in partially archived ranges. Complete archive
             # ranges are never fetched from PostgreSQL in the first place.
             raw = (
-                f"SELECT {select} FROM ({union}) QUALIFY "
-                "row_number() OVER (PARTITION BY symbol, open_time ORDER BY priority DESC) = 1"
+                # DISTINCT ON also avoids a DuckDB 1.5 projection bug in QUALIFY.
+                f"SELECT DISTINCT ON (symbol, open_time) {select} FROM ({union}) "
+                "ORDER BY symbol, open_time, priority DESC"
             )
             output = ", ".join(f'"{name}"' for name in columns)
             if seconds == 1:
@@ -231,7 +264,8 @@ def iter_market(
             if hasattr(result, "to_arrow_reader")
             else result.fetch_record_batch(batch_size)
         )
-        yield from reader
+        with closing(reader):
+            yield from reader
 
 
 def load_market(
@@ -260,6 +294,8 @@ def load_market(
 def iter_market_windows(symbol, start, end, *, window_seconds=86400, **kwargs):
     """Load sequential windows; callers can retain their own bounded lookback."""
     start, end = utc(start), utc(end)
+    if start >= end:
+        raise ValueError("start must precede end")
     seconds = TIMEFRAMES.get(kwargs.get("timeframe", "1s"), 0)
     if window_seconds <= 0 or not seconds or window_seconds % seconds:
         raise ValueError("window_seconds must be a positive multiple of the timeframe")

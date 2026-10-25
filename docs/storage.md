@@ -20,7 +20,18 @@ python scripts/archive_market.py --root archive verify
 ```
 
 The connection uses the same `.env` and host-side `POSTGRES_PORT_HOST` as
-`research/db.py`, with optional `PGHOST`/`PGPORT` overrides. Passwords are passed as
+`research/db.py`, with optional `PGHOST`/`PGPORT` overrides. Start with a bounded read-only inventory:
+
+```bash
+python scripts/audit_storage.py --root archive --output research/out/storage-audit.json
+```
+
+This saves connection availability, indexed symbol/time bounds, database and chunk
+sizes, compression status and installed policies without printing credentials.
+An unavailable database is reported explicitly; public Binance downloads do not
+constitute evidence about local migration.
+
+ Passwords are passed as
 connection parameters, so special characters are supported. Export uses read-only
 connections and server-side cursors; default batches contain at most 50,000 rows.
 
@@ -52,7 +63,9 @@ file visible to readers. `gc` removes only unreferenced archive generations:
 python scripts/archive_market.py --root archive gc
 ```
 
-Files missing seconds remain incomplete, without invented candles. Readers retain
+Files missing seconds remain incomplete, without invented candles. A backfill
+replacement must preserve every previously archived timestamp, including when the
+new source has equal or greater cardinality. Nonfinite and null values are refused. Readers retain
 the archived observations and query PostgreSQL for the uncovered/incomplete
 ranges; a DB row wins on an overlapping `(symbol, open_time)` key. Complete archive
 ranges do not hit PostgreSQL. Ordinary reads check file presence and size;
@@ -78,12 +91,15 @@ frame = load_market(
 )
 
 # For large raw ranges, consume batches and discard each one after use.
-for batch in iter_market(
+from contextlib import closing
+
+with closing(iter_market(
     "BTCUSDT", "2026-07-01", "2026-08-01",
     archive_root="archive", timeframe="1s",
     columns=["open_time", "close"], batch_size=50_000,
-):
-    process(batch)  # replace with your incremental calculation
+)) as batches:
+    for batch in batches:
+        process(batch)  # replace with your incremental calculation
 ```
 
 `source="archive"` supports disconnected/offline work. `source="database"` bypasses
@@ -155,34 +171,47 @@ a chunk has been archived. An existing Timescale retention job also stays active
 when an environment variable is cleared; inspect/remove that policy before this
 migration if one was previously installed. Do not turn it on as a shortcut.
 
-First complete sync and verification. Then copy the stable archive to a separate
-backup location, ideally another device. The following is a **dry-run**, showing
-whole chunks eligible by age; it does not yet validate their source contents:
+First complete sync and verification. Create a **new** independent backup snapshot:
 
 ```bash
+python scripts/backup_archive.py --root archive --destination /path/to/archive-backup
 python scripts/prune_archive.py --root archive --backup-root /path/to/archive-backup
 ```
 
-Apply only after the archive and backup exist:
+The copy command holds the source archive lock, copies only catalogued files,
+verifies every file, syncs the copy and publishes it by directory rename. It never
+overwrites an existing destination. A separate device is preferable; a same-device
+copy is explicitly identified and does not protect against device failure.
+Hard-linked files and overlapping source/backup paths are refused.
 
-```bash
-python scripts/prune_archive.py --root archive --backup-root /path/to/archive-backup --apply
-```
+The default prune command is now a **verified dry-run**, not an age-only listing:
+it checks archive and backup content/checksums and compares every stored column
+against the current database for every symbol in each eligible chunk. It reads a
+repeatable-read snapshot without refresh, table-write locks or deletion. Its JSON
+plan records symbols, rows, source/backup verification and policies checked. A dry
+run does not authorize later deletion and can become stale as backfills arrive.
 
-The apply path checks archive/backup checksums, compares every stored column with
-the current DB data for every symbol in each candidate chunk, refreshes existing
-continuous aggregates before dropping raw chunks, and drops only whole chunks
-older than seven days. A mismatch aborts the current chunk. Already verified and
-committed earlier chunks stay archived and removed; pruning is atomic per chunk,
-not for the complete run. PostgreSQL table locks briefly block writes during each
-comparison; the collector's existing Redis queue buffers incoming candles.
+Both modes refuse scheduled native retention on the raw table or its dependent
+aggregates, unknown relevant jobs, and unbounded or too-wide refresh windows.
+Fixed UTC aggregate buckets must align with candidate chunk boundaries;
+calendar, timezone/custom-origin and hierarchical aggregates require manual review.
+The tool only reports these blocks; it does not alter policies. Clearing `.env`
+never removes an already installed Timescale policy.
 
-Keep at least seven days, beyond the built-in aggregate refresh windows (up to
-three days). Custom refresh policies that reach farther into history must be
-reviewed before pruning: refreshing already-pruned raw ranges could erase old
-aggregate results. Old raw history remains accessible through the unified reader,
-not through SQL queries against `klines`. Native backfill tools still see only the
-hot DB, so avoid reseeding archived periods into it.
+The opt-in apply path remains separate. It revalidates each candidate with a
+write-blocking raw-table lock, refreshes aggregates through a second connection
+while keeping that lock, and drops only the verified whole chunk. A refresh/lock
+failure aborts that chunk. Integration tests exercise this only on a disposable
+`*_test` database. **No production apply is part of the October 2026 continuation.**
+Earlier successfully committed chunks remain removed if a later chunk fails.
+Policy administration must not race pruning; future manual refresh of already
+pruned history can still erase materializations and must be avoided.
+
+Keep at least seven days, beyond the built-in refresh windows (up to three days).
+Historical raw data and new complete aggregates remain available through the
+Parquet reader. Native backfill tools see only the hot DB; avoid reseeding pruned
+periods into it. The SQL `realized_vol_1m` view is a live raw-data view, not a
+historical materialization: use archived second candles for old volatility.
 
 Disk savings follow whole chunk boundaries, not an exact rolling seven-day row
 count. This code does not activate pruning automatically or change existing DB
@@ -191,7 +220,7 @@ volumes, native policies, Grafana queries, collector queues or frozen experiment
 ## Validation
 
 ```bash
-python -m pytest -q tests/test_archive.py tests/test_archive_postgres.py
+python -m pytest -q tests/test_archive*.py tests/test_prune_safety.py
 ```
 
 The PostgreSQL tests require `TEST_POSTGRES_DSN` pointing to a dedicated database
