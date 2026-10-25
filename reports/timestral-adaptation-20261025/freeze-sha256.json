@@ -1,0 +1,8 @@
+{
+  "frozen/bundle.json": "3faca63a7b215448e055ab772f89ce42fa5f47d5e2a9159bd3ca5e9ed3e814e0",
+  "frozen/bundle.sha256.json": "0e2dae46f1c4b3be42dfc6b9d4458a2d9f47cf3c3fbb03769e865cf494365ff1",
+  "frozen/selection.json": "2d626e3f127b191bc5962b8c96777bb4cfa54a112234ddfdcb8ecd3ea9d080c3",
+  "frozen/development-forecasts.jsonl": "dbd142382df2586c437d406fcf5c3d761eb98f99cfeab9c9c4bc8bfd7a84ac38",
+  "frozen/protocol.json": "30738a65ed3c9d60b66b3f925da76f7464e46a462b76873c2782b69775326c18",
+  "frozen/protocol.sha256.json": "6508adde0b7e325908c2929f40f287725663481cab265c291eb74816435be645"
+}
