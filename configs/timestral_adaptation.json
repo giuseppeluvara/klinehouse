@@ -1,0 +1,16 @@
+{
+  "symbol": "BTCUSDT",
+  "development_start": "2025-09-01T00:00:00Z",
+  "fit_start": "2025-10-01T00:00:00Z",
+  "validation_start": "2025-12-01T00:00:00Z",
+  "test_start": "2026-01-01T00:00:00Z",
+  "test_end": "2026-04-01T00:00:00Z",
+  "development_archive": "research/out/timestral-adaptation-20261025/development/archive",
+  "test_archive": "research/out/timestral-adaptation-20261025/test/archive",
+  "lookback": 256,
+  "horizons": [4, 24],
+  "batch_size": 8192,
+  "torch_threads": 2,
+  "model_cache": "research/out/timestral-pilot-20261025/model-cache",
+  "local_files_only": true
+}
