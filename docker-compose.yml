@@ -134,6 +134,27 @@ services:
           sleep "$$BACKUP_INTERVAL_SECONDS";
         done
 
+  # Opt-in archive worker. Independent of the collector, no automatic DB deletion.
+  archive:
+    build:
+      context: .
+      dockerfile: Dockerfile.storage
+    profiles: ["archive"]
+    restart: unless-stopped
+    user: "${ARCHIVE_USER:-1000:1000}"
+    depends_on:
+      timescaledb:
+        condition: service_healthy
+    environment:
+      PGHOST: timescaledb
+      PGPORT: "5432"
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      PYTHONDONTWRITEBYTECODE: "1"
+    volumes:
+      - ${ARCHIVE_ROOT:-./archive}:/archive
+
 volumes:
   timescaledb_data:
   redis_data:

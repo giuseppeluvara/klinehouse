@@ -1,0 +1,7 @@
+FROM python:3.12-slim
+WORKDIR /app
+COPY requirements-storage.txt .
+RUN pip install --no-cache-dir -r requirements-storage.txt
+COPY research/ ./research/
+COPY scripts/ ./scripts/
+CMD ["python", "scripts/archive_market.py", "--root", "/archive", "sync", "--loop"]
