@@ -26,9 +26,9 @@ def check_policies(conn, hot_days):
     with conn.cursor() as cur:
         cur.execute(
             "WITH RECURSIVE related(schema_name, table_name) AS ("
-            " SELECT 'public'::text, 'klines'::text UNION "
-            " SELECT c.materialization_hypertable_schema::text, "
-            " c.materialization_hypertable_name::text "
+            " SELECT 'public'::text COLLATE \"C\", 'klines'::text COLLATE \"C\" UNION "
+            " SELECT c.materialization_hypertable_schema::text COLLATE \"C\", "
+            " c.materialization_hypertable_name::text COLLATE \"C\" "
             " FROM timescaledb_information.continuous_aggregates c "
             " JOIN related r ON c.hypertable_schema = r.schema_name "
             " AND c.hypertable_name = r.table_name) "
