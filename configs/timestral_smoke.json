@@ -1,0 +1,19 @@
+{
+  "symbol": "BTCUSDT",
+  "start": "2026-07-01T00:00:00Z",
+  "end": "2026-07-08T00:00:00Z",
+  "evaluation_start": "2026-07-02T00:00:00Z",
+  "archive_root": "research/out/timestral-pilot-20261025/archive",
+  "source": "archive",
+  "lookback": 256,
+  "horizon": 60,
+  "stride": 60,
+  "min_calibration": 12,
+  "max_minutes": 11000,
+  "max_samples": 180,
+  "batch_size": 10000,
+  "torch_threads": 2,
+  "max_emission_delay_seconds": 60,
+  "local_files_only": true,
+  "model_cache": "research/out/timestral-pilot-20261025/model-cache"
+}
