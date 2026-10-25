@@ -1,0 +1,15 @@
+{
+  "local_focused_passed": 88,
+  "local_integration_skipped": 8,
+  "ci_passed": 96,
+  "independent_raw_audit": "passed",
+  "protected_files_checked": 11,
+  "protected_files_unchanged": true,
+  "actual_predictions": 644,
+  "forecast_csv_rows": 2576,
+  "no_exclusions": true,
+  "prospective_evaluation_completed": false,
+  "production_database_modified": false,
+  "free_disk_gib_before": 73.6,
+  "free_disk_gib_after": 72.77
+}

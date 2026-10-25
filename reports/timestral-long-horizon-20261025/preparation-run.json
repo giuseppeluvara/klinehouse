@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/usr/bin/time",
+    "-l",
+    "/Users/dev-luv/Sites/klinehouse/.venv-timestral/bin/python",
+    "scripts/prepare_timestral_data.py",
+    "--output",
+    "research/out/timestral-long-horizon-20261025",
+    "--symbol",
+    "BTCUSDT",
+    "--start",
+    "2026-04-01",
+    "--end",
+    "2026-08-01"
+  ],
+  "started_at": "2026-10-25T17:34:39.676723+00:00",
+  "completed_at": "2026-10-25T17:49:39.928475+00:00",
+  "wall_seconds": 900.2460172909996,
+  "exit_code": 0
+}

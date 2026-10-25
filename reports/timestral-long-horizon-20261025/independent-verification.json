@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "audited_at_utc": "2026-10-25T17:56:08.551317+00:00",
+  "method": "Independent direct DuckDB SQL over physical daily Parquet files; no research reader or experiment imports, no model rerun",
+  "audit_script_path": "/private/tmp/klinehouse-long-independent-audit.py",
+  "audit_script_sha256": "a316383209acb2f9fbed2a9b582c40505e4f23e8be811650dbe9f6400cddb2d9",
+  "protocol_sha256": "15776a78abc0763d1de66455de21e07f89bdb1a056d7cef9773db463cb93241a",
+  "results_sha256": "59263c8e29daf2425e0450712a23ab35f393bb45de177078df50a9d02c3fcd98",
+  "catalog_sha256": "659dc38ab6e75e5714300778347e6ce1288f9c1e0c23d0fe72712c39dfbdef3a",
+  "source_files_sha256_checked": 122,
+  "source_parquet_bytes": 406341945,
+  "raw_rows": 10540800,
+  "complete_unique_utc_hours": 2928,
+  "saved_predictions": 644,
+  "saved_outcomes": 644,
+  "flat_forecasts": 2576,
+  "protocol_and_code_hashes_checked": true,
+  "all_output_hashes_checked": {
+    "calibration-24h.jsonl": "d841e4b3782efe82a2d9255f0332edafa3b768f0e7daeae64137799add2df3fb",
+    "calibration-4h.jsonl": "79e3333566d1a66b380d4db4fe4209d4fe73fe5db9d045a4d1bc6d7a1d9439d4",
+    "forecast-rows.jsonl": "d03ff3b4579b06f3f28d41686a98947b708add8bcacd8137475e676b30d97ca9",
+    "outcomes.jsonl": "a8cb38f09a6aad26ee61415a90c3c0144abc531d0328deac514fcf8d64b815a9",
+    "predictions.jsonl": "4a593f689dca71ad60ec3b159159693d5cba608d7b37bd21e8fddf82af543e26"
+  },
+  "horizons": {
+    "4": {
+      "anchors": 552,
+      "calibration_records": 668,
+      "first_calibration_count": 116,
+      "all_labels_matured": true,
+      "first_anchor": "2026-05-01T00:00:00Z",
+      "last_label_end": "2026-08-01T00:00:00Z",
+      "all_four_models_share_samples": true,
+      "raw_endpoint_checks_passed": true,
+      "causal_baseline_quantiles_recomputed": true,
+      "core_metrics_independently_recomputed": true
+    },
+    "24": {
+      "anchors": 92,
+      "calibration_records": 111,
+      "first_calibration_count": 19,
+      "all_labels_matured": true,
+      "first_anchor": "2026-05-01T00:00:00Z",
+      "last_label_end": "2026-08-01T00:00:00Z",
+      "all_four_models_share_samples": true,
+      "raw_endpoint_checks_passed": true,
+      "causal_baseline_quantiles_recomputed": true,
+      "core_metrics_independently_recomputed": true
+    }
+  },
+  "max_absolute_endpoint_price_difference_usdt": 7.275957614183426e-11,
+  "max_absolute_log_return_difference": 0.0,
+  "seconds": 8.336451208000653,
+  "limits": [
+    "Does not independently rerun Timestral weights.",
+    "Does not imply pretraining contamination is excluded or establish prospective predictive performance."
+  ]
+}

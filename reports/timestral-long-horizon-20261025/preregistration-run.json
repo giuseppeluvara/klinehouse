@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/usr/bin/time",
+    "-l",
+    "/Users/dev-luv/Sites/klinehouse/.venv-timestral/bin/python",
+    "-m",
+    "research.timestral_long_horizon",
+    "preregister",
+    "--config",
+    "configs/timestral_long_horizon.json",
+    "--output",
+    "research/out/timestral-long-horizon-20261025/run"
+  ],
+  "started_at": "2026-10-25T17:50:06.756745+00:00",
+  "completed_at": "2026-10-25T17:52:16.087396+00:00",
+  "wall_seconds": 129.2951117499997,
+  "exit_code": 0
+}

@@ -1,0 +1,23 @@
+{
+  "source": "binance_public_data",
+  "start": "2026-04-01T00:00:00+00:00",
+  "end": "2026-08-01T00:00:00+00:00",
+  "verified_days": 122,
+  "rows": 10540800,
+  "all_complete": true,
+  "all_gaps": 0,
+  "all_zip_checksums_rechecked": true,
+  "parquet_logical_bytes": 406341945,
+  "zip_logical_bytes": 282303670,
+  "source_csv_uncompressed_bytes_not_extracted": 1538255327,
+  "allocated_download_and_archive_bytes": 808116224,
+  "wall_seconds": 900.2460172909996,
+  "download_seconds": 319.63422170700414,
+  "archive_verify_seconds": 500.47183374999713,
+  "peak_rss_bytes": 257048576,
+  "free_before_bytes": 79015362560,
+  "free_after_bytes": 78156312576,
+  "provenance_sha256": "0c61107eaf72d24713cc2f36a58eb6209d5222333116db4bffd5293718689650",
+  "catalog_sha256": "659dc38ab6e75e5714300778347e6ce1288f9c1e0c23d0fe72712c39dfbdef3a",
+  "importer_sha256": "0fed2f34b9ce7a5440d127b37199399abd194768fa647205c81d467c3668c5e0"
+}

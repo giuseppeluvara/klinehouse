@@ -397,6 +397,11 @@ data measurements, saved forecasts, limitations and reproducible commands.
 Historical scores are exploratory; no trading edge or prospective completion
 is claimed.
 
+The [four-hour and daily follow-up](docs/timestral-long-horizon.md) builds hourly
+inputs from 10.5 million verified second candles and evaluates 552 four-hour and
+92 daily anchors. Its [report and complete forecast CSV](reports/timestral-long-horizon-20261025/README.md)
+record the observed errors, uncertainty and resource use.
+
 ## License
 
 [MIT](LICENSE)
