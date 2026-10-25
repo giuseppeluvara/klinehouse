@@ -31,10 +31,12 @@ def raw_hour(path, duplicate=False):
     return start, prices, volume
 
 
-def test_direct_sql_and_arrow_reconstruct_raw_hour(tmp_path):
+@pytest.mark.parametrize("connection_timezone", ["UTC", "Asia/Kolkata"])
+def test_direct_sql_and_arrow_reconstruct_raw_hour(tmp_path, connection_timezone):
     path = tmp_path / "hour.parquet"
     start, prices, _ = raw_hour(path)
     with duckdb.connect() as connection:
+        connection.execute("SET TimeZone = ?", [connection_timezone])
         rows = verifier.direct_hours(connection, path, start, start + timedelta(hours=1))
     assert len(rows) == 1
     assert rows[0]["log_close"] == pytest.approx(np.log(prices[-1]))

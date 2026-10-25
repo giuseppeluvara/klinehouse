@@ -92,12 +92,12 @@ def direct_hours(connection, path, start, end, column_hashes=None):
     """Bound memory to one daily file and validate features through independent SQL."""
     sql = """
         WITH seconds AS (
-          SELECT date_trunc('hour', open_time) AS hour, epoch_us(open_time) AS ts,
+          SELECT epoch_us(open_time) // 3600000000 AS hour_key, epoch_us(open_time) AS ts,
                  epoch_us(close_time) AS closed, symbol, close, volume, trades, taker_buy_base,
-                 lag(close) OVER (PARTITION BY date_trunc('hour', open_time) ORDER BY open_time) AS prior
+                 lag(close) OVER (PARTITION BY epoch_us(open_time) // 3600000000 ORDER BY open_time) AS prior
           FROM read_parquet(?)
         )
-        SELECT hour, count(*), count(DISTINCT ts), min(ts), max(ts),
+        SELECT hour_key, count(*), count(DISTINCT ts), min(ts), max(ts),
                count(*) FILTER (WHERE symbol IS NULL OR symbol != 'BTCUSDT' OR ts % 1000000 != 0
                   OR closed < ts OR closed >= ts + 1000000 OR close <= 0 OR volume < 0
                   OR trades < 0 OR taker_buy_base < 0 OR taker_buy_base > volume + 1e-10
@@ -105,7 +105,7 @@ def direct_hours(connection, path, start, end, column_hashes=None):
                arg_max(close, ts),
                sqrt(sum(CASE WHEN prior IS NULL THEN 0 ELSE pow(ln(close / prior), 2) END)),
                sum(volume), sum(trades), sum(taker_buy_base)
-        FROM seconds GROUP BY hour ORDER BY hour
+        FROM seconds GROUP BY hour_key ORDER BY hour_key
     """
     aggregate = connection.execute(sql, [str(path)]).fetchall()
     with pq.ParquetFile(path) as parquet:
@@ -129,7 +129,7 @@ def direct_hours(connection, path, start, end, column_hashes=None):
     for i, sql_row in enumerate(aggregate):
         opened = start + i * HOUR
         ts = int(opened.timestamp() * 1_000_000)
-        require(sql_row[0] == opened and sql_row[1:6] == (3600, 3600, ts, ts + 3_599_000_000, 0),
+        require(sql_row[0] == ts // 3_600_000_000 and sql_row[1:6] == (3600, 3600, ts, ts + 3_599_000_000, 0),
                 "SQL found incomplete or invalid raw hour")
         close_values, volume, trades, taker = [values[i * 3600:(i + 1) * 3600] for values in arrays[2:]]
         logs = np.log(close_values)
