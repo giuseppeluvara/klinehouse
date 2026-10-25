@@ -49,3 +49,7 @@ research/out/
 
 # Database backups (created by scripts/backup.sh or the backup sidecar)
 backups/
+
+# Verified archive catalogs/locks and query spill files
+archive/
+*.duckdb.tmp/

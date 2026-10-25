@@ -10,3 +10,4 @@ scikit-learn>=1.6
 httpx>=0.27
 torch>=2.7
 certifi>=2023.0   # funding_scanner / carry_book TLS to Binance REST
+duckdb>=1.3,<3  # query the cold Parquet archive without importing it

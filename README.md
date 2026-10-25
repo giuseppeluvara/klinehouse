@@ -214,20 +214,23 @@ Prices are stored as `DOUBLE PRECISION` (64-bit float) for analytics performance
 TimescaleDB compression. If exact decimal precision is required (e.g. for settlement calculations),
 change every price column in `db/init.sql` to `NUMERIC(20,8)` and reset the volume.
 
-### Parquet export
+### Lightweight 1-second archive
 
-Export a date range to Parquet for cold archival or offline analysis:
+Keep the live collector and recent Timescale data, archive closed UTC days as
+verified Zstandard Parquet, and query history directly with DuckDB. Export and
+query paths process bounded batches; the archive retains every original column,
+including taker-buy volumes. Nothing deletes database rows by default.
 
 ```bash
-pip install pyarrow
-python scripts/export_parquet.py \
-  --symbol BTCUSDT \
-  --start  2024-01-01 \
-  --end    2024-02-01 \
-  --out    exports/
+pip install -r requirements-storage.txt
+python scripts/archive_market.py --root archive sync
+python scripts/archive_market.py --root archive verify
 ```
 
-The output file can be read with pandas, DuckDB, Spark, or any Parquet-compatible tool.
+See **[docs/storage.md](docs/storage.md)** for streaming queries, the optional
+archive worker, monthly compaction and backed-up, verified chunk pruning.
+The existing `scripts/export_parquet.py --symbol ... --start ... --end ... --out ...`
+command remains available, now writing the same verified day-partitioned archive.
 
 ---
 

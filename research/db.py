@@ -75,14 +75,29 @@ def load_klines(
     start: str | None = None,
     end: str | None = None,
     conn=None,
+    *,
+    columns: list[str] | None = None,
+    max_rows: int = 1_000_000,
 ) -> pd.DataFrame:
-    """Load raw 1-candle rows for ``symbol`` into a DataFrame, ordered by time.
+    """Load bounded raw candles, optionally routing through ARCHIVE_ROOT.
 
     ``start`` / ``end`` are optional ISO timestamps (inclusive lower / exclusive
     upper bound on ``open_time``).
     """
+    if max_rows <= 0:
+        raise ValueError("max_rows must be positive")
+    selected = KLINE_COLUMNS if columns is None else columns
+    if not selected or len(set(selected)) != len(selected) or any(c not in KLINE_COLUMNS for c in selected):
+        raise ValueError("invalid or duplicate columns")
+    env = {**_load_dotenv(), **os.environ}
+    if env.get("ARCHIVE_ROOT"):
+        if start is None or end is None:
+            raise ValueError("archive reads require explicit start/end; use iter_market for large ranges")
+        from .market import load_market
+        return load_market(symbol, start, end, columns=selected,
+                           archive_root=env["ARCHIVE_ROOT"], conn=conn, max_rows=max_rows)
     own = conn is None
-    conn = conn or connect()
+    conn = conn or connect(read_only=True)
     try:
         clauses = ["symbol = %s"]
         params: list = [symbol]
@@ -94,14 +109,16 @@ def load_klines(
             params.append(end)
         where = " AND ".join(clauses)
         sql = (
-            f"SELECT {', '.join(KLINE_COLUMNS)} FROM klines "
-            f"WHERE {where} ORDER BY open_time"
+            f"SELECT {', '.join(selected)} FROM klines "
+            f"WHERE {where} ORDER BY open_time LIMIT %s"
         )
         with warnings.catch_warnings():
             # pandas warns about non-SQLAlchemy DBAPI connections; psycopg2 works fine.
             warnings.simplefilter("ignore", UserWarning)
-            df = pd.read_sql(sql, conn, params=params,
-                             parse_dates=["open_time", "close_time"])
+            df = pd.read_sql(sql, conn, params=[*params, max_rows + 1],
+                             parse_dates=[c for c in ("open_time", "close_time") if c in selected])
+            if len(df) > max_rows:
+                raise MemoryError("raw result exceeds max_rows; use iter_market, aggregate or narrow the range")
     finally:
         if own:
             conn.close()
