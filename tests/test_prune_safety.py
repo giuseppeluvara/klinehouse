@@ -3,6 +3,7 @@ from datetime import timedelta
 import os
 import shutil
 
+import duckdb
 import pytest
 
 from research import archive
@@ -143,3 +144,71 @@ def test_dry_run_compares_all_symbols_and_current_values(tmp_path, monkeypatch):
     database.stale = True
     with pytest.raises(ValueError, match='differs from current DB'):
         prune_archive.prune(root, backup)
+
+
+@pytest.mark.parametrize('unsafe_view', [None, 'klines_1m', 'klines_1h'])
+def test_policy_discovery_resolves_public_views_and_materialization_dependencies(unsafe_view):
+    # Execute the discovery SQL against information-schema-shaped tables. A
+    # canned cursor response cannot catch a join against the wrong relation.
+    with duckdb.connect() as engine:
+        engine.execute('CREATE SCHEMA timescaledb_information')
+        engine.execute(
+            'CREATE TABLE timescaledb_information.continuous_aggregates ('
+            'hypertable_schema TEXT, hypertable_name TEXT, '
+            'materialization_hypertable_schema TEXT, materialization_hypertable_name TEXT, '
+            'view_schema TEXT, view_name TEXT)'
+        )
+        engine.execute(
+            "INSERT INTO timescaledb_information.continuous_aggregates VALUES "
+            "('public','klines','_timescaledb_internal','_mat_1','public','klines_1m'),"
+            "('_timescaledb_internal','_mat_1','_timescaledb_internal','_mat_2','public','klines_1h'),"
+            "('public','unrelated','_timescaledb_internal','_mat_3','public','unrelated_1m')"
+        )
+        engine.execute(
+            'CREATE TABLE timescaledb_information.jobs ('
+            'job_id INTEGER, proc_name TEXT, scheduled BOOLEAN, '
+            'config STRUCT(start_offset VARCHAR, end_offset VARCHAR), '
+            'hypertable_schema TEXT, hypertable_name TEXT)'
+        )
+        engine.execute(
+            "INSERT INTO timescaledb_information.jobs VALUES "
+            "(1,'policy_retention',false,NULL,'public','klines'),"
+            "(4,'policy_compression',true,NULL,'_timescaledb_internal','_mat_1'),"
+            "(5,'policy_retention',true,NULL,'public','unrelated_1m')"
+        )
+        for job_id, view in [(2, 'klines_1m'), (3, 'klines_1h')]:
+            engine.execute(
+                "INSERT INTO timescaledb_information.jobs VALUES "
+                "(?,'policy_refresh_continuous_aggregate',true,?,'public',?)",
+                [job_id, {'start_offset': '8 days' if view == unsafe_view else '3 days',
+                          'end_offset': '1 minute'}, view],
+            )
+
+        class Cursor:
+            def __enter__(self):
+                self.cursor = engine.cursor()
+                return self
+
+            def __exit__(self, *_):
+                self.cursor.close()
+
+            def execute(self, sql, parameters=None):
+                # Only adapt DB-API placeholders and the equivalent zero literal.
+                sql = sql.replace('%s', '?').replace("interval '0'", "interval '0 seconds'")
+                self.cursor.execute(sql, parameters or [])
+
+            def fetchall(self):
+                return self.cursor.fetchall()
+
+            def fetchone(self):
+                return self.cursor.fetchone()
+
+        class Connection:
+            cursor = Cursor
+
+        if unsafe_view:
+            with pytest.raises(ValueError, match='reaches the pruning window'):
+                prune_archive.check_policies(Connection(), 7)
+        else:
+            policies = prune_archive.check_policies(Connection(), 7)
+            assert {row[0] for row in policies} == {1, 2, 3, 4}

@@ -31,9 +31,17 @@ def check_policies(conn, hot_days):
             " c.materialization_hypertable_name::text COLLATE \"C\" "
             " FROM timescaledb_information.continuous_aggregates c "
             " JOIN related r ON c.hypertable_schema = r.schema_name "
-            " AND c.hypertable_name = r.table_name) "
+            " AND c.hypertable_name = r.table_name), "
+            # jobs exposes the public aggregate view name, while dependency
+            # traversal above follows its internal materialization hypertable.
+            "policy_targets(schema_name, table_name) AS ("
+            " SELECT schema_name, table_name FROM related UNION "
+            " SELECT c.view_schema::text COLLATE \"C\", c.view_name::text COLLATE \"C\" "
+            " FROM timescaledb_information.continuous_aggregates c JOIN related r "
+            " ON c.materialization_hypertable_schema = r.schema_name "
+            " AND c.materialization_hypertable_name = r.table_name) "
             "SELECT j.job_id, j.proc_name, j.scheduled, j.config "
-            "FROM timescaledb_information.jobs j JOIN related r "
+            "FROM timescaledb_information.jobs j JOIN policy_targets r "
             "ON j.hypertable_schema = r.schema_name AND j.hypertable_name = r.table_name"
         )
         policies = cur.fetchall()
