@@ -1,0 +1,13 @@
+{
+  "verification": "complete source streamed through minute_features after enabling ordered Arrow output",
+  "reader_code_sha256": "12694da73a75a28ef4c3351248f72cc3a6a146a119700e260134a4bd877c1ecd",
+  "minutes_strictly_ordered": true,
+  "minutes": 10080,
+  "last": "2026-07-07T23:59:00+00:00",
+  "seconds": 11.286728166999637,
+  "raw_rows": 604800,
+  "valid_minutes": 10080,
+  "invalid_minutes": 0,
+  "source_rows_sha256": "b2c19f42f35f8fa16a99faa2964812a81a198a2494a893a4d2e007115f1d8759",
+  "minute_features_sha256": "40acbf60a7ef0a65dca9b90bd019953bfc92795677d0ae1f4da2250534b13130"
+}

@@ -1,0 +1,9 @@
+{
+  "verified_rows": 604800,
+  "manifest_and_catalog_unchanged": true,
+  "verification_seconds": 7.4341415830003825,
+  "sha256": {
+    "provenance.json": "3a246a7bfeb29a314700cf7d4588bf117c1a8d18d1e6e3c84711846947179f7f",
+    "archive/catalog.json": "0a3471d34a3a9b05438f215b8d261e655242837479c1383dc8df689af6c86951"
+  }
+}

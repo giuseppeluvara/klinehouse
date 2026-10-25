@@ -1,0 +1,153 @@
+{
+  "archive_catalog_sha256": "0a3471d34a3a9b05438f215b8d261e655242837479c1383dc8df689af6c86951",
+  "archive_total_bytes": 22871811,
+  "archive_total_files": 7,
+  "dependencies": {
+    "duckdb": "1.5.0",
+    "numpy": "2.4.2",
+    "pandas": "2.3.3",
+    "pyarrow": "23.0.1"
+  },
+  "measurement": "Fresh process per sample; elapsed query only, peak RSS includes interpreter/libraries. Operating-system page cache is not cleared; repeats do not prove cold/warm cache performance.",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.5 (v3.13.5:6cb20a219a8, Jun 11 2025, 12:23:45) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "row_consumption": "Arrow batches counted and discarded; no complete DataFrame retained",
+  "samples": [
+    {
+      "archive_root": "/Users/dev-luv/Sites/klinehouse/research/out/timestral-pilot-20261025/archive",
+      "batch_size": 8192,
+      "batches": 11,
+      "columns": null,
+      "elapsed_seconds": 0.5817459579998285,
+      "end": "2026-07-02T00:00:00+00:00",
+      "max_arrow_batch_bytes": 790528,
+      "max_batch_rows": 8192,
+      "name": "one_day_raw_all_columns",
+      "peak_rss_bytes": 230195200,
+      "repeat": 1,
+      "rows": 86400,
+      "start": "2026-07-01T00:00:00+00:00",
+      "strict_timestamp_order_verified": true,
+      "symbol": "BTCUSDT",
+      "timeframe": "1s"
+    },
+    {
+      "archive_root": "/Users/dev-luv/Sites/klinehouse/research/out/timestral-pilot-20261025/archive",
+      "batch_size": 8192,
+      "batches": 11,
+      "columns": null,
+      "elapsed_seconds": 0.5783349580001413,
+      "end": "2026-07-02T00:00:00+00:00",
+      "max_arrow_batch_bytes": 790528,
+      "max_batch_rows": 8192,
+      "name": "one_day_raw_all_columns",
+      "peak_rss_bytes": 230490112,
+      "repeat": 2,
+      "rows": 86400,
+      "start": "2026-07-01T00:00:00+00:00",
+      "strict_timestamp_order_verified": true,
+      "symbol": "BTCUSDT",
+      "timeframe": "1s"
+    },
+    {
+      "archive_root": "/Users/dev-luv/Sites/klinehouse/research/out/timestral-pilot-20261025/archive",
+      "batch_size": 8192,
+      "batches": 74,
+      "columns": [
+        "open_time",
+        "close"
+      ],
+      "elapsed_seconds": 0.8491862500000025,
+      "end": "2026-07-08T00:00:00+00:00",
+      "max_arrow_batch_bytes": 133120,
+      "max_batch_rows": 8192,
+      "name": "full_period_raw_two_columns",
+      "peak_rss_bytes": 328761344,
+      "repeat": 1,
+      "rows": 604800,
+      "start": "2026-07-01T00:00:00+00:00",
+      "strict_timestamp_order_verified": true,
+      "symbol": "BTCUSDT",
+      "timeframe": "1s"
+    },
+    {
+      "archive_root": "/Users/dev-luv/Sites/klinehouse/research/out/timestral-pilot-20261025/archive",
+      "batch_size": 8192,
+      "batches": 74,
+      "columns": [
+        "open_time",
+        "close"
+      ],
+      "elapsed_seconds": 0.8544790420000936,
+      "end": "2026-07-08T00:00:00+00:00",
+      "max_arrow_batch_bytes": 133120,
+      "max_batch_rows": 8192,
+      "name": "full_period_raw_two_columns",
+      "peak_rss_bytes": 334233600,
+      "repeat": 2,
+      "rows": 604800,
+      "start": "2026-07-01T00:00:00+00:00",
+      "strict_timestamp_order_verified": true,
+      "symbol": "BTCUSDT",
+      "timeframe": "1s"
+    },
+    {
+      "archive_root": "/Users/dev-luv/Sites/klinehouse/research/out/timestral-pilot-20261025/archive",
+      "batch_size": 8192,
+      "batches": 2,
+      "columns": [
+        "open_time",
+        "close",
+        "volume",
+        "trades",
+        "taker_buy_base",
+        "taker_buy_quote"
+      ],
+      "elapsed_seconds": 0.3143568340001366,
+      "end": "2026-07-08T00:00:00+00:00",
+      "max_arrow_batch_bytes": 464896,
+      "max_batch_rows": 8192,
+      "name": "full_period_minute_six_columns",
+      "peak_rss_bytes": 288129024,
+      "repeat": 1,
+      "rows": 10080,
+      "start": "2026-07-01T00:00:00+00:00",
+      "strict_timestamp_order_verified": true,
+      "symbol": "BTCUSDT",
+      "timeframe": "1m"
+    },
+    {
+      "archive_root": "/Users/dev-luv/Sites/klinehouse/research/out/timestral-pilot-20261025/archive",
+      "batch_size": 8192,
+      "batches": 2,
+      "columns": [
+        "open_time",
+        "close",
+        "volume",
+        "trades",
+        "taker_buy_base",
+        "taker_buy_quote"
+      ],
+      "elapsed_seconds": 0.31679504200019437,
+      "end": "2026-07-08T00:00:00+00:00",
+      "max_arrow_batch_bytes": 464896,
+      "max_batch_rows": 8192,
+      "name": "full_period_minute_six_columns",
+      "peak_rss_bytes": 289374208,
+      "repeat": 2,
+      "rows": 10080,
+      "start": "2026-07-01T00:00:00+00:00",
+      "strict_timestamp_order_verified": true,
+      "symbol": "BTCUSDT",
+      "timeframe": "1m"
+    }
+  ],
+  "source": "archive",
+  "source_code_sha256": {
+    "research/archive.py": "6f775d9a1c76a1dcf49ae48f81ba552f58fccaddfd0457e613f26f6f458cb9c4",
+    "research/market.py": "12694da73a75a28ef4c3351248f72cc3a6a146a119700e260134a4bd877c1ecd",
+    "scripts/benchmark_market.py": "523137885ff896bf9b753635f87a6e352d7c47e8be0c80dc21911fab6d2e1571"
+  },
+  "synthetic": false,
+  "version": 1
+}

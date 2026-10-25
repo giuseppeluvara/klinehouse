@@ -1,0 +1,25 @@
+{"day": "2026-07-01T00:00:00+00:00", "rows": 86400, "complete": true}
+{"day": "2026-07-02T00:00:00+00:00", "rows": 86400, "complete": true}
+{"day": "2026-07-03T00:00:00+00:00", "rows": 86400, "complete": true}
+{"day": "2026-07-04T00:00:00+00:00", "rows": 86400, "complete": true}
+{"day": "2026-07-05T00:00:00+00:00", "rows": 86400, "complete": true}
+{"day": "2026-07-06T00:00:00+00:00", "rows": 86400, "complete": true}
+{"day": "2026-07-07T00:00:00+00:00", "rows": 86400, "complete": true}
+       52.03 real        29.18 user         0.36 sys
+           214892544  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               26186  page reclaims
+                   0  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                  34  messages sent
+                3369  messages received
+                   0  signals received
+                  47  voluntary context switches
+                7370  involuntary context switches
+        339493719821  instructions retired
+         61709602352  cycles elapsed
+           169394944  peak memory footprint

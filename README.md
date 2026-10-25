@@ -388,6 +388,15 @@ docker compose start collector
 
 ---
 
+## Reproducible Timestral pilot
+
+The separate [Timestral experiment](docs/timestral.md) compares zero-shot price
+and past-covariate forecasts against simple baselines. The
+[2026-10-25 report](reports/timestral-20261025/README.md) includes real Binance
+data measurements, saved forecasts, limitations and reproducible commands.
+Historical scores are exploratory; no trading edge or prospective completion
+is claimed.
+
 ## License
 
 [MIT](LICENSE)

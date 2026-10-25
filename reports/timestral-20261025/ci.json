@@ -1,0 +1,37 @@
+{
+  "code_commit": "483176eb711deef60af3eb90501e7ac0d75333db",
+  "workflow_url": "https://github.com/giuseppeluvara/klinehouse/actions/runs/40216471884",
+  "workflow_run_id": 40216471884,
+  "status": "completed",
+  "conclusion": "success",
+  "completed_jobs": [
+    {
+      "name": "Archive & Timescale integration",
+      "id": 121238574425,
+      "conclusion": "success"
+    },
+    {
+      "name": "Lint & import check",
+      "id": 121238574749,
+      "conclusion": "success"
+    }
+  ],
+  "integration": {
+    "passed": 75,
+    "skipped": 0,
+    "seconds": 58.05,
+    "timescaledb_image": "timescale/timescaledb:latest-pg16",
+    "image_digest": "sha256:322ae364eca3321cf2a48f1ef31213b87843413b3cf8feeebf54e999a26bb731"
+  },
+  "scope": "Tests run against isolated GitHub Actions TimescaleDB, not the user production database.",
+  "previous_failures_corrected": [
+    {
+      "run_id": 40215972117,
+      "cause": "PostgreSQL recursive CTE collation mismatch"
+    },
+    {
+      "run_id": 40216098132,
+      "cause": "Continuous aggregate jobs expose public view names"
+    }
+  ]
+}

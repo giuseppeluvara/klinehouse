@@ -1,0 +1,9 @@
+{
+  "status": "aborted_before_first_forecast",
+  "stage": "source_reader",
+  "error": "ValueError: source timestamps must be strictly increasing",
+  "predictions": 0,
+  "outcomes": 0,
+  "resolution": "Correct DuckDB Arrow stream ordering; preregister identical modeling protocol in a new directory.",
+  "recorded_at": "2026-10-25T17:18:24.293577+00:00"
+}

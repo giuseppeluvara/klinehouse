@@ -1,0 +1,12 @@
+{
+  "status": "verified_independent_copy",
+  "source": "research/out/timestral-pilot-20261025/archive",
+  "destination": "research/out/timestral-pilot-20261025/archive-backup",
+  "files": 7,
+  "rows": 604800,
+  "bytes": 22871811,
+  "same_device": true,
+  "protects_against_device_loss": false,
+  "production_database_backup": false,
+  "production_prune_executed": false
+}

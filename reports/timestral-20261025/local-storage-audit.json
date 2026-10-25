@@ -1,0 +1,14 @@
+{
+  "observed_at": "2026-10-25T17:16:05.898079+00:00",
+  "platform": "Darwin",
+  "machine": "arm64",
+  "free_disk_bytes": 79058898944,
+  "docker_cli_available": false,
+  "archive_present": false,
+  "database": {
+    "reachable": false,
+    "audit_complete": false,
+    "error_type": "OperationalError",
+    "sqlstate": null
+  }
+}

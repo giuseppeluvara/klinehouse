@@ -1,0 +1,16 @@
+{
+  "local_focused": {
+    "passed": 67,
+    "skipped_requires_timescaledb": 8
+  },
+  "legacy": {
+    "passed": 34,
+    "failed_missing_original_artifacts": [
+      "research/out/sequence/bundle/freeze.json",
+      "research/out/sequence/dataset/x.npy"
+    ]
+  },
+  "lint": "passed",
+  "protected_user_files_unchanged": true,
+  "production_database_available": false
+}
