@@ -1,0 +1,45 @@
+Traceback (most recent call last):
+  File "/Users/dev-luv/Sites/klinehouse/scripts/run_timestral_repair.py", line 202, in <module>
+    main()
+    ~~~~^^
+  File "/Users/dev-luv/Sites/klinehouse/scripts/run_timestral_repair.py", line 197, in main
+    result = register(args.root) if args.phase == "register" else run(args.root)
+                                                                  ~~~^^^^^^^^^^^
+  File "/Users/dev-luv/Sites/klinehouse/scripts/run_timestral_repair.py", line 188, in run
+    shared.exclusive_json(output / "analysis.json", analysis)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev-luv/Sites/klinehouse/research/timestral_experiment.py", line 66, in exclusive_json
+    handle.write(canonical(value) + b"\n")
+                 ~~~~~~~~~^^^^^^^
+  File "/Users/dev-luv/Sites/klinehouse/research/timestral_experiment.py", line 52, in canonical
+    return json.dumps(value, sort_keys=True, separators=(",", ":"), allow_nan=False).encode()
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type bool is not JSON serializable
+       56.63 real        50.70 user         2.43 sys
+           307134464  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               38103  page reclaims
+                 775  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                6056  voluntary context switches
+              418572  involuntary context switches
+        394023801338  instructions retired
+        107599229197  cycles elapsed
+           225805152  peak memory footprint

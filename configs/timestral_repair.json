@@ -1,0 +1,17 @@
+{
+  "status": "diagnostic replay on already observed historical data; not an independent test",
+  "source": "reuse verified public BTCUSDT seconds September 2025 through July 2026; no downloads",
+  "fit_context": "October-December 2025",
+  "evaluation": "January-July 2026, previously observed market history",
+  "hypothesis": "Forecast rolling horizon log returns directly instead of log-price levels; both receive exactly the same 256 past hourly closes. Returns have 256-horizon values, left-padded by the official API. Same pinned Timestral-5M.",
+  "point_candidates": [
+    "unchanged",
+    "timestral_price",
+    "timestral_returns"
+  ],
+  "selection": "each month only prior three completed months; unchanged is mandatory fallback; minimum 60 daily or 360 four-hour samples, 2/3 monthly MAE wins, RMSE no worse, paired weekly bootstrap upper 98.75 percent interval below zero; choose lowest MAE among admissible models",
+  "uncertainty": "2000 draws seed17; 98.75 percent two-sided intervals adjust four candidate/horizon comparisons at each decision, not repeated decisions over time",
+  "interval_repair": "90 percent symmetric conformal radius from last90 days of matured absolute residuals divided by contemporaneous trailing24h realized volatility times sqrt(h/24); finite-sample ceil((n+1)*.90) order statistic; minimum60daily or360four-hour observations; no exchangeability claim",
+  "preservation": "no changes to prior frozen modules, data, outputs or protected August2026-February2027 period",
+  "new_data_or_claim": "none; prospective validation remains pending"
+}

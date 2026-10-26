@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "predictions_audited": 2128,
+  "evaluation_rows": 1484,
+  "monthly_bootstraps_recomputed": 14,
+  "prior_price_forecasts_compared": 1274,
+  "maximum_prior_price_difference": 0.0,
+  "analysis_sha256": "5a5fe7b5eef9ebfef41e1fa9f160fc3be179f7cf073d20dd9626cc2c7089a070",
+  "auditor_sha256": "22c593073f44c0df258335e3727a29e4d2681076f8728c72b5fc398c32317834",
+  "limits": "Does not rerun Timestral or establish prospective validity. Hours are the previously verified cache; raw provenance is retained separately."
+}

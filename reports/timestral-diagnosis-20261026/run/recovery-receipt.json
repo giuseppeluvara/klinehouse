@@ -1,0 +1,10 @@
+{
+  "failure": "All 2128 forecasts and 1484 evaluation rows completed; final JSON failed because a numpy.bool selection flag was not JSON-serializable. Empty analysis.json preserved.",
+  "recovery": "Convert the monthly-win flag to a Python bool, then recompute analysis from saved predictions/outcomes without rerunning inference or changing forecasts, parameters, sample selection or targets.",
+  "saved_output_sha256": {
+    "forecasts.csv": "602dce25f8064f130ab329635993cfe6edc777c16c1b42ea3cc6237d4526733d",
+    "predictions.jsonl": "e9a1ae168ddbe784fbbdc1914608f69775b8a1061c92e804074aa116ee8aa781",
+    "outcomes.jsonl": "bd4bc65c5eae8043559a4cc9a6c26f78a0840e6997fecedbbbfeca3fc49e21ea",
+    "evaluation.jsonl": "12906da85031fbf08b8bc24cc5f85693ac6969dcd086f7c11f7b2387a5d46f5a"
+  }
+}

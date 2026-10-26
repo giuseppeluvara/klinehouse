@@ -409,6 +409,12 @@ compare the selected rule with unchanged price using a predeclared evidence gate
 The historical design was informed by the later May–July scores; it is not a
 prospective validation.
 
+The [diagnosis and repair](docs/timestral-repair.md) adds baseline-aware monthly
+selection, causal volatility-scaled intervals and a direct horizon-return
+hypothesis. Its [executed diagnostic report](reports/timestral-diagnosis-20261026/README.md)
+preserves the negative point-forecast result and reports interval improvements
+on previously observed history; prospective validation remains pending.
+
 ## License
 
 [MIT](LICENSE)
