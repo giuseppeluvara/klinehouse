@@ -1,0 +1,9 @@
+{
+  "resumed_at": "2026-10-26T14:51:00.594085+00:00",
+  "previous_acquisition_exit_code": 0,
+  "previous_acquisition_session_missing": true,
+  "no_acquisition_process_live": true,
+  "test_run_absent": true,
+  "opening_receipt_absent": true,
+  "action": "Continue with the first holdout execution after completed acquisition; no parameters or frozen code changed."
+}

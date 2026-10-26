@@ -1,0 +1,3566 @@
+{
+  "batch_size": 8192,
+  "complete": true,
+  "documentation": "https://github.com/binance/binance-public-data",
+  "elapsed_seconds": 811.1400491659997,
+  "end": "2026-01-01T00:00:00+00:00",
+  "files": [
+    {
+      "archive_entry": {
+        "bytes": 3609392,
+        "complete": true,
+        "end": "2025-09-02T00:00:00+00:00",
+        "first": "2025-09-01T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-01T23:59:59+00:00",
+        "logical_sha256": "fc965c6a402c4aa26eaea488f9f28dead182ff147036398b2c24eb31d005024c",
+        "path": "binance_spot/BTCUSDT/2025-09/20250901T000000-20250902T000000-bcec0386297f4f479b710a8f07c1bac6.parquet",
+        "rows": 86400,
+        "sha256": "46da45bf6b522470d7173f4ad3480b88764efb02e3cbf5f5d151ed66ebf623dc",
+        "start": "2025-09-01T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.371749208000438,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-01.zip.CHECKSUM",
+      "day": "2025-09-01T00:00:00+00:00",
+      "download_bytes": 2590013,
+      "download_seconds": 2.8693931669995436,
+      "filename": "BTCUSDT-1s-2025-09-01.zip",
+      "sha256": "7ea281970244deee6a02350236e76b735ba1a24346e99e1b28581ebef6d420e5",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-01.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3544103,
+        "complete": true,
+        "end": "2025-09-03T00:00:00+00:00",
+        "first": "2025-09-02T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-02T23:59:59+00:00",
+        "logical_sha256": "5fe65c77e6c151ea6ebd001309fd0fd62f3c92a1c0c53ac51fed069007406232",
+        "path": "binance_spot/BTCUSDT/2025-09/20250902T000000-20250903T000000-643b66124ffc440abcf15ba364f304b9.parquet",
+        "rows": 86400,
+        "sha256": "2be18a984dc8847c2f122e984241e6e14b5d41958041d3e11ac2ffc975b9b722",
+        "start": "2025-09-02T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.051305416999639,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-02.zip.CHECKSUM",
+      "day": "2025-09-02T00:00:00+00:00",
+      "download_bytes": 2521130,
+      "download_seconds": 3.0697866660002546,
+      "filename": "BTCUSDT-1s-2025-09-02.zip",
+      "sha256": "570f8844a97f3ce0b046fd51db0a4873960482acb6748466de1214c6571ac84c",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-02.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3297143,
+        "complete": true,
+        "end": "2025-09-04T00:00:00+00:00",
+        "first": "2025-09-03T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-03T23:59:59+00:00",
+        "logical_sha256": "1da08befd883d2de7b96802d56d97d9b2c8a6a8d9b1f5a41b856a353ac75bde5",
+        "path": "binance_spot/BTCUSDT/2025-09/20250903T000000-20250904T000000-69b31db74e084c26989607ac7913d912.parquet",
+        "rows": 86400,
+        "sha256": "416364bca0f056419232e90e8df5f632383fb1be65507c516469b0dfd8856b15",
+        "start": "2025-09-03T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.055302957999629,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-03.zip.CHECKSUM",
+      "day": "2025-09-03T00:00:00+00:00",
+      "download_bytes": 2339680,
+      "download_seconds": 2.806971834000251,
+      "filename": "BTCUSDT-1s-2025-09-03.zip",
+      "sha256": "2e4ec5799b2c7c95ad79fff04d0c0bd500672c3b2f9be23f86fb119a97093dfc",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-03.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3304379,
+        "complete": true,
+        "end": "2025-09-05T00:00:00+00:00",
+        "first": "2025-09-04T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-04T23:59:59+00:00",
+        "logical_sha256": "e4cf98b0cc5a175a17b570d2819aa264cff967fded6139b767fe300f7de8899e",
+        "path": "binance_spot/BTCUSDT/2025-09/20250904T000000-20250905T000000-ffb8285a1dc3431a94c053fbdc0db55d.parquet",
+        "rows": 86400,
+        "sha256": "46799d855f85e2b7ce6696edd21cb9ba4a7fcc33c5823fbed33f233c9dd7c4c4",
+        "start": "2025-09-04T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.492301999999654,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-04.zip.CHECKSUM",
+      "day": "2025-09-04T00:00:00+00:00",
+      "download_bytes": 2330323,
+      "download_seconds": 3.0589872079999623,
+      "filename": "BTCUSDT-1s-2025-09-04.zip",
+      "sha256": "fe5ef1a72cc9ce04c9f005958b40c2c3098f3c0c76798e25f8e16218b5eff477",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-04.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3384288,
+        "complete": true,
+        "end": "2025-09-06T00:00:00+00:00",
+        "first": "2025-09-05T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-05T23:59:59+00:00",
+        "logical_sha256": "7ac119c8eb734bd1eccf91fb41326cf3fb60d61dfd046bde44a30a1b7d6e9f98",
+        "path": "binance_spot/BTCUSDT/2025-09/20250905T000000-20250906T000000-d8fd3946eedc44108834100e027212dd.parquet",
+        "rows": 86400,
+        "sha256": "d4032ec1a717f2fb7336c8a0278b99d44e6e8b427d09cb3fc9064fe122bf293f",
+        "start": "2025-09-05T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.040557917000115,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-05.zip.CHECKSUM",
+      "day": "2025-09-05T00:00:00+00:00",
+      "download_bytes": 2402332,
+      "download_seconds": 2.852835374999813,
+      "filename": "BTCUSDT-1s-2025-09-05.zip",
+      "sha256": "c9cfb62a149f8ea94c3a20fd100edc7b2b85d45f190f3a3359d607d6368de549",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-05.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2686936,
+        "complete": true,
+        "end": "2025-09-07T00:00:00+00:00",
+        "first": "2025-09-06T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-06T23:59:59+00:00",
+        "logical_sha256": "e48ac7c56cd48cc0959256b423fe1ad9738fe932f4abd10cf83a222c29311924",
+        "path": "binance_spot/BTCUSDT/2025-09/20250906T000000-20250907T000000-5e5f7ebe97714a3e8f2065a79ad3947d.parquet",
+        "rows": 86400,
+        "sha256": "ecd9a50b22759cd456c2125a23552b2f2c872664ba506739bf61ffda343c8549",
+        "start": "2025-09-06T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 3.9799745000000257,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-06.zip.CHECKSUM",
+      "day": "2025-09-06T00:00:00+00:00",
+      "download_bytes": 1988323,
+      "download_seconds": 2.773912917000416,
+      "filename": "BTCUSDT-1s-2025-09-06.zip",
+      "sha256": "2472e9bcabd53e47cad276ee650d169842a7ff983068ec8d907c5335b68903b2",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-06.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2732668,
+        "complete": true,
+        "end": "2025-09-08T00:00:00+00:00",
+        "first": "2025-09-07T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-07T23:59:59+00:00",
+        "logical_sha256": "f4d9da5476ded2eb90ce81df14f6bdf7c565ffcb6a03812dfb3fec01bb06c2f6",
+        "path": "binance_spot/BTCUSDT/2025-09/20250907T000000-20250908T000000-659ccd94df554ffeba4daf84cbcdae79.parquet",
+        "rows": 86400,
+        "sha256": "4f16985aa35a2acf9a6a68dbf17323bc25e8a08a56ce576a3a8792cdd24eeb88",
+        "start": "2025-09-07T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 3.9916948330001105,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-07.zip.CHECKSUM",
+      "day": "2025-09-07T00:00:00+00:00",
+      "download_bytes": 2024990,
+      "download_seconds": 2.3678021670002636,
+      "filename": "BTCUSDT-1s-2025-09-07.zip",
+      "sha256": "7734a786b85e108cdde3767de10a07e39b72a6362f57d1021c6a2725c4e744bb",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-07.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3175246,
+        "complete": true,
+        "end": "2025-09-09T00:00:00+00:00",
+        "first": "2025-09-08T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-08T23:59:59+00:00",
+        "logical_sha256": "5a35a74cf8d72e43b1b2ce2375d53424ec0db8bf3adfc1752f9037790c661cb8",
+        "path": "binance_spot/BTCUSDT/2025-09/20250908T000000-20250909T000000-a8945262c87145ecb31973717f773e7a.parquet",
+        "rows": 86400,
+        "sha256": "1ef1997cbe447456b8d30060f853417480f1a84962c8d7b92c3b23482ed6cb42",
+        "start": "2025-09-08T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 3.983971874999952,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-08.zip.CHECKSUM",
+      "day": "2025-09-08T00:00:00+00:00",
+      "download_bytes": 2299576,
+      "download_seconds": 2.4484692080004606,
+      "filename": "BTCUSDT-1s-2025-09-08.zip",
+      "sha256": "ed63a4d0ec733f532b072b268b4ce94d83888df76a6cf9e7dd21f1c758dcac4d",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-08.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3350272,
+        "complete": true,
+        "end": "2025-09-10T00:00:00+00:00",
+        "first": "2025-09-09T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-09T23:59:59+00:00",
+        "logical_sha256": "9df25d86d8130d74bdead92e9c068fdfef0c33c2cf9ea20dfa3861223ccb3138",
+        "path": "binance_spot/BTCUSDT/2025-09/20250909T000000-20250910T000000-8b76feb85dc444cea1fdae1752b8ab0a.parquet",
+        "rows": 86400,
+        "sha256": "6e7c72ed729cbbcc1bdc471c6a4b55083a3483a563b80646cb959af4614c3481",
+        "start": "2025-09-09T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.019575250000344,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-09.zip.CHECKSUM",
+      "day": "2025-09-09T00:00:00+00:00",
+      "download_bytes": 2424850,
+      "download_seconds": 2.825130540999453,
+      "filename": "BTCUSDT-1s-2025-09-09.zip",
+      "sha256": "fd46c58ad76284e05dbe21c6cabb064ddf706633f5d8abda9f0e4f405ba0c1bb",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-09.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3285566,
+        "complete": true,
+        "end": "2025-09-11T00:00:00+00:00",
+        "first": "2025-09-10T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-10T23:59:59+00:00",
+        "logical_sha256": "cb90a200cd8534f3e696e973115c25820c1d1d386a7b7c241b0143031763ca6f",
+        "path": "binance_spot/BTCUSDT/2025-09/20250910T000000-20250911T000000-983b63842e27424481dcab6bb8e12d5f.parquet",
+        "rows": 86400,
+        "sha256": "86117d01cb71423a2bd7a609f3246151a00315d2be5051cab52d1f347d25158e",
+        "start": "2025-09-10T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.043823582999721,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-10.zip.CHECKSUM",
+      "day": "2025-09-10T00:00:00+00:00",
+      "download_bytes": 2408227,
+      "download_seconds": 2.359330334000333,
+      "filename": "BTCUSDT-1s-2025-09-10.zip",
+      "sha256": "713dc1b623b881c575bc0f2dbf434216bc34fdea673daeb08ef84672e604ce41",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-10.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3245066,
+        "complete": true,
+        "end": "2025-09-12T00:00:00+00:00",
+        "first": "2025-09-11T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-11T23:59:59+00:00",
+        "logical_sha256": "2d27b79dfa29c1156ffec450033b09f6ac2ea26e5890a8aa6188f7f9d9a4b8f2",
+        "path": "binance_spot/BTCUSDT/2025-09/20250911T000000-20250912T000000-3a661170c5c7406a8dddb4d99899fb48.parquet",
+        "rows": 86400,
+        "sha256": "339925dcafc0889411860ae156e9c8e9e7e5982d6817172c0a917ea6030af53b",
+        "start": "2025-09-11T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 3.9912122080004337,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-11.zip.CHECKSUM",
+      "day": "2025-09-11T00:00:00+00:00",
+      "download_bytes": 2408207,
+      "download_seconds": 2.830640749999475,
+      "filename": "BTCUSDT-1s-2025-09-11.zip",
+      "sha256": "834e86538167de4c44dd873f1284f219f5ffc40b1fbe15ecc031336fd0dd8c86",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-11.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3338471,
+        "complete": true,
+        "end": "2025-09-13T00:00:00+00:00",
+        "first": "2025-09-12T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-12T23:59:59+00:00",
+        "logical_sha256": "cb944877391bebc171a4a6183cd5b7a9815dee25a416eaf75858bb06423ddc94",
+        "path": "binance_spot/BTCUSDT/2025-09/20250912T000000-20250913T000000-c16361c67c8a4c19b11b22b6b689f729.parquet",
+        "rows": 86400,
+        "sha256": "809a6b904b228cbda2067c6a6c0a3333f475ebed52baf6c88b18ea603ba11698",
+        "start": "2025-09-12T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.016789416999927,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-12.zip.CHECKSUM",
+      "day": "2025-09-12T00:00:00+00:00",
+      "download_bytes": 2430354,
+      "download_seconds": 2.7893009999997957,
+      "filename": "BTCUSDT-1s-2025-09-12.zip",
+      "sha256": "ea1c1768956ecf76799af7eecd0ced781b9990cf7c5eddde6b8721d5937f4d5d",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-12.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2921630,
+        "complete": true,
+        "end": "2025-09-14T00:00:00+00:00",
+        "first": "2025-09-13T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-13T23:59:59+00:00",
+        "logical_sha256": "7b5a1101c3ccdf8317fd65a1b7f18e086c57df3f255064d2283b8da8b3a895c6",
+        "path": "binance_spot/BTCUSDT/2025-09/20250913T000000-20250914T000000-ebf123e7ef90405a823bc6e928f3b01d.parquet",
+        "rows": 86400,
+        "sha256": "8d5579aeffe7c977e643d7b1d27858cbaa96c25f98a77d6068ed6678402c9113",
+        "start": "2025-09-13T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.028594374999557,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-13.zip.CHECKSUM",
+      "day": "2025-09-13T00:00:00+00:00",
+      "download_bytes": 2185767,
+      "download_seconds": 1.9641203750006753,
+      "filename": "BTCUSDT-1s-2025-09-13.zip",
+      "sha256": "4002962c6796ebe541eb9dc22ed1936fa6721fb81740ff87b838be4f3b7d8ead",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-13.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2888836,
+        "complete": true,
+        "end": "2025-09-15T00:00:00+00:00",
+        "first": "2025-09-14T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-14T23:59:59+00:00",
+        "logical_sha256": "64a612bb95cf1cab94632b5a8ad245e3ba85394b800b979b5cc7982b8441494b",
+        "path": "binance_spot/BTCUSDT/2025-09/20250914T000000-20250915T000000-d717dfdc405c438d8c8b320b212c566d.parquet",
+        "rows": 86400,
+        "sha256": "e47b975e387573dd817fbb60cf66f030c5375873126d7f04f25079960a30d5f2",
+        "start": "2025-09-14T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 3.989221458999964,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-14.zip.CHECKSUM",
+      "day": "2025-09-14T00:00:00+00:00",
+      "download_bytes": 2132993,
+      "download_seconds": 2.861340040999494,
+      "filename": "BTCUSDT-1s-2025-09-14.zip",
+      "sha256": "6d1e00efb914b03cdd00e9dab1d0d359577d15540f0c6a1905aa0278e553cec1",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-14.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3302235,
+        "complete": true,
+        "end": "2025-09-16T00:00:00+00:00",
+        "first": "2025-09-15T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-15T23:59:59+00:00",
+        "logical_sha256": "4fa6ff2440be5eec7eceb48122322c40dac7e4347d56fed0d4bc2fb6dbcec602",
+        "path": "binance_spot/BTCUSDT/2025-09/20250915T000000-20250916T000000-2cd94b99bf934f4d9d20075988a28cfb.parquet",
+        "rows": 86400,
+        "sha256": "990148e4bce46c2b5230739ec1d8e71ea68ae0c14d52c0949dad31c09a54de5f",
+        "start": "2025-09-15T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.018290250000064,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-15.zip.CHECKSUM",
+      "day": "2025-09-15T00:00:00+00:00",
+      "download_bytes": 2349008,
+      "download_seconds": 0.8974485839999033,
+      "filename": "BTCUSDT-1s-2025-09-15.zip",
+      "sha256": "e566ad01e09117a8f50d773ba3dbca80b63cb9f36ebdaf6ab36ecd9d388c20b8",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-15.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3161253,
+        "complete": true,
+        "end": "2025-09-17T00:00:00+00:00",
+        "first": "2025-09-16T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-16T23:59:59+00:00",
+        "logical_sha256": "4bf54f994a3c3acd97667858c53807c5db9f8c45d018226362c056ca10751eb6",
+        "path": "binance_spot/BTCUSDT/2025-09/20250916T000000-20250917T000000-1707a9e48ee942c7ade4456b27b41f00.parquet",
+        "rows": 86400,
+        "sha256": "4c828482cbf006d3d07f43b7ef607435dd7c58620eb1514d003e3794983ee9d7",
+        "start": "2025-09-16T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0263277089998155,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-16.zip.CHECKSUM",
+      "day": "2025-09-16T00:00:00+00:00",
+      "download_bytes": 2272101,
+      "download_seconds": 2.8690700830002243,
+      "filename": "BTCUSDT-1s-2025-09-16.zip",
+      "sha256": "170514bddc6fa0c4cf678601789579a9d71e95df7c97b634f331b41e1faea278",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-16.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3419721,
+        "complete": true,
+        "end": "2025-09-18T00:00:00+00:00",
+        "first": "2025-09-17T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-17T23:59:59+00:00",
+        "logical_sha256": "10b82dcbe1bf79847ca69b2a30ced6d0a60a860dd51de379884d495b38f7f5ad",
+        "path": "binance_spot/BTCUSDT/2025-09/20250917T000000-20250918T000000-c15e83bb456b4afba6baf1fe928aec7c.parquet",
+        "rows": 86400,
+        "sha256": "d058fc98e11799dedd861b5ea87793aaff8c82a0db22fe9c2043e44cf5c479c3",
+        "start": "2025-09-17T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.018594874999508,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-17.zip.CHECKSUM",
+      "day": "2025-09-17T00:00:00+00:00",
+      "download_bytes": 2452350,
+      "download_seconds": 2.783885625000039,
+      "filename": "BTCUSDT-1s-2025-09-17.zip",
+      "sha256": "2a0b87bf08f3579f9dd5d0afbe12f97693edc0d81e644520108a7b3a738fe546",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-17.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3248480,
+        "complete": true,
+        "end": "2025-09-19T00:00:00+00:00",
+        "first": "2025-09-18T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-18T23:59:59+00:00",
+        "logical_sha256": "534f16870e121b34a868960deb51093d423c991c921a1ef193825bafa4b81d30",
+        "path": "binance_spot/BTCUSDT/2025-09/20250918T000000-20250919T000000-5ca8b2e8c6b04d94bc5e96068cdc02f2.parquet",
+        "rows": 86400,
+        "sha256": "a455cfb2e9bb40dc9a945af30ce230bf9b4017a6bffc034977b1a417a1dc8100",
+        "start": "2025-09-18T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.021279124999637,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-18.zip.CHECKSUM",
+      "day": "2025-09-18T00:00:00+00:00",
+      "download_bytes": 2353962,
+      "download_seconds": 2.801977875000375,
+      "filename": "BTCUSDT-1s-2025-09-18.zip",
+      "sha256": "b4280e866f0b8ec23e7b7384a6969992d69d06adf6113f46d6a28ed3161fbe1a",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-18.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3100357,
+        "complete": true,
+        "end": "2025-09-20T00:00:00+00:00",
+        "first": "2025-09-19T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-19T23:59:59+00:00",
+        "logical_sha256": "a781bea03329833048db439f6f21206d1ee9487b519fd68b43264d3eed58fcf1",
+        "path": "binance_spot/BTCUSDT/2025-09/20250919T000000-20250920T000000-be9c628825f2425c977e33d129e9ab64.parquet",
+        "rows": 86400,
+        "sha256": "d37f9d98e769741d73141179e08426b3dc4daad71e1032d37be24db398358d3d",
+        "start": "2025-09-19T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.004624082999726,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-19.zip.CHECKSUM",
+      "day": "2025-09-19T00:00:00+00:00",
+      "download_bytes": 2256681,
+      "download_seconds": 2.8078138339997167,
+      "filename": "BTCUSDT-1s-2025-09-19.zip",
+      "sha256": "a57544864fe2dd8cb9d549c6d85db0442370907af50ce829000fdae55a8165ab",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-19.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2655115,
+        "complete": true,
+        "end": "2025-09-21T00:00:00+00:00",
+        "first": "2025-09-20T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-20T23:59:59+00:00",
+        "logical_sha256": "10ded2c59815a2f4d345eaf40091459440bd77bbb552b00affa4db67eaa01e72",
+        "path": "binance_spot/BTCUSDT/2025-09/20250920T000000-20250921T000000-51aba73d744f46a59f3ff5ff9c5b67ff.parquet",
+        "rows": 86400,
+        "sha256": "22c5ae846e224b4011ed531efdf485e71e46b0a71fd2d2d51589007b3007ca5f",
+        "start": "2025-09-20T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 3.9977777920003064,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-20.zip.CHECKSUM",
+      "day": "2025-09-20T00:00:00+00:00",
+      "download_bytes": 2012923,
+      "download_seconds": 2.7812112499996147,
+      "filename": "BTCUSDT-1s-2025-09-20.zip",
+      "sha256": "27fa19a58fbc77d67e08b6ad11daa75ccae29bfd3cb437da61d475127e0150db",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-20.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2758287,
+        "complete": true,
+        "end": "2025-09-22T00:00:00+00:00",
+        "first": "2025-09-21T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-21T23:59:59+00:00",
+        "logical_sha256": "dfd368c9004fd45c147068e164242dafe11f0a28063fbf3da9426b9480511c8a",
+        "path": "binance_spot/BTCUSDT/2025-09/20250921T000000-20250922T000000-70921bd19f6347dc9d5bbe15fc77efbf.parquet",
+        "rows": 86400,
+        "sha256": "27f2aa882ebfa184b29a52d5fec7c2b2d00798a54b3c2077ca98bd35701604c3",
+        "start": "2025-09-21T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.015586041000461,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-21.zip.CHECKSUM",
+      "day": "2025-09-21T00:00:00+00:00",
+      "download_bytes": 2059778,
+      "download_seconds": 2.809564249999312,
+      "filename": "BTCUSDT-1s-2025-09-21.zip",
+      "sha256": "8741ada4b63731334c4d69580ce38560066bf7532f1150e7bfd54246243e0bc7",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-21.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3564176,
+        "complete": true,
+        "end": "2025-09-23T00:00:00+00:00",
+        "first": "2025-09-22T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-22T23:59:59+00:00",
+        "logical_sha256": "ff0b82b9a4e2e709fa656e4bdc790a729b95beb6db15356707439a496488d96b",
+        "path": "binance_spot/BTCUSDT/2025-09/20250922T000000-20250923T000000-5c99885e14c841d2927d08b9221d5640.parquet",
+        "rows": 86400,
+        "sha256": "fd1368a21fc4eeaef0c6b6e7cac92198ebbae3950352542f58abc1925b02f9ce",
+        "start": "2025-09-22T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.04210591699939,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-22.zip.CHECKSUM",
+      "day": "2025-09-22T00:00:00+00:00",
+      "download_bytes": 2551157,
+      "download_seconds": 2.8837013330003174,
+      "filename": "BTCUSDT-1s-2025-09-22.zip",
+      "sha256": "5712c292018272c48048c96f5228e360c72de3d591bca9c4f7e22c9ac4993508",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-22.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3329447,
+        "complete": true,
+        "end": "2025-09-24T00:00:00+00:00",
+        "first": "2025-09-23T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-23T23:59:59+00:00",
+        "logical_sha256": "3bea7001758200437bf21f0a319898421f11080b458786077516457163c0ea87",
+        "path": "binance_spot/BTCUSDT/2025-09/20250923T000000-20250924T000000-0bd8b6c701ef4265b1dd8488db5f98bc.parquet",
+        "rows": 86400,
+        "sha256": "5352bc5436aa7ed9199e9e900fe2853c9e07f86a5a1dc45e77e20129a5b26fe8",
+        "start": "2025-09-23T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.02538070799983,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-23.zip.CHECKSUM",
+      "day": "2025-09-23T00:00:00+00:00",
+      "download_bytes": 2370111,
+      "download_seconds": 2.4147957920004046,
+      "filename": "BTCUSDT-1s-2025-09-23.zip",
+      "sha256": "d4f785a55ffa472b36e1bffe3b3185a80cfeb5785eeda6d2445cf7ace18c3ced",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-23.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3146563,
+        "complete": true,
+        "end": "2025-09-25T00:00:00+00:00",
+        "first": "2025-09-24T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-24T23:59:59+00:00",
+        "logical_sha256": "0877694723ece53c77b657c70d67b4cdb40162cb27d9c2ddce1d6afaee997053",
+        "path": "binance_spot/BTCUSDT/2025-09/20250924T000000-20250925T000000-9735f7ecee25419a881c58a4fd507490.parquet",
+        "rows": 86400,
+        "sha256": "b58c58ff29abf83b04ae855482f7ae595ffbb26b5da6c9e546c80cb30f26e6f2",
+        "start": "2025-09-24T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.1060358340000676,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-24.zip.CHECKSUM",
+      "day": "2025-09-24T00:00:00+00:00",
+      "download_bytes": 2253832,
+      "download_seconds": 2.777282125000056,
+      "filename": "BTCUSDT-1s-2025-09-24.zip",
+      "sha256": "626a712000764e06be934f0f021f9966a5636dce3c0d81abfafecb1cd687e7be",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-24.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3665331,
+        "complete": true,
+        "end": "2025-09-26T00:00:00+00:00",
+        "first": "2025-09-25T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-25T23:59:59+00:00",
+        "logical_sha256": "dc2eeadab92bceae85783cd86531dee9fd486bb24236191f09e683b727b1868c",
+        "path": "binance_spot/BTCUSDT/2025-09/20250925T000000-20250926T000000-9622abb65b4c437c8921d43b0874486c.parquet",
+        "rows": 86400,
+        "sha256": "637fcd2d576fe9c929f6cf9ec07566161c9c0e3d378b04cca0d663ef0cbb7f7e",
+        "start": "2025-09-25T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.041136082999401,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-25.zip.CHECKSUM",
+      "day": "2025-09-25T00:00:00+00:00",
+      "download_bytes": 2606356,
+      "download_seconds": 2.4419445419998738,
+      "filename": "BTCUSDT-1s-2025-09-25.zip",
+      "sha256": "6b9fc23b8b305eb00502359120e49cfc9eec6b760bb9155cc31dcf520e54e622",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-25.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3467239,
+        "complete": true,
+        "end": "2025-09-27T00:00:00+00:00",
+        "first": "2025-09-26T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-26T23:59:59+00:00",
+        "logical_sha256": "b314493a9acbd93bc12bc8a3c34a8b7835ec73d00fd6a0170d9095e75cfbf17a",
+        "path": "binance_spot/BTCUSDT/2025-09/20250926T000000-20250927T000000-c3e6acac12bd4507973b15808321cd96.parquet",
+        "rows": 86400,
+        "sha256": "41733a49013f5b804334cd80372cc998977015743b2c56cf9fb3a35a80de873f",
+        "start": "2025-09-26T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.014106582999375,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-26.zip.CHECKSUM",
+      "day": "2025-09-26T00:00:00+00:00",
+      "download_bytes": 2467100,
+      "download_seconds": 2.6467231670003457,
+      "filename": "BTCUSDT-1s-2025-09-26.zip",
+      "sha256": "bd5c18480fb549aed919baff805eed12ec3a87e172519ddd10ec67b65ce78408",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-26.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2772796,
+        "complete": true,
+        "end": "2025-09-28T00:00:00+00:00",
+        "first": "2025-09-27T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-27T23:59:59+00:00",
+        "logical_sha256": "81a3b5c7d567d83337a77b895b5bf3c27a25961039ea7daa3182e786e6179081",
+        "path": "binance_spot/BTCUSDT/2025-09/20250927T000000-20250928T000000-1a29f8a544b74969acbf2537ebc25e76.parquet",
+        "rows": 86400,
+        "sha256": "05fc82c5bc2b10d0ebc24f17716b05bf7b2d81f035675619270bcb4e74936d6e",
+        "start": "2025-09-27T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.018457041999682,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-27.zip.CHECKSUM",
+      "day": "2025-09-27T00:00:00+00:00",
+      "download_bytes": 2036748,
+      "download_seconds": 2.804802625000775,
+      "filename": "BTCUSDT-1s-2025-09-27.zip",
+      "sha256": "11c03049047f2026e7d3c5deb9582da0019629f2bef13671a4f29dbbe4b0c017",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-27.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2900295,
+        "complete": true,
+        "end": "2025-09-29T00:00:00+00:00",
+        "first": "2025-09-28T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-28T23:59:59+00:00",
+        "logical_sha256": "1fb2e6b13283b45370b39c64d1df9df15e2f79429a4b95b21fcea89e60d02fa5",
+        "path": "binance_spot/BTCUSDT/2025-09/20250928T000000-20250929T000000-ee5abff068574a32a6919ed4e58c8bb7.parquet",
+        "rows": 86400,
+        "sha256": "846982764ac684a4296ff34885d3c99be1df91cb9c87cac21e35808a8695304b",
+        "start": "2025-09-28T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.027126417000545,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-28.zip.CHECKSUM",
+      "day": "2025-09-28T00:00:00+00:00",
+      "download_bytes": 2117121,
+      "download_seconds": 2.3565020409996578,
+      "filename": "BTCUSDT-1s-2025-09-28.zip",
+      "sha256": "977ccce089654f99f3385c68ad55c813613865e310fc07b2c90c74489e221258",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-28.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3224944,
+        "complete": true,
+        "end": "2025-09-30T00:00:00+00:00",
+        "first": "2025-09-29T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-29T23:59:59+00:00",
+        "logical_sha256": "1229eed72dd184187a8988f83396cb07d72a1d6a6043c304fa0a3ce3cf5ae6a1",
+        "path": "binance_spot/BTCUSDT/2025-09/20250929T000000-20250930T000000-7751c80523964912bc6e3d7c52d52b6e.parquet",
+        "rows": 86400,
+        "sha256": "85e0c7a810d3594ecbfa1bba7017edd59f720ebce85aef497b1e9ba6449a264a",
+        "start": "2025-09-29T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.040426374999697,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-29.zip.CHECKSUM",
+      "day": "2025-09-29T00:00:00+00:00",
+      "download_bytes": 2321823,
+      "download_seconds": 1.2714595830002509,
+      "filename": "BTCUSDT-1s-2025-09-29.zip",
+      "sha256": "867b652b476d964880160d6f42c63271cf14e867dc2b04904bcd8ad51183fe4a",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-29.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3327494,
+        "complete": true,
+        "end": "2025-10-01T00:00:00+00:00",
+        "first": "2025-09-30T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-09-30T23:59:59+00:00",
+        "logical_sha256": "2e819631917d9120c3235fd1699fd689ba5bc7b336ab3ecc841749578fad8530",
+        "path": "binance_spot/BTCUSDT/2025-09/20250930T000000-20251001T000000-ecd6f0c320f04745a3b8d4615b8cc8f5.parquet",
+        "rows": 86400,
+        "sha256": "1f0a501c2b7da28272a5e255f61d5b40e14c2437be043475ed41a672eb6e76a3",
+        "start": "2025-09-30T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.04955662500015,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-30.zip.CHECKSUM",
+      "day": "2025-09-30T00:00:00+00:00",
+      "download_bytes": 2361033,
+      "download_seconds": 0.9314805419999175,
+      "filename": "BTCUSDT-1s-2025-09-30.zip",
+      "sha256": "24e2727d539a92defda6a217e702d5214f332e0ade65c1e1d58f310d814b019f",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-30.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3426591,
+        "complete": true,
+        "end": "2025-10-02T00:00:00+00:00",
+        "first": "2025-10-01T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-01T23:59:59+00:00",
+        "logical_sha256": "a15c9b04aceb07fe92b6ec1002d6b0d299958b4eb530f48e42878ec456e85fd2",
+        "path": "binance_spot/BTCUSDT/2025-10/20251001T000000-20251002T000000-51529f4a28ec4f60b82d3647a647de96.parquet",
+        "rows": 86400,
+        "sha256": "4b293a6aadcf6710958bf00743e105cd539e5c30b4b207bf45bfaaefdd73ab7f",
+        "start": "2025-10-01T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.027733416999581,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-01.zip.CHECKSUM",
+      "day": "2025-10-01T00:00:00+00:00",
+      "download_bytes": 2479843,
+      "download_seconds": 2.44813379200059,
+      "filename": "BTCUSDT-1s-2025-10-01.zip",
+      "sha256": "6908e1f9619e2096867477b44bdbb3b524552067f85c3f515ff1e670d0a186b1",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-01.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3450046,
+        "complete": true,
+        "end": "2025-10-03T00:00:00+00:00",
+        "first": "2025-10-02T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-02T23:59:59+00:00",
+        "logical_sha256": "44510f04b1dd22c5c1ce173ba6e31332f5a840f3b7180cba7eead5ba7c987f9b",
+        "path": "binance_spot/BTCUSDT/2025-10/20251002T000000-20251003T000000-563cb9a1d4384e3b8257f42313ac911b.parquet",
+        "rows": 86400,
+        "sha256": "8cb9e0518735c43bd101c3f3b077e06f7671d9e16471568d61b823d80eb8e6e2",
+        "start": "2025-10-02T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.037965542000165,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-02.zip.CHECKSUM",
+      "day": "2025-10-02T00:00:00+00:00",
+      "download_bytes": 2530886,
+      "download_seconds": 3.1146464579996973,
+      "filename": "BTCUSDT-1s-2025-10-02.zip",
+      "sha256": "4888fd8e8b3ac33133b743ca9302427be7356ec46b0a421d92e75ca6e01ec8fb",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-02.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3500038,
+        "complete": true,
+        "end": "2025-10-04T00:00:00+00:00",
+        "first": "2025-10-03T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-03T23:59:59+00:00",
+        "logical_sha256": "916071f05c7c2980d4dc437d57fdd1c82eb770642406771e749aa296a89df68b",
+        "path": "binance_spot/BTCUSDT/2025-10/20251003T000000-20251004T000000-4471fdfbb5364aeba61558fdacc3dbcf.parquet",
+        "rows": 86400,
+        "sha256": "2951ee83ab0036579b174be57430a109106cb6fb35c745c87c39f50cdae13ad9",
+        "start": "2025-10-03T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.044841916999758,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-03.zip.CHECKSUM",
+      "day": "2025-10-03T00:00:00+00:00",
+      "download_bytes": 2550406,
+      "download_seconds": 2.8126588329996594,
+      "filename": "BTCUSDT-1s-2025-10-03.zip",
+      "sha256": "865e8bdf09b4a55fc21d1920b26cc307121ee7ba7334ab3cbe704cee76b1c75b",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-03.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3028139,
+        "complete": true,
+        "end": "2025-10-05T00:00:00+00:00",
+        "first": "2025-10-04T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-04T23:59:59+00:00",
+        "logical_sha256": "84af9dac059981515a78b8e4609c4046a3e079ef6ffae2ff8502e5b6c672f68b",
+        "path": "binance_spot/BTCUSDT/2025-10/20251004T000000-20251005T000000-e1fa49d3838346df86b67d03f1df7535.parquet",
+        "rows": 86400,
+        "sha256": "b665b6821af0f9a18928be39cbe1d5c560cb6742509d998554b2e1bc1f6efe40",
+        "start": "2025-10-04T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.050367249999908,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-04.zip.CHECKSUM",
+      "day": "2025-10-04T00:00:00+00:00",
+      "download_bytes": 2240336,
+      "download_seconds": 2.779932875000668,
+      "filename": "BTCUSDT-1s-2025-10-04.zip",
+      "sha256": "c479fdcaf93d3a3b7c5e78e14b6334fd60eb280e1920b9e9001a7ad8188e37d0",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-04.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3435733,
+        "complete": true,
+        "end": "2025-10-06T00:00:00+00:00",
+        "first": "2025-10-05T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-05T23:59:59+00:00",
+        "logical_sha256": "258a7bd0774d598093073850ac0b9d73bf50396714837c2e7e2d5e6dabf4bc6b",
+        "path": "binance_spot/BTCUSDT/2025-10/20251005T000000-20251006T000000-7c22b64d250e49d58e02941c862abfc2.parquet",
+        "rows": 86400,
+        "sha256": "22ba4b4dcfc0f0f678291b3267d564893db69e43b5ec365c420a192548110ea4",
+        "start": "2025-10-05T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0671106250001685,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-05.zip.CHECKSUM",
+      "day": "2025-10-05T00:00:00+00:00",
+      "download_bytes": 2473941,
+      "download_seconds": 2.855465874999936,
+      "filename": "BTCUSDT-1s-2025-10-05.zip",
+      "sha256": "812aba0350ba7a3556443ad5ca62ce412a0f060e80d28aed6c1f9f5b38d46ee1",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-05.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3528018,
+        "complete": true,
+        "end": "2025-10-07T00:00:00+00:00",
+        "first": "2025-10-06T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-06T23:59:59+00:00",
+        "logical_sha256": "6d2769ccef2491bc476d84c3146888659d8a77f4d699b77f60db625b4f0ad75b",
+        "path": "binance_spot/BTCUSDT/2025-10/20251006T000000-20251007T000000-78105f16cfaa49e2b39d1eaaf0e6ec2c.parquet",
+        "rows": 86400,
+        "sha256": "6b3ab4ad4b4d360288e043855bcb41245d541c1c05076876425e61507ba14751",
+        "start": "2025-10-06T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.032005666999794,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-06.zip.CHECKSUM",
+      "day": "2025-10-06T00:00:00+00:00",
+      "download_bytes": 2544599,
+      "download_seconds": 2.4753102080003373,
+      "filename": "BTCUSDT-1s-2025-10-06.zip",
+      "sha256": "08122e0b18561e321f79308499777fa792c001dd41076b86eee3f8296234ab56",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-06.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3630718,
+        "complete": true,
+        "end": "2025-10-08T00:00:00+00:00",
+        "first": "2025-10-07T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-07T23:59:59+00:00",
+        "logical_sha256": "3b806bc24af48ffaa244ded341c3545c90847e11852cf4d527a5cc1d35537879",
+        "path": "binance_spot/BTCUSDT/2025-10/20251007T000000-20251008T000000-df10f99397334658919700c8ceb8efab.parquet",
+        "rows": 86400,
+        "sha256": "236a451df166cc3757fb4cd7e4a8049bea7b9c941abf0368eac5aec9d98240a6",
+        "start": "2025-10-07T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.010089917000187,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-07.zip.CHECKSUM",
+      "day": "2025-10-07T00:00:00+00:00",
+      "download_bytes": 2596455,
+      "download_seconds": 2.9209012500004974,
+      "filename": "BTCUSDT-1s-2025-10-07.zip",
+      "sha256": "4e253dedd1d206c1de480ca683d2de90f35792e8ab072efe94e1ba9093d6fed9",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-07.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3538845,
+        "complete": true,
+        "end": "2025-10-09T00:00:00+00:00",
+        "first": "2025-10-08T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-08T23:59:59+00:00",
+        "logical_sha256": "bec585323d3f6fcf353e2f89509dc5a063739e76270681de7acfc7505b6c5e25",
+        "path": "binance_spot/BTCUSDT/2025-10/20251008T000000-20251009T000000-633fb1dc3d694957a77d04613557c8ef.parquet",
+        "rows": 86400,
+        "sha256": "588912232ef6b6145358a7b1a378eaf7f48e23dc08cd891c09eca4518304a818",
+        "start": "2025-10-08T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.017040167000232,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-08.zip.CHECKSUM",
+      "day": "2025-10-08T00:00:00+00:00",
+      "download_bytes": 2516110,
+      "download_seconds": 1.9444262919996618,
+      "filename": "BTCUSDT-1s-2025-10-08.zip",
+      "sha256": "53c26708084a061b5850f1743f537daca3b6982c5244beaccc1cdb345eb5298f",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-08.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3563322,
+        "complete": true,
+        "end": "2025-10-10T00:00:00+00:00",
+        "first": "2025-10-09T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-09T23:59:59+00:00",
+        "logical_sha256": "f26985d70fab1d423c7db1a98ebc63b0026f36375e7514cbc7e68a85bcfa4e14",
+        "path": "binance_spot/BTCUSDT/2025-10/20251009T000000-20251010T000000-af6a8dfafbd644b68f73c5dd28b47822.parquet",
+        "rows": 86400,
+        "sha256": "af2f69fb57bc5e09e3f1bd0146590cf20498aeb1cd38691529cba5182fa4b80d",
+        "start": "2025-10-09T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.067971875000694,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-09.zip.CHECKSUM",
+      "day": "2025-10-09T00:00:00+00:00",
+      "download_bytes": 2557536,
+      "download_seconds": 2.3240773329998774,
+      "filename": "BTCUSDT-1s-2025-10-09.zip",
+      "sha256": "33d1af2d9071e5b3c605e4c63b8ca9b93f38cf0d944e6701824eafb2f6eac611",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-09.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4030323,
+        "complete": true,
+        "end": "2025-10-11T00:00:00+00:00",
+        "first": "2025-10-10T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-10T23:59:59+00:00",
+        "logical_sha256": "bd69f4e3d2529221682b56d3ca282e9013fccdf87ca5eb908655872281fcd0cb",
+        "path": "binance_spot/BTCUSDT/2025-10/20251010T000000-20251011T000000-9ec59f2180214f2b8d56a7e2f67f6a25.parquet",
+        "rows": 86400,
+        "sha256": "5bebdfe1a1e52c3e8948fb47f5705b519b42c2e8f4e08b0451760e624598296d",
+        "start": "2025-10-10T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.031747375000123,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-10.zip.CHECKSUM",
+      "day": "2025-10-10T00:00:00+00:00",
+      "download_bytes": 2867348,
+      "download_seconds": 2.348340415999701,
+      "filename": "BTCUSDT-1s-2025-10-10.zip",
+      "sha256": "50b83589d0a44e262c34ee018e7b4d962578524b89ce5635e53b58e3c2bf61f5",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-10.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4103801,
+        "complete": true,
+        "end": "2025-10-12T00:00:00+00:00",
+        "first": "2025-10-11T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-11T23:59:59+00:00",
+        "logical_sha256": "153d3b581142a328acc2ab503de0402d312793e09dfa58eeefd967ebace4c1d5",
+        "path": "binance_spot/BTCUSDT/2025-10/20251011T000000-20251012T000000-2440ee9fdc7d40cebc116694e474dec4.parquet",
+        "rows": 86400,
+        "sha256": "15689eb43bd476ecc27d81768cefa831c8d00f894d6bac21011c83d10e628e6c",
+        "start": "2025-10-11T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.035088332999294,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-11.zip.CHECKSUM",
+      "day": "2025-10-11T00:00:00+00:00",
+      "download_bytes": 2963782,
+      "download_seconds": 2.4221382080004332,
+      "filename": "BTCUSDT-1s-2025-10-11.zip",
+      "sha256": "60703945ca1e49f9e5910352bad806dfa9ff7b97be12e04edc55fdf511d98f13",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-11.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3934323,
+        "complete": true,
+        "end": "2025-10-13T00:00:00+00:00",
+        "first": "2025-10-12T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-12T23:59:59+00:00",
+        "logical_sha256": "fa26433c3f3f8b491e2640d36d1e7dfa8b3af9f79665d2c646f71173c55e489b",
+        "path": "binance_spot/BTCUSDT/2025-10/20251012T000000-20251013T000000-e2a9cc4c6b6542abbe0b52ac6bdcfcf0.parquet",
+        "rows": 86400,
+        "sha256": "ef86157144be7eb4e788db90d5957fff97573802b93825c24320ddaaf8455fc8",
+        "start": "2025-10-12T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.033638791999692,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-12.zip.CHECKSUM",
+      "day": "2025-10-12T00:00:00+00:00",
+      "download_bytes": 2781815,
+      "download_seconds": 2.800255666999874,
+      "filename": "BTCUSDT-1s-2025-10-12.zip",
+      "sha256": "3b74cc343807e1cb286d43e00ae8540291338ed5558ba5f593efbd1184042e67",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-12.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3787359,
+        "complete": true,
+        "end": "2025-10-14T00:00:00+00:00",
+        "first": "2025-10-13T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-13T23:59:59+00:00",
+        "logical_sha256": "5cc1dc97519933cc1cf47a1c5824f00413cdfb06eea94fcdbcf28edfb32aae0d",
+        "path": "binance_spot/BTCUSDT/2025-10/20251013T000000-20251014T000000-9a9554c4d3f94723b6d09e3b5283f483.parquet",
+        "rows": 86400,
+        "sha256": "361b7aaab0207058c857c588a9f668e865bd1b2931f303b6153ccc5412cb87d4",
+        "start": "2025-10-13T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.02828425000007,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-13.zip.CHECKSUM",
+      "day": "2025-10-13T00:00:00+00:00",
+      "download_bytes": 2668122,
+      "download_seconds": 2.3493902079999316,
+      "filename": "BTCUSDT-1s-2025-10-13.zip",
+      "sha256": "4044978a3fceb175e5d473fad8a19ab775eadc0cd915eec48d370d6e62da78b3",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-13.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4063518,
+        "complete": true,
+        "end": "2025-10-15T00:00:00+00:00",
+        "first": "2025-10-14T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-14T23:59:59+00:00",
+        "logical_sha256": "f39b798024c48e5f8d3b79dab9ddb658f4751a949a485c0a22c703080af4ff75",
+        "path": "binance_spot/BTCUSDT/2025-10/20251014T000000-20251015T000000-54a3fd716f164055b546b26498225dec.parquet",
+        "rows": 86400,
+        "sha256": "efedb4d23d61c86d3806b95e36fa68ecde19061b0f002b428023d27461a5cec7",
+        "start": "2025-10-14T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.019462834000478,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-14.zip.CHECKSUM",
+      "day": "2025-10-14T00:00:00+00:00",
+      "download_bytes": 2862540,
+      "download_seconds": 2.874779082999339,
+      "filename": "BTCUSDT-1s-2025-10-14.zip",
+      "sha256": "b8583664deed0f980363df47ad923e39c0f9a48d89d3974f6c0fd5dd8f22e903",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-14.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3812985,
+        "complete": true,
+        "end": "2025-10-16T00:00:00+00:00",
+        "first": "2025-10-15T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-15T23:59:59+00:00",
+        "logical_sha256": "128256ad5b29bf7cea18cb91529c848c26cbb4ca44f5e435e70f5c5b976a3425",
+        "path": "binance_spot/BTCUSDT/2025-10/20251015T000000-20251016T000000-2740b99608a846e3bc9898cd90762f98.parquet",
+        "rows": 86400,
+        "sha256": "1995a6b6145ae801f1a2566d7088db82cf7397693e23efdcc58d3abdb7156297",
+        "start": "2025-10-15T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 3.9981414590001805,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-15.zip.CHECKSUM",
+      "day": "2025-10-15T00:00:00+00:00",
+      "download_bytes": 2702029,
+      "download_seconds": 2.8446424159992603,
+      "filename": "BTCUSDT-1s-2025-10-15.zip",
+      "sha256": "40db5ad32077e57c0bc76851bff7f7f330bf74aa20c3d7ecab23907b84272f18",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-15.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3960160,
+        "complete": true,
+        "end": "2025-10-17T00:00:00+00:00",
+        "first": "2025-10-16T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-16T23:59:59+00:00",
+        "logical_sha256": "4b060e15eb1aa1db6b966e41b77e9331b418882afc94bd13ed20a05d73864b5b",
+        "path": "binance_spot/BTCUSDT/2025-10/20251016T000000-20251017T000000-b9472babe82048b5a30b346e3eae4f77.parquet",
+        "rows": 86400,
+        "sha256": "1f08f79cb6a570918068143dc345581b3a4a67d12f43e592e3e6e5a9b79e2fc1",
+        "start": "2025-10-16T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.019679707999785,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-16.zip.CHECKSUM",
+      "day": "2025-10-16T00:00:00+00:00",
+      "download_bytes": 2795715,
+      "download_seconds": 2.7679359590001695,
+      "filename": "BTCUSDT-1s-2025-10-16.zip",
+      "sha256": "8b126395c67ca3af95b566b8b1aa4b7cbc18ce667b3bf53e65e81b665cf6b1de",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-16.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4124599,
+        "complete": true,
+        "end": "2025-10-18T00:00:00+00:00",
+        "first": "2025-10-17T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-17T23:59:59+00:00",
+        "logical_sha256": "1625cae4b97586e689fe395621ca36377a5bb320e3e91e1bb64fc8672277e7d2",
+        "path": "binance_spot/BTCUSDT/2025-10/20251017T000000-20251018T000000-f40541c7ba2344e9b629ed16be521095.parquet",
+        "rows": 86400,
+        "sha256": "588c6b6db86c95e5ad264494d9045f2fb0ce66c9e8dd85c913efeac2578c833e",
+        "start": "2025-10-17T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.045231666999825,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-17.zip.CHECKSUM",
+      "day": "2025-10-17T00:00:00+00:00",
+      "download_bytes": 2888034,
+      "download_seconds": 2.822070457999871,
+      "filename": "BTCUSDT-1s-2025-10-17.zip",
+      "sha256": "4a0ef33fc39a04d5f377c6e04a2132ce48b9869ff3001c7467a83706fa0ec424",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-17.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3236920,
+        "complete": true,
+        "end": "2025-10-19T00:00:00+00:00",
+        "first": "2025-10-18T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-18T23:59:59+00:00",
+        "logical_sha256": "f39f4625a994c363b0982828f059b9c9b1405c10fcf4db4650f327226d69a864",
+        "path": "binance_spot/BTCUSDT/2025-10/20251018T000000-20251019T000000-34cd56ce01bf4311a638903d1f8b28ed.parquet",
+        "rows": 86400,
+        "sha256": "8efa6a94b73144b34fef7274fccc4bb70e27b5f05eee1afdef87ab1c3ddb338a",
+        "start": "2025-10-18T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.033162708000418,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-18.zip.CHECKSUM",
+      "day": "2025-10-18T00:00:00+00:00",
+      "download_bytes": 2309822,
+      "download_seconds": 2.434863499999665,
+      "filename": "BTCUSDT-1s-2025-10-18.zip",
+      "sha256": "c3c195ae24a03bc2ca22c4eaae02bdf7580b2cbf6bf5f6de1083878e5258a4a2",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-18.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3380641,
+        "complete": true,
+        "end": "2025-10-20T00:00:00+00:00",
+        "first": "2025-10-19T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-19T23:59:59+00:00",
+        "logical_sha256": "9e445b61ff6b1cff0902a45adc0ecff4951029dfbd2cc016f6f394bab6e15654",
+        "path": "binance_spot/BTCUSDT/2025-10/20251019T000000-20251020T000000-c8786bbcaa6c450890adf6b86ec58b2b.parquet",
+        "rows": 86400,
+        "sha256": "3febcda1830351f1c618cd7ac53e13d5d8c86ff783930b6b324008edd443df20",
+        "start": "2025-10-19T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.039080292000108,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-19.zip.CHECKSUM",
+      "day": "2025-10-19T00:00:00+00:00",
+      "download_bytes": 2379787,
+      "download_seconds": 2.430647332999797,
+      "filename": "BTCUSDT-1s-2025-10-19.zip",
+      "sha256": "bfc1f444bcab893f32035c2f10dec7593ca3d793880b7c8638dd2b4eabc35ec5",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-19.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3660988,
+        "complete": true,
+        "end": "2025-10-21T00:00:00+00:00",
+        "first": "2025-10-20T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-20T23:59:59+00:00",
+        "logical_sha256": "ac0ab65592ad43d664a1b84cbd75d3aff2342ef2786430c2007cedfb5bffdeaf",
+        "path": "binance_spot/BTCUSDT/2025-10/20251020T000000-20251021T000000-7e6b831c0dee4c48bffcfdcde998bf3f.parquet",
+        "rows": 86400,
+        "sha256": "9b38471eeadf3c07644355f5c68dd576c1d917a8db5e5c70f2e8ca1de6a65b1a",
+        "start": "2025-10-20T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.062094583000544,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-20.zip.CHECKSUM",
+      "day": "2025-10-20T00:00:00+00:00",
+      "download_bytes": 2587308,
+      "download_seconds": 2.8511050830002205,
+      "filename": "BTCUSDT-1s-2025-10-20.zip",
+      "sha256": "f8ab6f6dd76e267e1f0705778158697cf696a4975aeeb0586187fffa0853ca26",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-20.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3929671,
+        "complete": true,
+        "end": "2025-10-22T00:00:00+00:00",
+        "first": "2025-10-21T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-21T23:59:59+00:00",
+        "logical_sha256": "6644388a214ffd1b7d0369242414b560a43b6e6786f81a2e99203c2a9f6212d6",
+        "path": "binance_spot/BTCUSDT/2025-10/20251021T000000-20251022T000000-6170cf71cbe247919df30b40e7b9b0c7.parquet",
+        "rows": 86400,
+        "sha256": "94cfebb54b4e827898184a904e82e14c1af2ec892684226713d75e9833bf78f2",
+        "start": "2025-10-21T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.023428499999682,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-21.zip.CHECKSUM",
+      "day": "2025-10-21T00:00:00+00:00",
+      "download_bytes": 2771308,
+      "download_seconds": 2.7835622080001485,
+      "filename": "BTCUSDT-1s-2025-10-21.zip",
+      "sha256": "94305486985b39d66817fbc8d0710058df392e34aeb44c0ba0dc4992e7588f1c",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-21.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3821008,
+        "complete": true,
+        "end": "2025-10-23T00:00:00+00:00",
+        "first": "2025-10-22T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-22T23:59:59+00:00",
+        "logical_sha256": "98468b6369a9ffe1e3e7dbe9db26748dcaec7fb0f2787721b178c8e9c4d5648d",
+        "path": "binance_spot/BTCUSDT/2025-10/20251022T000000-20251023T000000-26efdf7103674e4b9083b305ded1d11b.parquet",
+        "rows": 86400,
+        "sha256": "5347009bf46fcd65cd1593e30bef907bc27267412d62be9efc07476c28caebe4",
+        "start": "2025-10-22T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.02551479199974,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-22.zip.CHECKSUM",
+      "day": "2025-10-22T00:00:00+00:00",
+      "download_bytes": 2683383,
+      "download_seconds": 1.7055462079997596,
+      "filename": "BTCUSDT-1s-2025-10-22.zip",
+      "sha256": "fb247e803963c28261f4267750b2eeaa3cfa3acb043b14e460f3e98778264dea",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-22.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3481834,
+        "complete": true,
+        "end": "2025-10-24T00:00:00+00:00",
+        "first": "2025-10-23T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-23T23:59:59+00:00",
+        "logical_sha256": "21b01a2ff172ea06f810ec826a38e0fb0e4b6e4bd4a7cc591dee96a60a3e26a3",
+        "path": "binance_spot/BTCUSDT/2025-10/20251023T000000-20251024T000000-eeb524f17d0344618767ad61e51cbeb2.parquet",
+        "rows": 86400,
+        "sha256": "aaeb00e020b2dd0585f5c2cbc5e951e21a07ceddde7fb6e9a45a3b026eb717b0",
+        "start": "2025-10-23T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.005566333000388,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-23.zip.CHECKSUM",
+      "day": "2025-10-23T00:00:00+00:00",
+      "download_bytes": 2455775,
+      "download_seconds": 2.811087750000297,
+      "filename": "BTCUSDT-1s-2025-10-23.zip",
+      "sha256": "1e4e260b73292d5cdb3ab17faf84b03b5d0dfa85065cc1ff7540b9f417438920",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-23.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3307110,
+        "complete": true,
+        "end": "2025-10-25T00:00:00+00:00",
+        "first": "2025-10-24T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-24T23:59:59+00:00",
+        "logical_sha256": "b415c0fbcf143d224f4678a4cc68b02c0ef70e1c437fe2d01cc15cc56941d0e5",
+        "path": "binance_spot/BTCUSDT/2025-10/20251024T000000-20251025T000000-2de5d96f7ab346d4936f1fe2ef30b515.parquet",
+        "rows": 86400,
+        "sha256": "b782407e5a815653d8f49c966ab3b2201854bdd08640403bf755a4367101720b",
+        "start": "2025-10-24T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.017580375000762,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-24.zip.CHECKSUM",
+      "day": "2025-10-24T00:00:00+00:00",
+      "download_bytes": 2334070,
+      "download_seconds": 2.3766182919998755,
+      "filename": "BTCUSDT-1s-2025-10-24.zip",
+      "sha256": "abc62da288278030f8525f1909249c01683aaf525dfd8bf88ea84d600a808edb",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-24.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2771672,
+        "complete": true,
+        "end": "2025-10-26T00:00:00+00:00",
+        "first": "2025-10-25T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-25T23:59:59+00:00",
+        "logical_sha256": "879d51c0527d35af8480589ce5b14527e2bf330672c3afb819a48135a8d338a1",
+        "path": "binance_spot/BTCUSDT/2025-10/20251025T000000-20251026T000000-413f59065df14c039f0a7add99aaf93d.parquet",
+        "rows": 86400,
+        "sha256": "ea9e078dac02dfb14dbd17387ab8e5b435f5a0db7a118e491f80ec391e8c6ab4",
+        "start": "2025-10-25T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 3.9897289589998763,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-25.zip.CHECKSUM",
+      "day": "2025-10-25T00:00:00+00:00",
+      "download_bytes": 2017974,
+      "download_seconds": 2.377622915999382,
+      "filename": "BTCUSDT-1s-2025-10-25.zip",
+      "sha256": "8dbda09784d1778c210abc39e7f9158fc641d81dd72609d5236e40431871aa95",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-25.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3082483,
+        "complete": true,
+        "end": "2025-10-27T00:00:00+00:00",
+        "first": "2025-10-26T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-26T23:59:59+00:00",
+        "logical_sha256": "c5b1bcdb2691304683756c472adf4445b4595af265b15ae0c15adc0e6aef9de3",
+        "path": "binance_spot/BTCUSDT/2025-10/20251026T000000-20251027T000000-02a682dd35784636b3d871753c62a596.parquet",
+        "rows": 86400,
+        "sha256": "b60610d91d46d16e14b23a171fca97065b11fa94e0be56931d6395a2b34e77cc",
+        "start": "2025-10-26T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 3.9838270000000193,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-26.zip.CHECKSUM",
+      "day": "2025-10-26T00:00:00+00:00",
+      "download_bytes": 2230611,
+      "download_seconds": 3.010084915999869,
+      "filename": "BTCUSDT-1s-2025-10-26.zip",
+      "sha256": "c57c2b99e048bfff4f2c42e083212607b50db398275a2ff63cefb1bd4605a405",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-26.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3548216,
+        "complete": true,
+        "end": "2025-10-28T00:00:00+00:00",
+        "first": "2025-10-27T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-27T23:59:59+00:00",
+        "logical_sha256": "697887a0fd79726708e6a9154168a3cbc0227e9b495522a8d944887fc1b05179",
+        "path": "binance_spot/BTCUSDT/2025-10/20251027T000000-20251028T000000-e6ec8b8410d0455892ae127bd042bc29.parquet",
+        "rows": 86400,
+        "sha256": "79eec7a86e960e309341fd13da2a7df351821c3f665b75176ae708ded4c259ee",
+        "start": "2025-10-27T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.011211584000193,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-27.zip.CHECKSUM",
+      "day": "2025-10-27T00:00:00+00:00",
+      "download_bytes": 2555555,
+      "download_seconds": 1.914841916000114,
+      "filename": "BTCUSDT-1s-2025-10-27.zip",
+      "sha256": "0ce81053c69120e9c4d524d82bce722395b37ae7abd6c7c794e957e6814df5a4",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-27.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3517185,
+        "complete": true,
+        "end": "2025-10-29T00:00:00+00:00",
+        "first": "2025-10-28T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-28T23:59:59+00:00",
+        "logical_sha256": "c8ad03cd0da9d52cf24fd0678b75b8ef173bd8c8eae6dd7b8917f948adf85edc",
+        "path": "binance_spot/BTCUSDT/2025-10/20251028T000000-20251029T000000-bc659f4c4a1f4c878ba89d68cb3c4e87.parquet",
+        "rows": 86400,
+        "sha256": "4213fcc8602d9db6ccfa048a8c6b6b5473b474b731dd549aa86160178c420613",
+        "start": "2025-10-28T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 3.985834416999751,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-28.zip.CHECKSUM",
+      "day": "2025-10-28T00:00:00+00:00",
+      "download_bytes": 2496261,
+      "download_seconds": 2.66954345799968,
+      "filename": "BTCUSDT-1s-2025-10-28.zip",
+      "sha256": "3755a12671b1e4ee05eaf475c1a510cc5c51440c0665cdcf0f89366ce7177ee2",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-28.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3677971,
+        "complete": true,
+        "end": "2025-10-30T00:00:00+00:00",
+        "first": "2025-10-29T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-29T23:59:59+00:00",
+        "logical_sha256": "d55f4dc4155987180d5aafec25f187c6f22ca934b596085477af90bd7770e803",
+        "path": "binance_spot/BTCUSDT/2025-10/20251029T000000-20251030T000000-2383e3e7a6544fbfa2391288fbcad0fc.parquet",
+        "rows": 86400,
+        "sha256": "55cafb353abab7228484d7fd198d9deb253dd42987a113f90a745854136e19c4",
+        "start": "2025-10-29T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 3.9917028750005557,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-29.zip.CHECKSUM",
+      "day": "2025-10-29T00:00:00+00:00",
+      "download_bytes": 2595841,
+      "download_seconds": 2.837052082999435,
+      "filename": "BTCUSDT-1s-2025-10-29.zip",
+      "sha256": "ea690d13ff32c5feb6b2a17316848e744584cb0f6c065601179cdc0b1d5a37e8",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-29.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4024034,
+        "complete": true,
+        "end": "2025-10-31T00:00:00+00:00",
+        "first": "2025-10-30T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-30T23:59:59+00:00",
+        "logical_sha256": "f39536c8f58ecc9f4b90b728ea6aa964a5c126418420a421281facf4274fbd3d",
+        "path": "binance_spot/BTCUSDT/2025-10/20251030T000000-20251031T000000-f757d9599272485ead28613aef5f54a4.parquet",
+        "rows": 86400,
+        "sha256": "89847b2a584a6de4cdc133e5dfc42188fc9db08a0e2eaf7cb05f43b7d73e67ce",
+        "start": "2025-10-30T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.037199124999461,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-30.zip.CHECKSUM",
+      "day": "2025-10-30T00:00:00+00:00",
+      "download_bytes": 2848995,
+      "download_seconds": 2.416217625000172,
+      "filename": "BTCUSDT-1s-2025-10-30.zip",
+      "sha256": "c8e782d09f85fb5d584ac422c7dc84d852ec568680e87de13bd8daa1c57e7f19",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-30.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3747578,
+        "complete": true,
+        "end": "2025-11-01T00:00:00+00:00",
+        "first": "2025-10-31T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-10-31T23:59:59+00:00",
+        "logical_sha256": "ff1c44f89fa4bd8fbbcd4c7726ce4b5975d9f62b78b26746008350f874ed8273",
+        "path": "binance_spot/BTCUSDT/2025-10/20251031T000000-20251101T000000-d2b83e868e9544aa9d5e1a49b2abd9d4.parquet",
+        "rows": 86400,
+        "sha256": "3048bfd17da5c08614c1183b3ac4dc1dbe42133edbf932c29ae757ade494473b",
+        "start": "2025-10-31T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.087175042000126,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-31.zip.CHECKSUM",
+      "day": "2025-10-31T00:00:00+00:00",
+      "download_bytes": 2683591,
+      "download_seconds": 1.7372292500003823,
+      "filename": "BTCUSDT-1s-2025-10-31.zip",
+      "sha256": "4f549a4f7ad0cbe547f818f1b0d0768f1d0168796f8cf83d6bd9e87e0e2e6ae7",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-31.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3049273,
+        "complete": true,
+        "end": "2025-11-02T00:00:00+00:00",
+        "first": "2025-11-01T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-01T23:59:59+00:00",
+        "logical_sha256": "cce2b4dce9c9a08ec7b001669bacd64b5381dff35240bfb9314ab10825fb0ef6",
+        "path": "binance_spot/BTCUSDT/2025-11/20251101T000000-20251102T000000-7c37119123ec429cad8ee3ac038575cb.parquet",
+        "rows": 86400,
+        "sha256": "a711117eddc428184676ef8a10b5265858268a681243efa8af781763bff1ab40",
+        "start": "2025-11-01T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.026098250000359,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-01.zip.CHECKSUM",
+      "day": "2025-11-01T00:00:00+00:00",
+      "download_bytes": 2213060,
+      "download_seconds": 1.9672337499996502,
+      "filename": "BTCUSDT-1s-2025-11-01.zip",
+      "sha256": "adeb10db78222d55b9121b0963347dcbf0048386a607faf1b1e985aaf9438639",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-01.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3180192,
+        "complete": true,
+        "end": "2025-11-03T00:00:00+00:00",
+        "first": "2025-11-02T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-02T23:59:59+00:00",
+        "logical_sha256": "b5eba15e68353cabea1ad384e5ef90dd53afaa663151013a57aa99f19772d4a1",
+        "path": "binance_spot/BTCUSDT/2025-11/20251102T000000-20251103T000000-15108f77950d4af3b17d8e565d17b480.parquet",
+        "rows": 86400,
+        "sha256": "bb06cc44e63b5958f1c1317daeb17b50521fef9d76bb2171aad438bb0f274b18",
+        "start": "2025-11-02T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0348747089992685,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-02.zip.CHECKSUM",
+      "day": "2025-11-02T00:00:00+00:00",
+      "download_bytes": 2256581,
+      "download_seconds": 2.5437424580004517,
+      "filename": "BTCUSDT-1s-2025-11-02.zip",
+      "sha256": "ff1fdfaa8c767e3812d401beeedede404eff856e0803339f74ac87ee03b456a7",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-02.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4072900,
+        "complete": true,
+        "end": "2025-11-04T00:00:00+00:00",
+        "first": "2025-11-03T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-03T23:59:59+00:00",
+        "logical_sha256": "1d4d10c747f287c8f8f610cf54899271bb97bc74ee1c6c5b6cbd967874026cd0",
+        "path": "binance_spot/BTCUSDT/2025-11/20251103T000000-20251104T000000-ebafc2b5a3154409a7d0be0a2ea3fa20.parquet",
+        "rows": 86400,
+        "sha256": "efdee7ce46d4af6e66ed5a833b1679479fa97a468a01bbdd6ba3d94b2f6efe5e",
+        "start": "2025-11-03T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.052473249999821,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-03.zip.CHECKSUM",
+      "day": "2025-11-03T00:00:00+00:00",
+      "download_bytes": 2874058,
+      "download_seconds": 2.610696624999946,
+      "filename": "BTCUSDT-1s-2025-11-03.zip",
+      "sha256": "b30f35e7bddfcba832ae4c302001d39955c6f9e5f65913b936e2866e206dff1c",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-03.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4456218,
+        "complete": true,
+        "end": "2025-11-05T00:00:00+00:00",
+        "first": "2025-11-04T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-04T23:59:59+00:00",
+        "logical_sha256": "a30e8c0175e2ec93ab02ed33335bf5e35cdd88a7035ed02658157a353b727af1",
+        "path": "binance_spot/BTCUSDT/2025-11/20251104T000000-20251105T000000-8a23f0f1fb7a48c29d07788c8ee5b0ac.parquet",
+        "rows": 86400,
+        "sha256": "65024a32b9786ed64dd73f06025ac652e6ca83f40b557837c846ceaed113d018",
+        "start": "2025-11-04T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.078836916,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-04.zip.CHECKSUM",
+      "day": "2025-11-04T00:00:00+00:00",
+      "download_bytes": 3166631,
+      "download_seconds": 3.0137805839995053,
+      "filename": "BTCUSDT-1s-2025-11-04.zip",
+      "sha256": "d7f8656e2017ade6d9f04b1c97c4e78e0d296b0bfdec6634021c2c9db753c8fe",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-04.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4152667,
+        "complete": true,
+        "end": "2025-11-06T00:00:00+00:00",
+        "first": "2025-11-05T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-05T23:59:59+00:00",
+        "logical_sha256": "983745baeb1cb1b5254eb33251a161ac85de1e5a55f6b6d117bbf2cbadef4545",
+        "path": "binance_spot/BTCUSDT/2025-11/20251105T000000-20251106T000000-494a0e3a224f44e2b8e81f02184069bb.parquet",
+        "rows": 86400,
+        "sha256": "0787980108a48310916267fd9e44d14893760ba863d3eb857c47bc327f33bd69",
+        "start": "2025-11-05T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.076160749999872,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-05.zip.CHECKSUM",
+      "day": "2025-11-05T00:00:00+00:00",
+      "download_bytes": 2955866,
+      "download_seconds": 2.881586208999579,
+      "filename": "BTCUSDT-1s-2025-11-05.zip",
+      "sha256": "eb241158f3031144d429e0bd0169a110f6350cd53f6839cf4c0b19ed022761df",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-05.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3921968,
+        "complete": true,
+        "end": "2025-11-07T00:00:00+00:00",
+        "first": "2025-11-06T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-06T23:59:59+00:00",
+        "logical_sha256": "ec2aa0c514f1626c86511779edb8cfb2404657e19ec5a31722d5980f7cfc5ca5",
+        "path": "binance_spot/BTCUSDT/2025-11/20251106T000000-20251107T000000-46e7b08b75fa45eaa30836f21e0b4fd4.parquet",
+        "rows": 86400,
+        "sha256": "9a9da27cf0fe4a147ac6ed18452da146c053545e1ed24b52a14c136eac259d74",
+        "start": "2025-11-06T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.064621957999407,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-06.zip.CHECKSUM",
+      "day": "2025-11-06T00:00:00+00:00",
+      "download_bytes": 2756407,
+      "download_seconds": 2.874329292000766,
+      "filename": "BTCUSDT-1s-2025-11-06.zip",
+      "sha256": "88bcc729ca2045b1e56940a1246de1fad7c2ab3c796da6dd451a99336aa3dde2",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-06.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4063352,
+        "complete": true,
+        "end": "2025-11-08T00:00:00+00:00",
+        "first": "2025-11-07T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-07T23:59:59+00:00",
+        "logical_sha256": "63093eaa3bdee53502b3de4cbe42d063abc5d03c2e6eb7e4e72fd0c812f5a315",
+        "path": "binance_spot/BTCUSDT/2025-11/20251107T000000-20251108T000000-8eabd907202741bbb2677602dd98b292.parquet",
+        "rows": 86400,
+        "sha256": "a4faf002d4c20fa3aeae633918072901f1f72a9ffa9c479f03ee55d9c50d2448",
+        "start": "2025-11-07T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.052574250000362,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-07.zip.CHECKSUM",
+      "day": "2025-11-07T00:00:00+00:00",
+      "download_bytes": 2879002,
+      "download_seconds": 2.497046832999331,
+      "filename": "BTCUSDT-1s-2025-11-07.zip",
+      "sha256": "7c06c5b3940ab716476352d787c06ac6193032f2d415eecf296d04de84224832",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-07.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3413232,
+        "complete": true,
+        "end": "2025-11-09T00:00:00+00:00",
+        "first": "2025-11-08T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-08T23:59:59+00:00",
+        "logical_sha256": "0c5aa22ee658eb4ba51c9c07398459473ec9915c5e582d09069aebb6bad8fc0f",
+        "path": "binance_spot/BTCUSDT/2025-11/20251108T000000-20251109T000000-4d822d7517c6467aa9a03885664132db.parquet",
+        "rows": 86400,
+        "sha256": "d93b3ba61e7a7a87136dc252986498e686b2e1790c5b82855dc55d5aef3a1385",
+        "start": "2025-11-08T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.039324708000095,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-08.zip.CHECKSUM",
+      "day": "2025-11-08T00:00:00+00:00",
+      "download_bytes": 2439723,
+      "download_seconds": 2.777621917000033,
+      "filename": "BTCUSDT-1s-2025-11-08.zip",
+      "sha256": "90c0f88487358cadda09f883d69877be42cc5e249df942ced88b07ca3ddd607d",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-08.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3427057,
+        "complete": true,
+        "end": "2025-11-10T00:00:00+00:00",
+        "first": "2025-11-09T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-09T23:59:59+00:00",
+        "logical_sha256": "de19072eb6843e9d022a78dcf0299d94eb4c24050fd51cc1c4bcf110c3774d12",
+        "path": "binance_spot/BTCUSDT/2025-11/20251109T000000-20251110T000000-00708bb82b2448fc8663931eb01dceb9.parquet",
+        "rows": 86400,
+        "sha256": "211030b71008bb4135617d85af59c0fb6fb3feb4d7fe8b09c2798e8cf59e3346",
+        "start": "2025-11-09T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0737880840006255,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-09.zip.CHECKSUM",
+      "day": "2025-11-09T00:00:00+00:00",
+      "download_bytes": 2396197,
+      "download_seconds": 2.852234291000059,
+      "filename": "BTCUSDT-1s-2025-11-09.zip",
+      "sha256": "585f9aff0e9401d1d97ef17f3f0436a540bfcb6e98a18366306f1d0adbe84496",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-09.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3753453,
+        "complete": true,
+        "end": "2025-11-11T00:00:00+00:00",
+        "first": "2025-11-10T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-10T23:59:59+00:00",
+        "logical_sha256": "5414a1f0580babc312a5996eb2c043267f3d595119ee663be6d72a542df3e346",
+        "path": "binance_spot/BTCUSDT/2025-11/20251110T000000-20251111T000000-2b4b722b5a364ca292cb92a44e764595.parquet",
+        "rows": 86400,
+        "sha256": "341123516a5519e95e4aa4a29ded0e8860ad16b660920e1e7b79222fc70255f4",
+        "start": "2025-11-10T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.072120249999898,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-10.zip.CHECKSUM",
+      "day": "2025-11-10T00:00:00+00:00",
+      "download_bytes": 2678218,
+      "download_seconds": 3.0961315000004106,
+      "filename": "BTCUSDT-1s-2025-11-10.zip",
+      "sha256": "c0dba21e797608a5a30a2caf91c350461372d17f050cb00ca5e9bfd7ea847f4e",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-10.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3772596,
+        "complete": true,
+        "end": "2025-11-12T00:00:00+00:00",
+        "first": "2025-11-11T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-11T23:59:59+00:00",
+        "logical_sha256": "ca0635b6b2f3d403c575d6da5b65ac57af06ada312d3a68f07099ed12edae455",
+        "path": "binance_spot/BTCUSDT/2025-11/20251111T000000-20251112T000000-8f74e52827544b2797c40d5ead3c1886.parquet",
+        "rows": 86400,
+        "sha256": "14b49bf8311f22a42b5411a5535bd3d2905edd312cb30767b24bbdc1d63f8ad0",
+        "start": "2025-11-11T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.050040875000377,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-11.zip.CHECKSUM",
+      "day": "2025-11-11T00:00:00+00:00",
+      "download_bytes": 2650102,
+      "download_seconds": 1.9032189580002523,
+      "filename": "BTCUSDT-1s-2025-11-11.zip",
+      "sha256": "27514ed635fb75c608a4fab263eea92685c460da9c0e589e1b5d38c26fba570e",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-11.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3723957,
+        "complete": true,
+        "end": "2025-11-13T00:00:00+00:00",
+        "first": "2025-11-12T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-12T23:59:59+00:00",
+        "logical_sha256": "af7a4ef19e5174f0a5ac22fd4a3b52b61d1bbfc6ead59860d768e96fba28ba15",
+        "path": "binance_spot/BTCUSDT/2025-11/20251112T000000-20251113T000000-92dd95cca8804acabd1098eb49500c4e.parquet",
+        "rows": 86400,
+        "sha256": "4ddcbe123f31032ebb86a8fb03bc3577cb8f1a724d679eae3ff5f38e73f9e918",
+        "start": "2025-11-12T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.057265874999757,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-12.zip.CHECKSUM",
+      "day": "2025-11-12T00:00:00+00:00",
+      "download_bytes": 2604381,
+      "download_seconds": 2.3662172909998844,
+      "filename": "BTCUSDT-1s-2025-11-12.zip",
+      "sha256": "371455e1cabb799fed47d06b5341fa5ed5220767875b1002ba088a91d8f4c285",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-12.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4101240,
+        "complete": true,
+        "end": "2025-11-14T00:00:00+00:00",
+        "first": "2025-11-13T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-13T23:59:59+00:00",
+        "logical_sha256": "1147a3aafab86456f2c6982fbfbfba4398db92cf056a902eb26105c6e0222c6d",
+        "path": "binance_spot/BTCUSDT/2025-11/20251113T000000-20251114T000000-88847c9b5c514315945d1ac6dd39aad3.parquet",
+        "rows": 86400,
+        "sha256": "b478fb6fd9a273cdb31e4e8a43ea7ca702b54d1d11be0e6e26dab09c5b4c0ccc",
+        "start": "2025-11-13T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.04712974999984,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-13.zip.CHECKSUM",
+      "day": "2025-11-13T00:00:00+00:00",
+      "download_bytes": 2849491,
+      "download_seconds": 2.497645499999635,
+      "filename": "BTCUSDT-1s-2025-11-13.zip",
+      "sha256": "34bb71837632ea17bf273b6c32e8b4f518385dda301395da5eecdc44f84ceada",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-13.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4498700,
+        "complete": true,
+        "end": "2025-11-15T00:00:00+00:00",
+        "first": "2025-11-14T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-14T23:59:59+00:00",
+        "logical_sha256": "93fb84fce293b9fb84876ee00264ea03127060d8c2eaea52132c2a28a5b20f35",
+        "path": "binance_spot/BTCUSDT/2025-11/20251114T000000-20251115T000000-27830b9323ae43f39d4661699d9d2ad2.parquet",
+        "rows": 86400,
+        "sha256": "8246589787f217d7748a92bb593deb561ec190df2890ef779932b5a3041bc755",
+        "start": "2025-11-14T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.051827374999448,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-14.zip.CHECKSUM",
+      "day": "2025-11-14T00:00:00+00:00",
+      "download_bytes": 3113062,
+      "download_seconds": 3.034914249999929,
+      "filename": "BTCUSDT-1s-2025-11-14.zip",
+      "sha256": "77266f1fa54e76d9c58259dbf0cfdfb11bc2eb9e4a6d91356f1eb152f79fd110",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-14.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3616459,
+        "complete": true,
+        "end": "2025-11-16T00:00:00+00:00",
+        "first": "2025-11-15T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-15T23:59:59+00:00",
+        "logical_sha256": "6557f2a55c32e4657443d5b2accda434c756c60e3c0053adeac90b4dc3a31991",
+        "path": "binance_spot/BTCUSDT/2025-11/20251115T000000-20251116T000000-b9c05e1ab5ae48238b366ecef43a4a44.parquet",
+        "rows": 86400,
+        "sha256": "67b8a270a33fa3edbbf9338683ea2bfa5f47f4de96b03fbba95d01ef0d35e2d9",
+        "start": "2025-11-15T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.050435915999515,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-15.zip.CHECKSUM",
+      "day": "2025-11-15T00:00:00+00:00",
+      "download_bytes": 2519302,
+      "download_seconds": 2.3486699169998246,
+      "filename": "BTCUSDT-1s-2025-11-15.zip",
+      "sha256": "cb25ca371ac8d45f44ab2db1d6d320e118b1eb2ac3812dadb22924111a5c311a",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-15.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3754579,
+        "complete": true,
+        "end": "2025-11-17T00:00:00+00:00",
+        "first": "2025-11-16T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-16T23:59:59+00:00",
+        "logical_sha256": "d7bbe89ca0ae4080d7d32cafee81a0d7fd127e1b37537f073da8b2ee17cd25e6",
+        "path": "binance_spot/BTCUSDT/2025-11/20251116T000000-20251117T000000-8e4bfc352c064c6894414a777daba0a1.parquet",
+        "rows": 86400,
+        "sha256": "2fd6b0336a126fc990a0c89d82d91adf1760b465b547bf4a13f104725e5500d4",
+        "start": "2025-11-16T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.043156542000361,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-16.zip.CHECKSUM",
+      "day": "2025-11-16T00:00:00+00:00",
+      "download_bytes": 2611542,
+      "download_seconds": 2.7959292079995066,
+      "filename": "BTCUSDT-1s-2025-11-16.zip",
+      "sha256": "1bd987a63d511bf5e68e1513d8a79a8fe53b9173e3415ab2cd98fb9160f799ca",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-16.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4137256,
+        "complete": true,
+        "end": "2025-11-18T00:00:00+00:00",
+        "first": "2025-11-17T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-17T23:59:59+00:00",
+        "logical_sha256": "54d361b531be2c4a0d0717efc23fdd3380f19bfc3b4350c875c60b51c544fd13",
+        "path": "binance_spot/BTCUSDT/2025-11/20251117T000000-20251118T000000-f8ccda11252c4092acd9039e3b92191e.parquet",
+        "rows": 86400,
+        "sha256": "651b00962079282d91445eb135ea2f4b612e79645952bec01c2534f174756b82",
+        "start": "2025-11-17T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.045082416999321,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-17.zip.CHECKSUM",
+      "day": "2025-11-17T00:00:00+00:00",
+      "download_bytes": 2898372,
+      "download_seconds": 2.853774416000306,
+      "filename": "BTCUSDT-1s-2025-11-17.zip",
+      "sha256": "28f049f6b2c255aae3c9674e804a7a5eb2b87e8c09e3110311e0355726d0205c",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-17.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4252885,
+        "complete": true,
+        "end": "2025-11-19T00:00:00+00:00",
+        "first": "2025-11-18T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-18T23:59:59+00:00",
+        "logical_sha256": "9ee093dc834d57ae540d96588626e5066adefa5d5f780d31ae3ee540719e46f8",
+        "path": "binance_spot/BTCUSDT/2025-11/20251118T000000-20251119T000000-6e337f786caf45b09b01d46e180c610e.parquet",
+        "rows": 86400,
+        "sha256": "706f9b0da69b7ac11907452f3bdad1754da490e66bfaac44f23683e38b20b231",
+        "start": "2025-11-18T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.067112707999513,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-18.zip.CHECKSUM",
+      "day": "2025-11-18T00:00:00+00:00",
+      "download_bytes": 2974001,
+      "download_seconds": 1.742415708000408,
+      "filename": "BTCUSDT-1s-2025-11-18.zip",
+      "sha256": "f35560b0d2095fa7838264741c0838fe278d9f43d1cb5dcb2db83bbc5a297c0d",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-18.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4126766,
+        "complete": true,
+        "end": "2025-11-20T00:00:00+00:00",
+        "first": "2025-11-19T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-19T23:59:59+00:00",
+        "logical_sha256": "fd40d75b3dafbaf7e76791bf300de1b697a4424494bb53df42c7359bdeb49994",
+        "path": "binance_spot/BTCUSDT/2025-11/20251119T000000-20251120T000000-9684d27d04b94cff8bf8312f5216af00.parquet",
+        "rows": 86400,
+        "sha256": "47f22df446ca5a009e82d45473846d4c61a7c67607f281f24602b7468f141e41",
+        "start": "2025-11-19T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.052610042000197,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-19.zip.CHECKSUM",
+      "day": "2025-11-19T00:00:00+00:00",
+      "download_bytes": 2861863,
+      "download_seconds": 2.792175749999842,
+      "filename": "BTCUSDT-1s-2025-11-19.zip",
+      "sha256": "b32154e536c32bd9451c428e38e0379ec31fa23f7a5ece95efc68bce36539b75",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-19.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4183762,
+        "complete": true,
+        "end": "2025-11-21T00:00:00+00:00",
+        "first": "2025-11-20T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-20T23:59:59+00:00",
+        "logical_sha256": "0b36fdf89a7ff52bb6d16271caa26e786ac7dd4aa1d78b6e8c9f6dbfc1cfb4e1",
+        "path": "binance_spot/BTCUSDT/2025-11/20251120T000000-20251121T000000-4ce6422d3db8424ba63d1cd60fa7e2f8.parquet",
+        "rows": 86400,
+        "sha256": "612421643745fbdf36407344f39e93cc2794ecdb5d57228605c9616360c49c21",
+        "start": "2025-11-20T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.05444933400031,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-20.zip.CHECKSUM",
+      "day": "2025-11-20T00:00:00+00:00",
+      "download_bytes": 2931619,
+      "download_seconds": 2.475551958000324,
+      "filename": "BTCUSDT-1s-2025-11-20.zip",
+      "sha256": "355bad608ec21f1da9ed115e7e263527b0df40ba5f783dbcb0034f749c63a895",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-20.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4710328,
+        "complete": true,
+        "end": "2025-11-22T00:00:00+00:00",
+        "first": "2025-11-21T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-21T23:59:59+00:00",
+        "logical_sha256": "d7fa5894e3ca671c840e7321572ded7f578e9632f9b991549e488d210b1dfcea",
+        "path": "binance_spot/BTCUSDT/2025-11/20251121T000000-20251122T000000-bff8e2813a5744cba747f2e3243e2458.parquet",
+        "rows": 86400,
+        "sha256": "15df5c6cd18b3036a7b76419dcd2c52bbe422ce80a37e5373ba4940e87e03677",
+        "start": "2025-11-21T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.058936000000358,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-21.zip.CHECKSUM",
+      "day": "2025-11-21T00:00:00+00:00",
+      "download_bytes": 3279835,
+      "download_seconds": 2.751410916000168,
+      "filename": "BTCUSDT-1s-2025-11-21.zip",
+      "sha256": "f08e029a8c072be275462b742bb872daf89d609c0fdeea7b3bd12c889c8fee63",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-21.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3737271,
+        "complete": true,
+        "end": "2025-11-23T00:00:00+00:00",
+        "first": "2025-11-22T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-22T23:59:59+00:00",
+        "logical_sha256": "8a1c6c0a55cec740e63500e3bd810ff8613a6e3335361d3be952069601636201",
+        "path": "binance_spot/BTCUSDT/2025-11/20251122T000000-20251123T000000-8a894e0a588d4e0ba1559f2963180697.parquet",
+        "rows": 86400,
+        "sha256": "020c6e0a425aaf8f245c185c35a729f940ce82e3420a2a83f361fae415dd3204",
+        "start": "2025-11-22T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.035759374999543,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-22.zip.CHECKSUM",
+      "day": "2025-11-22T00:00:00+00:00",
+      "download_bytes": 2598335,
+      "download_seconds": 2.7980317500005185,
+      "filename": "BTCUSDT-1s-2025-11-22.zip",
+      "sha256": "7e81c6e8ad6781226a50194f4870671a3b0b82bdf6d764760d1dc65c5ff1e7e4",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-22.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3845934,
+        "complete": true,
+        "end": "2025-11-24T00:00:00+00:00",
+        "first": "2025-11-23T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-23T23:59:59+00:00",
+        "logical_sha256": "b927511a382625f75cba6a3a92b9ad2ab13d7d27481b26b967fed014abae9c64",
+        "path": "binance_spot/BTCUSDT/2025-11/20251123T000000-20251124T000000-24bad431f4e84aba8447cbd08aa6804a.parquet",
+        "rows": 86400,
+        "sha256": "9be9522a56475a3210b8927cc5549fd96acc4d6d4b4292de63bb582f914eb08f",
+        "start": "2025-11-23T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.053365500000837,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-23.zip.CHECKSUM",
+      "day": "2025-11-23T00:00:00+00:00",
+      "download_bytes": 2670734,
+      "download_seconds": 2.3459589999993113,
+      "filename": "BTCUSDT-1s-2025-11-23.zip",
+      "sha256": "ee562943c3fd3d3cc7c70b1847101228a54da7364b6024dbb09d19ce77ee6f88",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-23.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4021983,
+        "complete": true,
+        "end": "2025-11-25T00:00:00+00:00",
+        "first": "2025-11-24T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-24T23:59:59+00:00",
+        "logical_sha256": "535d3186caccef829a6fd0da7c0cbdeeaee12e3867ffb1e7d949fa70dc15b697",
+        "path": "binance_spot/BTCUSDT/2025-11/20251124T000000-20251125T000000-14fc6a15d8d44accb6b4daf33bbaf2a8.parquet",
+        "rows": 86400,
+        "sha256": "6c6f38197c67fc0f74a4c41ef5c2b8502ac122e8599e7b68da5a30cd09dc4283",
+        "start": "2025-11-24T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.068926709000152,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-24.zip.CHECKSUM",
+      "day": "2025-11-24T00:00:00+00:00",
+      "download_bytes": 2775963,
+      "download_seconds": 2.363086958000167,
+      "filename": "BTCUSDT-1s-2025-11-24.zip",
+      "sha256": "ca28c94a561b3bd11f2c3b76f151e8dad42bb36f4a46b70a32b7e19b40dce78c",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-24.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3759561,
+        "complete": true,
+        "end": "2025-11-26T00:00:00+00:00",
+        "first": "2025-11-25T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-25T23:59:59+00:00",
+        "logical_sha256": "0dec10f6ec1b0c5198298aee3c8a83435e933316da87c7f913978d8625749de2",
+        "path": "binance_spot/BTCUSDT/2025-11/20251125T000000-20251126T000000-eddf4d9a699248b5ab369a72c79f2521.parquet",
+        "rows": 86400,
+        "sha256": "929efa7556bbc522439e8a2c6d40d1c44a1ce41aecf99e61ac67656f05556583",
+        "start": "2025-11-25T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.042171499999313,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-25.zip.CHECKSUM",
+      "day": "2025-11-25T00:00:00+00:00",
+      "download_bytes": 2609636,
+      "download_seconds": 2.820271125000545,
+      "filename": "BTCUSDT-1s-2025-11-25.zip",
+      "sha256": "60c4af891dd7ac23b0d523a151077004bb21388c8cc8248cec8f86d4e3dd53c1",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-25.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3675995,
+        "complete": true,
+        "end": "2025-11-27T00:00:00+00:00",
+        "first": "2025-11-26T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-26T23:59:59+00:00",
+        "logical_sha256": "7abbd2b5be8e5a1eefe134bd79826c47a90ba5d4646742c3afd341bd6d3cae7e",
+        "path": "binance_spot/BTCUSDT/2025-11/20251126T000000-20251127T000000-beb1872c10094b29b6f519af0fd44ac5.parquet",
+        "rows": 86400,
+        "sha256": "d2aaa538eef38b55f34bd7e6abbbc6cb23851c91b78b158035215e351ad821e2",
+        "start": "2025-11-26T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.069434874999388,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-26.zip.CHECKSUM",
+      "day": "2025-11-26T00:00:00+00:00",
+      "download_bytes": 2590416,
+      "download_seconds": 2.4483661660005964,
+      "filename": "BTCUSDT-1s-2025-11-26.zip",
+      "sha256": "239374668deae916eaf928ada976d497157f7b886c218b6c703f46ef19ee7da1",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-26.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3600074,
+        "complete": true,
+        "end": "2025-11-28T00:00:00+00:00",
+        "first": "2025-11-27T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-27T23:59:59+00:00",
+        "logical_sha256": "a65acd2d7717fecee052b7394eb3aa5009e78787056407cab651c45c71cc35ef",
+        "path": "binance_spot/BTCUSDT/2025-11/20251127T000000-20251128T000000-9e75b19cccbb44cdaf42ed8917923dc3.parquet",
+        "rows": 86400,
+        "sha256": "57e2ea9935f3e4f05f3a49772b8abc8193c25b865f61ce481a613075d6798915",
+        "start": "2025-11-27T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.035036417000811,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-27.zip.CHECKSUM",
+      "day": "2025-11-27T00:00:00+00:00",
+      "download_bytes": 2578406,
+      "download_seconds": 2.434913666999819,
+      "filename": "BTCUSDT-1s-2025-11-27.zip",
+      "sha256": "d874e3a4ddbeb7abf74336291a15b51e53405b18851c28a546ade0cb0030028d",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-27.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3574697,
+        "complete": true,
+        "end": "2025-11-29T00:00:00+00:00",
+        "first": "2025-11-28T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-28T23:59:59+00:00",
+        "logical_sha256": "2dbb474b4f5ec8b535319c8902f8bc943a0155d2e839e3a17098303b036d8022",
+        "path": "binance_spot/BTCUSDT/2025-11/20251128T000000-20251129T000000-d4854e83db4c4e32b5e0de48115b41bf.parquet",
+        "rows": 86400,
+        "sha256": "d800218b4396901ef2862889fb66b26ac28cc8c2670d5d9da47c7915431a5d70",
+        "start": "2025-11-28T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.042993459000172,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-28.zip.CHECKSUM",
+      "day": "2025-11-28T00:00:00+00:00",
+      "download_bytes": 2513960,
+      "download_seconds": 2.4163152080000145,
+      "filename": "BTCUSDT-1s-2025-11-28.zip",
+      "sha256": "82730e9298167d377463abfff4c8d1092f7b17b29d6a55aecd25e8f648368667",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-28.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3117887,
+        "complete": true,
+        "end": "2025-11-30T00:00:00+00:00",
+        "first": "2025-11-29T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-29T23:59:59+00:00",
+        "logical_sha256": "e3d582e848c6fdd14f279d66faaca66c2189477f6259b05921bb8d7a8a0f84f7",
+        "path": "binance_spot/BTCUSDT/2025-11/20251129T000000-20251130T000000-1ea787a3c20e461297e7b8629564b879.parquet",
+        "rows": 86400,
+        "sha256": "8e1f04ab4e3dba36191665dd6b81427612835c56334e2efa8ae049f9a9da5da3",
+        "start": "2025-11-29T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.020847999999205,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-29.zip.CHECKSUM",
+      "day": "2025-11-29T00:00:00+00:00",
+      "download_bytes": 2197227,
+      "download_seconds": 2.397312167000564,
+      "filename": "BTCUSDT-1s-2025-11-29.zip",
+      "sha256": "9943874ddd0bbd18f1eb4880c0268d40931157bda27bafa586418e622ef5c7f1",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-29.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3140129,
+        "complete": true,
+        "end": "2025-12-01T00:00:00+00:00",
+        "first": "2025-11-30T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-11-30T23:59:59+00:00",
+        "logical_sha256": "e4256eda8eb26a00ff46d8bfa4dc12e4216d5ac26ccdaae6790064d4b69bb598",
+        "path": "binance_spot/BTCUSDT/2025-11/20251130T000000-20251201T000000-6d75c6ddde8c455d984bf6670ba79b64.parquet",
+        "rows": 86400,
+        "sha256": "848a34a6abe77a5b07506199d757a30c8a7c9ab97765fad85b6eba6faa28b965",
+        "start": "2025-11-30T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0515584169997965,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-30.zip.CHECKSUM",
+      "day": "2025-11-30T00:00:00+00:00",
+      "download_bytes": 2205668,
+      "download_seconds": 2.359660208000605,
+      "filename": "BTCUSDT-1s-2025-11-30.zip",
+      "sha256": "ebff8da03f1353a9751d5059e8f7d51110f0949c86d91450ab16e54b69225532",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-30.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4187109,
+        "complete": true,
+        "end": "2025-12-02T00:00:00+00:00",
+        "first": "2025-12-01T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-01T23:59:59+00:00",
+        "logical_sha256": "11103466d3481fa7e265fd0ae9764fffdbc6bfd8f6cb2df43af01c2cd2f2170b",
+        "path": "binance_spot/BTCUSDT/2025-12/20251201T000000-20251202T000000-fe28e52f408141c8b95971ee1a57fc54.parquet",
+        "rows": 86400,
+        "sha256": "34f8ebf2a7d9bbc8cfd8e40f08718116252f104a475cea607050ba8a9ee6022d",
+        "start": "2025-12-01T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.053273292000085,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-01.zip.CHECKSUM",
+      "day": "2025-12-01T00:00:00+00:00",
+      "download_bytes": 2940674,
+      "download_seconds": 2.910834875000546,
+      "filename": "BTCUSDT-1s-2025-12-01.zip",
+      "sha256": "ed7a3ca29ce4f34615b5d946bbb2c7ff4832a6e2aa72eb0a2594cbe22e9e6774",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-01.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3911173,
+        "complete": true,
+        "end": "2025-12-03T00:00:00+00:00",
+        "first": "2025-12-02T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-02T23:59:59+00:00",
+        "logical_sha256": "faca326dcb91ae2eb6cb9f5f203b679406010dac7eebb67c4d51ca94f70b37ab",
+        "path": "binance_spot/BTCUSDT/2025-12/20251202T000000-20251203T000000-8137a9a2ab1a4a16862385bde79ab625.parquet",
+        "rows": 86400,
+        "sha256": "a543010f912a553f4b4bc567a827b1104a4a28c0c023e75668017af1931c73d7",
+        "start": "2025-12-02T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.060869124999954,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-02.zip.CHECKSUM",
+      "day": "2025-12-02T00:00:00+00:00",
+      "download_bytes": 2754057,
+      "download_seconds": 2.7808604579995517,
+      "filename": "BTCUSDT-1s-2025-12-02.zip",
+      "sha256": "659fc217cc092a43f1c635cc6d6803533c2e4607466e85dee1f515a5cf4b11e1",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-02.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4017908,
+        "complete": true,
+        "end": "2025-12-04T00:00:00+00:00",
+        "first": "2025-12-03T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-03T23:59:59+00:00",
+        "logical_sha256": "8d410c4064f9ebaa97ebf614938d3ced56fa90165d0e6915d4ce38be9764c6f0",
+        "path": "binance_spot/BTCUSDT/2025-12/20251203T000000-20251204T000000-c385c543afa244c8ace9600eb19af1e8.parquet",
+        "rows": 86400,
+        "sha256": "efadbdda7362a8a3e5bdd92266672b0430f7129fe50717439a56e462b5f671fb",
+        "start": "2025-12-03T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.037135249999665,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-03.zip.CHECKSUM",
+      "day": "2025-12-03T00:00:00+00:00",
+      "download_bytes": 2817047,
+      "download_seconds": 2.0736699999997654,
+      "filename": "BTCUSDT-1s-2025-12-03.zip",
+      "sha256": "d2460ccbaf987d83939be3547c2aae48119e391ba9b6943cfee1f7514ce9ae5d",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-03.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3658965,
+        "complete": true,
+        "end": "2025-12-05T00:00:00+00:00",
+        "first": "2025-12-04T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-04T23:59:59+00:00",
+        "logical_sha256": "73d6533f704ab0a6798e0f72edc46f00a24166d11e946c0916baeeb941194f88",
+        "path": "binance_spot/BTCUSDT/2025-12/20251204T000000-20251205T000000-17a23426fe8a43bb8be9faefd3b9289e.parquet",
+        "rows": 86400,
+        "sha256": "4839debaf3994d115c5042e130fdfc22c19903d273ddb2b2d7ab35105a0f0e7f",
+        "start": "2025-12-04T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.03899037499923,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-04.zip.CHECKSUM",
+      "day": "2025-12-04T00:00:00+00:00",
+      "download_bytes": 2569729,
+      "download_seconds": 2.8512347910000244,
+      "filename": "BTCUSDT-1s-2025-12-04.zip",
+      "sha256": "72c01583ef4cbf3d86f87b4222a04542174e8a8cfe3e9afc46d7a2454f6fe724",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-04.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3659291,
+        "complete": true,
+        "end": "2025-12-06T00:00:00+00:00",
+        "first": "2025-12-05T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-05T23:59:59+00:00",
+        "logical_sha256": "2507f42f8314960ba6805673bad13a61b4d177a6008d1afcfd443766a8aa5843",
+        "path": "binance_spot/BTCUSDT/2025-12/20251205T000000-20251206T000000-0e7ca75296a34938a16a83fb5e09d9b7.parquet",
+        "rows": 86400,
+        "sha256": "5235d7075bd8ea94cfdfc3be716a55e3e8ce2246a7b7e02203991c0c037c63e0",
+        "start": "2025-12-05T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0429017500000555,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-05.zip.CHECKSUM",
+      "day": "2025-12-05T00:00:00+00:00",
+      "download_bytes": 2551006,
+      "download_seconds": 2.9944280829995478,
+      "filename": "BTCUSDT-1s-2025-12-05.zip",
+      "sha256": "2f3d486ed164962045273e68251faf214e4f5bf94518abf8a8941422857ab95e",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-05.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3079136,
+        "complete": true,
+        "end": "2025-12-07T00:00:00+00:00",
+        "first": "2025-12-06T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-06T23:59:59+00:00",
+        "logical_sha256": "529429fbae111cab47eb4829f05e2a64a35c007f53c59463dab495b7e6afa212",
+        "path": "binance_spot/BTCUSDT/2025-12/20251206T000000-20251207T000000-776e1ff5d9634114ab151b4407db1c39.parquet",
+        "rows": 86400,
+        "sha256": "9325d969dd5ceffd551b02e4dc9deb2bfa86e604f7cc86a1f23163573a63898f",
+        "start": "2025-12-06T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.017698999999993,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-06.zip.CHECKSUM",
+      "day": "2025-12-06T00:00:00+00:00",
+      "download_bytes": 2173571,
+      "download_seconds": 1.8973978329995589,
+      "filename": "BTCUSDT-1s-2025-12-06.zip",
+      "sha256": "004d74cd14cb35728e17814e8768325cb3fdf5fccc975f7fca2ab2643b79919f",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-06.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3225654,
+        "complete": true,
+        "end": "2025-12-08T00:00:00+00:00",
+        "first": "2025-12-07T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-07T23:59:59+00:00",
+        "logical_sha256": "c0ac7151fe39ba78f3ef4b06108a2c2ebfd34c604c148fcc5af461af7b936005",
+        "path": "binance_spot/BTCUSDT/2025-12/20251207T000000-20251208T000000-1ef20731f0f34a979ac1daeffe580299.parquet",
+        "rows": 86400,
+        "sha256": "44464910470c92e91feca5118f213eea63c3bbbf6a146c44d66924c8b44a96b6",
+        "start": "2025-12-07T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.07763070800047,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-07.zip.CHECKSUM",
+      "day": "2025-12-07T00:00:00+00:00",
+      "download_bytes": 2228038,
+      "download_seconds": 2.7801077079993775,
+      "filename": "BTCUSDT-1s-2025-12-07.zip",
+      "sha256": "d042a121563fe1ff142647a86c9744126cbe96ac67ba2d63ab0d574ec9883631",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-07.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3596864,
+        "complete": true,
+        "end": "2025-12-09T00:00:00+00:00",
+        "first": "2025-12-08T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-08T23:59:59+00:00",
+        "logical_sha256": "8422f447525a9fb325ede93db4eb1356829a7813ad25bec3a67693eea5fa5e9e",
+        "path": "binance_spot/BTCUSDT/2025-12/20251208T000000-20251209T000000-38409895bd774266a52aaf9d1e132dd6.parquet",
+        "rows": 86400,
+        "sha256": "ff1257abe40646a8c6ad935c9f757fe76be6469082393032bd9f0203d239a7c4",
+        "start": "2025-12-08T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.038510915999723,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-08.zip.CHECKSUM",
+      "day": "2025-12-08T00:00:00+00:00",
+      "download_bytes": 2475318,
+      "download_seconds": 2.8475707920006244,
+      "filename": "BTCUSDT-1s-2025-12-08.zip",
+      "sha256": "c73d59515380e4706091249f230deed77cbb751894706204092c7345930836b4",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-08.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3659648,
+        "complete": true,
+        "end": "2025-12-10T00:00:00+00:00",
+        "first": "2025-12-09T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-09T23:59:59+00:00",
+        "logical_sha256": "60b5933596467f6bbf4cbe3046b630bb72fee850520be44ae3cebf922cde0329",
+        "path": "binance_spot/BTCUSDT/2025-12/20251209T000000-20251210T000000-7e6336b20f5742b1a2fb8e10a2fe917b.parquet",
+        "rows": 86400,
+        "sha256": "4df3e22d8d218e7d1baee277e6a9961e4b8df4607e609bf42f6ac7985ffc854e",
+        "start": "2025-12-09T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0418765419999545,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-09.zip.CHECKSUM",
+      "day": "2025-12-09T00:00:00+00:00",
+      "download_bytes": 2550799,
+      "download_seconds": 2.837865875000716,
+      "filename": "BTCUSDT-1s-2025-12-09.zip",
+      "sha256": "ba95ea8b9cffd135d13a8c762964e1d7d4dfb8b0419fa4cb56c6aee7817cd6ee",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-09.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3580667,
+        "complete": true,
+        "end": "2025-12-11T00:00:00+00:00",
+        "first": "2025-12-10T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-10T23:59:59+00:00",
+        "logical_sha256": "3fc9deb60e9ad200d9c68debd99b9ed4be8f815a0101c543c4b2725c53688f54",
+        "path": "binance_spot/BTCUSDT/2025-12/20251210T000000-20251211T000000-7bb0bf21022647dfb6e4a4712916602a.parquet",
+        "rows": 86400,
+        "sha256": "af0521bcef294507324cfe28776a758b58310a26afbc88e565e8e7e0de6ef7bb",
+        "start": "2025-12-10T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.031802083000002,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-10.zip.CHECKSUM",
+      "day": "2025-12-10T00:00:00+00:00",
+      "download_bytes": 2483295,
+      "download_seconds": 2.8480139170005714,
+      "filename": "BTCUSDT-1s-2025-12-10.zip",
+      "sha256": "9967563018e49f7967a118cf1449f4c0a3911877c638be3b000609ded0a962f8",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-10.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3723287,
+        "complete": true,
+        "end": "2025-12-12T00:00:00+00:00",
+        "first": "2025-12-11T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-11T23:59:59+00:00",
+        "logical_sha256": "688014ada899b485e766cc57d9296e34642f0a040d4055cb8677e3becc873ee0",
+        "path": "binance_spot/BTCUSDT/2025-12/20251211T000000-20251212T000000-d9059ea684fc409ab0147364ce69e394.parquet",
+        "rows": 86400,
+        "sha256": "1c60ef4c11af745138f66e38c5f306492c06a13131a701e4518f040f9fe9e48a",
+        "start": "2025-12-11T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.047314583000116,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-11.zip.CHECKSUM",
+      "day": "2025-12-11T00:00:00+00:00",
+      "download_bytes": 2576296,
+      "download_seconds": 2.8320837500004927,
+      "filename": "BTCUSDT-1s-2025-12-11.zip",
+      "sha256": "5a9184a1d5635f38486224ff4c0a528034bb171791bde49a194da396c0d947a2",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-11.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3427792,
+        "complete": true,
+        "end": "2025-12-13T00:00:00+00:00",
+        "first": "2025-12-12T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-12T23:59:59+00:00",
+        "logical_sha256": "bbec8eeed7e6e95b7f673de5aa7f5f50e4d7ac2497473864ac9a43372834b0a4",
+        "path": "binance_spot/BTCUSDT/2025-12/20251212T000000-20251213T000000-d90b8f19cc7a481bb30ceff61085db0c.parquet",
+        "rows": 86400,
+        "sha256": "8483897eaf6bdd1b8171ea3d4dfbd1bd7c6be0cf26c4d1e21a879a79f4e8f4f7",
+        "start": "2025-12-12T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.04167466600029,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-12.zip.CHECKSUM",
+      "day": "2025-12-12T00:00:00+00:00",
+      "download_bytes": 2383146,
+      "download_seconds": 2.802355499999976,
+      "filename": "BTCUSDT-1s-2025-12-12.zip",
+      "sha256": "84f4650625de93c9e123ba9c74c0e6926ec157a8895fdfd7193d9677e6e5c74e",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-12.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2814342,
+        "complete": true,
+        "end": "2025-12-14T00:00:00+00:00",
+        "first": "2025-12-13T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-13T23:59:59+00:00",
+        "logical_sha256": "57ef3d1520d8dae4af3b8796b8e9c866feaf0c2ef1557e96c2c60423c2cd2120",
+        "path": "binance_spot/BTCUSDT/2025-12/20251213T000000-20251214T000000-9e87e52cd81f47168e7c2b63a2e89645.parquet",
+        "rows": 86400,
+        "sha256": "a7252ec176ceb592c6eb56e3d1b1ed1a24139f57a227793ff754dc480bb18bd3",
+        "start": "2025-12-13T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.039192624999487,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-13.zip.CHECKSUM",
+      "day": "2025-12-13T00:00:00+00:00",
+      "download_bytes": 2045201,
+      "download_seconds": 2.7981382079997275,
+      "filename": "BTCUSDT-1s-2025-12-13.zip",
+      "sha256": "c7d8142d5e5136b684ab0c7554c9c42331bbd24dc9ede440a3553525c9cd8973",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-13.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3149875,
+        "complete": true,
+        "end": "2025-12-15T00:00:00+00:00",
+        "first": "2025-12-14T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-14T23:59:59+00:00",
+        "logical_sha256": "dfd899f34eb05dcc0ee3d2f084a5255b13c3d1208149672dc6a970b38b9a86a7",
+        "path": "binance_spot/BTCUSDT/2025-12/20251214T000000-20251215T000000-45c04a3adb9c43d69f39d72e31fa6667.parquet",
+        "rows": 86400,
+        "sha256": "0b92380731eae6c89291e6b1075238916d99b530bd0048991395a4590664d63f",
+        "start": "2025-12-14T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.021475167000062,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-14.zip.CHECKSUM",
+      "day": "2025-12-14T00:00:00+00:00",
+      "download_bytes": 2205004,
+      "download_seconds": 2.9420359169998846,
+      "filename": "BTCUSDT-1s-2025-12-14.zip",
+      "sha256": "c6734fb23d5b3aac9657c0a3565bcc74b8bc59d0077c85d7ac40bed85b94f78b",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-14.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3768344,
+        "complete": true,
+        "end": "2025-12-16T00:00:00+00:00",
+        "first": "2025-12-15T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-15T23:59:59+00:00",
+        "logical_sha256": "07dc1043f793f7781633cb88ac6f17305dea007a7e7a953da425f99538258216",
+        "path": "binance_spot/BTCUSDT/2025-12/20251215T000000-20251216T000000-91264e6c60714d479b39073879496b60.parquet",
+        "rows": 86400,
+        "sha256": "19dc73c4f838c4ea4595d721bfb22d651f644273d31b5718a1fda121bfd2f286",
+        "start": "2025-12-15T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.042503624999881,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-15.zip.CHECKSUM",
+      "day": "2025-12-15T00:00:00+00:00",
+      "download_bytes": 2597293,
+      "download_seconds": 3.0295316250003452,
+      "filename": "BTCUSDT-1s-2025-12-15.zip",
+      "sha256": "650a5be5d8f5f8175e7fe8383da128bf4fa0d81e5fb3564f36b66e65ff13deeb",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-15.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3709333,
+        "complete": true,
+        "end": "2025-12-17T00:00:00+00:00",
+        "first": "2025-12-16T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-16T23:59:59+00:00",
+        "logical_sha256": "5e18ccc60469824a1b7bcce475727606cd23f214bc48b1977f88011870e661b8",
+        "path": "binance_spot/BTCUSDT/2025-12/20251216T000000-20251217T000000-706674ae8f59415d8f78b051dc08803b.parquet",
+        "rows": 86400,
+        "sha256": "73b5cf5250023d996d877fe2226965d06ada797f8758e782146eae3c58cad83d",
+        "start": "2025-12-16T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.061732874999507,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-16.zip.CHECKSUM",
+      "day": "2025-12-16T00:00:00+00:00",
+      "download_bytes": 2614372,
+      "download_seconds": 2.793077125000309,
+      "filename": "BTCUSDT-1s-2025-12-16.zip",
+      "sha256": "b82826b5d8c8da11603a27f5be92ea747a73063382e9f041763a8e700ea252d4",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-16.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3687160,
+        "complete": true,
+        "end": "2025-12-18T00:00:00+00:00",
+        "first": "2025-12-17T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-17T23:59:59+00:00",
+        "logical_sha256": "2f6b1eb6adc759b564bcfafad79c0a91e461824d32cf498110cef88b97ee0ddc",
+        "path": "binance_spot/BTCUSDT/2025-12/20251217T000000-20251218T000000-ab780cf707f24ec1b78d69bdcda332d4.parquet",
+        "rows": 86400,
+        "sha256": "d6fdc2fe28d8a57129a3ef1d6a346d98dac53695229308161e8e641a8d77ff20",
+        "start": "2025-12-17T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.041410084000745,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-17.zip.CHECKSUM",
+      "day": "2025-12-17T00:00:00+00:00",
+      "download_bytes": 2547265,
+      "download_seconds": 2.519408540999393,
+      "filename": "BTCUSDT-1s-2025-12-17.zip",
+      "sha256": "831efb852a9ae2056e2acca928f3122de0fc5848bbeab60c99ef28d1be5ffad4",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-17.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3736070,
+        "complete": true,
+        "end": "2025-12-19T00:00:00+00:00",
+        "first": "2025-12-18T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-18T23:59:59+00:00",
+        "logical_sha256": "0727766a073861ae432db36ff34fa4b498bc1aa50341d32ef3b0d1736063cf9c",
+        "path": "binance_spot/BTCUSDT/2025-12/20251218T000000-20251219T000000-ee9b7acfe54747a5a395d5fb16629a50.parquet",
+        "rows": 86400,
+        "sha256": "a559cb2247248438041a3b8b7153a32d6ea53147286377d20fc7373db8f4c9c4",
+        "start": "2025-12-18T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.048871415999201,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-18.zip.CHECKSUM",
+      "day": "2025-12-18T00:00:00+00:00",
+      "download_bytes": 2593978,
+      "download_seconds": 2.4147852500000226,
+      "filename": "BTCUSDT-1s-2025-12-18.zip",
+      "sha256": "2d35f4bce2a148d5899246ded40c2c19abd1896bf1384164dd2321f6d55e4a81",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-18.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3690876,
+        "complete": true,
+        "end": "2025-12-20T00:00:00+00:00",
+        "first": "2025-12-19T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-19T23:59:59+00:00",
+        "logical_sha256": "ce0684b079ce689be4014538130cdcf9c1585ef092a42864adb5ffb154d90c80",
+        "path": "binance_spot/BTCUSDT/2025-12/20251219T000000-20251220T000000-f6dd0a37067a4ca984376b046aa73e0b.parquet",
+        "rows": 86400,
+        "sha256": "526c802439b19c6cdff60ac04ffcd9e15728e3d2a268b0e3b9b197c7db5bef61",
+        "start": "2025-12-19T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0640812080000615,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-19.zip.CHECKSUM",
+      "day": "2025-12-19T00:00:00+00:00",
+      "download_bytes": 2553611,
+      "download_seconds": 2.8030076249997364,
+      "filename": "BTCUSDT-1s-2025-12-19.zip",
+      "sha256": "cb1e2a52dde16bc6b64c719eea99272239f8f6dbe0b9415db39104c0c9cf6990",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-19.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2649423,
+        "complete": true,
+        "end": "2025-12-21T00:00:00+00:00",
+        "first": "2025-12-20T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-20T23:59:59+00:00",
+        "logical_sha256": "c9fb8eb2c92b86b6f2da9e8bee204a31018020823687c9c7bde3412e4163f615",
+        "path": "binance_spot/BTCUSDT/2025-12/20251220T000000-20251221T000000-41623726a7d642059d32121f1b3edcc7.parquet",
+        "rows": 86400,
+        "sha256": "1c7d526ea75b8212414edeb43843301ed00ff226679b0c35ab44de4d6ade8227",
+        "start": "2025-12-20T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.020504917000835,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-20.zip.CHECKSUM",
+      "day": "2025-12-20T00:00:00+00:00",
+      "download_bytes": 1923475,
+      "download_seconds": 2.814977541999724,
+      "filename": "BTCUSDT-1s-2025-12-20.zip",
+      "sha256": "8903dab4ba782bffb3e500ffdb59ba6b6400a11a43f7cf7a7ee1fd716bbad542",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-20.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2840701,
+        "complete": true,
+        "end": "2025-12-22T00:00:00+00:00",
+        "first": "2025-12-21T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-21T23:59:59+00:00",
+        "logical_sha256": "1febd71527f0636a44af0ae8858d7e2e10a22dcc55d5c3c2ffcfd04c2550156c",
+        "path": "binance_spot/BTCUSDT/2025-12/20251221T000000-20251222T000000-f536b499bf5c435db2225f984aee1d9d.parquet",
+        "rows": 86400,
+        "sha256": "c164120d6cb01b2931ddfe93a2a17723477781f2f45c4b7bd9541de3e6c70d8c",
+        "start": "2025-12-21T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.031787707999683,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-21.zip.CHECKSUM",
+      "day": "2025-12-21T00:00:00+00:00",
+      "download_bytes": 1991386,
+      "download_seconds": 2.7727017090001027,
+      "filename": "BTCUSDT-1s-2025-12-21.zip",
+      "sha256": "a4c511cbe406ee9244a1c8fedbc493283a774bf27ee8ba5a7c8a5d9574f0178c",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-21.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3492959,
+        "complete": true,
+        "end": "2025-12-23T00:00:00+00:00",
+        "first": "2025-12-22T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-22T23:59:59+00:00",
+        "logical_sha256": "1cb47ab0338ae6c7cf6d2172475d7b4e8ce7e71c8984a3c3d190fc0ae3d4e162",
+        "path": "binance_spot/BTCUSDT/2025-12/20251222T000000-20251223T000000-a4329e0003f54e919b4373790c909bf3.parquet",
+        "rows": 86400,
+        "sha256": "038f91d5efdfdb771e0aa6a8473ccbce657b4f53807f7fba425d976bded976f6",
+        "start": "2025-12-22T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.027242165999269,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-22.zip.CHECKSUM",
+      "day": "2025-12-22T00:00:00+00:00",
+      "download_bytes": 2424503,
+      "download_seconds": 2.9104021250004735,
+      "filename": "BTCUSDT-1s-2025-12-22.zip",
+      "sha256": "ab573ad3ad1fe5b2bea7177f1cb76c2ed4b095442c17da04f14c01f6594c9fa9",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-22.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3459035,
+        "complete": true,
+        "end": "2025-12-24T00:00:00+00:00",
+        "first": "2025-12-23T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-23T23:59:59+00:00",
+        "logical_sha256": "f0bd6e0d19d84772e5838f440cf160f6cce287c96cdd86419386d6bed4a89b24",
+        "path": "binance_spot/BTCUSDT/2025-12/20251223T000000-20251224T000000-f96dfad3e4fa46289ed370291631297c.parquet",
+        "rows": 86400,
+        "sha256": "9b85ae100463a7ebd411bf0d87ba99b6673091a7411c7f7e70751324fa4de389",
+        "start": "2025-12-23T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.040258584000185,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-23.zip.CHECKSUM",
+      "day": "2025-12-23T00:00:00+00:00",
+      "download_bytes": 2446870,
+      "download_seconds": 2.9345930830004363,
+      "filename": "BTCUSDT-1s-2025-12-23.zip",
+      "sha256": "afb289908c3823c188318a235b3ae8b796beb23ecd2701d9122fb619ff010a87",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-23.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3197938,
+        "complete": true,
+        "end": "2025-12-25T00:00:00+00:00",
+        "first": "2025-12-24T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-24T23:59:59+00:00",
+        "logical_sha256": "d952e59a9ccc1874dc4b44e2bd6ec20b79fc81498b71154c3ca50d725be1d75f",
+        "path": "binance_spot/BTCUSDT/2025-12/20251224T000000-20251225T000000-48d19f7219da4acb849bbe8d315620fc.parquet",
+        "rows": 86400,
+        "sha256": "bd47de872c36bafc08307c39c71e06e028947a670d943035aece77b6eb5fafc0",
+        "start": "2025-12-24T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.029041542000414,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-24.zip.CHECKSUM",
+      "day": "2025-12-24T00:00:00+00:00",
+      "download_bytes": 2310122,
+      "download_seconds": 2.77567474999978,
+      "filename": "BTCUSDT-1s-2025-12-24.zip",
+      "sha256": "2cb13d1066d170f7773906729dd1a042395ada2a7486ce5c7ae97e88cfb08ee0",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-24.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2981535,
+        "complete": true,
+        "end": "2025-12-26T00:00:00+00:00",
+        "first": "2025-12-25T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-25T23:59:59+00:00",
+        "logical_sha256": "a448b2db0dbb179d1ab8ff2150d0c83eb70ccc0fb585bee27724dfc7fd18a2e4",
+        "path": "binance_spot/BTCUSDT/2025-12/20251225T000000-20251226T000000-abb844bd71c84956bde2de610fd18675.parquet",
+        "rows": 86400,
+        "sha256": "181690f6f9a25424c0eff5f49f8bd001c8b69f3619dd81092fd0ddf803279ad7",
+        "start": "2025-12-25T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.012812124999982,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-25.zip.CHECKSUM",
+      "day": "2025-12-25T00:00:00+00:00",
+      "download_bytes": 2184163,
+      "download_seconds": 2.7829395420003493,
+      "filename": "BTCUSDT-1s-2025-12-25.zip",
+      "sha256": "c78ad47877e405ea83609d3bb03641d7ef1f6e0813cd388cba294bf70cf10f83",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-25.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3472252,
+        "complete": true,
+        "end": "2025-12-27T00:00:00+00:00",
+        "first": "2025-12-26T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-26T23:59:59+00:00",
+        "logical_sha256": "5b9ab4a4ea0983764bda68e9caf5e62405ac04e16615ce9ceccb855faae583f3",
+        "path": "binance_spot/BTCUSDT/2025-12/20251226T000000-20251227T000000-c128a6e6a44c40a99f7650aa6b0d5e8c.parquet",
+        "rows": 86400,
+        "sha256": "e6ff525668a2814352a8f45cfa8e1e36c2e398a4091754fba3fb793b30e0b813",
+        "start": "2025-12-26T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.021553417000177,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-26.zip.CHECKSUM",
+      "day": "2025-12-26T00:00:00+00:00",
+      "download_bytes": 2528528,
+      "download_seconds": 2.812110207999467,
+      "filename": "BTCUSDT-1s-2025-12-26.zip",
+      "sha256": "d1ae34086fc148c2614cb64c6c4c73be67ad37e66293e2fd057b850affe87d2c",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-26.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2796405,
+        "complete": true,
+        "end": "2025-12-28T00:00:00+00:00",
+        "first": "2025-12-27T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-27T23:59:59+00:00",
+        "logical_sha256": "4ddbedc88d31c96339f8902d18c8e91797149021527f59967b2c7f0782fba20e",
+        "path": "binance_spot/BTCUSDT/2025-12/20251227T000000-20251228T000000-0531637e975a4d73a22e1f9e59edde21.parquet",
+        "rows": 86400,
+        "sha256": "f5caa769c136963be4772e940714ab03f66c4be4e5bbe9978a05d4f794f63f42",
+        "start": "2025-12-27T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.019769624999753,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-27.zip.CHECKSUM",
+      "day": "2025-12-27T00:00:00+00:00",
+      "download_bytes": 2125201,
+      "download_seconds": 2.8327149169999757,
+      "filename": "BTCUSDT-1s-2025-12-27.zip",
+      "sha256": "cf7fc169242bbb61a117c83a632e3c44a9bc3c921b65a900af119573f6efd130",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-27.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2840283,
+        "complete": true,
+        "end": "2025-12-29T00:00:00+00:00",
+        "first": "2025-12-28T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-28T23:59:59+00:00",
+        "logical_sha256": "ad093bdfa315c5c812cd6afe91c3389a2d49bf813949fb7623280bac2e6f0ef7",
+        "path": "binance_spot/BTCUSDT/2025-12/20251228T000000-20251229T000000-ecd7d71037604c4d8b44c2ff407f61df.parquet",
+        "rows": 86400,
+        "sha256": "6c4ca56bcf877dd7a9268b0691b1e287cd958b198bfb05457f7a1e06896706de",
+        "start": "2025-12-28T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0283802080002715,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-28.zip.CHECKSUM",
+      "day": "2025-12-28T00:00:00+00:00",
+      "download_bytes": 2127844,
+      "download_seconds": 2.8445598749995042,
+      "filename": "BTCUSDT-1s-2025-12-28.zip",
+      "sha256": "8ccf7ab692f63eb2733c831e924c14c510215144837ba891f455365b36ecc266",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-28.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3567479,
+        "complete": true,
+        "end": "2025-12-30T00:00:00+00:00",
+        "first": "2025-12-29T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-29T23:59:59+00:00",
+        "logical_sha256": "9f72ca6862d77635a338e7d4dd19ce6e095f4b0daab6cc01bffeef03b8b7bfa4",
+        "path": "binance_spot/BTCUSDT/2025-12/20251229T000000-20251230T000000-d257a0320aa14dd9b6bef587018bfd86.parquet",
+        "rows": 86400,
+        "sha256": "d9ada41f81990117d5dc1cd0aeaba0769c75700b36a3ef41324ebdb9d2f6b6dd",
+        "start": "2025-12-29T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.023316458000409,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-29.zip.CHECKSUM",
+      "day": "2025-12-29T00:00:00+00:00",
+      "download_bytes": 2574863,
+      "download_seconds": 2.8298675419991923,
+      "filename": "BTCUSDT-1s-2025-12-29.zip",
+      "sha256": "441e5d62e24d4f867367db589788284b0ebbae5d579e240f807ff35a47175999",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-29.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3320131,
+        "complete": true,
+        "end": "2025-12-31T00:00:00+00:00",
+        "first": "2025-12-30T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-30T23:59:59+00:00",
+        "logical_sha256": "caa3b3ca8fe44278449a83bf581de0910f6a5cb677e3d3d5c70df8d63440b11b",
+        "path": "binance_spot/BTCUSDT/2025-12/20251230T000000-20251231T000000-842f35099d3445dca6c0f18ec0866342.parquet",
+        "rows": 86400,
+        "sha256": "238f9f098ead5087b8fc471d15ea3e10b59d8c63b41e8857a51b4764e5c09e3c",
+        "start": "2025-12-30T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.01348120900002,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-30.zip.CHECKSUM",
+      "day": "2025-12-30T00:00:00+00:00",
+      "download_bytes": 2375595,
+      "download_seconds": 2.839955041000394,
+      "filename": "BTCUSDT-1s-2025-12-30.zip",
+      "sha256": "313c90da46aedf99a6b1ff51319693456cca483c153962fe8b8051925b92fba4",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-30.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3248049,
+        "complete": true,
+        "end": "2026-01-01T00:00:00+00:00",
+        "first": "2025-12-31T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2025-12-31T23:59:59+00:00",
+        "logical_sha256": "bc86514c71238cfa9276140f64ea76f085996bd679188b2c692d3f1d1218545c",
+        "path": "binance_spot/BTCUSDT/2025-12/20251231T000000-20260101T000000-bf48f81df0a8421e901d3c3d6763d1c1.parquet",
+        "rows": 86400,
+        "sha256": "9f9358cdd708742f6f8400818a3153ee71241f323f8f8d98bf61cded2f0aba8a",
+        "start": "2025-12-31T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.085158291999505,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-31.zip.CHECKSUM",
+      "day": "2025-12-31T00:00:00+00:00",
+      "download_bytes": 2328907,
+      "download_seconds": 2.590377250000529,
+      "filename": "BTCUSDT-1s-2025-12-31.zip",
+      "sha256": "b37441cff7e651c5795a713bec064912aad06b646d1aee2da9a73f3eb645ed73",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-31.zip"
+    }
+  ],
+  "free_after_bytes": 77036195840,
+  "interval": "1s",
+  "local_database_verified": false,
+  "market": "binance_spot",
+  "numeric_storage": "float64, matching the live database archive schema; reserved zero ignore field omitted",
+  "plan": {
+    "download_bytes": 304949442,
+    "estimated_increment_bytes": 2838021277,
+    "files": [
+      {
+        "bytes": 2590013,
+        "day": "2025-09-01T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-01.zip"
+      },
+      {
+        "bytes": 2521130,
+        "day": "2025-09-02T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-02.zip"
+      },
+      {
+        "bytes": 2339680,
+        "day": "2025-09-03T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-03.zip"
+      },
+      {
+        "bytes": 2330323,
+        "day": "2025-09-04T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-04.zip"
+      },
+      {
+        "bytes": 2402332,
+        "day": "2025-09-05T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-05.zip"
+      },
+      {
+        "bytes": 1988323,
+        "day": "2025-09-06T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-06.zip"
+      },
+      {
+        "bytes": 2024990,
+        "day": "2025-09-07T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-07.zip"
+      },
+      {
+        "bytes": 2299576,
+        "day": "2025-09-08T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-08.zip"
+      },
+      {
+        "bytes": 2424850,
+        "day": "2025-09-09T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-09.zip"
+      },
+      {
+        "bytes": 2408227,
+        "day": "2025-09-10T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-10.zip"
+      },
+      {
+        "bytes": 2408207,
+        "day": "2025-09-11T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-11.zip"
+      },
+      {
+        "bytes": 2430354,
+        "day": "2025-09-12T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-12.zip"
+      },
+      {
+        "bytes": 2185767,
+        "day": "2025-09-13T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-13.zip"
+      },
+      {
+        "bytes": 2132993,
+        "day": "2025-09-14T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-14.zip"
+      },
+      {
+        "bytes": 2349008,
+        "day": "2025-09-15T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-15.zip"
+      },
+      {
+        "bytes": 2272101,
+        "day": "2025-09-16T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-16.zip"
+      },
+      {
+        "bytes": 2452350,
+        "day": "2025-09-17T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-17.zip"
+      },
+      {
+        "bytes": 2353962,
+        "day": "2025-09-18T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-18.zip"
+      },
+      {
+        "bytes": 2256681,
+        "day": "2025-09-19T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-19.zip"
+      },
+      {
+        "bytes": 2012923,
+        "day": "2025-09-20T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-20.zip"
+      },
+      {
+        "bytes": 2059778,
+        "day": "2025-09-21T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-21.zip"
+      },
+      {
+        "bytes": 2551157,
+        "day": "2025-09-22T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-22.zip"
+      },
+      {
+        "bytes": 2370111,
+        "day": "2025-09-23T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-23.zip"
+      },
+      {
+        "bytes": 2253832,
+        "day": "2025-09-24T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-24.zip"
+      },
+      {
+        "bytes": 2606356,
+        "day": "2025-09-25T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-25.zip"
+      },
+      {
+        "bytes": 2467100,
+        "day": "2025-09-26T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-26.zip"
+      },
+      {
+        "bytes": 2036748,
+        "day": "2025-09-27T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-27.zip"
+      },
+      {
+        "bytes": 2117121,
+        "day": "2025-09-28T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-28.zip"
+      },
+      {
+        "bytes": 2321823,
+        "day": "2025-09-29T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-29.zip"
+      },
+      {
+        "bytes": 2361033,
+        "day": "2025-09-30T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-09-30.zip"
+      },
+      {
+        "bytes": 2479843,
+        "day": "2025-10-01T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-01.zip"
+      },
+      {
+        "bytes": 2530886,
+        "day": "2025-10-02T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-02.zip"
+      },
+      {
+        "bytes": 2550406,
+        "day": "2025-10-03T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-03.zip"
+      },
+      {
+        "bytes": 2240336,
+        "day": "2025-10-04T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-04.zip"
+      },
+      {
+        "bytes": 2473941,
+        "day": "2025-10-05T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-05.zip"
+      },
+      {
+        "bytes": 2544599,
+        "day": "2025-10-06T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-06.zip"
+      },
+      {
+        "bytes": 2596455,
+        "day": "2025-10-07T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-07.zip"
+      },
+      {
+        "bytes": 2516110,
+        "day": "2025-10-08T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-08.zip"
+      },
+      {
+        "bytes": 2557536,
+        "day": "2025-10-09T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-09.zip"
+      },
+      {
+        "bytes": 2867348,
+        "day": "2025-10-10T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-10.zip"
+      },
+      {
+        "bytes": 2963782,
+        "day": "2025-10-11T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-11.zip"
+      },
+      {
+        "bytes": 2781815,
+        "day": "2025-10-12T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-12.zip"
+      },
+      {
+        "bytes": 2668122,
+        "day": "2025-10-13T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-13.zip"
+      },
+      {
+        "bytes": 2862540,
+        "day": "2025-10-14T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-14.zip"
+      },
+      {
+        "bytes": 2702029,
+        "day": "2025-10-15T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-15.zip"
+      },
+      {
+        "bytes": 2795715,
+        "day": "2025-10-16T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-16.zip"
+      },
+      {
+        "bytes": 2888034,
+        "day": "2025-10-17T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-17.zip"
+      },
+      {
+        "bytes": 2309822,
+        "day": "2025-10-18T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-18.zip"
+      },
+      {
+        "bytes": 2379787,
+        "day": "2025-10-19T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-19.zip"
+      },
+      {
+        "bytes": 2587308,
+        "day": "2025-10-20T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-20.zip"
+      },
+      {
+        "bytes": 2771308,
+        "day": "2025-10-21T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-21.zip"
+      },
+      {
+        "bytes": 2683383,
+        "day": "2025-10-22T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-22.zip"
+      },
+      {
+        "bytes": 2455775,
+        "day": "2025-10-23T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-23.zip"
+      },
+      {
+        "bytes": 2334070,
+        "day": "2025-10-24T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-24.zip"
+      },
+      {
+        "bytes": 2017974,
+        "day": "2025-10-25T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-25.zip"
+      },
+      {
+        "bytes": 2230611,
+        "day": "2025-10-26T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-26.zip"
+      },
+      {
+        "bytes": 2555555,
+        "day": "2025-10-27T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-27.zip"
+      },
+      {
+        "bytes": 2496261,
+        "day": "2025-10-28T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-28.zip"
+      },
+      {
+        "bytes": 2595841,
+        "day": "2025-10-29T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-29.zip"
+      },
+      {
+        "bytes": 2848995,
+        "day": "2025-10-30T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-30.zip"
+      },
+      {
+        "bytes": 2683591,
+        "day": "2025-10-31T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-10-31.zip"
+      },
+      {
+        "bytes": 2213060,
+        "day": "2025-11-01T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-01.zip"
+      },
+      {
+        "bytes": 2256581,
+        "day": "2025-11-02T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-02.zip"
+      },
+      {
+        "bytes": 2874058,
+        "day": "2025-11-03T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-03.zip"
+      },
+      {
+        "bytes": 3166631,
+        "day": "2025-11-04T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-04.zip"
+      },
+      {
+        "bytes": 2955866,
+        "day": "2025-11-05T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-05.zip"
+      },
+      {
+        "bytes": 2756407,
+        "day": "2025-11-06T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-06.zip"
+      },
+      {
+        "bytes": 2879002,
+        "day": "2025-11-07T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-07.zip"
+      },
+      {
+        "bytes": 2439723,
+        "day": "2025-11-08T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-08.zip"
+      },
+      {
+        "bytes": 2396197,
+        "day": "2025-11-09T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-09.zip"
+      },
+      {
+        "bytes": 2678218,
+        "day": "2025-11-10T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-10.zip"
+      },
+      {
+        "bytes": 2650102,
+        "day": "2025-11-11T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-11.zip"
+      },
+      {
+        "bytes": 2604381,
+        "day": "2025-11-12T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-12.zip"
+      },
+      {
+        "bytes": 2849491,
+        "day": "2025-11-13T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-13.zip"
+      },
+      {
+        "bytes": 3113062,
+        "day": "2025-11-14T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-14.zip"
+      },
+      {
+        "bytes": 2519302,
+        "day": "2025-11-15T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-15.zip"
+      },
+      {
+        "bytes": 2611542,
+        "day": "2025-11-16T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-16.zip"
+      },
+      {
+        "bytes": 2898372,
+        "day": "2025-11-17T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-17.zip"
+      },
+      {
+        "bytes": 2974001,
+        "day": "2025-11-18T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-18.zip"
+      },
+      {
+        "bytes": 2861863,
+        "day": "2025-11-19T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-19.zip"
+      },
+      {
+        "bytes": 2931619,
+        "day": "2025-11-20T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-20.zip"
+      },
+      {
+        "bytes": 3279835,
+        "day": "2025-11-21T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-21.zip"
+      },
+      {
+        "bytes": 2598335,
+        "day": "2025-11-22T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-22.zip"
+      },
+      {
+        "bytes": 2670734,
+        "day": "2025-11-23T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-23.zip"
+      },
+      {
+        "bytes": 2775963,
+        "day": "2025-11-24T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-24.zip"
+      },
+      {
+        "bytes": 2609636,
+        "day": "2025-11-25T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-25.zip"
+      },
+      {
+        "bytes": 2590416,
+        "day": "2025-11-26T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-26.zip"
+      },
+      {
+        "bytes": 2578406,
+        "day": "2025-11-27T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-27.zip"
+      },
+      {
+        "bytes": 2513960,
+        "day": "2025-11-28T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-28.zip"
+      },
+      {
+        "bytes": 2197227,
+        "day": "2025-11-29T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-29.zip"
+      },
+      {
+        "bytes": 2205668,
+        "day": "2025-11-30T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-11-30.zip"
+      },
+      {
+        "bytes": 2940674,
+        "day": "2025-12-01T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-01.zip"
+      },
+      {
+        "bytes": 2754057,
+        "day": "2025-12-02T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-02.zip"
+      },
+      {
+        "bytes": 2817047,
+        "day": "2025-12-03T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-03.zip"
+      },
+      {
+        "bytes": 2569729,
+        "day": "2025-12-04T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-04.zip"
+      },
+      {
+        "bytes": 2551006,
+        "day": "2025-12-05T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-05.zip"
+      },
+      {
+        "bytes": 2173571,
+        "day": "2025-12-06T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-06.zip"
+      },
+      {
+        "bytes": 2228038,
+        "day": "2025-12-07T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-07.zip"
+      },
+      {
+        "bytes": 2475318,
+        "day": "2025-12-08T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-08.zip"
+      },
+      {
+        "bytes": 2550799,
+        "day": "2025-12-09T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-09.zip"
+      },
+      {
+        "bytes": 2483295,
+        "day": "2025-12-10T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-10.zip"
+      },
+      {
+        "bytes": 2576296,
+        "day": "2025-12-11T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-11.zip"
+      },
+      {
+        "bytes": 2383146,
+        "day": "2025-12-12T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-12.zip"
+      },
+      {
+        "bytes": 2045201,
+        "day": "2025-12-13T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-13.zip"
+      },
+      {
+        "bytes": 2205004,
+        "day": "2025-12-14T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-14.zip"
+      },
+      {
+        "bytes": 2597293,
+        "day": "2025-12-15T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-15.zip"
+      },
+      {
+        "bytes": 2614372,
+        "day": "2025-12-16T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-16.zip"
+      },
+      {
+        "bytes": 2547265,
+        "day": "2025-12-17T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-17.zip"
+      },
+      {
+        "bytes": 2593978,
+        "day": "2025-12-18T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-18.zip"
+      },
+      {
+        "bytes": 2553611,
+        "day": "2025-12-19T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-19.zip"
+      },
+      {
+        "bytes": 1923475,
+        "day": "2025-12-20T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-20.zip"
+      },
+      {
+        "bytes": 1991386,
+        "day": "2025-12-21T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-21.zip"
+      },
+      {
+        "bytes": 2424503,
+        "day": "2025-12-22T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-22.zip"
+      },
+      {
+        "bytes": 2446870,
+        "day": "2025-12-23T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-23.zip"
+      },
+      {
+        "bytes": 2310122,
+        "day": "2025-12-24T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-24.zip"
+      },
+      {
+        "bytes": 2184163,
+        "day": "2025-12-25T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-25.zip"
+      },
+      {
+        "bytes": 2528528,
+        "day": "2025-12-26T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-26.zip"
+      },
+      {
+        "bytes": 2125201,
+        "day": "2025-12-27T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-27.zip"
+      },
+      {
+        "bytes": 2127844,
+        "day": "2025-12-28T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-28.zip"
+      },
+      {
+        "bytes": 2574863,
+        "day": "2025-12-29T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-29.zip"
+      },
+      {
+        "bytes": 2375595,
+        "day": "2025-12-30T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-30.zip"
+      },
+      {
+        "bytes": 2328907,
+        "day": "2025-12-31T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2025-12-31.zip"
+      }
+    ],
+    "free_before_bytes": 78117560320
+  },
+  "retrieved_at": "2026-10-25T18:21:46.820149+00:00",
+  "rows": 10540800,
+  "source": "binance_public_data",
+  "start": "2025-09-01T00:00:00+00:00",
+  "symbol": "BTCUSDT",
+  "timestamp_rule": "Spot timestamps use microseconds from 2025-01-01; older files use milliseconds",
+  "version": 1
+}

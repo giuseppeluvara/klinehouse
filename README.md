@@ -402,6 +402,13 @@ inputs from 10.5 million verified second candles and evaluates 552 four-hour and
 92 daily anchors. Its [report and complete forecast CSV](reports/timestral-long-horizon-20261025/README.md)
 record the observed errors, uncertainty and resource use.
 
+The [frozen adaptation experiment](docs/timestral-adaptation.md) selects a
+forecast rule on October–December 2025 data and evaluates it on separate
+January–March 2026 samples. Its [results, forecasts and independent audits](reports/timestral-adaptation-20261025/README.md)
+compare the selected rule with unchanged price using a predeclared evidence gate.
+The historical design was informed by the later May–July scores; it is not a
+prospective validation.
+
 ## License
 
 [MIT](LICENSE)

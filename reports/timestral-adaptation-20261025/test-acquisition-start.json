@@ -1,0 +1,14 @@
+{
+  "registered_before_first_get_utc": "2026-10-25T18:27:37.114929+00:00",
+  "source": "binance_public_data",
+  "symbol": "BTCUSDT",
+  "start": "2026-01-01T00:00:00+00:00",
+  "end": "2026-04-01T00:00:00+00:00",
+  "freeze_sha256": "3faca63a7b215448e055ab772f89ce42fa5f47d5e2a9159bd3ca5e9ed3e814e0",
+  "frozen_protocol_sha256": "30738a65ed3c9d60b66b3f925da76f7464e46a462b76873c2782b69775326c18",
+  "test_head_plan_sha256": "52cdda295ebbd8964010fd869688cc50328d8286ce46a3f4a47eb8eb1a4c4a16",
+  "storage_guard_sha256": "0b0a3fc27be2f716a002bc21ecf4acd480c0e93543221482017e9fed4ec255e5",
+  "free_before_bytes": 77118693376,
+  "test_directory_absent_before_first_get": true,
+  "importer_sha256": "0fed2f34b9ce7a5440d127b37199399abd194768fa647205c81d467c3668c5e0"
+}

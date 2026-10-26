@@ -1,0 +1,25 @@
+{
+  "commit": "975fbbb8021c972a05e51943c6fe6b1551932cf3",
+  "run_id": 40220664070,
+  "url": "https://github.com/giuseppeluvara/klinehouse/actions/runs/40220664070",
+  "status": "completed",
+  "conclusion": "success",
+  "tests_passed": 154,
+  "seconds": 49.46,
+  "test_log": [
+    "2026-10-25T18:20:48.1449091Z 154 passed, 72 warnings in 49.46s"
+  ],
+  "jobs": [
+    {
+      "id": 121251336783,
+      "name": "Archive & Timescale integration",
+      "conclusion": "success"
+    },
+    {
+      "id": 121251337086,
+      "name": "Lint & import check",
+      "conclusion": "success"
+    }
+  ],
+  "scope": "Eight isolated TimescaleDB integrations, frozen adaptation, artifact export and independent raw-data auditor."
+}

@@ -1,0 +1,2638 @@
+{
+  "batch_size": 8192,
+  "complete": true,
+  "documentation": "https://github.com/binance/binance-public-data",
+  "elapsed_seconds": 590.5563638330004,
+  "end": "2026-04-01T00:00:00+00:00",
+  "files": [
+    {
+      "archive_entry": {
+        "bytes": 2781675,
+        "complete": true,
+        "end": "2026-01-02T00:00:00+00:00",
+        "first": "2026-01-01T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-01T23:59:59+00:00",
+        "logical_sha256": "95f8e30f7fa29c79e0b7a39de5a89dde415accbb28688a653feab514814c2629",
+        "path": "binance_spot/BTCUSDT/2026-01/20260101T000000-20260102T000000-e1f8613868c74fbcb7c30a347d73d1ea.parquet",
+        "rows": 86400,
+        "sha256": "c6d5cb080ee4ac3ec0152ae3dce19206b9adadb8464fa2ccc9bfb286f608f5fd",
+        "start": "2026-01-01T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.408049832999495,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-01.zip.CHECKSUM",
+      "day": "2026-01-01T00:00:00+00:00",
+      "download_bytes": 2022603,
+      "download_seconds": 2.764967125000112,
+      "filename": "BTCUSDT-1s-2026-01-01.zip",
+      "sha256": "77fad0ee670923b0d7199396ae6fbf4a120bd647c30f6749a0dc7c48aae17953",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-01.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3397612,
+        "complete": true,
+        "end": "2026-01-03T00:00:00+00:00",
+        "first": "2026-01-02T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-02T23:59:59+00:00",
+        "logical_sha256": "cf1bc21c07874ab8bc794dd23aeacf0a31645667c8128a8c525823a4d5132a6b",
+        "path": "binance_spot/BTCUSDT/2026-01/20260102T000000-20260103T000000-7576bf5481394cb096370f88226338d8.parquet",
+        "rows": 86400,
+        "sha256": "366a9293d7a8701a51378751dbc464eac81add6c2cad9968dfd5c4dc45b8395c",
+        "start": "2026-01-02T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.051867875000426,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-02.zip.CHECKSUM",
+      "day": "2026-01-02T00:00:00+00:00",
+      "download_bytes": 2399097,
+      "download_seconds": 1.7368084999998246,
+      "filename": "BTCUSDT-1s-2026-01-02.zip",
+      "sha256": "99c1e937156f068719c55e0eee2a035f5a70f98885eff058cfe8b7534864a902",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-02.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2934703,
+        "complete": true,
+        "end": "2026-01-04T00:00:00+00:00",
+        "first": "2026-01-03T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-03T23:59:59+00:00",
+        "logical_sha256": "8a10dd7e7035476f36e5848d804047a2996f5975375c9e6375c1d1b22de27499",
+        "path": "binance_spot/BTCUSDT/2026-01/20260103T000000-20260104T000000-8f047abdb299470e99bbefbe22137373.parquet",
+        "rows": 86400,
+        "sha256": "4b8db457d1a079d035e2fd6f1a6139a09ab968db6137e8b3628f89e16a398878",
+        "start": "2026-01-03T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.061789083000804,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-03.zip.CHECKSUM",
+      "day": "2026-01-03T00:00:00+00:00",
+      "download_bytes": 2148942,
+      "download_seconds": 2.856741666999369,
+      "filename": "BTCUSDT-1s-2026-01-03.zip",
+      "sha256": "a568e755d94dc93b538ed96a3a7a848b6067cf9b20d5d8d460f507d8e079fe2b",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-03.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3109204,
+        "complete": true,
+        "end": "2026-01-05T00:00:00+00:00",
+        "first": "2026-01-04T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-04T23:59:59+00:00",
+        "logical_sha256": "f227231fea358c6d9c0e049a3169522e6273d10ab2f33de271c143f2a575bf16",
+        "path": "binance_spot/BTCUSDT/2026-01/20260104T000000-20260105T000000-bbc6d60b9d9141ff9d344d523e2664c4.parquet",
+        "rows": 86400,
+        "sha256": "88978f8b3a99252805feef7878fd1b194f7464ef27bb27f0ef65287f257c139f",
+        "start": "2026-01-04T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.119486749999851,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-04.zip.CHECKSUM",
+      "day": "2026-01-04T00:00:00+00:00",
+      "download_bytes": 2238281,
+      "download_seconds": 2.7988331669994295,
+      "filename": "BTCUSDT-1s-2026-01-04.zip",
+      "sha256": "d13d604e672be824574f995834c4b04b326ea293dd253863a9cc3ef78becb646",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-04.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3697203,
+        "complete": true,
+        "end": "2026-01-06T00:00:00+00:00",
+        "first": "2026-01-05T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-05T23:59:59+00:00",
+        "logical_sha256": "5d4610ab134d4d9a5773c3ddd396087d68302e00340a90eb9eca21b7776ad19b",
+        "path": "binance_spot/BTCUSDT/2026-01/20260105T000000-20260106T000000-16d0e5d722984b03b31e0892a636a1ab.parquet",
+        "rows": 86400,
+        "sha256": "910ed5a45a6f3013840d748586edae50c8fc2de2d608441b5daeada50832c413",
+        "start": "2026-01-05T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.040497125000002,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-05.zip.CHECKSUM",
+      "day": "2026-01-05T00:00:00+00:00",
+      "download_bytes": 2643214,
+      "download_seconds": 2.762118417000238,
+      "filename": "BTCUSDT-1s-2026-01-05.zip",
+      "sha256": "c371dd3ce5b06b0f5e27092b0019bdf1bba1d7232911ef9b203cf240bbe5dbb4",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-05.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3585262,
+        "complete": true,
+        "end": "2026-01-07T00:00:00+00:00",
+        "first": "2026-01-06T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-06T23:59:59+00:00",
+        "logical_sha256": "6f222c3e29555cda511153cbcd4b98bb4a33e82ca565fa0f8422a4744aa5cab8",
+        "path": "binance_spot/BTCUSDT/2026-01/20260106T000000-20260107T000000-d3234ac627c047638a379df4b27d1c1d.parquet",
+        "rows": 86400,
+        "sha256": "c490af80a37c04e80774a6d895b60d3c9febbe76c2a371ba6280a51e815cd4e7",
+        "start": "2026-01-06T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.034492333000344,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-06.zip.CHECKSUM",
+      "day": "2026-01-06T00:00:00+00:00",
+      "download_bytes": 2575449,
+      "download_seconds": 2.3482986669996535,
+      "filename": "BTCUSDT-1s-2026-01-06.zip",
+      "sha256": "5afd2dc842883021e4a1daf66405c938b518346a78df79718098172e5c1e30db",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-06.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3411292,
+        "complete": true,
+        "end": "2026-01-08T00:00:00+00:00",
+        "first": "2026-01-07T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-07T23:59:59+00:00",
+        "logical_sha256": "43a08243eece1d8f2f2a8234125f826146b85ae825052231a498c3319afc7450",
+        "path": "binance_spot/BTCUSDT/2026-01/20260107T000000-20260108T000000-006b0567a47f4be889379c1d2eef698b.parquet",
+        "rows": 86400,
+        "sha256": "d3bee5c3fa601dd6ee32ab10ac3a19df2e9fdf7488fd885cb1454517803d1454",
+        "start": "2026-01-07T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.07624795799984,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-07.zip.CHECKSUM",
+      "day": "2026-01-07T00:00:00+00:00",
+      "download_bytes": 2429791,
+      "download_seconds": 2.3249119170004633,
+      "filename": "BTCUSDT-1s-2026-01-07.zip",
+      "sha256": "c93bd7495ce4b3cab61f09660ccf2bc2cbde5ccedcfe8e52fa3642a051b7821e",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-07.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3520488,
+        "complete": true,
+        "end": "2026-01-09T00:00:00+00:00",
+        "first": "2026-01-08T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-08T23:59:59+00:00",
+        "logical_sha256": "b0cefe60877172aaeb79d214fa387eedcc09e3e80ba808991b0385c91db0c2a8",
+        "path": "binance_spot/BTCUSDT/2026-01/20260108T000000-20260109T000000-a6095891e995415980e1e67ebfb176e1.parquet",
+        "rows": 86400,
+        "sha256": "c5d1855957a16c82228013c69291dfad41a0a386e55ea88d3fef2ee953badece",
+        "start": "2026-01-08T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.076559957999962,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-08.zip.CHECKSUM",
+      "day": "2026-01-08T00:00:00+00:00",
+      "download_bytes": 2476878,
+      "download_seconds": 2.898397666999699,
+      "filename": "BTCUSDT-1s-2026-01-08.zip",
+      "sha256": "688bbc217a2c0d033fa7c5c79b2c41bd609dfa99daad02448cd36ce73dba541b",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-08.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3281380,
+        "complete": true,
+        "end": "2026-01-10T00:00:00+00:00",
+        "first": "2026-01-09T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-09T23:59:59+00:00",
+        "logical_sha256": "19830b7075557f5cb2bc8a2435111f850d2b90354ee141565cee6250ebf1a0eb",
+        "path": "binance_spot/BTCUSDT/2026-01/20260109T000000-20260110T000000-ae983b0d664c44b2bb880412faa9aa96.parquet",
+        "rows": 86400,
+        "sha256": "fc133fea5104682f2ae6c2027bda071f1644afc154526028b1d8c139c01eee64",
+        "start": "2026-01-09T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.057057708000684,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-09.zip.CHECKSUM",
+      "day": "2026-01-09T00:00:00+00:00",
+      "download_bytes": 2297023,
+      "download_seconds": 2.3858520419998968,
+      "filename": "BTCUSDT-1s-2026-01-09.zip",
+      "sha256": "f8479a4d8556a74b94ce4fe78661533ed3c78a9fbaa3fdce79b606e04a540d8c",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-09.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2586160,
+        "complete": true,
+        "end": "2026-01-11T00:00:00+00:00",
+        "first": "2026-01-10T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-10T23:59:59+00:00",
+        "logical_sha256": "1d478606b85ff134f140941b4fa0b74c0b27810f69f11784b9837aa9df2e8821",
+        "path": "binance_spot/BTCUSDT/2026-01/20260110T000000-20260111T000000-8b5cbe02e2814ba788dd8a709a7e10f0.parquet",
+        "rows": 86400,
+        "sha256": "173dad4cf4264bbd001b3f191ca5d95ef8fdb2672b9ec55a07a70222109a9f4c",
+        "start": "2026-01-10T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.062187249999624,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-10.zip.CHECKSUM",
+      "day": "2026-01-10T00:00:00+00:00",
+      "download_bytes": 1901675,
+      "download_seconds": 2.402321125000526,
+      "filename": "BTCUSDT-1s-2026-01-10.zip",
+      "sha256": "ebb0103dad639c75a83c892108c0d3b4592b3533efd5cc4a0004c6eb881cf475",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-10.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2665102,
+        "complete": true,
+        "end": "2026-01-12T00:00:00+00:00",
+        "first": "2026-01-11T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-11T23:59:59+00:00",
+        "logical_sha256": "4995add6c5569190347eb375bdf1844393ab758ff4dd64f52dea00e85b311558",
+        "path": "binance_spot/BTCUSDT/2026-01/20260111T000000-20260112T000000-0abf4de48a91413190c6cb549435ed5d.parquet",
+        "rows": 86400,
+        "sha256": "2ef17050be0b6958494eb59162fe9b1b8a962425dd0ef6d31115daf025e9b620",
+        "start": "2026-01-11T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.02703854200081,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-11.zip.CHECKSUM",
+      "day": "2026-01-11T00:00:00+00:00",
+      "download_bytes": 1945010,
+      "download_seconds": 2.4086581249994197,
+      "filename": "BTCUSDT-1s-2026-01-11.zip",
+      "sha256": "0f2790b65af11c31215377e87a970c03fc24297f83ce68fc16f4f511821c9351",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-11.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3290268,
+        "complete": true,
+        "end": "2026-01-13T00:00:00+00:00",
+        "first": "2026-01-12T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-12T23:59:59+00:00",
+        "logical_sha256": "d1cb0636526b2ab238b7ee3a82def2b982af76876cb2beaa7600d513b819bd6e",
+        "path": "binance_spot/BTCUSDT/2026-01/20260112T000000-20260113T000000-772c4b0ac19c4f71a36ada056dabbeed.parquet",
+        "rows": 86400,
+        "sha256": "55f2206e68c363fbcaf57d94f7f2498ec1beaa2622ec3c66c00ddb1651202135",
+        "start": "2026-01-12T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.032724499999858,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-12.zip.CHECKSUM",
+      "day": "2026-01-12T00:00:00+00:00",
+      "download_bytes": 2298298,
+      "download_seconds": 2.552027083000212,
+      "filename": "BTCUSDT-1s-2026-01-12.zip",
+      "sha256": "01ca086ec42042b2fd49f60fbe4ab45650aa395ea284a4fe036ba07d8d890989",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-12.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3482552,
+        "complete": true,
+        "end": "2026-01-14T00:00:00+00:00",
+        "first": "2026-01-13T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-13T23:59:59+00:00",
+        "logical_sha256": "f00c9808ee06814a076daf74b8a7fc9320719277a6ad57014d60b72b19d30360",
+        "path": "binance_spot/BTCUSDT/2026-01/20260113T000000-20260114T000000-f9e88887b7c74e828c389f35ac4d9ee6.parquet",
+        "rows": 86400,
+        "sha256": "158b3dd49e964395cf1170e28bd906208ebd9c4d03c4c57765cf2a5d808d53ce",
+        "start": "2026-01-13T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.046792334000202,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-13.zip.CHECKSUM",
+      "day": "2026-01-13T00:00:00+00:00",
+      "download_bytes": 2459111,
+      "download_seconds": 2.330165541000497,
+      "filename": "BTCUSDT-1s-2026-01-13.zip",
+      "sha256": "0b63bfece149bafec08414fe6a4eaa1fe1a2cf4748e65ece3e3ae6dcccb534b3",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-13.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3637691,
+        "complete": true,
+        "end": "2026-01-15T00:00:00+00:00",
+        "first": "2026-01-14T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-14T23:59:59+00:00",
+        "logical_sha256": "92e2c1adc06cb03b40c7c406a6badeb0327f686de36b0e828b6b9db6ee027556",
+        "path": "binance_spot/BTCUSDT/2026-01/20260114T000000-20260115T000000-5c495a5ba83149faa7a27b4025d5c519.parquet",
+        "rows": 86400,
+        "sha256": "3537bde656695db17eea3ebce3d80b3bafb962d6c9e3c228b1e395327494ffbc",
+        "start": "2026-01-14T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.05057562499951,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-14.zip.CHECKSUM",
+      "day": "2026-01-14T00:00:00+00:00",
+      "download_bytes": 2574156,
+      "download_seconds": 2.419314542000393,
+      "filename": "BTCUSDT-1s-2026-01-14.zip",
+      "sha256": "1b49df1ac1078e1e4fa541dded97e6595232592b55f4ccc25ac7dd569508f343",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-14.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3511073,
+        "complete": true,
+        "end": "2026-01-16T00:00:00+00:00",
+        "first": "2026-01-15T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-15T23:59:59+00:00",
+        "logical_sha256": "0574f11dba9c88dfa1da64def4acda1286b5b2819ffcf38d0696e8c0f00f40b4",
+        "path": "binance_spot/BTCUSDT/2026-01/20260115T000000-20260116T000000-0ebbc236bca84e4db34431d55be808ec.parquet",
+        "rows": 86400,
+        "sha256": "2dc88cbbab23de49dfcd4a4079f5499de6d7a466e870b514990038017fc228f3",
+        "start": "2026-01-15T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.054959792000773,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-15.zip.CHECKSUM",
+      "day": "2026-01-15T00:00:00+00:00",
+      "download_bytes": 2464486,
+      "download_seconds": 2.5404484999999113,
+      "filename": "BTCUSDT-1s-2026-01-15.zip",
+      "sha256": "11f399ff16d4fd5243c1727032c11fbba421d92dcb0d212d09ffdc9b31be0a67",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-15.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3152867,
+        "complete": true,
+        "end": "2026-01-17T00:00:00+00:00",
+        "first": "2026-01-16T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-16T23:59:59+00:00",
+        "logical_sha256": "b0a839187409b4fcf213215a21aa00f08d4702c3f92f466762f76228196c6f7a",
+        "path": "binance_spot/BTCUSDT/2026-01/20260116T000000-20260117T000000-d346b5aa21cc41caaef5677df733251c.parquet",
+        "rows": 86400,
+        "sha256": "4825d84804eb83feb94d8919211f74ea74dd90b180e4e96f83de4cd7fbc885fd",
+        "start": "2026-01-16T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.016472624999551,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-16.zip.CHECKSUM",
+      "day": "2026-01-16T00:00:00+00:00",
+      "download_bytes": 2241863,
+      "download_seconds": 2.4539556250001624,
+      "filename": "BTCUSDT-1s-2026-01-16.zip",
+      "sha256": "39ca3062b3d5d220c794b48b23e575ce1435657c784eb987653b41092f1d8a8f",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-16.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2614917,
+        "complete": true,
+        "end": "2026-01-18T00:00:00+00:00",
+        "first": "2026-01-17T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-17T23:59:59+00:00",
+        "logical_sha256": "34b34b3ffd52702991008e35225fb378fa3a6ed2ed9670ae1739ee82a2953c4c",
+        "path": "binance_spot/BTCUSDT/2026-01/20260117T000000-20260118T000000-12f282c6a6c34cdfa0d3f4c24acf7341.parquet",
+        "rows": 86400,
+        "sha256": "78e352d98e01adba7dbe5ec20adeeaee5ce1e31587137d851fcc741b048c2247",
+        "start": "2026-01-17T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.017041582999809,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-17.zip.CHECKSUM",
+      "day": "2026-01-17T00:00:00+00:00",
+      "download_bytes": 1923250,
+      "download_seconds": 2.3374985419995937,
+      "filename": "BTCUSDT-1s-2026-01-17.zip",
+      "sha256": "8b99571e506801c8754fcaf31e1c17d02f627a128b2a3c98031768d090098821",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-17.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2747883,
+        "complete": true,
+        "end": "2026-01-19T00:00:00+00:00",
+        "first": "2026-01-18T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-18T23:59:59+00:00",
+        "logical_sha256": "f94209c388165a2408d3e9bea3630f9d8dd07cf20257eff0d0357ddbc7848361",
+        "path": "binance_spot/BTCUSDT/2026-01/20260118T000000-20260119T000000-e67e53462bbb4b7580d9eadc79ab92a8.parquet",
+        "rows": 86400,
+        "sha256": "6054ff1f472e04697805eb2826ff8828014966b90a43688e9aea77d6a455ff44",
+        "start": "2026-01-18T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.020082250000087,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-18.zip.CHECKSUM",
+      "day": "2026-01-18T00:00:00+00:00",
+      "download_bytes": 1998239,
+      "download_seconds": 2.3348812920003184,
+      "filename": "BTCUSDT-1s-2026-01-18.zip",
+      "sha256": "2543f212c0fb44ca6c0d60bff4b9c4496118a4857d7bf7b6c62ea93a482affa2",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-18.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3280009,
+        "complete": true,
+        "end": "2026-01-20T00:00:00+00:00",
+        "first": "2026-01-19T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-19T23:59:59+00:00",
+        "logical_sha256": "2fbd2974037c3870273650ea945ae68b37ac9fed0cfc24c4f38252b543d9d15f",
+        "path": "binance_spot/BTCUSDT/2026-01/20260119T000000-20260120T000000-431717a0f24b4dd695e6855f5c25ad03.parquet",
+        "rows": 86400,
+        "sha256": "09c02e6a9dd6b1d5a58fd7948dd45257486fee8fc07d1fb3d327bdfafc0f9aaf",
+        "start": "2026-01-19T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.050796499999706,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-19.zip.CHECKSUM",
+      "day": "2026-01-19T00:00:00+00:00",
+      "download_bytes": 2329982,
+      "download_seconds": 2.9545362919998297,
+      "filename": "BTCUSDT-1s-2026-01-19.zip",
+      "sha256": "6e47a34ccbaa06dc620dccb9aa2c43868904615715c29e35ec8e8068ca87adc7",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-19.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3722845,
+        "complete": true,
+        "end": "2026-01-21T00:00:00+00:00",
+        "first": "2026-01-20T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-20T23:59:59+00:00",
+        "logical_sha256": "256c2e1b0136e66f2ed1ff9256036e7762a1a29ea7f67873738961fb94dce014",
+        "path": "binance_spot/BTCUSDT/2026-01/20260120T000000-20260121T000000-9c43e2cab7c54279afa6e5670f434d80.parquet",
+        "rows": 86400,
+        "sha256": "9d9214431e774675457cfc8b42c4664fc45a64749d44521071bb4bdd8c03cb67",
+        "start": "2026-01-20T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.05105179200018,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-20.zip.CHECKSUM",
+      "day": "2026-01-20T00:00:00+00:00",
+      "download_bytes": 2706792,
+      "download_seconds": 2.5080543329995635,
+      "filename": "BTCUSDT-1s-2026-01-20.zip",
+      "sha256": "3e8ca8e3a13a6ecee953bab31ae265578135fa58bfb8e243f2f90c8169f815b9",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-20.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3806500,
+        "complete": true,
+        "end": "2026-01-22T00:00:00+00:00",
+        "first": "2026-01-21T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-21T23:59:59+00:00",
+        "logical_sha256": "9c70ca27c5c7d8e9c91189ed70d85841755bc5daeff2ca4df19d364bd7bb5933",
+        "path": "binance_spot/BTCUSDT/2026-01/20260121T000000-20260122T000000-cb67f1987e834d48910cce2cc373fb46.parquet",
+        "rows": 86400,
+        "sha256": "a80bf9cf9d45f970b50c839715e35e5520678bb1a6e8fa7e1ce0789db36c0c0b",
+        "start": "2026-01-21T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.047950708999451,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-21.zip.CHECKSUM",
+      "day": "2026-01-21T00:00:00+00:00",
+      "download_bytes": 2726795,
+      "download_seconds": 2.5582167909997224,
+      "filename": "BTCUSDT-1s-2026-01-21.zip",
+      "sha256": "f8fb08ff26b52052190dc4187e34305a1b6cba4d0a7752c47f3d60661848ccdc",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-21.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3458390,
+        "complete": true,
+        "end": "2026-01-23T00:00:00+00:00",
+        "first": "2026-01-22T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-22T23:59:59+00:00",
+        "logical_sha256": "260183502384fc6b91d8559690bbd573e8a4be2dff3b2479d97bc1e6e537cf04",
+        "path": "binance_spot/BTCUSDT/2026-01/20260122T000000-20260123T000000-0bbfe267a8fc429e88067cd1c9c3be1d.parquet",
+        "rows": 86400,
+        "sha256": "459064c064ecc11c116fc4b4f4283637f13cd18fff268e1cc72dec7d0057f060",
+        "start": "2026-01-22T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.037306916000489,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-22.zip.CHECKSUM",
+      "day": "2026-01-22T00:00:00+00:00",
+      "download_bytes": 2474478,
+      "download_seconds": 2.426863083999706,
+      "filename": "BTCUSDT-1s-2026-01-22.zip",
+      "sha256": "e0f5f02b8ec761398d3154f786cf21870dbbc9aea7d745fe5825fac32f34c362",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-22.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3463150,
+        "complete": true,
+        "end": "2026-01-24T00:00:00+00:00",
+        "first": "2026-01-23T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-23T23:59:59+00:00",
+        "logical_sha256": "aa29db744028e0c4537f25b4b35e1470fd00b027deb46c8f1d80639828f74a38",
+        "path": "binance_spot/BTCUSDT/2026-01/20260123T000000-20260124T000000-09262e1fbc164c1397dd01b3f865a2c4.parquet",
+        "rows": 86400,
+        "sha256": "57d27abf86355032f630721c123f0e5249ec2c5b05466771870d9621ddb5c016",
+        "start": "2026-01-23T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.048159332999603,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-23.zip.CHECKSUM",
+      "day": "2026-01-23T00:00:00+00:00",
+      "download_bytes": 2498334,
+      "download_seconds": 2.779352875000768,
+      "filename": "BTCUSDT-1s-2026-01-23.zip",
+      "sha256": "703addbfbe29dae16e7708cc689785711ead5c31595e47434d16a2eb8dacf667",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-23.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2687913,
+        "complete": true,
+        "end": "2026-01-25T00:00:00+00:00",
+        "first": "2026-01-24T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-24T23:59:59+00:00",
+        "logical_sha256": "82d77baeff8fb3f7e276fda15f452f98de509f49b1f4beeb6e4c90a45f7134d6",
+        "path": "binance_spot/BTCUSDT/2026-01/20260124T000000-20260125T000000-9a180dd183c347f4bd10cbb2dc5d790a.parquet",
+        "rows": 86400,
+        "sha256": "2831174cfd1eb628d4b35c09dc0e973de4260caab81a374dba8d7da10ccada46",
+        "start": "2026-01-24T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.043076583000584,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-24.zip.CHECKSUM",
+      "day": "2026-01-24T00:00:00+00:00",
+      "download_bytes": 2021074,
+      "download_seconds": 2.5718317499995464,
+      "filename": "BTCUSDT-1s-2026-01-24.zip",
+      "sha256": "5b075f92acd2ea97ff8eb6205c9a926e59a144bd8a24b2cd22b392b6c7da2157",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-24.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3328037,
+        "complete": true,
+        "end": "2026-01-26T00:00:00+00:00",
+        "first": "2026-01-25T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-25T23:59:59+00:00",
+        "logical_sha256": "aa35461f5edad194af4ec9d10dc432740a4cd7b40c0031d2bf688155902caece",
+        "path": "binance_spot/BTCUSDT/2026-01/20260125T000000-20260126T000000-d1c94213c05b4a7d9c0f26ab995a5da0.parquet",
+        "rows": 86400,
+        "sha256": "6553fbc301f826578a8859118c2fb77f5d5abd443914f60053217e0cf43352c6",
+        "start": "2026-01-25T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.051102125000398,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-25.zip.CHECKSUM",
+      "day": "2026-01-25T00:00:00+00:00",
+      "download_bytes": 2434122,
+      "download_seconds": 2.4416357499994774,
+      "filename": "BTCUSDT-1s-2026-01-25.zip",
+      "sha256": "2355be3e238c097415e6a5da8ccd7128a2263b0b946b3b43da213a84f4be7de0",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-25.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3542965,
+        "complete": true,
+        "end": "2026-01-27T00:00:00+00:00",
+        "first": "2026-01-26T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-26T23:59:59+00:00",
+        "logical_sha256": "02543a5bc3cd603dd689353b9691683cf8704886f771ac27916a569f80c33c82",
+        "path": "binance_spot/BTCUSDT/2026-01/20260126T000000-20260127T000000-df3a0cdd165b44c6969913a27a6612c3.parquet",
+        "rows": 86400,
+        "sha256": "7a6085b433f298e4126f10c70eae7bed947fe78c1748cd426e984922b4cc6276",
+        "start": "2026-01-26T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.038537875000657,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-26.zip.CHECKSUM",
+      "day": "2026-01-26T00:00:00+00:00",
+      "download_bytes": 2543035,
+      "download_seconds": 2.770233416999872,
+      "filename": "BTCUSDT-1s-2026-01-26.zip",
+      "sha256": "4c31360767ee7925b80cc5ebaee70a3def9f9228caef60a41d1563b3e77ec797",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-26.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3349891,
+        "complete": true,
+        "end": "2026-01-28T00:00:00+00:00",
+        "first": "2026-01-27T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-27T23:59:59+00:00",
+        "logical_sha256": "bf1186cd16ef9d76af4bcd855dc61403277c29965bcad4cc458da84adbf51239",
+        "path": "binance_spot/BTCUSDT/2026-01/20260127T000000-20260128T000000-a5d56b88d5cb4fe486b10d337abc57ce.parquet",
+        "rows": 86400,
+        "sha256": "bf7b2fe6ae82abb5fc557264f6da6222c5a66b917a6b0100d1d2f201f4aeef88",
+        "start": "2026-01-27T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.065258124999673,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-27.zip.CHECKSUM",
+      "day": "2026-01-27T00:00:00+00:00",
+      "download_bytes": 2401593,
+      "download_seconds": 2.7719327080003495,
+      "filename": "BTCUSDT-1s-2026-01-27.zip",
+      "sha256": "4a34cde06ef5d25860d36036eeb9619d983b8a6d640f9580310077f3ab0b3074",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-27.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3394586,
+        "complete": true,
+        "end": "2026-01-29T00:00:00+00:00",
+        "first": "2026-01-28T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-28T23:59:59+00:00",
+        "logical_sha256": "f3be1bb5f0c85f58a64e4567316890d46b933a3f4d7ee56425d97311d5a7214f",
+        "path": "binance_spot/BTCUSDT/2026-01/20260128T000000-20260129T000000-ac4178888bf14305be9dbacea04ed3da.parquet",
+        "rows": 86400,
+        "sha256": "19b23986938fb186b5c2ae251aefc0aa110087552c7d6ae724d52c88fa12bdcf",
+        "start": "2026-01-28T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.031117624999752,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-28.zip.CHECKSUM",
+      "day": "2026-01-28T00:00:00+00:00",
+      "download_bytes": 2403877,
+      "download_seconds": 2.7570095000000947,
+      "filename": "BTCUSDT-1s-2026-01-28.zip",
+      "sha256": "bd7d3f78cf05bba04fb45f72ae107237bfc6a45e9020b62d708d919a7ba69aa0",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-28.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3603765,
+        "complete": true,
+        "end": "2026-01-30T00:00:00+00:00",
+        "first": "2026-01-29T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-29T23:59:59+00:00",
+        "logical_sha256": "5020509df9442dd83cba14257da6fb615c7488cb24c5c44808d6f3aaa51a876d",
+        "path": "binance_spot/BTCUSDT/2026-01/20260129T000000-20260130T000000-3a7172beedba4c0c811f7cc47467c75b.parquet",
+        "rows": 86400,
+        "sha256": "27a9d0e97b7f2506d14e60a8629a0c0c795770de8788d484c96acd0b7b768dc6",
+        "start": "2026-01-29T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.050080082999557,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-29.zip.CHECKSUM",
+      "day": "2026-01-29T00:00:00+00:00",
+      "download_bytes": 2555048,
+      "download_seconds": 2.8423699579998356,
+      "filename": "BTCUSDT-1s-2026-01-29.zip",
+      "sha256": "2531186319d10b92d4f00b26bb9b4b9d15c7ea6f90ad0c01938e43e84d95ebd4",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-29.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4059615,
+        "complete": true,
+        "end": "2026-01-31T00:00:00+00:00",
+        "first": "2026-01-30T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-30T23:59:59+00:00",
+        "logical_sha256": "f535ad3ec535d1280a2946db4cc499ffe0670d52080c65aeb59ce20c74097c80",
+        "path": "binance_spot/BTCUSDT/2026-01/20260130T000000-20260131T000000-04f4404502c24effba442a237bbc391a.parquet",
+        "rows": 86400,
+        "sha256": "73285ca04c6a098e892e728d568196b0eb9251c57801b5cdafa9dca7573aeb33",
+        "start": "2026-01-30T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.035543874999348,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-30.zip.CHECKSUM",
+      "day": "2026-01-30T00:00:00+00:00",
+      "download_bytes": 2855930,
+      "download_seconds": 2.0331558330008193,
+      "filename": "BTCUSDT-1s-2026-01-30.zip",
+      "sha256": "c2ba9cdc1cd37d424fb7ac77ff05062d575d98b8c5f41db212f1104c826a2eb1",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-30.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3921362,
+        "complete": true,
+        "end": "2026-02-01T00:00:00+00:00",
+        "first": "2026-01-31T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-01-31T23:59:59+00:00",
+        "logical_sha256": "ae5ab9decca5720d41493cc6b08d4de2fdc69891f125fc2c1fc9b3076c0e2abd",
+        "path": "binance_spot/BTCUSDT/2026-01/20260131T000000-20260201T000000-6414150c2d804f50ae484721f142ea37.parquet",
+        "rows": 86400,
+        "sha256": "9a8064ca6ad0dcaaf04f8610aa995732601fbad19ad3fc1d55a54dd4ec289a92",
+        "start": "2026-01-31T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.045654792000278,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-31.zip.CHECKSUM",
+      "day": "2026-01-31T00:00:00+00:00",
+      "download_bytes": 2760182,
+      "download_seconds": 0.9521489580001798,
+      "filename": "BTCUSDT-1s-2026-01-31.zip",
+      "sha256": "0ade99c5187d12d4fbc8004efe7bcd5797f83c8cd7587b226139dcd3ad9354cf",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-31.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4091989,
+        "complete": true,
+        "end": "2026-02-02T00:00:00+00:00",
+        "first": "2026-02-01T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-01T23:59:59+00:00",
+        "logical_sha256": "5ab186eaedc62ac2dc8c34425e9a58d327eb64d4583ed59f72cc241a9c3c6d89",
+        "path": "binance_spot/BTCUSDT/2026-02/20260201T000000-20260202T000000-06874b87d8a64a2f9d0db9b6294f0079.parquet",
+        "rows": 86400,
+        "sha256": "4fc76521b9f23737722f5abb5e737c0c4b6a3e3588f85d9b2f7c5dfa78d7569f",
+        "start": "2026-02-01T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.039732332999847,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-01.zip.CHECKSUM",
+      "day": "2026-02-01T00:00:00+00:00",
+      "download_bytes": 2848435,
+      "download_seconds": 2.6466248750002705,
+      "filename": "BTCUSDT-1s-2026-02-01.zip",
+      "sha256": "3ccb0ec2931b5dcda1372abc84f992308166952064ba5e55b085765d7fd77142",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-01.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4381188,
+        "complete": true,
+        "end": "2026-02-03T00:00:00+00:00",
+        "first": "2026-02-02T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-02T23:59:59+00:00",
+        "logical_sha256": "22e64b9379e195e6a970426688b60f7d5fd16518c418bf8f0bc6991a0bc24cdd",
+        "path": "binance_spot/BTCUSDT/2026-02/20260202T000000-20260203T000000-933b8c3696ad4c4fade15ba558840a42.parquet",
+        "rows": 86400,
+        "sha256": "b9572349b4e4eeaf7a2e8f37830a29bb5eb715abd322b7e4befeb53a5ce815ff",
+        "start": "2026-02-02T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.037038999999822,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-02.zip.CHECKSUM",
+      "day": "2026-02-02T00:00:00+00:00",
+      "download_bytes": 3062435,
+      "download_seconds": 2.78243004199976,
+      "filename": "BTCUSDT-1s-2026-02-02.zip",
+      "sha256": "bad4675668c1271592e0aa35d3b9ed3d18a0c9eb954f9448be71259797dd9133",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-02.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4188014,
+        "complete": true,
+        "end": "2026-02-04T00:00:00+00:00",
+        "first": "2026-02-03T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-03T23:59:59+00:00",
+        "logical_sha256": "a30e8a6a31314d1b3218cdd725bb0d9cbe7f4ba05a1ccee6909f1c8b76da5a74",
+        "path": "binance_spot/BTCUSDT/2026-02/20260203T000000-20260204T000000-4addb6f608304b04b777ff5e142f5e15.parquet",
+        "rows": 86400,
+        "sha256": "8137565d65145391ff8f2aaa49e5673838ee4f0dd0fa71571cf89728844d94c4",
+        "start": "2026-02-03T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.035668749999786,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-03.zip.CHECKSUM",
+      "day": "2026-02-03T00:00:00+00:00",
+      "download_bytes": 2906426,
+      "download_seconds": 2.4866350419997616,
+      "filename": "BTCUSDT-1s-2026-02-03.zip",
+      "sha256": "007c4df46ae2e6d3d279dba05cdfae435b21fd24bbdf94deda4b851bddc5c736",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-03.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4207943,
+        "complete": true,
+        "end": "2026-02-05T00:00:00+00:00",
+        "first": "2026-02-04T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-04T23:59:59+00:00",
+        "logical_sha256": "5365a4b016aa152f0ffca037cb921e8b9c532300b991632d03e90811d2f0a147",
+        "path": "binance_spot/BTCUSDT/2026-02/20260204T000000-20260205T000000-d0bec20d5f6c46c3a2c5411693caecd8.parquet",
+        "rows": 86400,
+        "sha256": "026785ae44ed74f516c421ca03e8d1f0fbf28ab1e7c0c52e3203fc40deca9a54",
+        "start": "2026-02-04T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.046653957999297,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-04.zip.CHECKSUM",
+      "day": "2026-02-04T00:00:00+00:00",
+      "download_bytes": 2937708,
+      "download_seconds": 3.0582131670007584,
+      "filename": "BTCUSDT-1s-2026-02-04.zip",
+      "sha256": "6dddc40b747970d0e6235d1f19c0ab705a690f9f2f95b59ab2132a9d3a5c9486",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-04.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4921139,
+        "complete": true,
+        "end": "2026-02-06T00:00:00+00:00",
+        "first": "2026-02-05T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-05T23:59:59+00:00",
+        "logical_sha256": "faf91fb72134906aa9319e708d35af5e6b3d7053329d4d59bd4f4b9e3c5f0aed",
+        "path": "binance_spot/BTCUSDT/2026-02/20260205T000000-20260206T000000-424cb95245114375a64aacd3cc57ff90.parquet",
+        "rows": 86400,
+        "sha256": "3e2b95350c5c26f719ce74c2193f5a5cf867b286107e4c70872625313fb883e8",
+        "start": "2026-02-05T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.047321333000582,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-05.zip.CHECKSUM",
+      "day": "2026-02-05T00:00:00+00:00",
+      "download_bytes": 3466941,
+      "download_seconds": 3.0132511669999076,
+      "filename": "BTCUSDT-1s-2026-02-05.zip",
+      "sha256": "0180dbe2e385a7e274530a6627b0a2241bd91681c2274ebe9359da00785ffd9d",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-05.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4886000,
+        "complete": true,
+        "end": "2026-02-07T00:00:00+00:00",
+        "first": "2026-02-06T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-06T23:59:59+00:00",
+        "logical_sha256": "dd142b06323cab3d93aa70181fb49c7ebb173f14f7b244b5d9c12f92684f28f0",
+        "path": "binance_spot/BTCUSDT/2026-02/20260206T000000-20260207T000000-b0df8ada2f334c8f9f9b0194628ab9b7.parquet",
+        "rows": 86400,
+        "sha256": "6d46d14ba73cb9033ae7c4202984c4ad24d518a9b68db062d042ba217df92305",
+        "start": "2026-02-06T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0561078750006345,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-06.zip.CHECKSUM",
+      "day": "2026-02-06T00:00:00+00:00",
+      "download_bytes": 3442845,
+      "download_seconds": 3.049051832999794,
+      "filename": "BTCUSDT-1s-2026-02-06.zip",
+      "sha256": "65075c5056f47b09448fe390ae2c091af618ecfcf27bcb986a5e7601ecd7fa37",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-06.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4224230,
+        "complete": true,
+        "end": "2026-02-08T00:00:00+00:00",
+        "first": "2026-02-07T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-07T23:59:59+00:00",
+        "logical_sha256": "e81ab8eb2841ecef7fb17fe67a0a63e5b2f3991ec08d945714790e5fe3677117",
+        "path": "binance_spot/BTCUSDT/2026-02/20260207T000000-20260208T000000-aec262cc7d5148c4adb30bcc31ed38b5.parquet",
+        "rows": 86400,
+        "sha256": "ac6bfdf782c65527252d30c9724d6261515eb114d09e123dcee79fcd95d46c88",
+        "start": "2026-02-07T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.04499879100058,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-07.zip.CHECKSUM",
+      "day": "2026-02-07T00:00:00+00:00",
+      "download_bytes": 2915829,
+      "download_seconds": 2.888431542000035,
+      "filename": "BTCUSDT-1s-2026-02-07.zip",
+      "sha256": "56ae14f777c7c932f8e430c178d0dda43bd256a341c8488ea1c24736fc27dbec",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-07.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3859150,
+        "complete": true,
+        "end": "2026-02-09T00:00:00+00:00",
+        "first": "2026-02-08T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-08T23:59:59+00:00",
+        "logical_sha256": "0dbe5ac83f24cd21eb90feb946790e3834ccda1eb2e3e10fcde87acb8289f7f5",
+        "path": "binance_spot/BTCUSDT/2026-02/20260208T000000-20260209T000000-ce880d501d684489b31225dafd669bb9.parquet",
+        "rows": 86400,
+        "sha256": "6e6025c16ad96bb46249b61cbee34d638f56e4d418104e16711d7b51950f93da",
+        "start": "2026-02-08T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.025294750000285,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-08.zip.CHECKSUM",
+      "day": "2026-02-08T00:00:00+00:00",
+      "download_bytes": 2670973,
+      "download_seconds": 1.7201793330004875,
+      "filename": "BTCUSDT-1s-2026-02-08.zip",
+      "sha256": "b3dc7789ad9909a5fb42b08c1c765f088efea718ab9390aebf850f134018e102",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-08.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4197514,
+        "complete": true,
+        "end": "2026-02-10T00:00:00+00:00",
+        "first": "2026-02-09T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-09T23:59:59+00:00",
+        "logical_sha256": "835bf250c5dcfa829b566f97f5c6f57769ea18c6f9c7ebbc7c893bd546ee7c62",
+        "path": "binance_spot/BTCUSDT/2026-02/20260209T000000-20260210T000000-cb323cf8053747a2ad4d22f929363946.parquet",
+        "rows": 86400,
+        "sha256": "3b4d9cfe2799311970ecda973c1032c67386ad11603e0c55565f6f5fb0aad1cb",
+        "start": "2026-02-09T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0265244170004735,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-09.zip.CHECKSUM",
+      "day": "2026-02-09T00:00:00+00:00",
+      "download_bytes": 2889041,
+      "download_seconds": 2.359823291999419,
+      "filename": "BTCUSDT-1s-2026-02-09.zip",
+      "sha256": "012554db20dcb0f7c9582c34ef224bfa3497c883b4fd1237ed0222b8e1042987",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-09.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3897119,
+        "complete": true,
+        "end": "2026-02-11T00:00:00+00:00",
+        "first": "2026-02-10T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-10T23:59:59+00:00",
+        "logical_sha256": "c8e47eda5a5b338f7832bbab6942b42621549d653b9f78fee5a9bf85e81eda58",
+        "path": "binance_spot/BTCUSDT/2026-02/20260210T000000-20260211T000000-6ca24face1a3461aafbdeeb6972b7c93.parquet",
+        "rows": 86400,
+        "sha256": "d12b4bf117abbfc94bb5a9bcc75949b8515fe5a85ccdd9684021642c5c5d3f62",
+        "start": "2026-02-10T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0433253749997675,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-10.zip.CHECKSUM",
+      "day": "2026-02-10T00:00:00+00:00",
+      "download_bytes": 2709855,
+      "download_seconds": 2.7827853329999925,
+      "filename": "BTCUSDT-1s-2026-02-10.zip",
+      "sha256": "e1a3a8b50cbfb475467c4078d196148adda9604dded0ea37546e10a61daa5c87",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-10.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4158873,
+        "complete": true,
+        "end": "2026-02-12T00:00:00+00:00",
+        "first": "2026-02-11T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-11T23:59:59+00:00",
+        "logical_sha256": "c271b5f4477731863337dae9d0d80d7b076ee8d8891561dd27ceefe130b1e7e9",
+        "path": "binance_spot/BTCUSDT/2026-02/20260211T000000-20260212T000000-85411450501442ebbaceef09bb079d86.parquet",
+        "rows": 86400,
+        "sha256": "e0c349d656f65efdcfdb0f12fcc7b4f6165dc6bd2a0a7e8e2991992130587df2",
+        "start": "2026-02-11T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.036839583000074,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-11.zip.CHECKSUM",
+      "day": "2026-02-11T00:00:00+00:00",
+      "download_bytes": 2894002,
+      "download_seconds": 2.7759913749996485,
+      "filename": "BTCUSDT-1s-2026-02-11.zip",
+      "sha256": "428dec3f66e3ab4a2bc8e9c8ae3cde735bf8ed9c39796316616cbaf026c74043",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-11.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4138003,
+        "complete": true,
+        "end": "2026-02-13T00:00:00+00:00",
+        "first": "2026-02-12T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-12T23:59:59+00:00",
+        "logical_sha256": "9afa136a5be54d21d8d8fc35e197d71963af51fca177b1a7307e6ba87266b963",
+        "path": "binance_spot/BTCUSDT/2026-02/20260212T000000-20260213T000000-3607222bddab4691ad8f3b0dd49ed5b3.parquet",
+        "rows": 86400,
+        "sha256": "af95bf8894e68cdd8dd571297fb390f9f15bacb330ceaa9ec8430a036e28e4d8",
+        "start": "2026-02-12T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.041962083000726,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-12.zip.CHECKSUM",
+      "day": "2026-02-12T00:00:00+00:00",
+      "download_bytes": 2922429,
+      "download_seconds": 2.69529354199949,
+      "filename": "BTCUSDT-1s-2026-02-12.zip",
+      "sha256": "53977a7e04bea01a5fa3c86bcd979de691d22544deb266862161b2d6f0763cf6",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-12.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4010897,
+        "complete": true,
+        "end": "2026-02-14T00:00:00+00:00",
+        "first": "2026-02-13T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-13T23:59:59+00:00",
+        "logical_sha256": "fb0aaa529ac8eddca3e15b7f82f06fee85bebf74e78741d18ff82132a0dd9d48",
+        "path": "binance_spot/BTCUSDT/2026-02/20260213T000000-20260214T000000-6db0da03abea47ed99a1be27b4b42529.parquet",
+        "rows": 86400,
+        "sha256": "54db80a165e084e5cf9a3fcf3f261db0bf99ff2c9789ea6d4b72f7105736fdb8",
+        "start": "2026-02-13T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.033999833000053,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-13.zip.CHECKSUM",
+      "day": "2026-02-13T00:00:00+00:00",
+      "download_bytes": 2843538,
+      "download_seconds": 2.4255924579993007,
+      "filename": "BTCUSDT-1s-2026-02-13.zip",
+      "sha256": "d700d6cd66abaa6d19e78b6e5d7e30c2dfea7cf3c00041abb1ba136411ba8806",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-13.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3588424,
+        "complete": true,
+        "end": "2026-02-15T00:00:00+00:00",
+        "first": "2026-02-14T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-14T23:59:59+00:00",
+        "logical_sha256": "9e84dc73836e2026b12601e8edbb0085c42e007ed34e393b162b30874a6d9226",
+        "path": "binance_spot/BTCUSDT/2026-02/20260214T000000-20260215T000000-2c96dffce4d547288640c11944a3c958.parquet",
+        "rows": 86400,
+        "sha256": "8d0240b637212e96ba33721fbb94094343617144df9ae608462648be1a9eaf35",
+        "start": "2026-02-14T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.020791707999706,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-14.zip.CHECKSUM",
+      "day": "2026-02-14T00:00:00+00:00",
+      "download_bytes": 2547909,
+      "download_seconds": 2.8277405829994677,
+      "filename": "BTCUSDT-1s-2026-02-14.zip",
+      "sha256": "d6bad61eec65bbc97dc3c6b33fe6c4bfef6365bea99a3715579524eacbcaf513",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-14.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3670992,
+        "complete": true,
+        "end": "2026-02-16T00:00:00+00:00",
+        "first": "2026-02-15T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-15T23:59:59+00:00",
+        "logical_sha256": "a2a25523c14739d90287e9e86af1349d8dc3293c4a4fab4bba0ae7c1b4c63545",
+        "path": "binance_spot/BTCUSDT/2026-02/20260215T000000-20260216T000000-4b1c6d8cdced4fb6b26403cbb6fec78e.parquet",
+        "rows": 86400,
+        "sha256": "9501edfbfdccce751e391e823c810dde59e1be2dab5ddbdab2205b1143956322",
+        "start": "2026-02-15T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0473186660001375,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-15.zip.CHECKSUM",
+      "day": "2026-02-15T00:00:00+00:00",
+      "download_bytes": 2577991,
+      "download_seconds": 2.966482542000449,
+      "filename": "BTCUSDT-1s-2026-02-15.zip",
+      "sha256": "742f2cfb8b00334e7699a8ec8967a187ec4e34557ef4d38b603adf791ef85b99",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-15.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3700377,
+        "complete": true,
+        "end": "2026-02-17T00:00:00+00:00",
+        "first": "2026-02-16T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-16T23:59:59+00:00",
+        "logical_sha256": "554acbf93115c0a96a6e70d253f77968d52620849040f245fae5d63083d31813",
+        "path": "binance_spot/BTCUSDT/2026-02/20260216T000000-20260217T000000-5ed05377a4db4263ae7daae8039045cf.parquet",
+        "rows": 86400,
+        "sha256": "f52870998386bb994c88c3542a6c7d67e0b0ebbe48d092e5803129e03e82cab1",
+        "start": "2026-02-16T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.030655624999781,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-16.zip.CHECKSUM",
+      "day": "2026-02-16T00:00:00+00:00",
+      "download_bytes": 2575301,
+      "download_seconds": 2.3722191670003667,
+      "filename": "BTCUSDT-1s-2026-02-16.zip",
+      "sha256": "98156426bdb8eb9555cd2d96c0c197b5374bd8e8346ffd2521b7aa768b258521",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-16.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3731368,
+        "complete": true,
+        "end": "2026-02-18T00:00:00+00:00",
+        "first": "2026-02-17T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-17T23:59:59+00:00",
+        "logical_sha256": "0d97ed5b78cd7d10bc3fdcc02271c61640f0b651e6c8925a975e8a7454587f0e",
+        "path": "binance_spot/BTCUSDT/2026-02/20260217T000000-20260218T000000-8537c132ac0d4e1a8faa10c67f3799ba.parquet",
+        "rows": 86400,
+        "sha256": "87996d56286f18df087405893430cb7fff8a61d45cd877c451e05b9dd8c50a1a",
+        "start": "2026-02-17T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.022378417000255,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-17.zip.CHECKSUM",
+      "day": "2026-02-17T00:00:00+00:00",
+      "download_bytes": 2564510,
+      "download_seconds": 2.4381598330000998,
+      "filename": "BTCUSDT-1s-2026-02-17.zip",
+      "sha256": "4c0bdecc5f3b49a48289566360fb40ca2032a14c55075620a196df1e402392e7",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-17.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3634337,
+        "complete": true,
+        "end": "2026-02-19T00:00:00+00:00",
+        "first": "2026-02-18T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-18T23:59:59+00:00",
+        "logical_sha256": "d697a3a89deceae22dee7bb898caadc33d994a4da6072f7c2c80e1e1be84e48d",
+        "path": "binance_spot/BTCUSDT/2026-02/20260218T000000-20260219T000000-b5db874eda3d4dbe999a6a75431e2370.parquet",
+        "rows": 86400,
+        "sha256": "2cf25af6251d120c1167da334cb3439da855d3518e71c46c822ff6b287f21fc7",
+        "start": "2026-02-18T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.020605959000022,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-18.zip.CHECKSUM",
+      "day": "2026-02-18T00:00:00+00:00",
+      "download_bytes": 2534976,
+      "download_seconds": 2.754663665999942,
+      "filename": "BTCUSDT-1s-2026-02-18.zip",
+      "sha256": "6341d654b432d5c4e2ceaf32b846e114f62185b9c055aff14480d38fe02a002c",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-18.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3707472,
+        "complete": true,
+        "end": "2026-02-20T00:00:00+00:00",
+        "first": "2026-02-19T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-19T23:59:59+00:00",
+        "logical_sha256": "58c49660f7be6e3d0c8bd0d290fce8934d7a8e96746a1eaa12aa4b38986f09b1",
+        "path": "binance_spot/BTCUSDT/2026-02/20260219T000000-20260220T000000-7ac55dcc46c247f4a20bece444ee4a39.parquet",
+        "rows": 86400,
+        "sha256": "3f81dded62de68e3ffed9a91e088f6363b2f0edc97754516c5acc2b642458843",
+        "start": "2026-02-19T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.041007916000126,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-19.zip.CHECKSUM",
+      "day": "2026-02-19T00:00:00+00:00",
+      "download_bytes": 2567245,
+      "download_seconds": 2.0835327089998827,
+      "filename": "BTCUSDT-1s-2026-02-19.zip",
+      "sha256": "05da7336ae60c6cc38bdea12100c6225273064daadae0125517257881ce006e8",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-19.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3762251,
+        "complete": true,
+        "end": "2026-02-21T00:00:00+00:00",
+        "first": "2026-02-20T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-20T23:59:59+00:00",
+        "logical_sha256": "94790d912df093f9689ef1ceab16a9604b78e1ad247579c981f48cb927d08d27",
+        "path": "binance_spot/BTCUSDT/2026-02/20260220T000000-20260221T000000-a11b3271a5e34b16a16e15bdf4c752dc.parquet",
+        "rows": 86400,
+        "sha256": "f35cd3eafd215082241ee5ca9b1dc28679eb540eecdacdf35d6e5169db97cd93",
+        "start": "2026-02-20T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.063568250000571,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-20.zip.CHECKSUM",
+      "day": "2026-02-20T00:00:00+00:00",
+      "download_bytes": 2613176,
+      "download_seconds": 1.9823700829992958,
+      "filename": "BTCUSDT-1s-2026-02-20.zip",
+      "sha256": "7246354ee72ae2b1fb7f35d1b56e40558fb8f68037dbb7e553cfc81a19c402cb",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-20.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3170543,
+        "complete": true,
+        "end": "2026-02-22T00:00:00+00:00",
+        "first": "2026-02-21T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-21T23:59:59+00:00",
+        "logical_sha256": "d7d8aa8903dd92f729f2b6f738fdbc1de03caea80b782bad4806ed09dd07ecb0",
+        "path": "binance_spot/BTCUSDT/2026-02/20260221T000000-20260222T000000-ceb6df37dd144795ad2fc871285d80cb.parquet",
+        "rows": 86400,
+        "sha256": "37397a3a7bb94018c87493f4089b6bbb83015beee906de8d8201b241f152175e",
+        "start": "2026-02-21T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.025794750000387,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-21.zip.CHECKSUM",
+      "day": "2026-02-21T00:00:00+00:00",
+      "download_bytes": 2308236,
+      "download_seconds": 2.4135094160001245,
+      "filename": "BTCUSDT-1s-2026-02-21.zip",
+      "sha256": "6cf273408ef201f1507daeb0c44e1386065e3ee574fe0821d96fcffc7dcf8750",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-21.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3132366,
+        "complete": true,
+        "end": "2026-02-23T00:00:00+00:00",
+        "first": "2026-02-22T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-22T23:59:59+00:00",
+        "logical_sha256": "29d7d4b418bbe78e6eea8e88eb5a9907f26890f255e6957b6a5b31ba7e339b94",
+        "path": "binance_spot/BTCUSDT/2026-02/20260222T000000-20260223T000000-c53d02d1d3504ed9a53f5eeee7b56b56.parquet",
+        "rows": 86400,
+        "sha256": "9946794a5f3f8531319009308f784cc2caff1fe775474e8cc4d46f553d5d9e58",
+        "start": "2026-02-22T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.03263324999989,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-22.zip.CHECKSUM",
+      "day": "2026-02-22T00:00:00+00:00",
+      "download_bytes": 2245050,
+      "download_seconds": 1.2386301659998935,
+      "filename": "BTCUSDT-1s-2026-02-22.zip",
+      "sha256": "aa0b26c17d77ccf370f26d6474298c94437253b56e8511527df90215859a9db4",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-22.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4068738,
+        "complete": true,
+        "end": "2026-02-24T00:00:00+00:00",
+        "first": "2026-02-23T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-23T23:59:59+00:00",
+        "logical_sha256": "6b643eaf280cffa969d9fda846e76e5601cd344974d493fc2dde157ba99ba885",
+        "path": "binance_spot/BTCUSDT/2026-02/20260223T000000-20260224T000000-1940d587bb1643b98d2c791b9031c655.parquet",
+        "rows": 86400,
+        "sha256": "3f7ac77a7d4031e5ae6ea33de3aa12c7b22b658b1e0209e07db57874f7500f35",
+        "start": "2026-02-23T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.066716125000312,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-23.zip.CHECKSUM",
+      "day": "2026-02-23T00:00:00+00:00",
+      "download_bytes": 2847831,
+      "download_seconds": 2.800412542000231,
+      "filename": "BTCUSDT-1s-2026-02-23.zip",
+      "sha256": "7b76b4c9f6cb79d49f8e45de1ed7230b3796ea7742340e2db597443cd2726ff0",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-23.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3977287,
+        "complete": true,
+        "end": "2026-02-25T00:00:00+00:00",
+        "first": "2026-02-24T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-24T23:59:59+00:00",
+        "logical_sha256": "543c109996761e5141d8dde76aec9b41e28afda883744bc5bb431581db6d5c62",
+        "path": "binance_spot/BTCUSDT/2026-02/20260224T000000-20260225T000000-038dd24c022a4b83bff5cd81fa3b6223.parquet",
+        "rows": 86400,
+        "sha256": "43a9f9e4a1912eed96213b30c511df5d3458710163e408c1f22c70be2ab19ef0",
+        "start": "2026-02-24T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.036302041999988,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-24.zip.CHECKSUM",
+      "day": "2026-02-24T00:00:00+00:00",
+      "download_bytes": 2768525,
+      "download_seconds": 2.4750199579993932,
+      "filename": "BTCUSDT-1s-2026-02-24.zip",
+      "sha256": "ea4d1ebe58e7a548dde79f214f4960cf0c35cd51e2c29d6bfe9734a95f730b51",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-24.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4101841,
+        "complete": true,
+        "end": "2026-02-26T00:00:00+00:00",
+        "first": "2026-02-25T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-25T23:59:59+00:00",
+        "logical_sha256": "b5780c56374618d5e386535bb8ccb5cf5e627544474641bba2164e0001066a8d",
+        "path": "binance_spot/BTCUSDT/2026-02/20260225T000000-20260226T000000-0c6c6d338fa1439fb0ecb9d2f92ba6d6.parquet",
+        "rows": 86400,
+        "sha256": "b16dc1e9a8554dc8bc1ace549d390bb5fd88b2ea891aee563c87ec58ab39bd37",
+        "start": "2026-02-25T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0444555829999445,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-25.zip.CHECKSUM",
+      "day": "2026-02-25T00:00:00+00:00",
+      "download_bytes": 2885917,
+      "download_seconds": 2.840746791998754,
+      "filename": "BTCUSDT-1s-2026-02-25.zip",
+      "sha256": "c1991710c015c504827ca208dec8e24685f8a4f781711b0d77b630dc30bb6f5f",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-25.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3867188,
+        "complete": true,
+        "end": "2026-02-27T00:00:00+00:00",
+        "first": "2026-02-26T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-26T23:59:59+00:00",
+        "logical_sha256": "87081aa88feb51a0f871c28f60c45eaa660e6a306f24d40bffd664f9aefb9836",
+        "path": "binance_spot/BTCUSDT/2026-02/20260226T000000-20260227T000000-828e0bd9e61947a28cedaf169de32f40.parquet",
+        "rows": 86400,
+        "sha256": "b003b8521dc77d8ecfe32e82b4eb31b5ade0a51af1156f3b111ea6d8abfffe0d",
+        "start": "2026-02-26T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.045477458001187,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-26.zip.CHECKSUM",
+      "day": "2026-02-26T00:00:00+00:00",
+      "download_bytes": 2717435,
+      "download_seconds": 2.425184208999781,
+      "filename": "BTCUSDT-1s-2026-02-26.zip",
+      "sha256": "60c62732c78814612e553b92729dc04ef0a570fd9435d46d9465ed54594f24b0",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-26.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3877052,
+        "complete": true,
+        "end": "2026-02-28T00:00:00+00:00",
+        "first": "2026-02-27T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-27T23:59:59+00:00",
+        "logical_sha256": "53a9e16e7ef4e317d887b8df61877c268d2e0c605673d18e72bb7027f536a4ac",
+        "path": "binance_spot/BTCUSDT/2026-02/20260227T000000-20260228T000000-d285b53f4ede40a7b35e3177f086035f.parquet",
+        "rows": 86400,
+        "sha256": "f197936043f6497cb7bc57b786fcfe813fe7a15bd4ca06958921b0008dc5291d",
+        "start": "2026-02-27T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.033919458999662,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-27.zip.CHECKSUM",
+      "day": "2026-02-27T00:00:00+00:00",
+      "download_bytes": 2703784,
+      "download_seconds": 2.7738547080007265,
+      "filename": "BTCUSDT-1s-2026-02-27.zip",
+      "sha256": "50b5e9c931d1f98cf4221baf62649da5129524783c6bdfd1cb5accaf52cd89b2",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-27.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3847681,
+        "complete": true,
+        "end": "2026-03-01T00:00:00+00:00",
+        "first": "2026-02-28T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-02-28T23:59:59+00:00",
+        "logical_sha256": "21039ff90a407cf50f20c9a1ac7c3a70bfe5da6d75bd8a9bfc357737ed5751c8",
+        "path": "binance_spot/BTCUSDT/2026-02/20260228T000000-20260301T000000-58b3d8d2faeb46f2875baf2684e5d9a9.parquet",
+        "rows": 86400,
+        "sha256": "a9de0d9504346615607fb591f48b95c2a79784a26fc336819f3f18d3c3d801b7",
+        "start": "2026-02-28T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.04085216599924,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-28.zip.CHECKSUM",
+      "day": "2026-02-28T00:00:00+00:00",
+      "download_bytes": 2680919,
+      "download_seconds": 2.7796062090001215,
+      "filename": "BTCUSDT-1s-2026-02-28.zip",
+      "sha256": "2796e9956f42fd54614beb204c87fabd8809c03fb2284f6eeee69692e628b0ee",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-28.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3787982,
+        "complete": true,
+        "end": "2026-03-02T00:00:00+00:00",
+        "first": "2026-03-01T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-01T23:59:59+00:00",
+        "logical_sha256": "0295e9c12f1f4ef521d033598fd19a385361460f96de6dd309ea28d8be8f41d8",
+        "path": "binance_spot/BTCUSDT/2026-03/20260301T000000-20260302T000000-e7172ebc110d486cb82f717c4dfa28d2.parquet",
+        "rows": 86400,
+        "sha256": "5ea61a348b8dcad8c528d061181f2badfc656eeb6bb7d6af62822d0f6c36fd0a",
+        "start": "2026-03-01T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.055195667000589,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-01.zip.CHECKSUM",
+      "day": "2026-03-01T00:00:00+00:00",
+      "download_bytes": 2622756,
+      "download_seconds": 2.5808119579996855,
+      "filename": "BTCUSDT-1s-2026-03-01.zip",
+      "sha256": "efa70e84a629e50a8012bda7f93a92be4c7f0d47771936f25e30b29478f34ac0",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-01.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4126484,
+        "complete": true,
+        "end": "2026-03-03T00:00:00+00:00",
+        "first": "2026-03-02T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-02T23:59:59+00:00",
+        "logical_sha256": "9f5a737a004a3625ec2ad34853b6162a0333c52b83686a70ade198a47ed6ca7d",
+        "path": "binance_spot/BTCUSDT/2026-03/20260302T000000-20260303T000000-70771f6aa1c14f84811b5e3710006079.parquet",
+        "rows": 86400,
+        "sha256": "d0e9a98f9c892c9dcdeec46515f45efc221ab4de55125440731c41efe3b8cedb",
+        "start": "2026-03-02T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0523996250012715,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-02.zip.CHECKSUM",
+      "day": "2026-03-02T00:00:00+00:00",
+      "download_bytes": 2859746,
+      "download_seconds": 2.7843470419993537,
+      "filename": "BTCUSDT-1s-2026-03-02.zip",
+      "sha256": "e7009769071a0ce964063b0798793d9d5b848c6d4e49d6410be033619bdeaa4f",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-02.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4075524,
+        "complete": true,
+        "end": "2026-03-04T00:00:00+00:00",
+        "first": "2026-03-03T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-03T23:59:59+00:00",
+        "logical_sha256": "e4129e093abca383084b60eeb224115e7d7cf4d301635090bf078fa9c7cfe5fa",
+        "path": "binance_spot/BTCUSDT/2026-03/20260303T000000-20260304T000000-e76d225d16984552bdb94bf90d5edd8c.parquet",
+        "rows": 86400,
+        "sha256": "bc6457c319e1848be0efd1c43304488f6e5bdae5ab5fe7ea4238cc9ab5be29e9",
+        "start": "2026-03-03T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.053942542001096,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-03.zip.CHECKSUM",
+      "day": "2026-03-03T00:00:00+00:00",
+      "download_bytes": 2788669,
+      "download_seconds": 2.781371332999697,
+      "filename": "BTCUSDT-1s-2026-03-03.zip",
+      "sha256": "4206481a48518ff94c31ba6855c7a9508e643f079f973f5a37f42a22a7522ed1",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-03.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 4211415,
+        "complete": true,
+        "end": "2026-03-05T00:00:00+00:00",
+        "first": "2026-03-04T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-04T23:59:59+00:00",
+        "logical_sha256": "ae0dfcd0950246d3d5f4bb61c48717b7569b3e2b3037a9d22c81c5e491d94370",
+        "path": "binance_spot/BTCUSDT/2026-03/20260304T000000-20260305T000000-2f4c53785b494e769acf6a063d59104c.parquet",
+        "rows": 86400,
+        "sha256": "416db722928f972bbc463b9fcd67f82c89975e3a622bde7bfa2182663ede7bc3",
+        "start": "2026-03-04T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.092178749999221,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-04.zip.CHECKSUM",
+      "day": "2026-03-04T00:00:00+00:00",
+      "download_bytes": 2930152,
+      "download_seconds": 2.9448835000002873,
+      "filename": "BTCUSDT-1s-2026-03-04.zip",
+      "sha256": "1f8dc3a14b1aee39ff60c54665d27bfccaf2ea7d3bcdbe0d5dab096566217657",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-04.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3973338,
+        "complete": true,
+        "end": "2026-03-06T00:00:00+00:00",
+        "first": "2026-03-05T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-05T23:59:59+00:00",
+        "logical_sha256": "8ea7051d9c527cb59c28589ed5f99c08e31180f9e083a60e7bef45439f333623",
+        "path": "binance_spot/BTCUSDT/2026-03/20260305T000000-20260306T000000-e88d91af809243a8b73ae12ddfcfa289.parquet",
+        "rows": 86400,
+        "sha256": "5c10aba7f65e1e185a8c6ee9d7a4fd2323e766e95b4b77c0d6830860ca4734ce",
+        "start": "2026-03-05T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.044951666999623,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-05.zip.CHECKSUM",
+      "day": "2026-03-05T00:00:00+00:00",
+      "download_bytes": 2726826,
+      "download_seconds": 2.820136583000931,
+      "filename": "BTCUSDT-1s-2026-03-05.zip",
+      "sha256": "98c798416358ec0ff5ce013a4652ac698f9616c51739ad2513f50dc5adf81838",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-05.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3874401,
+        "complete": true,
+        "end": "2026-03-07T00:00:00+00:00",
+        "first": "2026-03-06T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-06T23:59:59+00:00",
+        "logical_sha256": "f7447054518296b8e0ad407e3252c100b48e01f022f3e2b4a44febff54e32a60",
+        "path": "binance_spot/BTCUSDT/2026-03/20260306T000000-20260307T000000-e332e164495f47c98fd05bf238cd4003.parquet",
+        "rows": 86400,
+        "sha256": "487b18976dbc2bd135f8d6d207507b0502f89a11a2d87013602782f1e9a1f6c3",
+        "start": "2026-03-06T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.037608833999911,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-06.zip.CHECKSUM",
+      "day": "2026-03-06T00:00:00+00:00",
+      "download_bytes": 2653444,
+      "download_seconds": 3.160452250000162,
+      "filename": "BTCUSDT-1s-2026-03-06.zip",
+      "sha256": "950ff72908ead7dec1f1d7772bb0bedb92e8539dca651e7ea016dc27fb0e82ee",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-06.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3334468,
+        "complete": true,
+        "end": "2026-03-08T00:00:00+00:00",
+        "first": "2026-03-07T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-07T23:59:59+00:00",
+        "logical_sha256": "9cee91fc94a85c5d17e564f9a4084788200965b23f8091fda418da2989c8a30b",
+        "path": "binance_spot/BTCUSDT/2026-03/20260307T000000-20260308T000000-b6a808e0ba2143f9ae65e203796ad646.parquet",
+        "rows": 86400,
+        "sha256": "f4a00564fdba2fd9b6d49eb09a743d674972b4b78d68fd0f2546dd8fab2ca3c6",
+        "start": "2026-03-07T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.038039167000534,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-07.zip.CHECKSUM",
+      "day": "2026-03-07T00:00:00+00:00",
+      "download_bytes": 2275714,
+      "download_seconds": 2.3237706250001793,
+      "filename": "BTCUSDT-1s-2026-03-07.zip",
+      "sha256": "30aec373744cf9cb551397d8eaa04cfe9e23da924755054673970ab80e6fa6f5",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-07.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3490349,
+        "complete": true,
+        "end": "2026-03-09T00:00:00+00:00",
+        "first": "2026-03-08T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-08T23:59:59+00:00",
+        "logical_sha256": "590e103596bd6dcff836a2e76586db53e8927600ce0af269a73590a1a0851390",
+        "path": "binance_spot/BTCUSDT/2026-03/20260308T000000-20260309T000000-1c59beb16a0644d68a777f7e4ac92c4f.parquet",
+        "rows": 86400,
+        "sha256": "e85885d6d50e47de83db494b00abee622d58f5ff5b7fa623d5b8d594e8c042d6",
+        "start": "2026-03-08T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.041528458999892,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-08.zip.CHECKSUM",
+      "day": "2026-03-08T00:00:00+00:00",
+      "download_bytes": 2380619,
+      "download_seconds": 2.8331627909992676,
+      "filename": "BTCUSDT-1s-2026-03-08.zip",
+      "sha256": "9c7fa3ec49b9e88887f997531ac264a57c86bedd31104fed914019c983fc8f85",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-08.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3962608,
+        "complete": true,
+        "end": "2026-03-10T00:00:00+00:00",
+        "first": "2026-03-09T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-09T23:59:59+00:00",
+        "logical_sha256": "231c210149e0de61ba2a04b363be7b0cfb693f8447475ddd4d8da063dc5e6481",
+        "path": "binance_spot/BTCUSDT/2026-03/20260309T000000-20260310T000000-705b8da66a5e47ed96a47f3842bc1b6c.parquet",
+        "rows": 86400,
+        "sha256": "e2659233eeca1c41cb2be040b47483a04fd7f3902c03e5d3ea38f3412ecc7789",
+        "start": "2026-03-09T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.058288874999562,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-09.zip.CHECKSUM",
+      "day": "2026-03-09T00:00:00+00:00",
+      "download_bytes": 2699087,
+      "download_seconds": 2.782222083000306,
+      "filename": "BTCUSDT-1s-2026-03-09.zip",
+      "sha256": "a4679362180dce7e038ef656bb2bf2539db3d93fcec3ef115e5b496f0f397edf",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-09.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3938570,
+        "complete": true,
+        "end": "2026-03-11T00:00:00+00:00",
+        "first": "2026-03-10T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-10T23:59:59+00:00",
+        "logical_sha256": "e8476b8fb7a5a61a7edfe898d41dfce971244cced337685c50bdabd8d50bcc1d",
+        "path": "binance_spot/BTCUSDT/2026-03/20260310T000000-20260311T000000-93bc3e3e6c834810b1f8426ec878546b.parquet",
+        "rows": 86400,
+        "sha256": "828673daafa8bf551878048c58ca5be283b293f015bd75943346a60f764c9e59",
+        "start": "2026-03-10T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0564560830007395,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-10.zip.CHECKSUM",
+      "day": "2026-03-10T00:00:00+00:00",
+      "download_bytes": 2707558,
+      "download_seconds": 2.623023916999955,
+      "filename": "BTCUSDT-1s-2026-03-10.zip",
+      "sha256": "8df09e054aca09dd4de569f78afe3b2395506b61cb77f40c4c370a6305261554",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-10.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3733655,
+        "complete": true,
+        "end": "2026-03-12T00:00:00+00:00",
+        "first": "2026-03-11T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-11T23:59:59+00:00",
+        "logical_sha256": "c7ff4fa229e4f61bfb095472127c0eb85acf096c9e78479b4ec27bec870d44b8",
+        "path": "binance_spot/BTCUSDT/2026-03/20260311T000000-20260312T000000-886e7189515148f78ac95b07f9d88839.parquet",
+        "rows": 86400,
+        "sha256": "49cbf4c96af76133f493a4a4a920d03510f3b0b2338e5894fd48adfb85fee4d5",
+        "start": "2026-03-11T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.113133666998692,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-11.zip.CHECKSUM",
+      "day": "2026-03-11T00:00:00+00:00",
+      "download_bytes": 2573397,
+      "download_seconds": 2.8149849159999576,
+      "filename": "BTCUSDT-1s-2026-03-11.zip",
+      "sha256": "693dd4e913ec62578495f7004ce69ec64c03e4ab3d437acd2a0ec47182c98394",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-11.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3685565,
+        "complete": true,
+        "end": "2026-03-13T00:00:00+00:00",
+        "first": "2026-03-12T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-12T23:59:59+00:00",
+        "logical_sha256": "6f2e7d1ba3ce6252972ff750123de6f2295c048012a2d055289b691f400f056a",
+        "path": "binance_spot/BTCUSDT/2026-03/20260312T000000-20260313T000000-32f0d27ecbe541bca662461d5f410ee0.parquet",
+        "rows": 86400,
+        "sha256": "e12d0af15104d24b1a5ac5943be0317b2f87dc8fca635b18c21fa97ec037a9b2",
+        "start": "2026-03-12T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.069384624999657,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-12.zip.CHECKSUM",
+      "day": "2026-03-12T00:00:00+00:00",
+      "download_bytes": 2517771,
+      "download_seconds": 2.3473612910001975,
+      "filename": "BTCUSDT-1s-2026-03-12.zip",
+      "sha256": "9b14958ba0f640461d0b725fe33578ad6dbb739d963327e03a8092fa3089fbcf",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-12.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3887571,
+        "complete": true,
+        "end": "2026-03-14T00:00:00+00:00",
+        "first": "2026-03-13T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-13T23:59:59+00:00",
+        "logical_sha256": "00e72db1c40d1c7fcd77515a42bd6a6144092f6879cd1ccb95405bfdbf76d121",
+        "path": "binance_spot/BTCUSDT/2026-03/20260313T000000-20260314T000000-fc3dd6fa309b4bf9820cb24a922e5ab0.parquet",
+        "rows": 86400,
+        "sha256": "9735a76c6f425f9ff614daced415d2e5d0db75c080d5f81d202a87e054c6b0e6",
+        "start": "2026-03-13T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.088515708999694,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-13.zip.CHECKSUM",
+      "day": "2026-03-13T00:00:00+00:00",
+      "download_bytes": 2696670,
+      "download_seconds": 2.7769442910012003,
+      "filename": "BTCUSDT-1s-2026-03-13.zip",
+      "sha256": "02bb7aac380bf2e83fc8b43db3731e9c80d153388c45804e9e4723d100b67722",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-13.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3044232,
+        "complete": true,
+        "end": "2026-03-15T00:00:00+00:00",
+        "first": "2026-03-14T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-14T23:59:59+00:00",
+        "logical_sha256": "ef1575bff57d20aee1e43c72be1112887ee1ea9c02fee3cfed182b327ddb4350",
+        "path": "binance_spot/BTCUSDT/2026-03/20260314T000000-20260315T000000-d40322bf758a4ae4bb15d4e2376db560.parquet",
+        "rows": 86400,
+        "sha256": "20635668a1862ef6d78d1c52e2173bd0fa1f5568619f4d6050d24bdbed967a70",
+        "start": "2026-03-14T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.026296542000637,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-14.zip.CHECKSUM",
+      "day": "2026-03-14T00:00:00+00:00",
+      "download_bytes": 2102012,
+      "download_seconds": 0.9328966249995574,
+      "filename": "BTCUSDT-1s-2026-03-14.zip",
+      "sha256": "df09a5c34f3f7940ccef95a328a0142e024c648a07eafea12a4c4decdd5c42d8",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-14.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3219818,
+        "complete": true,
+        "end": "2026-03-16T00:00:00+00:00",
+        "first": "2026-03-15T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-15T23:59:59+00:00",
+        "logical_sha256": "16f071a57aa10cec5c734e70fbdcede56b6df56c249aeca96e5f5c3ba302807d",
+        "path": "binance_spot/BTCUSDT/2026-03/20260315T000000-20260316T000000-00b9f3b8d9624d78bc01614ab9a278fc.parquet",
+        "rows": 86400,
+        "sha256": "974f124f27de32a3c0a5562cf6465e593e531c38c64bbafd630d46eb73a89c23",
+        "start": "2026-03-15T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0645859589985776,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-15.zip.CHECKSUM",
+      "day": "2026-03-15T00:00:00+00:00",
+      "download_bytes": 2195701,
+      "download_seconds": 2.823861875000148,
+      "filename": "BTCUSDT-1s-2026-03-15.zip",
+      "sha256": "0d513c2807619f0bad31fb7c43fe647af7c7287396451567ba5e35c8aed408e5",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-15.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3852212,
+        "complete": true,
+        "end": "2026-03-17T00:00:00+00:00",
+        "first": "2026-03-16T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-16T23:59:59+00:00",
+        "logical_sha256": "6ad465f4755a285000ccde2e5ca663125f74087aaa740f217187c18b2264271b",
+        "path": "binance_spot/BTCUSDT/2026-03/20260316T000000-20260317T000000-b5828ad53f71448aa7a23d89cc86e4ee.parquet",
+        "rows": 86400,
+        "sha256": "f4028f0b95851e7a366882bc1f2bc7de611309d97a7516d921ee2d1dc294b306",
+        "start": "2026-03-16T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.05193833300109,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-16.zip.CHECKSUM",
+      "day": "2026-03-16T00:00:00+00:00",
+      "download_bytes": 2660143,
+      "download_seconds": 1.2079310419994727,
+      "filename": "BTCUSDT-1s-2026-03-16.zip",
+      "sha256": "0c4c75ce381c25b08df32df13a19f52a09c4ac6542e25f4080569b5f3631de53",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-16.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3783246,
+        "complete": true,
+        "end": "2026-03-18T00:00:00+00:00",
+        "first": "2026-03-17T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-17T23:59:59+00:00",
+        "logical_sha256": "4fb7d83acc12aef6adf1d7faa45f213315f41e53acd64f7804c4e172952a0d07",
+        "path": "binance_spot/BTCUSDT/2026-03/20260317T000000-20260318T000000-634d7fb1370142c28e41456298ebfd50.parquet",
+        "rows": 86400,
+        "sha256": "b4689d4b745ca451449939b0811fe5f7de8f48407b917666174ab7f112cd09e1",
+        "start": "2026-03-17T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.054256417000943,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-17.zip.CHECKSUM",
+      "day": "2026-03-17T00:00:00+00:00",
+      "download_bytes": 2602048,
+      "download_seconds": 0.9211932079997496,
+      "filename": "BTCUSDT-1s-2026-03-17.zip",
+      "sha256": "bfd45e03dbd1c91bbf983d15a035138820df7753bd0ce97455eb69b32b2ff208",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-17.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3725310,
+        "complete": true,
+        "end": "2026-03-19T00:00:00+00:00",
+        "first": "2026-03-18T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-18T23:59:59+00:00",
+        "logical_sha256": "040105028c98486a9da119e6044127bdaf2872012b87835520cbed225020f439",
+        "path": "binance_spot/BTCUSDT/2026-03/20260318T000000-20260319T000000-10dfba8b182240afae14dd1aad4d925d.parquet",
+        "rows": 86400,
+        "sha256": "1bf7bd2a24d5a2d07b1802c298de019bd9f062e25cc080a0f9b46792b44ff0be",
+        "start": "2026-03-18T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.059508000000278,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-18.zip.CHECKSUM",
+      "day": "2026-03-18T00:00:00+00:00",
+      "download_bytes": 2548737,
+      "download_seconds": 1.3897879579999426,
+      "filename": "BTCUSDT-1s-2026-03-18.zip",
+      "sha256": "acd3bf12f20a5175091055d97f31fa5b8730bea9f52e3db48c4a7ab48f9b6b51",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-18.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3739552,
+        "complete": true,
+        "end": "2026-03-20T00:00:00+00:00",
+        "first": "2026-03-19T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-19T23:59:59+00:00",
+        "logical_sha256": "820d39405e8595bfa1d0640d2cfdaf6f0bfbfbcc5f855f387713b03b2e8107f9",
+        "path": "binance_spot/BTCUSDT/2026-03/20260319T000000-20260320T000000-0e471b4042694fef86cd40de76b2e966.parquet",
+        "rows": 86400,
+        "sha256": "aba73de2ed6e85811510f305ec679b94bc34e6f68f6f1c43bafbad4beb937b36",
+        "start": "2026-03-19T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.3065836660007335,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-19.zip.CHECKSUM",
+      "day": "2026-03-19T00:00:00+00:00",
+      "download_bytes": 2554138,
+      "download_seconds": 2.7704400419988815,
+      "filename": "BTCUSDT-1s-2026-03-19.zip",
+      "sha256": "1ce4635582b0aba3b347de6e20118404f31a6a5faddd44b2e89b817b35ebce45",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-19.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3650785,
+        "complete": true,
+        "end": "2026-03-21T00:00:00+00:00",
+        "first": "2026-03-20T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-20T23:59:59+00:00",
+        "logical_sha256": "fb7936d91896ead027a2a129684d45595d0b1badb3671f31e0dfaec788d6d64e",
+        "path": "binance_spot/BTCUSDT/2026-03/20260320T000000-20260321T000000-1562f0cab1614c0eb10c552c86f18565.parquet",
+        "rows": 86400,
+        "sha256": "eae93093dbec0a58fd40655b4f844c205f07a8fb6967a44aa94859b55935d22b",
+        "start": "2026-03-20T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.050967375000255,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-20.zip.CHECKSUM",
+      "day": "2026-03-20T00:00:00+00:00",
+      "download_bytes": 2488016,
+      "download_seconds": 2.2963364589995763,
+      "filename": "BTCUSDT-1s-2026-03-20.zip",
+      "sha256": "a1cf4ec3bc0bfc0a67889dabbe6e53fec880f002538c506fcad55ac4aa2867d6",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-20.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 2904648,
+        "complete": true,
+        "end": "2026-03-22T00:00:00+00:00",
+        "first": "2026-03-21T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-21T23:59:59+00:00",
+        "logical_sha256": "84478697a62f566d34764755e369f6a47088dfad3bb818ef8f1c688720434339",
+        "path": "binance_spot/BTCUSDT/2026-03/20260321T000000-20260322T000000-fbe812835427497b8b8fc4e0dd1edbaa.parquet",
+        "rows": 86400,
+        "sha256": "aa7da98eaac6e5b51c76eff85877fbee9c87ccf47a77d7bac86cdf1946de95e6",
+        "start": "2026-03-21T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.037735874999271,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-21.zip.CHECKSUM",
+      "day": "2026-03-21T00:00:00+00:00",
+      "download_bytes": 1989940,
+      "download_seconds": 2.7717750840001827,
+      "filename": "BTCUSDT-1s-2026-03-21.zip",
+      "sha256": "db0efea7c1e30977bbd45b86f9554d8d8a097f4307420d9709b6e176316b308c",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-21.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3447167,
+        "complete": true,
+        "end": "2026-03-23T00:00:00+00:00",
+        "first": "2026-03-22T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-22T23:59:59+00:00",
+        "logical_sha256": "0158024e351a25ee6175a139c7b85f1fa56c5d03285254a08ef65fa33b4b78bb",
+        "path": "binance_spot/BTCUSDT/2026-03/20260322T000000-20260323T000000-6336ed80fadf4246ad08153e5577acc5.parquet",
+        "rows": 86400,
+        "sha256": "8b6cf5ff855f8d1bad7eb9922ac4e8b53e46423d58176a759789c59e1bac099c",
+        "start": "2026-03-22T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.06742979199953,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-22.zip.CHECKSUM",
+      "day": "2026-03-22T00:00:00+00:00",
+      "download_bytes": 2338657,
+      "download_seconds": 2.4204048750016227,
+      "filename": "BTCUSDT-1s-2026-03-22.zip",
+      "sha256": "6e2bcfedcfbcf1414c3a4f8bc991631920c854ec43fc96bff1174cda99e252f0",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-22.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3891501,
+        "complete": true,
+        "end": "2026-03-24T00:00:00+00:00",
+        "first": "2026-03-23T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-23T23:59:59+00:00",
+        "logical_sha256": "8d6532fa59602dde68a05bf1a0ba7f3c1bbc14f47de9271badf5643602dac5c3",
+        "path": "binance_spot/BTCUSDT/2026-03/20260323T000000-20260324T000000-7769fc90d7e04813a1d980235daaf9e4.parquet",
+        "rows": 86400,
+        "sha256": "88ecfa860267331843d25a229c45ac8fdc3d6c02c050ff5c2a11e1ab8d80fe36",
+        "start": "2026-03-23T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0435647499998595,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-23.zip.CHECKSUM",
+      "day": "2026-03-23T00:00:00+00:00",
+      "download_bytes": 2671047,
+      "download_seconds": 2.3235819580004318,
+      "filename": "BTCUSDT-1s-2026-03-23.zip",
+      "sha256": "49ed2b80d093bf64327ad80d24e7341aabcbc099415cf65efc28092e49ddd65f",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-23.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3722502,
+        "complete": true,
+        "end": "2026-03-25T00:00:00+00:00",
+        "first": "2026-03-24T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-24T23:59:59+00:00",
+        "logical_sha256": "5780adf487de95850769eb06b9a14b5bb6ebc4d56cc611f50a527ff762d0d41d",
+        "path": "binance_spot/BTCUSDT/2026-03/20260324T000000-20260325T000000-f65ab12e90044d10876f878203c592ab.parquet",
+        "rows": 86400,
+        "sha256": "fe4dd9aa99450c83bb4d2ff0e5a44a9aa4e05fb28a66c48e1f16e0bf3fb33861",
+        "start": "2026-03-24T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.0568890839986125,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-24.zip.CHECKSUM",
+      "day": "2026-03-24T00:00:00+00:00",
+      "download_bytes": 2564521,
+      "download_seconds": 2.9904134580010577,
+      "filename": "BTCUSDT-1s-2026-03-24.zip",
+      "sha256": "2992c14de2fdd3b0f4109f706c220aa2ae101f13f34d415b16d2f7468141150a",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-24.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3521919,
+        "complete": true,
+        "end": "2026-03-26T00:00:00+00:00",
+        "first": "2026-03-25T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-25T23:59:59+00:00",
+        "logical_sha256": "ead0820ecd984abbfe011c9db9a4fb5725700e8f46c830e0e4cc8a675db4c713",
+        "path": "binance_spot/BTCUSDT/2026-03/20260325T000000-20260326T000000-d5adff4f9afc4b4e89c4edf3e9713dad.parquet",
+        "rows": 86400,
+        "sha256": "2bc33f1de2900eab4b3a53db66687d4eb351c76bfaaba7341505bcb8890cb133",
+        "start": "2026-03-25T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.031219083000906,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-25.zip.CHECKSUM",
+      "day": "2026-03-25T00:00:00+00:00",
+      "download_bytes": 2427901,
+      "download_seconds": 2.4932131249988743,
+      "filename": "BTCUSDT-1s-2026-03-25.zip",
+      "sha256": "b7ca9c068eee95843f6c433cca7d78b024ff4e8c6aa6d0b53097b2f1897489ff",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-25.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3660008,
+        "complete": true,
+        "end": "2026-03-27T00:00:00+00:00",
+        "first": "2026-03-26T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-26T23:59:59+00:00",
+        "logical_sha256": "f41bdb6aae561d74558863b887f2bec0f6f1abe41361e706e81b9bec507bdcdd",
+        "path": "binance_spot/BTCUSDT/2026-03/20260326T000000-20260327T000000-73ff7c805aed48cc9112a2a9cf01eed3.parquet",
+        "rows": 86400,
+        "sha256": "71f57dc1dd3b5aab879b3a39581c7e329faf2c72129dede01804dd2fc5259f9a",
+        "start": "2026-03-26T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.028663541001151,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-26.zip.CHECKSUM",
+      "day": "2026-03-26T00:00:00+00:00",
+      "download_bytes": 2512703,
+      "download_seconds": 2.3385117499983608,
+      "filename": "BTCUSDT-1s-2026-03-26.zip",
+      "sha256": "ad172bea18f6c09a990ff5de7bf1a1d0a1552774d99188458dea18db3db09784",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-26.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3755612,
+        "complete": true,
+        "end": "2026-03-28T00:00:00+00:00",
+        "first": "2026-03-27T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-27T23:59:59+00:00",
+        "logical_sha256": "3cb8779fe9f7daa15b8a2243f5c39d8139f68f720cea2da079821f15bcd3ba2f",
+        "path": "binance_spot/BTCUSDT/2026-03/20260327T000000-20260328T000000-052007c83e044636b297ef338e84dc80.parquet",
+        "rows": 86400,
+        "sha256": "74dc0e39501f07729945bd41e6898e365ddadab0c7577cbd0cb395d70914fcb1",
+        "start": "2026-03-27T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.049510541000927,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-27.zip.CHECKSUM",
+      "day": "2026-03-27T00:00:00+00:00",
+      "download_bytes": 2592873,
+      "download_seconds": 3.0371274589997483,
+      "filename": "BTCUSDT-1s-2026-03-27.zip",
+      "sha256": "e6729a673141403e34af5ed47704dfbee84160d311b503793151512a5adc0406",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-27.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3110025,
+        "complete": true,
+        "end": "2026-03-29T00:00:00+00:00",
+        "first": "2026-03-28T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-28T23:59:59+00:00",
+        "logical_sha256": "b6570f5743aa6ce9f2d875211a9afe5ca99ac449d1a4fdad95a157c371c4518a",
+        "path": "binance_spot/BTCUSDT/2026-03/20260328T000000-20260329T000000-6680905f922843bca8dd9c18a3d54579.parquet",
+        "rows": 86400,
+        "sha256": "18d3037e67eebe0aecbcadee0bbfd27151cbd864034894305ae38742d06b4a68",
+        "start": "2026-03-28T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.033591625000554,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-28.zip.CHECKSUM",
+      "day": "2026-03-28T00:00:00+00:00",
+      "download_bytes": 2159829,
+      "download_seconds": 2.908109374999185,
+      "filename": "BTCUSDT-1s-2026-03-28.zip",
+      "sha256": "eddb8705563626f288d8152fb66980e856e0bbd0779646f1179bbd20a2b9a195",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-28.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3132977,
+        "complete": true,
+        "end": "2026-03-30T00:00:00+00:00",
+        "first": "2026-03-29T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-29T23:59:59+00:00",
+        "logical_sha256": "41a44f09a6d396ba70f586502bf000f4ff9e1609155e54cbc2cdd6e8fc122f7b",
+        "path": "binance_spot/BTCUSDT/2026-03/20260329T000000-20260330T000000-b85f9f5bf19a4c8ab664770165e2cb90.parquet",
+        "rows": 86400,
+        "sha256": "bcca95ba2d8bec33f8b9ed0d5672fdfc72a24e849fe19aa998782ba44c34cb7a",
+        "start": "2026-03-29T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.030894249999619,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-29.zip.CHECKSUM",
+      "day": "2026-03-29T00:00:00+00:00",
+      "download_bytes": 2130509,
+      "download_seconds": 1.9542582089998177,
+      "filename": "BTCUSDT-1s-2026-03-29.zip",
+      "sha256": "b6a24258118191bd696303df9a3cd083ee4832c736e76e5991a29b27c0b5592c",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-29.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3637316,
+        "complete": true,
+        "end": "2026-03-31T00:00:00+00:00",
+        "first": "2026-03-30T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-30T23:59:59+00:00",
+        "logical_sha256": "55a3be569921e4f5baf987f896579da907b679b1cc686b2bb48a70f989b2767d",
+        "path": "binance_spot/BTCUSDT/2026-03/20260330T000000-20260331T000000-afa8a020786f4557bcb15950bc8aa4e2.parquet",
+        "rows": 86400,
+        "sha256": "ddcba2eb0381806e580dc7c42f0a2860e0b94e732c2ab891da58df761999e0bf",
+        "start": "2026-03-30T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.04800108299969,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-30.zip.CHECKSUM",
+      "day": "2026-03-30T00:00:00+00:00",
+      "download_bytes": 2502885,
+      "download_seconds": 2.811465249998946,
+      "filename": "BTCUSDT-1s-2026-03-30.zip",
+      "sha256": "5ac5dbc5620fd08f09dc0e622667437d83bf88798ec66e4823c4b3ec82e9f9c7",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-30.zip"
+    },
+    {
+      "archive_entry": {
+        "bytes": 3734138,
+        "complete": true,
+        "end": "2026-04-01T00:00:00+00:00",
+        "first": "2026-03-31T00:00:00+00:00",
+        "gaps": 0,
+        "last": "2026-03-31T23:59:59+00:00",
+        "logical_sha256": "fbafe61d72a15b9f9cdf2c927dad6b4e8da14577b2ca26af9767ddfa28ac90f0",
+        "path": "binance_spot/BTCUSDT/2026-03/20260331T000000-20260401T000000-302a574748034b15a0aca38d167ca458.parquet",
+        "rows": 86400,
+        "sha256": "8eaf2fda29a02f10095e3f9c74dc36db2b7ec3afc0a5bdcbc5f2b63b6a48ac31",
+        "start": "2026-03-31T00:00:00+00:00",
+        "symbol": "BTCUSDT"
+      },
+      "archive_verify_seconds": 4.042023083000458,
+      "checksum_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-31.zip.CHECKSUM",
+      "day": "2026-03-31T00:00:00+00:00",
+      "download_bytes": 2567679,
+      "download_seconds": 2.8816002080002363,
+      "filename": "BTCUSDT-1s-2026-03-31.zip",
+      "sha256": "3f3dd5bb501d47830b72269b6c8e0e200c271c63527a49fa75095a06d630e572",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-31.zip"
+    }
+  ],
+  "free_after_bytes": 76606091264,
+  "interval": "1s",
+  "local_database_verified": false,
+  "market": "binance_spot",
+  "numeric_storage": "float64, matching the live database archive schema; reserved zero ignore field omitted",
+  "plan": {
+    "download_bytes": 229439618,
+    "estimated_increment_bytes": 2099146559,
+    "files": [
+      {
+        "bytes": 2022603,
+        "day": "2026-01-01T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-01.zip"
+      },
+      {
+        "bytes": 2399097,
+        "day": "2026-01-02T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-02.zip"
+      },
+      {
+        "bytes": 2148942,
+        "day": "2026-01-03T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-03.zip"
+      },
+      {
+        "bytes": 2238281,
+        "day": "2026-01-04T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-04.zip"
+      },
+      {
+        "bytes": 2643214,
+        "day": "2026-01-05T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-05.zip"
+      },
+      {
+        "bytes": 2575449,
+        "day": "2026-01-06T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-06.zip"
+      },
+      {
+        "bytes": 2429791,
+        "day": "2026-01-07T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-07.zip"
+      },
+      {
+        "bytes": 2476878,
+        "day": "2026-01-08T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-08.zip"
+      },
+      {
+        "bytes": 2297023,
+        "day": "2026-01-09T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-09.zip"
+      },
+      {
+        "bytes": 1901675,
+        "day": "2026-01-10T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-10.zip"
+      },
+      {
+        "bytes": 1945010,
+        "day": "2026-01-11T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-11.zip"
+      },
+      {
+        "bytes": 2298298,
+        "day": "2026-01-12T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-12.zip"
+      },
+      {
+        "bytes": 2459111,
+        "day": "2026-01-13T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-13.zip"
+      },
+      {
+        "bytes": 2574156,
+        "day": "2026-01-14T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-14.zip"
+      },
+      {
+        "bytes": 2464486,
+        "day": "2026-01-15T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-15.zip"
+      },
+      {
+        "bytes": 2241863,
+        "day": "2026-01-16T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-16.zip"
+      },
+      {
+        "bytes": 1923250,
+        "day": "2026-01-17T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-17.zip"
+      },
+      {
+        "bytes": 1998239,
+        "day": "2026-01-18T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-18.zip"
+      },
+      {
+        "bytes": 2329982,
+        "day": "2026-01-19T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-19.zip"
+      },
+      {
+        "bytes": 2706792,
+        "day": "2026-01-20T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-20.zip"
+      },
+      {
+        "bytes": 2726795,
+        "day": "2026-01-21T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-21.zip"
+      },
+      {
+        "bytes": 2474478,
+        "day": "2026-01-22T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-22.zip"
+      },
+      {
+        "bytes": 2498334,
+        "day": "2026-01-23T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-23.zip"
+      },
+      {
+        "bytes": 2021074,
+        "day": "2026-01-24T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-24.zip"
+      },
+      {
+        "bytes": 2434122,
+        "day": "2026-01-25T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-25.zip"
+      },
+      {
+        "bytes": 2543035,
+        "day": "2026-01-26T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-26.zip"
+      },
+      {
+        "bytes": 2401593,
+        "day": "2026-01-27T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-27.zip"
+      },
+      {
+        "bytes": 2403877,
+        "day": "2026-01-28T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-28.zip"
+      },
+      {
+        "bytes": 2555048,
+        "day": "2026-01-29T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-29.zip"
+      },
+      {
+        "bytes": 2855930,
+        "day": "2026-01-30T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-30.zip"
+      },
+      {
+        "bytes": 2760182,
+        "day": "2026-01-31T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-01-31.zip"
+      },
+      {
+        "bytes": 2848435,
+        "day": "2026-02-01T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-01.zip"
+      },
+      {
+        "bytes": 3062435,
+        "day": "2026-02-02T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-02.zip"
+      },
+      {
+        "bytes": 2906426,
+        "day": "2026-02-03T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-03.zip"
+      },
+      {
+        "bytes": 2937708,
+        "day": "2026-02-04T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-04.zip"
+      },
+      {
+        "bytes": 3466941,
+        "day": "2026-02-05T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-05.zip"
+      },
+      {
+        "bytes": 3442845,
+        "day": "2026-02-06T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-06.zip"
+      },
+      {
+        "bytes": 2915829,
+        "day": "2026-02-07T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-07.zip"
+      },
+      {
+        "bytes": 2670973,
+        "day": "2026-02-08T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-08.zip"
+      },
+      {
+        "bytes": 2889041,
+        "day": "2026-02-09T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-09.zip"
+      },
+      {
+        "bytes": 2709855,
+        "day": "2026-02-10T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-10.zip"
+      },
+      {
+        "bytes": 2894002,
+        "day": "2026-02-11T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-11.zip"
+      },
+      {
+        "bytes": 2922429,
+        "day": "2026-02-12T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-12.zip"
+      },
+      {
+        "bytes": 2843538,
+        "day": "2026-02-13T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-13.zip"
+      },
+      {
+        "bytes": 2547909,
+        "day": "2026-02-14T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-14.zip"
+      },
+      {
+        "bytes": 2577991,
+        "day": "2026-02-15T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-15.zip"
+      },
+      {
+        "bytes": 2575301,
+        "day": "2026-02-16T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-16.zip"
+      },
+      {
+        "bytes": 2564510,
+        "day": "2026-02-17T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-17.zip"
+      },
+      {
+        "bytes": 2534976,
+        "day": "2026-02-18T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-18.zip"
+      },
+      {
+        "bytes": 2567245,
+        "day": "2026-02-19T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-19.zip"
+      },
+      {
+        "bytes": 2613176,
+        "day": "2026-02-20T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-20.zip"
+      },
+      {
+        "bytes": 2308236,
+        "day": "2026-02-21T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-21.zip"
+      },
+      {
+        "bytes": 2245050,
+        "day": "2026-02-22T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-22.zip"
+      },
+      {
+        "bytes": 2847831,
+        "day": "2026-02-23T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-23.zip"
+      },
+      {
+        "bytes": 2768525,
+        "day": "2026-02-24T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-24.zip"
+      },
+      {
+        "bytes": 2885917,
+        "day": "2026-02-25T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-25.zip"
+      },
+      {
+        "bytes": 2717435,
+        "day": "2026-02-26T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-26.zip"
+      },
+      {
+        "bytes": 2703784,
+        "day": "2026-02-27T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-27.zip"
+      },
+      {
+        "bytes": 2680919,
+        "day": "2026-02-28T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-02-28.zip"
+      },
+      {
+        "bytes": 2622756,
+        "day": "2026-03-01T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-01.zip"
+      },
+      {
+        "bytes": 2859746,
+        "day": "2026-03-02T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-02.zip"
+      },
+      {
+        "bytes": 2788669,
+        "day": "2026-03-03T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-03.zip"
+      },
+      {
+        "bytes": 2930152,
+        "day": "2026-03-04T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-04.zip"
+      },
+      {
+        "bytes": 2726826,
+        "day": "2026-03-05T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-05.zip"
+      },
+      {
+        "bytes": 2653444,
+        "day": "2026-03-06T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-06.zip"
+      },
+      {
+        "bytes": 2275714,
+        "day": "2026-03-07T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-07.zip"
+      },
+      {
+        "bytes": 2380619,
+        "day": "2026-03-08T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-08.zip"
+      },
+      {
+        "bytes": 2699087,
+        "day": "2026-03-09T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-09.zip"
+      },
+      {
+        "bytes": 2707558,
+        "day": "2026-03-10T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-10.zip"
+      },
+      {
+        "bytes": 2573397,
+        "day": "2026-03-11T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-11.zip"
+      },
+      {
+        "bytes": 2517771,
+        "day": "2026-03-12T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-12.zip"
+      },
+      {
+        "bytes": 2696670,
+        "day": "2026-03-13T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-13.zip"
+      },
+      {
+        "bytes": 2102012,
+        "day": "2026-03-14T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-14.zip"
+      },
+      {
+        "bytes": 2195701,
+        "day": "2026-03-15T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-15.zip"
+      },
+      {
+        "bytes": 2660143,
+        "day": "2026-03-16T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-16.zip"
+      },
+      {
+        "bytes": 2602048,
+        "day": "2026-03-17T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-17.zip"
+      },
+      {
+        "bytes": 2548737,
+        "day": "2026-03-18T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-18.zip"
+      },
+      {
+        "bytes": 2554138,
+        "day": "2026-03-19T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-19.zip"
+      },
+      {
+        "bytes": 2488016,
+        "day": "2026-03-20T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-20.zip"
+      },
+      {
+        "bytes": 1989940,
+        "day": "2026-03-21T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-21.zip"
+      },
+      {
+        "bytes": 2338657,
+        "day": "2026-03-22T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-22.zip"
+      },
+      {
+        "bytes": 2671047,
+        "day": "2026-03-23T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-23.zip"
+      },
+      {
+        "bytes": 2564521,
+        "day": "2026-03-24T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-24.zip"
+      },
+      {
+        "bytes": 2427901,
+        "day": "2026-03-25T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-25.zip"
+      },
+      {
+        "bytes": 2512703,
+        "day": "2026-03-26T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-26.zip"
+      },
+      {
+        "bytes": 2592873,
+        "day": "2026-03-27T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-27.zip"
+      },
+      {
+        "bytes": 2159829,
+        "day": "2026-03-28T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-28.zip"
+      },
+      {
+        "bytes": 2130509,
+        "day": "2026-03-29T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-29.zip"
+      },
+      {
+        "bytes": 2502885,
+        "day": "2026-03-30T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-30.zip"
+      },
+      {
+        "bytes": 2567679,
+        "day": "2026-03-31T00:00:00+00:00",
+        "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1s/BTCUSDT-1s-2026-03-31.zip"
+      }
+    ],
+    "free_before_bytes": 77108850688
+  },
+  "retrieved_at": "2026-10-25T18:38:24.340728+00:00",
+  "rows": 7776000,
+  "source": "binance_public_data",
+  "start": "2026-01-01T00:00:00+00:00",
+  "symbol": "BTCUSDT",
+  "timestamp_rule": "Spot timestamps use microseconds from 2025-01-01; older files use milliseconds",
+  "version": 1
+}

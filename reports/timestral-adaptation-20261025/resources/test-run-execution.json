@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv-timestral/bin/python",
+    "scripts/run_timestral_adaptation.py",
+    "holdout",
+    "--frozen",
+    "research/out/timestral-adaptation-20261025/frozen",
+    "--output",
+    "research/out/timestral-adaptation-20261025/test-run"
+  ],
+  "started_utc": "2026-10-26T14:51:00.594702+00:00",
+  "finished_utc": "2026-10-26T14:53:30.097678+00:00",
+  "wall_seconds": 149.5012373750069,
+  "exit_code": 0
+}

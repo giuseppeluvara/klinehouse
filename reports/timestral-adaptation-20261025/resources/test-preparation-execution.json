@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv-timestral/bin/python",
+    "scripts/prepare_timestral_data.py",
+    "--output",
+    "research/out/timestral-adaptation-20261025/test",
+    "--symbol",
+    "BTCUSDT",
+    "--start",
+    "2026-01-01",
+    "--end",
+    "2026-04-01"
+  ],
+  "started_utc": "2026-10-25T18:27:37.115766+00:00",
+  "finished_utc": "2026-10-25T18:38:24.397139+00:00",
+  "wall_seconds": 647.2835205830006,
+  "exit_code": 0,
+  "test_acquisition_receipt_sha256": "a9ef6f72c8da77a5dae7a4c0f57c6e57d01f6b3a4cc6d22dba7be4dcd6d1fc88",
+  "freeze_sha256": "3faca63a7b215448e055ab772f89ce42fa5f47d5e2a9159bd3ca5e9ed3e814e0",
+  "frozen_protocol_sha256": "30738a65ed3c9d60b66b3f925da76f7464e46a462b76873c2782b69775326c18"
+}

@@ -1,0 +1,159 @@
+{
+  "auditor_sha256": "2ebe6313c7ecb2fab7ae4835d75e32627e485c937853da9511b7ae07f1d83a79",
+  "checked_at": "2026-10-26T14:54:03.480146+00:00",
+  "criterion": {
+    "all_contrasts_match": true,
+    "counts_and_identities": "exact match",
+    "numeric_absolute_tolerance": 1e-14,
+    "numeric_relative_tolerance": 1e-12
+  },
+  "failures": [],
+  "horizons": {
+    "24": {
+      "block_sample_counts": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        6
+      ],
+      "contrasts": {
+        "adapted_minus_timestral_price": {
+          "fraction_nonempty_blocks_lower_mae": 0.46153846153846156,
+          "mean_mae_difference": 0.000167255655853735,
+          "percentile95": [
+            -0.00018942093656042973,
+            0.0005155635770535107
+          ]
+        },
+        "adapted_minus_unchanged": {
+          "fraction_nonempty_blocks_lower_mae": 0.46153846153846156,
+          "mean_mae_difference": 0.0007520092177218077,
+          "percentile95": [
+            -0.000614603680624172,
+            0.0022368503328665003
+          ],
+          "percentile97_5": [
+            -0.0007865362138198607,
+            0.0024297360299624206
+          ]
+        },
+        "timestral_covariates_minus_unchanged": {
+          "fraction_nonempty_blocks_lower_mae": 0.46153846153846156,
+          "mean_mae_difference": 0.0007520092177218077,
+          "percentile95": [
+            -0.000614603680624172,
+            0.0022368503328665003
+          ]
+        },
+        "timestral_price_minus_unchanged": {
+          "fraction_nonempty_blocks_lower_mae": 0.46153846153846156,
+          "mean_mae_difference": 0.0005847535618680726,
+          "percentile95": [
+            -0.0004799189411341679,
+            0.001753844110463329
+          ]
+        }
+      },
+      "expected_samples": 90,
+      "samples": 90
+    },
+    "4": {
+      "block_sample_counts": [
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        36
+      ],
+      "contrasts": {
+        "adapted_minus_timestral_price": {
+          "fraction_nonempty_blocks_lower_mae": 0.6153846153846154,
+          "mean_mae_difference": -5.07965082586959e-05,
+          "percentile95": [
+            -0.00010578371862052076,
+            2.0561420799385053e-06
+          ]
+        },
+        "adapted_minus_unchanged": {
+          "fraction_nonempty_blocks_lower_mae": 0.46153846153846156,
+          "mean_mae_difference": 1.1991442757970289e-05,
+          "percentile95": [
+            -3.482804051248323e-05,
+            5.514501463659809e-05
+          ],
+          "percentile97_5": [
+            -4.1281711079408585e-05,
+            6.0936420995858306e-05
+          ]
+        },
+        "timestral_covariates_minus_unchanged": {
+          "fraction_nonempty_blocks_lower_mae": 0.3076923076923077,
+          "mean_mae_difference": 0.00012110975258098056,
+          "percentile95": [
+            -2.6049105530372365e-05,
+            0.00028624586672851407
+          ]
+        },
+        "timestral_price_minus_unchanged": {
+          "fraction_nonempty_blocks_lower_mae": 0.38461538461538464,
+          "mean_mae_difference": 6.27879510166662e-05,
+          "percentile95": [
+            -3.4212984036938336e-05,
+            0.00015671149230316432
+          ]
+        }
+      },
+      "expected_samples": 540,
+      "samples": 540
+    }
+  },
+  "implementation": "standalone auditor; sampled calendar blocks expanded to individual row indices; direct mean of paired per-anchor absolute-error differences; no pipeline imports",
+  "input_sha256": {
+    "analysis.json": "999a67c3aeac2f40e6b3c054c9955d5f94712da08d5016d32db46e052bfd612b",
+    "evaluation.jsonl": "d906744e4851ab4c60655fafa31cf8c05576aa47b16872fc24b1d3edd491e7d5",
+    "frozen/protocol.json": "30738a65ed3c9d60b66b3f925da76f7464e46a462b76873c2782b69775326c18"
+  },
+  "limitations": "This checks the arithmetic and reported endpoints; it does not establish independence, calibrated coverage, prospective accuracy, or profitability.",
+  "maximum_absolute_deviations": {
+    "fraction_nonempty_blocks_lower_mae": 0.0,
+    "mean_mae_difference": 0.0,
+    "percentile95": 0.0,
+    "percentile97_5": 0.0
+  },
+  "method": {
+    "block_days": 7,
+    "blocks": 13,
+    "draws": 10000,
+    "last_block_days": 6,
+    "origin": "2026-01-01T00:00:00+00:00",
+    "primary_quantiles": [
+      0.0125,
+      0.9875
+    ],
+    "secondary_quantiles": [
+      0.025,
+      0.975
+    ],
+    "seed": 17,
+    "weighting": "equal weight per sampled anchor"
+  },
+  "numpy_version": "2.4.2",
+  "passed": true
+}

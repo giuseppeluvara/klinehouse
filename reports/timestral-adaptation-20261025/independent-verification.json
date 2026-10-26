@@ -1,0 +1,136 @@
+{
+  "passed": true,
+  "verified_at": "2026-10-26T14:54:15.051055Z",
+  "seconds": 11.806550624998636,
+  "verifier_path": "/Users/dev-luv/Sites/klinehouse/scripts/verify_timestral_adaptation.py",
+  "verifier_sha256": "3f1af5f133ecd7335eb01dc89006bda742ceec6e951860dce8a3038c4d374360",
+  "method": "direct per-file DuckDB SQL and PyArrow, NumPy causal reconstruction; ridge by augmented least squares",
+  "source": {
+    "development": {
+      "files": 122,
+      "raw_rows": 10540800,
+      "hours": 2928,
+      "catalog_sha256": "6a375951c7d4e27494c6d54e8497b25df9175fb1ae86d37c544d6835faedeb34",
+      "provenance_sha256": "33c736c842bde39aa3cb9f377a4330fe83b3c94569ed0ecbc5ac8f02e9b4d32f",
+      "source_rows_sha256": "94b56148d0cda3fa35163b34355dd5cbb0c5ad74cd8b5fcbd4a5588acf5a16fc",
+      "hourly_features_sha256": "1e41dc85ed30f9ce6403d8bd942b8ba3398f7eef0e297c288ef0fdaf6e6b1540"
+    },
+    "test": {
+      "files": 90,
+      "raw_rows": 7776000,
+      "hours": 2160,
+      "catalog_sha256": "bd8c884946dfb6d0353102412d531edaa8a540d035cb627d88ba22f86d0ff065",
+      "provenance_sha256": "044e07a0f526194cfacc41e721c59ac97298c2e8ae5807d53c0bec748423eac1",
+      "source_rows_sha256": "0a9437d27ab03ac3ab1e24c8dadd3d5f35c5e047d859652f6bfc213f28fa7f16",
+      "hourly_features_sha256": "3c80d8d202442899301ec128b3e60d03c2225ff32a0bc6513cf1df7c9b6b9218"
+    }
+  },
+  "horizons": {
+    "4": {
+      "fit_samples": 366,
+      "validation_samples": 186,
+      "refit_samples": 552,
+      "selected": "shrink_price_0.5",
+      "test_predictions_verified": 540,
+      "validation_mae_margin_to_runner_up": 3.4681081752443305e-06,
+      "maximum_adapted_point_difference": 0.0
+    },
+    "24": {
+      "fit_samples": 61,
+      "validation_samples": 31,
+      "refit_samples": 92,
+      "selected": "raw_covariates",
+      "test_predictions_verified": 90,
+      "validation_mae_margin_to_runner_up": 0.0002916338896548718,
+      "maximum_adapted_point_difference": 0.0
+    }
+  },
+  "analysis_sha256": "999a67c3aeac2f40e6b3c054c9955d5f94712da08d5016d32db46e052bfd612b",
+  "metric_checks": {
+    "4": {
+      "models_compared": [
+        "unchanged",
+        "timestral_price",
+        "timestral_covariates",
+        "adapted"
+      ],
+      "months_compared": [
+        "2026-01",
+        "2026-02",
+        "2026-03"
+      ],
+      "metrics_per_model": [
+        "samples",
+        "return_mae",
+        "return_rmse",
+        "price_mae_usdt",
+        "price_rmse_usdt",
+        "direction_accuracy",
+        "direction_calls",
+        "direction_call_fraction",
+        "direction_accuracy_when_called",
+        "pinball_mean",
+        "coverage90",
+        "interval_width90",
+        "quantile_crossing",
+        "mae_skill_vs_unchanged"
+      ],
+      "gate_recalculated": true,
+      "gate_passed": false,
+      "primary_interval_source": "saved analysis, not independently resampled"
+    },
+    "24": {
+      "models_compared": [
+        "unchanged",
+        "timestral_price",
+        "timestral_covariates",
+        "adapted"
+      ],
+      "months_compared": [
+        "2026-01",
+        "2026-02",
+        "2026-03"
+      ],
+      "metrics_per_model": [
+        "samples",
+        "return_mae",
+        "return_rmse",
+        "price_mae_usdt",
+        "price_rmse_usdt",
+        "direction_accuracy",
+        "direction_calls",
+        "direction_call_fraction",
+        "direction_accuracy_when_called",
+        "pinball_mean",
+        "coverage90",
+        "interval_width90",
+        "quantile_crossing",
+        "mae_skill_vs_unchanged"
+      ],
+      "gate_recalculated": true,
+      "gate_passed": false,
+      "primary_interval_source": "saved analysis, not independently resampled"
+    }
+  },
+  "maximum_target_return_difference": 0.0,
+  "protocol_sha256": "030ffcb8a9f6d446fd9e62f1a82e446d430a00609b63ce05a4846eaceadf0117",
+  "frozen_protocol_sha256": "30738a65ed3c9d60b66b3f925da76f7464e46a462b76873c2782b69775326c18",
+  "bundle_sha256": "3faca63a7b215448e055ab772f89ce42fa5f47d5e2a9159bd3ca5e9ed3e814e0",
+  "results_sha256": "087a3dcd3cde27e20bd3723b995b12c5a7282456da75cb63342e2a653222fb42",
+  "output_sha256": {
+    "evaluation.jsonl": "d906744e4851ab4c60655fafa31cf8c05576aa47b16872fc24b1d3edd491e7d5",
+    "outcomes.jsonl": "46ad5cb18b6cb40fd76240ec58c2b37c7d3000e3f393e3ed905d5cf598545f30",
+    "predictions.jsonl": "c5da5b85b7a2792ce608639205036eb7a020ae633fcbdaeb3209481571746349"
+  },
+  "checkpoint_files_sha256": {
+    "LICENSE": "648194727930df730890e9f9affdbcc5c930d406d6829559b25ca3d5a973fc8c",
+    "README.md": "295a9aa5a97eb8fe93935ab8e3736ee762fffaf869dcc41de6fcc98c77829f12",
+    "config.json": "b5f27f61513f8fd1a3aa996f3720d3679cb40bce5bcb08eb3dc320ce726e7c2f",
+    "model.safetensors": "7ace108c4987e7f2a99a75a445240019d1d31c2117139d1bd05ffdfd25aca738"
+  },
+  "limits": [
+    "Timestral inference is not rerun; its saved outputs and identities are hash-verified.",
+    "Timestamp evidence verifies recorded ordering, not an external proof of historical ignorance.",
+    "This historical audit establishes no prospective, statistical-independence or profitability guarantee."
+  ]
+}
