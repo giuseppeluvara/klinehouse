@@ -415,6 +415,12 @@ hypothesis. Its [executed diagnostic report](reports/timestral-diagnosis-2026102
 preserves the negative point-forecast result and reports interval improvements
 on previously observed history; prospective validation remains pending.
 
+The [root-cause diagnostics](docs/timestral-diagnostics.md) correct the attribution
+of interval scores, test numerical equivalence and known synthetic signals, and
+compare overlapping versus disjoint horizon returns on identical past windows.
+The [executed report](reports/timestral-root-cause-20261026/README.md) retains both
+the improvements over the flawed representation and the losses to unchanged price.
+
 ## License
 
 [MIT](LICENSE)
