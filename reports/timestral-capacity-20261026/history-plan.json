@@ -1,0 +1,22 @@
+{
+  "hypothesis": "Insufficient financial training history, paired180 versus1095days using identical shallow histogram quantile learner and causal hourly features. No Timestral-derived features in this controlled sample-size experiment; compare its saved forecasts descriptively on2026 only.",
+  "source": "BTCUSDT native Binance Spot1h monthly bars August2020-July2026, all source timestamps strictly before August2026. Distinct from the1s archive, no mixing or migration.",
+  "features": [
+    "return4_scaled",
+    "return24_scaled",
+    "return168_scaled",
+    "realized_vol24_over168",
+    "range_last_scaled",
+    "volume24_vs168",
+    "imbalance24",
+    "hour_sin",
+    "hour_cos",
+    "weekday_sin",
+    "weekday_cos"
+  ],
+  "scale": "sqrt(sum of last24 hourly close returns squared)*sqrt(h/24), floor1e-6, past only",
+  "learner": "Same fixed HistGradientBoosting quantile0.5 parameters as funding experiment;100iterations,lr0.03,3leaves,depth2,minleaf30,L2=10,no earlystop,seed7. Target normalized by causal scale and loss weighted by scale; time half-life365days in both windows.",
+  "fit": "Monthly refit on matured labels on nonoverlapping4h/24h anchor grids; min60daily/360four-hour; fixed180 vs1095days.",
+  "evaluation": "2024,2025,Jan-Jul2026 reported separately, both candidates and both horizons. Existing2026 history has been inspected; earlier years not a prospective test and may have been used in unrelated prior research. Protocol fixed before acquisition.",
+  "gate": "Each cohort requires >=1%MAE reduction,RMSE no worse,>=2/3 monthly wins, upper paired weekly bootstrap99.583333%below0,4000draws seed20261026 for12primary comparisons. Candidate must pass all3cohorts for a horizon to be nominated; still requires independent prospective validation. No retrospective selection of favorable years."
+}

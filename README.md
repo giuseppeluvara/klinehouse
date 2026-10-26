@@ -421,6 +421,13 @@ compare overlapping versus disjoint horizon returns on identical past windows.
 The [executed report](reports/timestral-root-cause-20261026/README.md) retains both
 the improvements over the flawed representation and the losses to unchanged price.
 
+The [capacity, calibration, funding and history comparisons](reports/timestral-capacity-20261026/README.md)
+test four further explanations with registered protocols and paired samples.
+Neither a larger Timestral checkpoint, loss-aligned calibration, settled funding,
+nor three years of training data passes the historical screen. The report includes
+compressed forecasts and an independent arithmetic and causality audit; it does
+not claim a functioning trading strategy.
+
 ## License
 
 [MIT](LICENSE)

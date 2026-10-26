@@ -1,0 +1,17 @@
+{
+  "verified": true,
+  "capacity_forecasts": 5936,
+  "calibration_anchors_per_family": 1484,
+  "history_forecasts": 13202,
+  "native_hours": 52564,
+  "native_vs_1s_matching_hours": 8016,
+  "metric_comparisons": 30,
+  "inference_rerun": false,
+  "independent_predictive_validation": false,
+  "scope": "frozen hashes, exact sample sets, past-only features/training, target endpoints, point metrics, weekly bootstrap, median prediction reconstruction; neural/tree inference not replayed",
+  "retained_sources_and_models": {
+    "raw_archives": 83,
+    "model_files": 166,
+    "invalid_native_rows": 1
+  }
+}

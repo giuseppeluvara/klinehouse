@@ -1,0 +1,10 @@
+{
+  "checked_files": 228,
+  "intended_changed_files": [
+    ".github/workflows/ci.yml",
+    "README.md"
+  ],
+  "other_original_files_unchanged": true,
+  "user_untracked_files_preserved": true,
+  "private_manifest_retained_locally": true
+}
