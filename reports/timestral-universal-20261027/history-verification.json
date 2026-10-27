@@ -1,0 +1,1 @@
+{"history": {"baseline_fits": 42, "cohort_comparisons": 6, "fits": 14, "max_objective_gradient": 1.2215075382329943e-07, "raw_sources_verified": true, "replication_gate": false, "verified": true}, "trees": {"all_cohorts_gate": false, "cohort_comparisons": 9, "fits": 21, "greedy_tree_fitting_rerun": false, "verified": true}}

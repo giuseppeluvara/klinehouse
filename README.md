@@ -444,6 +444,13 @@ one-minute delay. BTC and SOL fail; the combined transfer gate remains false.
 Saved predictions, independent reconstruction and a historical forecast preview
 are included. This is a selective research candidate, not prospective validation.
 
+The [shared-model generalization study](reports/timestral-universal-20261027/README.md)
+fits one common directional model across BTC, ETH and SOL. All three pass the
+January-July 2026 screen, but locked replications in 2024 and 2025 fail the combined
+criterion. A fixed nonlinear follow-up also fails the full nine-cohort gate.
+Independent audits and a shared-fit historical preview preserve the positive
+recent results and the limits of generalization without opening protected data.
+
 ## License
 
 [MIT](LICENSE)
