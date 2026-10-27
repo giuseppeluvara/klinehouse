@@ -117,3 +117,12 @@ jobs:
         run: |
           python scripts/verify_simple_direction.py
           python scripts/verify_market_reversal.py
+      - name: Lint scalar market calibration experiments
+        run: ruff check --select E4,E7,E9,F research/timestral_market_calibration.py research/timestral_uncertain_market.py
+      - name: Verify prequential calibration and coefficient uncertainty without fitting
+        env:
+          OMP_NUM_THREADS: "2"
+          OPENBLAS_NUM_THREADS: "2"
+        run: |
+          python scripts/verify_market_calibration.py
+          python scripts/verify_uncertain_market.py

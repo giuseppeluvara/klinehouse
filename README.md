@@ -492,6 +492,16 @@ improvement over the flow control. The unpenalized diagnostic passes six origina
 gates. Both sequential retrospective studies preserve their failed general-solution
 criteria, all samples, protected holdouts and independently audited artifacts.
 
+The [prequential calibration experiment](reports/timestral-market-calibration-20261027/README.md)
+corrects underconfidence using earlier out-of-training forecasts, but adds no
+general advantage over the unpenalized common-hour model. The separately registered
+[direct uncertainty adjustment](reports/timestral-uncertain-market-20261027/README.md)
+retains one coefficient, improves calibration error and Brier over the conservative
+base in eight of nine cohorts at point estimate, and restores adequate selection
+coverage. Six original direction gates pass, with no demonstrated superiority to
+the unpenalized control. Both studies retain failed general-solution criteria,
+all anchors, independent covariance/score audits and protected holdouts.
+
 ## License
 
 [MIT](LICENSE)

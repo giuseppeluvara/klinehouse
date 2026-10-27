@@ -1,0 +1,10 @@
+{
+  "base_fits": 27,
+  "calibration_fits": 21,
+  "cases": 550362,
+  "cohorts": 9,
+  "general_solution": false,
+  "maximum_optimality_residual": 2.1361384883178403e-14,
+  "protected_data_opened": false,
+  "verified": true
+}
