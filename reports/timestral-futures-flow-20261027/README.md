@@ -147,3 +147,21 @@ python scripts/verify_futures_flow.py --root research/out/futures-flow-replay --
 
 The manifest freezes the executed experiment artifacts. This report, runtime
 receipt and independent verification receipt were added afterward.
+
+## CI portability diagnosis
+
+The first publication run passed **274 tests**, including TimescaleDB integration,
+but stopped in an older frozen tree audit before reaching the new futures audit.
+On BTC 2024-06-13 00:45 UTC, feature `log1p(trades)` for 656 trades equals a saved
+tree split, 6.48768401848461. Raising that feature by exactly one ULP reproduces
+all three discrepant probabilities from CI exactly, including the maximum
+8.80241439e-6 difference. This is an arithmetic branch-boundary issue; it is
+separate from the negative futures-information result.
+
+The earlier passing and failing CI runs used the same NumPy 2.5.4 release. The
+workflow now disables the AVX-512 dispatch targets for that strict historical
+audit and asserts the split-boundary logarithm against scalar `math.log1p`.
+All frozen trees, features, saved predictions, score gates and audit tolerances
+remain unchanged. NumPy documents [runtime dispatch controls](https://numpy.org/doc/2.4/reference/simd/build-options.html#runtime-dispatch)
+and [transcendental differences with AVX-512](https://github.com/numpy/numpy/issues/23523).
+The historical audit also passed unchanged locally during this diagnosis.

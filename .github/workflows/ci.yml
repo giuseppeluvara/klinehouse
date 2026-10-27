@@ -79,7 +79,11 @@ jobs:
         env:
           OMP_NUM_THREADS: "2"
           OPENBLAS_NUM_THREADS: "2"
+          # AVX-512 log1p can differ by one ULP at a frozen tree split.
+          # Preserve strict evidence tolerances with the scalar math path.
+          NPY_DISABLE_CPU_FEATURES: "X86_V4,AVX512_ICL,AVX512_SPR"
         run: |
+          python -c 'import math, numpy as np; np.show_runtime(); x = np.log1p(np.full(16, 656.0)); assert np.all(x == math.log1p(656)), "log1p split-boundary reproducibility"'
           python scripts/verify_universal_direction.py
           python scripts/verify_universal_history.py --trees
       - name: Verify causal adaptive calibration and expert mixtures
