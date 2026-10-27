@@ -1,0 +1,185 @@
+{
+  "status": "Descriptive post-evaluation decomposition; no selection or gate changes",
+  "cohorts": {
+    "2024-BTCUSDT": {
+      "raw": {
+        "flat_logloss": 0.019168548899291937,
+        "direction_logloss_per_anchor": 0.6901102565959116,
+        "total_logloss": 0.7092788054952036,
+        "confidence_gap_on_raw_selected_class": -0.0007369274267662987
+      },
+      "calibration": {
+        "flat_logloss": 0.01878955877815255,
+        "direction_logloss_per_anchor": 0.6901458593063661,
+        "total_logloss": 0.7089354180845187,
+        "confidence_gap_on_raw_selected_class": -0.004412179331097244
+      },
+      "mixture": {
+        "flat_logloss": 0.01911100192918674,
+        "direction_logloss_per_anchor": 0.6901358127153526,
+        "total_logloss": 0.7092468146445393,
+        "confidence_gap_on_raw_selected_class": -0.0049796841192350765
+      }
+    },
+    "2024-ETHUSDT": {
+      "raw": {
+        "flat_logloss": 0.016852450329893243,
+        "direction_logloss_per_anchor": 0.6910761844702061,
+        "total_logloss": 0.7079286348000994,
+        "confidence_gap_on_raw_selected_class": 0.005071325360554638
+      },
+      "calibration": {
+        "flat_logloss": 0.016286620295191196,
+        "direction_logloss_per_anchor": 0.6910614736786433,
+        "total_logloss": 0.7073480939738346,
+        "confidence_gap_on_raw_selected_class": -0.002387127349811735
+      },
+      "mixture": {
+        "flat_logloss": 0.016473120907759146,
+        "direction_logloss_per_anchor": 0.6910275451534119,
+        "total_logloss": 0.707500666061171,
+        "confidence_gap_on_raw_selected_class": -0.010157178556382452
+      }
+    },
+    "2024-SOLUSDT": {
+      "raw": {
+        "flat_logloss": 0.07531663880005915,
+        "direction_logloss_per_anchor": 0.6829824095723215,
+        "total_logloss": 0.7582990483723806,
+        "confidence_gap_on_raw_selected_class": 0.015556666579025812
+      },
+      "calibration": {
+        "flat_logloss": 0.07478137660736939,
+        "direction_logloss_per_anchor": 0.6829625974147451,
+        "total_logloss": 0.7577439740221145,
+        "confidence_gap_on_raw_selected_class": 0.0040569405685427305
+      },
+      "mixture": {
+        "flat_logloss": 0.0745411438267756,
+        "direction_logloss_per_anchor": 0.682901098487863,
+        "total_logloss": 0.7574422423146385,
+        "confidence_gap_on_raw_selected_class": 0.0009870179565419387
+      }
+    },
+    "2025-BTCUSDT": {
+      "raw": {
+        "flat_logloss": 0.015682314310449152,
+        "direction_logloss_per_anchor": 0.6912780029976731,
+        "total_logloss": 0.7069603173081223,
+        "confidence_gap_on_raw_selected_class": 0.012640246705836309
+      },
+      "calibration": {
+        "flat_logloss": 0.015681460231356675,
+        "direction_logloss_per_anchor": 0.6911176631533021,
+        "total_logloss": 0.7067991233846588,
+        "confidence_gap_on_raw_selected_class": -0.0007036572638944264
+      },
+      "mixture": {
+        "flat_logloss": 0.015754682769846363,
+        "direction_logloss_per_anchor": 0.6911658534672253,
+        "total_logloss": 0.7069205362370716,
+        "confidence_gap_on_raw_selected_class": 0.0026039038356378565
+      }
+    },
+    "2025-ETHUSDT": {
+      "raw": {
+        "flat_logloss": 0.01282203980900557,
+        "direction_logloss_per_anchor": 0.6909524549398989,
+        "total_logloss": 0.7037744947489044,
+        "confidence_gap_on_raw_selected_class": -0.008944285492072695
+      },
+      "calibration": {
+        "flat_logloss": 0.012237204704064347,
+        "direction_logloss_per_anchor": 0.690979626655333,
+        "total_logloss": 0.7032168313593973,
+        "confidence_gap_on_raw_selected_class": -0.01046854216715602
+      },
+      "mixture": {
+        "flat_logloss": 0.012492032295537175,
+        "direction_logloss_per_anchor": 0.6910550191226382,
+        "total_logloss": 0.7035470514181754,
+        "confidence_gap_on_raw_selected_class": -0.019962205889093
+      }
+    },
+    "2025-SOLUSDT": {
+      "raw": {
+        "flat_logloss": 0.07506083605032679,
+        "direction_logloss_per_anchor": 0.6830976587593354,
+        "total_logloss": 0.7581584948096621,
+        "confidence_gap_on_raw_selected_class": 0.005476406023396446
+      },
+      "calibration": {
+        "flat_logloss": 0.07400741440247645,
+        "direction_logloss_per_anchor": 0.6830417454872206,
+        "total_logloss": 0.7570491598896971,
+        "confidence_gap_on_raw_selected_class": -0.008074588948079548
+      },
+      "mixture": {
+        "flat_logloss": 0.07373965827153588,
+        "direction_logloss_per_anchor": 0.6830765720848149,
+        "total_logloss": 0.7568162303563507,
+        "confidence_gap_on_raw_selected_class": -0.01510376087249337
+      }
+    },
+    "2026-BTCUSDT": {
+      "raw": {
+        "flat_logloss": 0.014228797399452238,
+        "direction_logloss_per_anchor": 0.6907427175686568,
+        "total_logloss": 0.7049715149681091,
+        "confidence_gap_on_raw_selected_class": 0.008941959656509454
+      },
+      "calibration": {
+        "flat_logloss": 0.013651637068189542,
+        "direction_logloss_per_anchor": 0.6907101756762144,
+        "total_logloss": 0.7043618127444039,
+        "confidence_gap_on_raw_selected_class": 0.0003627595956830245
+      },
+      "mixture": {
+        "flat_logloss": 0.013870772021290017,
+        "direction_logloss_per_anchor": 0.6905918675856171,
+        "total_logloss": 0.7044626396069071,
+        "confidence_gap_on_raw_selected_class": -0.0015201717217567339
+      }
+    },
+    "2026-ETHUSDT": {
+      "raw": {
+        "flat_logloss": 0.017530677258331143,
+        "direction_logloss_per_anchor": 0.6895923821325153,
+        "total_logloss": 0.7071230593908464,
+        "confidence_gap_on_raw_selected_class": -0.0009566975372852274
+      },
+      "calibration": {
+        "flat_logloss": 0.01746969779597226,
+        "direction_logloss_per_anchor": 0.6896297426884108,
+        "total_logloss": 0.7070994404843831,
+        "confidence_gap_on_raw_selected_class": -0.003373392176715542
+      },
+      "mixture": {
+        "flat_logloss": 0.01743367555574602,
+        "direction_logloss_per_anchor": 0.6896351469657598,
+        "total_logloss": 0.7070688225215058,
+        "confidence_gap_on_raw_selected_class": -0.008234509525072351
+      }
+    },
+    "2026-SOLUSDT": {
+      "raw": {
+        "flat_logloss": 0.16187515971697797,
+        "direction_logloss_per_anchor": 0.6651883791432722,
+        "total_logloss": 0.8270635388602502,
+        "confidence_gap_on_raw_selected_class": 0.006792625883164544
+      },
+      "calibration": {
+        "flat_logloss": 0.16184026860930376,
+        "direction_logloss_per_anchor": 0.6652178524774246,
+        "total_logloss": 0.8270581210867284,
+        "confidence_gap_on_raw_selected_class": -3.57434939749409e-05
+      },
+      "mixture": {
+        "flat_logloss": 0.1604711086655641,
+        "direction_logloss_per_anchor": 0.6652248078580449,
+        "total_logloss": 0.8256959165236091,
+        "confidence_gap_on_raw_selected_class": -0.0055766799629408245
+      }
+    }
+  }
+}

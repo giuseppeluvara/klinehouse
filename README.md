@@ -451,6 +451,14 @@ criterion. A fixed nonlinear follow-up also fails the full nine-cohort gate.
 Independent audits and a shared-fit historical preview preserve the positive
 recent results and the limits of generalization without opening protected data.
 
+## Adaptive direction follow-up
+
+The [adaptive direction study](reports/timestral-adaptive-direction-20261027/README.md)
+tests daily probability calibration and changing mixtures of frozen experts on
+the same nine 2024–2026 asset/cohort comparisons. Both pass five of nine direction
+gates; neither establishes a general improvement. The report separates flat-price
+calibration from up/down prediction and includes independent causal replay audits.
+
 ## License
 
 [MIT](LICENSE)

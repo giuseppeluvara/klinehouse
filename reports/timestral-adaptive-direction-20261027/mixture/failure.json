@@ -1,0 +1,6 @@
+{
+  "at": "2026-10-27T10:41:05.784587+00:00",
+  "status": "aborted_before_cohort_metrics",
+  "reason": "SLSQP success but KKT residual 2.980696538257277e-6 > 2e-6; numerical tolerance repair registered separately",
+  "log": "research/out/adaptive-direction-20261027/mixture.log"
+}
