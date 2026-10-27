@@ -459,6 +459,14 @@ the same nine 2024–2026 asset/cohort comparisons. Both pass five of nine direc
 gates; neither establishes a general improvement. The report separates flat-price
 calibration from up/down prediction and includes independent causal replay audits.
 
+## Derivatives information and up/down direction
+
+The [premium-index study](reports/timestral-premium-direction-20261027/README.md)
+adds a new perpetual-futures source while keeping flat-price probabilities fixed.
+Across all nine 2024–2026 asset/cohort checks, it finds no verified incremental
+up/down benefit over the spot-only control. All original evaluation anchors,
+source gaps, frozen protocols and independent audits are preserved.
+
 ## License
 
 [MIT](LICENSE)
