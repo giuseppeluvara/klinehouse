@@ -1,0 +1,10 @@
+{
+  "agreement_cases": 484663,
+  "cases": 550362,
+  "cohorts": 9,
+  "fits": 42,
+  "general_solution": false,
+  "maximum_raw_fit_residual": 7.257697529381188e-15,
+  "protected_data_opened": false,
+  "verified": true
+}

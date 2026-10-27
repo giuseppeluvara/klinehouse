@@ -1,0 +1,151 @@
+{
+  "code_sha256": "563dc7badff6ea8cf607681ba7b834ccb3e1684022d28cea5f88e348c830c9ee",
+  "cohorts": {
+    "2024-BTCUSDT": {
+      "uniform": {
+        "direction_gain": 0.0024792090215872697,
+        "flat_gain": 0.001387883559971029,
+        "selected": 11984,
+        "selected_flats": 16,
+        "total_gain": 0.0038670925815583734
+      },
+      "volume": {
+        "direction_gain": 0.0029569567789763385,
+        "flat_gain": 0.000894623324968237,
+        "selected": 10918,
+        "selected_flats": 15,
+        "total_gain": 0.0038515801039444852
+      }
+    },
+    "2024-ETHUSDT": {
+      "uniform": {
+        "direction_gain": 0.0022354381502548426,
+        "flat_gain": -0.00025512782237365264,
+        "selected": 11119,
+        "selected_flats": 25,
+        "total_gain": 0.001980310327881263
+      },
+      "volume": {
+        "direction_gain": 0.001963410455376957,
+        "flat_gain": -0.00025467591158196204,
+        "selected": 9960,
+        "selected_flats": 21,
+        "total_gain": 0.001708734543795165
+      }
+    },
+    "2024-SOLUSDT": {
+      "uniform": {
+        "direction_gain": 0.002083681483376343,
+        "flat_gain": 0.002930115979360798,
+        "selected": 8205,
+        "selected_flats": 79,
+        "total_gain": 0.005013797462737335
+      },
+      "volume": {
+        "direction_gain": 0.0018009148832833777,
+        "flat_gain": 0.0006960478630259545,
+        "selected": 7041,
+        "selected_flats": 79,
+        "total_gain": 0.0024969627463096167
+      }
+    },
+    "2025-BTCUSDT": {
+      "uniform": {
+        "direction_gain": 0.002415683085695064,
+        "flat_gain": 6.641866716567205e-05,
+        "selected": 13252,
+        "selected_flats": 18,
+        "total_gain": 0.002482101752860788
+      },
+      "volume": {
+        "direction_gain": 0.00226285516554392,
+        "flat_gain": 0.00023556539317410967,
+        "selected": 13648,
+        "selected_flats": 19,
+        "total_gain": 0.002498420558718073
+      }
+    },
+    "2025-ETHUSDT": {
+      "uniform": {
+        "direction_gain": 0.004321771623630233,
+        "flat_gain": -0.0001545408742606412,
+        "selected": 12790,
+        "selected_flats": 20,
+        "total_gain": 0.004167230749369533
+      },
+      "volume": {
+        "direction_gain": 0.004249543663949806,
+        "flat_gain": 0.00019977635338013985,
+        "selected": 13137,
+        "selected_flats": 27,
+        "total_gain": 0.004449320017329894
+      }
+    },
+    "2025-SOLUSDT": {
+      "uniform": {
+        "direction_gain": 0.002366551682294271,
+        "flat_gain": -0.002710698449695584,
+        "selected": 10015,
+        "selected_flats": 133,
+        "total_gain": -0.0003441467674013543
+      },
+      "volume": {
+        "direction_gain": 0.002149789086745457,
+        "flat_gain": -0.0022846979803844286,
+        "selected": 10191,
+        "selected_flats": 144,
+        "total_gain": -0.0001349088936390963
+      }
+    },
+    "2026-BTCUSDT": {
+      "uniform": {
+        "direction_gain": 0.002535536228620905,
+        "flat_gain": 0.0006890996159088607,
+        "selected": 21503,
+        "selected_flats": 23,
+        "total_gain": 0.0032246358445295886
+      },
+      "volume": {
+        "direction_gain": 0.002108275384867686,
+        "flat_gain": 0.0008582128053302787,
+        "selected": 22400,
+        "selected_flats": 23,
+        "total_gain": 0.002966488190197847
+      }
+    },
+    "2026-ETHUSDT": {
+      "uniform": {
+        "direction_gain": 0.003792289137828031,
+        "flat_gain": -3.308093200916733e-05,
+        "selected": 21001,
+        "selected_flats": 41,
+        "total_gain": 0.003759208205818765
+      },
+      "volume": {
+        "direction_gain": 0.003376707675626922,
+        "flat_gain": -0.00012122595637680152,
+        "selected": 21922,
+        "selected_flats": 41,
+        "total_gain": 0.003255481719249942
+      }
+    },
+    "2026-SOLUSDT": {
+      "uniform": {
+        "direction_gain": 0.0027199130561996743,
+        "flat_gain": 0.0007222537889444297,
+        "selected": 8065,
+        "selected_flats": 191,
+        "total_gain": 0.003442166845144201
+      },
+      "volume": {
+        "direction_gain": 0.0028043709143599216,
+        "flat_gain": 0.0008639486608928021,
+        "selected": 8119,
+        "selected_flats": 202,
+        "total_gain": 0.00366831957525271
+      }
+    }
+  },
+  "results_sha256": "7a15de9770acf2cf47d02a786924005e94aaccae7b4fe6226585774b20674d2a",
+  "status": "Post-hoc descriptive accounting after candidate outcomes, not used to alter candidates or gates; gains are baseline loss minus model loss on each candidate's selected rows."
+}

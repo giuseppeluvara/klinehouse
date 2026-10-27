@@ -133,3 +133,12 @@ jobs:
           OMP_NUM_THREADS: "2"
           OPENBLAS_NUM_THREADS: "2"
         run: python scripts/verify_market_specific.py
+      - name: Lint fixed price-path center experiment
+        run: ruff check --select E4,E7,E9,F research/timestral_volume_center.py scripts/run_volume_center.py scripts/verify_volume_center.py scripts/diagnose_volume_center.py
+      - name: Verify price-path centers and loss accounting without fitting
+        env:
+          OMP_NUM_THREADS: "2"
+          OPENBLAS_NUM_THREADS: "2"
+        run: |
+          python scripts/verify_volume_center.py
+          python scripts/diagnose_volume_center.py --verify

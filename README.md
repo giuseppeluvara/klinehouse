@@ -511,6 +511,16 @@ seven cohorts, but demonstrates improvement over the common signal in only one.
 All nine cohorts, failed comparisons and independent reconstruction are retained;
 protected holdouts remain unopened.
 
+The [price-path center study](reports/timestral-volume-center-20261027/README.md)
+adds the location of the current price within its trailing-hour path when asset
+and market agree. Both uniform and volume-weighted centers pass eight original
+gates, repairing BTC 2025 and SOL 2026. The uniform center beats the endpoint
+signal on conditional Brier at point estimate in eight cohorts; five paired
+information gates pass. Volume weighting worsens Brier against uniform in every
+cohort. SOL 2025 still fails combined log loss: a post-hoc decomposition isolates
+an adverse flat/moving component despite improved direction. No general solution
+is claimed; all nine cohorts and protected holdouts are preserved.
+
 ## License
 
 [MIT](LICENSE)
