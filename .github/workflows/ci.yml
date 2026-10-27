@@ -126,3 +126,10 @@ jobs:
         run: |
           python scripts/verify_market_calibration.py
           python scripts/verify_uncertain_market.py
+      - name: Lint fixed asset agreement experiment
+        run: ruff check --select E4,E7,E9,F research/timestral_market_specific.py scripts/run_market_specific.py scripts/verify_market_specific.py
+      - name: Verify fixed asset agreement and blending without fitting
+        env:
+          OMP_NUM_THREADS: "2"
+          OPENBLAS_NUM_THREADS: "2"
+        run: python scripts/verify_market_specific.py

@@ -502,6 +502,15 @@ coverage. Six original direction gates pass, with no demonstrated superiority to
 the unpenalized control. Both studies retain failed general-solution criteria,
 all anchors, independent covariance/score audits and protected holdouts.
 
+The [fixed asset-agreement study](reports/timestral-market-specific-20261027/README.md)
+separates binary direction, unchanged-price outcomes and score uncertainty in the
+three failing cohorts. Neutralizing disagreement adds no fitted parameter;
+equal-weight asset/common blending retains one coefficient. Both still pass only
+six original gates. Blending improves conditional Brier at point estimate in
+seven cohorts, but demonstrates improvement over the common signal in only one.
+All nine cohorts, failed comparisons and independent reconstruction are retained;
+protected holdouts remain unopened.
+
 ## License
 
 [MIT](LICENSE)

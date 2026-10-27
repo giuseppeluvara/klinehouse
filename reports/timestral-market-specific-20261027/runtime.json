@@ -1,0 +1,16 @@
+{
+  "run": {
+    "seconds": 8.0,
+    "max_rss_bytes": 847511552
+  },
+  "verify": {
+    "seconds": 7.92,
+    "max_rss_bytes": 742211584
+  },
+  "bundle_bytes_before_receipts": 9145495,
+  "local_tests": {
+    "passed": 293,
+    "skipped": 8,
+    "seconds": 14.76
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "blend_fits": 21,
+  "cases": 550362,
+  "cohorts": 9,
+  "general_solution": false,
+  "maximum_raw_fit_residual": 2.2045097229176728e-14,
+  "protected_data_opened": false,
+  "verified": true
+}
