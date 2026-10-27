@@ -1,0 +1,13 @@
+{
+  "execution": {
+    "seconds": 7.74,
+    "peak_rss_bytes": 893517824
+  },
+  "independent_audit": {
+    "seconds": 6.17,
+    "peak_rss_bytes": 746356736
+  },
+  "source_downloads": false,
+  "new_environment": false,
+  "bundle_bytes_before_receipts": 10672185
+}

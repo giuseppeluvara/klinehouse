@@ -482,6 +482,16 @@ the regime model fits all 21 training windows better but scores worse in all
 nine subsequent cohorts. The report preserves the registered comparisons,
 diagnostic uncertainty and independent reconstruction without protected holdouts.
 
+The [one-coefficient simplification](reports/timestral-simple-direction-20261027/README.md)
+rejects relative one-minute reversal. A separately registered
+[common-hour reversal follow-up](reports/timestral-market-reversal-20261027/README.md)
+passes the conditional 50/50-and-frequency comparison in all nine explored
+asset/year cohorts, with 50.66–51.78% accuracy. Strong shrinkage is too conservative:
+the primary model fails all original selective gates and does not establish
+improvement over the flow control. The unpenalized diagnostic passes six original
+gates. Both sequential retrospective studies preserve their failed general-solution
+criteria, all samples, protected holdouts and independently audited artifacts.
+
 ## License
 
 [MIT](LICENSE)

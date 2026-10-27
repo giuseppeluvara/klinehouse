@@ -1,0 +1,9 @@
+{
+  "cases": 550362,
+  "cohorts": 9,
+  "fits": 63,
+  "general_solution": false,
+  "maximum_kkt_residual": 1.8691645453650096e-14,
+  "protected_data_opened": false,
+  "verified": true
+}

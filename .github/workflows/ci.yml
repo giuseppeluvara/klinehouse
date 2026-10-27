@@ -108,3 +108,12 @@ jobs:
           OMP_NUM_THREADS: "2"
           OPENBLAS_NUM_THREADS: "2"
         run: python scripts/verify_regime_direction.py
+      - name: Lint one-coefficient direction experiments
+        run: ruff check --select E4,E7,E9,F research/timestral_simple_direction.py research/timestral_market_reversal.py
+      - name: Verify simple relative and common-market reversal without fitting
+        env:
+          OMP_NUM_THREADS: "2"
+          OPENBLAS_NUM_THREADS: "2"
+        run: |
+          python scripts/verify_simple_direction.py
+          python scripts/verify_market_reversal.py
