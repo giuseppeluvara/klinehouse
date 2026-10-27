@@ -1,0 +1,68 @@
+{
+  "BTCUSDT": {
+    "confusion_rows_actual_columns_predicted_down_flat_up": [
+      [
+        2540,
+        0,
+        2292
+      ],
+      [
+        16,
+        0,
+        11
+      ],
+      [
+        2379,
+        0,
+        2472
+      ]
+    ],
+    "down_precision": 0.5146909827760892,
+    "mean_probability_of_selected_direction": 0.5277416301608264,
+    "up_precision": 0.5176963350785341
+  },
+  "ETHUSDT": {
+    "confusion_rows_actual_columns_predicted_down_flat_up": [
+      [
+        4010,
+        0,
+        3419
+      ],
+      [
+        18,
+        0,
+        22
+      ],
+      [
+        3574,
+        0,
+        3838
+      ]
+    ],
+    "down_precision": 0.5274927650618259,
+    "mean_probability_of_selected_direction": 0.5321890471861214,
+    "up_precision": 0.5272702294271191
+  },
+  "SOLUSDT": {
+    "confusion_rows_actual_columns_predicted_down_flat_up": [
+      [
+        873,
+        0,
+        773
+      ],
+      [
+        64,
+        0,
+        49
+      ],
+      [
+        776,
+        0,
+        871
+      ]
+    ],
+    "down_precision": 0.5096322241681261,
+    "mean_probability_of_selected_direction": 0.5278376836187727,
+    "up_precision": 0.5144713526284702
+  }
+}

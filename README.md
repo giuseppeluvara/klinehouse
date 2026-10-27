@@ -435,6 +435,15 @@ transfer gate fails because SOL does not pass every cohort. The report preserves
 the initial failed screen, explains the separate mean and expected-log outputs,
 and includes an independently verified single-origin forecast command.
 
+The [minute direction and selective reversal experiment](reports/timestral-microdirection-20261027/README.md)
+tests a different hypothesis using existing second-level BTC candles and new,
+pre-protected native minute ETH/SOL data. Minute flow and last-ten-second flow
+fail the BTC screen. A frozen sign-symmetric reversal rule passes the individual
+historical ETH screen at 52.74% accuracy on 24.37% of five-minute anchors with a
+one-minute delay. BTC and SOL fail; the combined transfer gate remains false.
+Saved predictions, independent reconstruction and a historical forecast preview
+are included. This is a selective research candidate, not prospective validation.
+
 ## License
 
 [MIT](LICENSE)
