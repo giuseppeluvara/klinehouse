@@ -101,3 +101,10 @@ jobs:
           OMP_NUM_THREADS: "2"
           OPENBLAS_NUM_THREADS: "2"
         run: python scripts/verify_futures_flow.py
+      - name: Lint recurring-regime direction experiment
+        run: ruff check --select E4,E7,E9,F research/timestral_regime_direction.py
+      - name: Verify recurring regimes and drift diagnosis without fitting
+        env:
+          OMP_NUM_THREADS: "2"
+          OPENBLAS_NUM_THREADS: "2"
+        run: python scripts/verify_regime_direction.py

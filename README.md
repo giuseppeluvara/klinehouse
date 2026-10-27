@@ -475,6 +475,13 @@ original direction gates versus six for spot. Ninety checksummed source files,
 63 monthly fits and independent raw-data/score audits preserve this negative
 result without opening protected holdouts.
 
+The [recurring-regime study](reports/timestral-regime-direction-20261027/README.md)
+separates changing state frequencies from changing within-state fixed-rule
+accuracy. Long context and conditional slopes fail to establish a general signal;
+the regime model fits all 21 training windows better but scores worse in all
+nine subsequent cohorts. The report preserves the registered comparisons,
+diagnostic uncertainty and independent reconstruction without protected holdouts.
+
 ## License
 
 [MIT](LICENSE)

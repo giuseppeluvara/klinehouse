@@ -1,0 +1,14 @@
+{
+  "python": "3.13.5 (v3.13.5:6cb20a219a8, Jun 11 2025, 12:23:45) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.4.2",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.9.0"
+  },
+  "threads": 2,
+  "run_seconds": 66.73,
+  "run_peak_rss_bytes": 2838347776,
+  "audit_seconds": 15.11,
+  "audit_peak_rss_bytes": 2795159552
+}
