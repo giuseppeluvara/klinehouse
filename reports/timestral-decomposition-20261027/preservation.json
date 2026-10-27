@@ -1,0 +1,10 @@
+{
+  "checked_files": 284,
+  "unchanged_files": 282,
+  "intended_changed_files": [
+    ".github/workflows/ci.yml",
+    "README.md"
+  ],
+  "original_untracked_user_files_unchanged": true,
+  "single_origin_example_matches_saved_forecast_exactly": true
+}

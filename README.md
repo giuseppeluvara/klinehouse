@@ -428,6 +428,13 @@ nor three years of training data passes the historical screen. The report includ
 compressed forecasts and an independent arithmetic and causality audit; it does
 not claim a functioning trading strategy.
 
+The [direction/variance decomposition and transfer tests](reports/timestral-decomposition-20261027/README.md)
+find useful historical four-hour variance forecasts on BTC and ETH using a
+calibrated Gamma model. Direction remains unvalidated, and the full ETH/SOL
+transfer gate fails because SOL does not pass every cohort. The report preserves
+the initial failed screen, explains the separate mean and expected-log outputs,
+and includes an independently verified single-origin forecast command.
+
 ## License
 
 [MIT](LICENSE)

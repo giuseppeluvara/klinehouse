@@ -1,0 +1,7 @@
+{
+  "hypothesis": "A conditional-mean variance forecast and an expected-log-variance forecast are distinct functionals. Preserve the failed first experiment. Predict a Gamma distribution with a fitted mean and training-only shape, and score each functional correctly.",
+  "source": "Exact same hourly samples, mature1095day monthly fit sets and saved Gamma regression coefficients as decomposition. No new source data. Historical replay, not independent validation.",
+  "calibration": "For each of Gamma model, persistence24h and EWMA24h, calculate raw predictions on the current matured training set, bias=mean(actual/raw), normalized ratios=actual/(bias*raw), shape solves log(k)-digamma(k)=-mean(log(ratio)). Identical fitting rules for model and baselines. Save mean=bias*raw, Elog=log(mean)+digamma(k)-log(k), Gamma5/95% quantiles and probability variance exceeds current past24h persistence. Do not assert Gamma distribution is true.",
+  "screen": "For each horizon and each2024/2025/Jan-Jul2026 cohort beat BOTH calibrated baselines: >=1%QLIKE gain, no worse mean squared error of expected logvariance, >=2/3 monthly wins, upper4000draw paired weekly bootstrap99.583333% interval below0;seed20261027.12primary comparisons. All3cohorts must pass. Coverage, interval scores and event Brier descriptive, no tuning on them.",
+  "interpretation": "Risk/variance forecast only. No directional success, no trading PnL, no prospective validation. Correcting a functional mismatch does not erase prior failed gate or establish price direction."
+}

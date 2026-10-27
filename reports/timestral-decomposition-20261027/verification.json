@@ -1,0 +1,18 @@
+{
+  "verified": true,
+  "primary_comparisons": 48,
+  "btc_decomposition_forecasts": 6601,
+  "distribution_forecasts": 17917,
+  "maximum_objective_gradient_error": 8.302750423809643e-08,
+  "source_assets": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT"
+  ],
+  "inference_or_fit_rerun": false,
+  "scope": "Source reconstruction, exact training/evaluation membership, optimizer stationarity, forecasts from coefficients, calibration, target endpoints, metrics and expanded weekly bootstrap. Not prospective/trading validation.",
+  "raw_transfer_audit": {
+    "archives": 144,
+    "excluded_malformed_rows": 3
+  }
+}

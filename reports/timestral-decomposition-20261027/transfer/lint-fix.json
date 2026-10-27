@@ -1,0 +1,6 @@
+{
+  "reason": "Remove an unused local variable after completed execution. Original executed code retained; no numerical logic, protocol, forecasts or outcomes altered.",
+  "original_sha256": "5f4cb8ae22143936ba06448e5e1585c15916ca2935a9b4e8f19f3ef40012f508",
+  "current_sha256": "47fe86e0c6ecdb8f7bcb327e0477630345973956ff979a4263a3f14c2bcb575c",
+  "edit": "replace one `    p = verify(root)` with `    verify(root)`"
+}

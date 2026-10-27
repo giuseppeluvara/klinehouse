@@ -1,0 +1,8 @@
+Internal available: 48.42 GiB
+Estimated additional writes: 0.12 GiB
+Projected available: 48.30 GiB
+Allocated: 2.99 GiB | /Users/dev-luv/.cache/huggingface
+Measurement incomplete (access restrictions): /Users/dev-luv/Library/Caches
+Allocated: 0.00 GiB | /Users/dev-luv/.cache/uv
+Allocated: 0.00 GiB | /Users/dev-luv/.npm
+External AI-Models volume unavailable: do not create an internal fallback.
