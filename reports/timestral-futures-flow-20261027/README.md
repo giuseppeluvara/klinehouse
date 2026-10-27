@@ -112,7 +112,7 @@ It does not call the production feature builder, reader or fitter. Maximum fit
 gradient: **8.865×10⁻⁸**. Hashes, chronology, labels, unchanged flat probabilities,
 source bounds and every saved probability are checked.
 
-Local relevant suite: **266 passed, 8 skipped** (database integration requires
+Local relevant suite: **273 passed, 8 skipped** (database integration requires
 TimescaleDB). CI runs those integration tests and the saved-evidence audit.
 Runtime: acquisition/validation **127.39s**, fit/evaluation **23.57s**, independent
 raw audit **36.21s**. Peak fit RSS **1.33GiB**; peak audit RSS **1.38GiB**.
@@ -158,10 +158,22 @@ all three discrepant probabilities from CI exactly, including the maximum
 8.80241439e-6 difference. This is an arithmetic branch-boundary issue; it is
 separate from the negative futures-information result.
 
-The earlier passing and failing CI runs used the same NumPy 2.5.4 release. The
-workflow now disables the AVX-512 dispatch targets for that strict historical
-audit and asserts the split-boundary logarithm against scalar `math.log1p`.
-All frozen trees, features, saved predictions, score gates and audit tolerances
-remain unchanged. NumPy documents [runtime dispatch controls](https://numpy.org/doc/2.4/reference/simd/build-options.html#runtime-dispatch)
-and [transcendental differences with AVX-512](https://github.com/numpy/numpy/issues/23523).
-The historical audit also passed unchanged locally during this diagnosis.
+The earlier passing and failing CI runs used the same NumPy 2.5.4 release.
+Disabling AVX-512 did **not** resolve the failure; that initial runtime hypothesis
+was rejected. NumPy documents [platform-sensitive transcendental differences](https://github.com/numpy/numpy/issues/23523), but disabling one instruction set is
+insufficient to guarantee identical rounding across mathematical libraries.
+
+The dedicated [portable auditor](../../scripts/verify_history_portable.py) now
+reconstructs only the integer-count logarithm with Decimal at 48 and 80 digits,
+requires both precisions to round to the same binary64 value, and then runs the
+existing strict history/tree audits. The canonical value for 656 trades is
+`0x1.9f3637078b16bp+2`. This is the same mathematical feature with deterministic
+rounding, not a changed statistical model. All other features, labels, frozen
+trees, saved predictions, score gates and comparison tolerances are unchanged.
+The wrapper restores the original reconstruction function after the audit.
+
+Seven focused regression cases check the split boundary, invalid counts and
+invariance of every other feature. The full portable history/tree audit passed
+locally, including all 21 frozen tree fits and all nine cohorts; see
+[portable-history-verification.json](portable-history-verification.json).
+The initial failed CI runs are retained as part of the publication history.

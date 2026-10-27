@@ -1,0 +1,26 @@
+{
+  "count_log_rounding": "Decimal48/80 agreement to binary64",
+  "frozen_artifacts_changed": false,
+  "history": {
+    "baseline_fits": 42,
+    "cohort_comparisons": 6,
+    "fits": 14,
+    "max_objective_gradient": 1.2215075382329943e-07,
+    "raw_sources_verified": false,
+    "replication_gate": false,
+    "verified": true
+  },
+  "log1p656": {
+    "canonical": "0x1.9f3637078b16bp+2",
+    "numpy": "0x1.9f3637078b16bp+2",
+    "platform_math": "0x1.9f3637078b16bp+2"
+  },
+  "tolerances_changed": false,
+  "trees": {
+    "all_cohorts_gate": false,
+    "cohort_comparisons": 9,
+    "fits": 21,
+    "greedy_tree_fitting_rerun": false,
+    "verified": true
+  }
+}
