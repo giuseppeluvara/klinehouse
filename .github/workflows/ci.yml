@@ -94,3 +94,10 @@ jobs:
           OMP_NUM_THREADS: "2"
           OPENBLAS_NUM_THREADS: "2"
         run: python scripts/verify_premium_direction.py
+      - name: Lint futures flow experiment
+        run: ruff check --select E4,E7,E9,F research/timestral_futures_flow.py
+      - name: Verify futures volume and aggressor-flow evidence without fitting
+        env:
+          OMP_NUM_THREADS: "2"
+          OPENBLAS_NUM_THREADS: "2"
+        run: python scripts/verify_futures_flow.py

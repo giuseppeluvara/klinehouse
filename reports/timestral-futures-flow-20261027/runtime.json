@@ -1,0 +1,17 @@
+{
+  "python": "3.13.5 (v3.13.5:6cb20a219a8, Jun 11 2025, 12:23:45) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.4.2",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.9.0",
+    "requests": "2.32.5"
+  },
+  "threads": 2,
+  "prepare_seconds": 127.39,
+  "prepare_peak_rss_bytes": 350781440,
+  "fit_and_evaluate_seconds": 23.57,
+  "fit_and_evaluate_peak_rss_bytes": 1429225472,
+  "independent_raw_audit_seconds": 36.21,
+  "independent_raw_audit_peak_rss_bytes": 1476460544
+}

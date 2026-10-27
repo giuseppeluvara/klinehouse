@@ -467,6 +467,14 @@ Across all nine 2024–2026 asset/cohort checks, it finds no verified incrementa
 up/down benefit over the spot-only control. All original evaluation anchors,
 source gaps, frozen protocols and independent audits are preserved.
 
+The [futures volume and aggressor-flow study](reports/timestral-futures-flow-20261027/README.md)
+compares spot, spot with futures activity, and spot with activity plus taker flow.
+Across January–July 2024, 2025 and 2026, all three incremental-information
+comparisons fail in every asset/year cohort. The flow model passes five of nine
+original direction gates versus six for spot. Ninety checksummed source files,
+63 monthly fits and independent raw-data/score audits preserve this negative
+result without opening protected holdouts.
+
 ## License
 
 [MIT](LICENSE)
