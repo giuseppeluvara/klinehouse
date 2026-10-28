@@ -149,3 +149,10 @@ jobs:
           OMP_NUM_THREADS: "2"
           OPENBLAS_NUM_THREADS: "2"
         run: python scripts/verify_flat_repair.py
+      - name: Lint causal log-loss aggregation
+        run: ruff check --select E4,E7,E9,F research/timestral_logloss_aggregate.py scripts/run_logloss_aggregate.py scripts/verify_logloss_aggregate.py
+      - name: Verify delayed aggregation and finite-sequence regret
+        env:
+          OMP_NUM_THREADS: "2"
+          OPENBLAS_NUM_THREADS: "2"
+        run: python scripts/verify_logloss_aggregate.py

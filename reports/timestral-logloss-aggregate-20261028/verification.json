@@ -1,0 +1,16 @@
+{
+  "all_direction_information_gates": false,
+  "all_original_gates": true,
+  "all_paired_gates": false,
+  "cases": 550362,
+  "cohorts": 9,
+  "direction_comparisons": 18,
+  "general_solution": false,
+  "lanes": 18,
+  "maximum_absolute_telescoping_gap": 2.0372681319713593e-10,
+  "maximum_regret_bound_excess": -8.595879557260488e-05,
+  "paired_comparisons": 90,
+  "past_frequency_windows": 63,
+  "protected_data_opened": false,
+  "verified": true
+}

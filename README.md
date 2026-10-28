@@ -530,6 +530,16 @@ universal superiority: overall log loss worsens significantly for BTC 2024 and
 BTC 2026, and the broader calibration/general-solution criteria remain false.
 Independent source reconstruction checks all 63 frequency windows and all scores.
 
+The [causal log-loss aggregation study](reports/timestral-logloss-aggregate-20261028/README.md)
+combines four frozen direction/flat alternatives with delayed outcome updates.
+It retains all nine original gates and independently verifies a cumulative
+log-loss disadvantage of at most `2 ln(4)` against any of those four fixed
+experts, for every valid outcome sequence. It repairs the significant BTC
+log-loss regressions relative to the preceding mixed model, but worsens Brier
+in eight cohorts and log loss significantly in ETH 2025 against that model.
+The general-superiority criterion remains false; bounded regret is a narrower
+guarantee, without new directional information or untouched validation.
+
 ## License
 
 [MIT](LICENSE)
