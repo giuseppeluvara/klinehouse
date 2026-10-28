@@ -156,3 +156,12 @@ jobs:
           OMP_NUM_THREADS: "2"
           OPENBLAS_NUM_THREADS: "2"
         run: python scripts/verify_logloss_aggregate.py
+      - name: Lint simultaneous scoring-rule experiment
+        run: ruff check --select E4,E7,E9,F research/timestral_multiscore.py scripts/run_multiscore.py scripts/verify_multiscore.py
+      - name: Verify causal multi-score potentials and regret bounds
+        env:
+          OMP_NUM_THREADS: "2"
+          OPENBLAS_NUM_THREADS: "2"
+        run: |
+          python scripts/verify_multiscore.py
+          python scripts/diagnose_multiscore.py --verify

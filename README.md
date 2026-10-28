@@ -540,6 +540,15 @@ in eight cohorts and log loss significantly in ETH 2025 against that model.
 The general-superiority criterion remains false; bounded regret is a narrower
 guarantee, without new directional information or untouched validation.
 
+The [simultaneous scoring-rule study](reports/timestral-multiscore-20261028/README.md)
+extends causal aggregation to protect both full Brier and log loss against six
+existing forecasters. An independent audit verifies all possible-outcome
+constraints and cumulative regret bounds at every prefix. All nine original
+gates remain passed, but the new rule improves both full scores over the preceding
+adaptive model only in SOL 2024 and significantly regresses in ETH 2025.
+It establishes a broader mathematical guarantee, not empirical universal
+superiority; the registered general-solution criterion remains false.
+
 ## License
 
 [MIT](LICENSE)

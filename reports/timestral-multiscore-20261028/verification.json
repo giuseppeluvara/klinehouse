@@ -1,0 +1,19 @@
+{
+  "all_certificates": true,
+  "all_direction_information_gates": false,
+  "all_original_gates": true,
+  "all_paired_gates": false,
+  "cases": 550362,
+  "cohorts": 9,
+  "direction_comparisons": 18,
+  "general_solution": false,
+  "lanes": 18,
+  "maximum_numeric_slack": 5.724087870358622e-12,
+  "maximum_potential_ratio": 1.0000000000018638,
+  "maximum_prefix_bound_excess": -1.0866547197399066,
+  "original_evaluations": 63,
+  "paired_comparisons": 108,
+  "past_frequency_windows": 63,
+  "protected_data_opened": false,
+  "verified": true
+}
