@@ -549,6 +549,16 @@ adaptive model only in SOL 2024 and significantly regresses in ETH 2025.
 It establishes a broader mathematical guarantee, not empirical universal
 superiority; the registered general-solution criterion remains false.
 
+The [same-expert temporal adaptation study](reports/timestral-temporal-adaptation-20261028/README.md)
+compares fixed sharing, 30-day discounting and calendar-month resets against
+the frozen cumulative learner, with exactly the same six experts and anchors.
+Each retains nine original passes, but none passes the registered stable-gain
+criteria for direction, Brier and log loss. Benefits concentrate in SOL 2024;
+ETH 2025 log loss significantly worsens for every variant, and all variants'
+2026 directional-accuracy point estimates worsen against both controls.
+Independent temporal-state and 12,000-block-bootstrap audits retain all results
+without opening protected holdouts or claiming the old global regret bound.
+
 ## License
 
 [MIT](LICENSE)

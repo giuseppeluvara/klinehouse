@@ -1,0 +1,42 @@
+{
+  "all_local_potentials_valid": true,
+  "arm_forecasts": 1651086,
+  "bootstrap_replicates": 12000,
+  "cases": 550362,
+  "cohorts": 9,
+  "direction_comparisons": 54,
+  "full_cohort_regret_bound_claimed": false,
+  "maximum_numeric_slack": 2.834177337261005e-12,
+  "maximum_potential_ratio": 1.000000000001801,
+  "monthly_resets": {
+    "discount": 0,
+    "monthly": 108,
+    "share": 0
+  },
+  "original_evaluations": 27,
+  "paired_comparisons": 108,
+  "past_frequency_windows": 63,
+  "primary_stable_improvement": false,
+  "protected_data_opened": false,
+  "summary": {
+    "discount": {
+      "direction_passes": 0,
+      "original_passes": 9,
+      "paired_passes": 0,
+      "stable_improvement": false
+    },
+    "monthly": {
+      "direction_passes": 0,
+      "original_passes": 9,
+      "paired_passes": 0,
+      "stable_improvement": false
+    },
+    "share": {
+      "direction_passes": 0,
+      "original_passes": 9,
+      "paired_passes": 0,
+      "stable_improvement": false
+    }
+  },
+  "verified": true
+}

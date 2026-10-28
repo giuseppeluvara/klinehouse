@@ -1,0 +1,18 @@
+{
+  "downloads": false,
+  "installations": false,
+  "local_tests": {
+    "passed": 319,
+    "seconds": 15.89,
+    "skipped": 8
+  },
+  "prediction_bundle_bytes": 38268323,
+  "run": {
+    "maximum_rss_bytes": 432570368,
+    "wall_seconds": 312.41
+  },
+  "verify": {
+    "maximum_rss_bytes": 347635712,
+    "wall_seconds": 29.09
+  }
+}
