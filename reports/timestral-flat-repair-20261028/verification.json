@@ -1,0 +1,17 @@
+{
+  "calibration_success": {
+    "frequency": false,
+    "mixed": false
+  },
+  "cases": 550362,
+  "cohorts": 9,
+  "general_solution": false,
+  "new_fits": 0,
+  "past_frequency_windows": 63,
+  "protected_data_opened": false,
+  "repair_success": {
+    "frequency": true,
+    "mixed": true
+  },
+  "verified": true
+}

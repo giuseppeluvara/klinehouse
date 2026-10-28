@@ -142,3 +142,10 @@ jobs:
         run: |
           python scripts/verify_volume_center.py
           python scripts/diagnose_volume_center.py --verify
+      - name: Lint fixed flat probability repair
+        run: ruff check --select E4,E7,E9,F research/timestral_flat_repair.py scripts/run_flat_repair.py scripts/verify_flat_repair.py
+      - name: Verify flat repair and historical frequency without fitting
+        env:
+          OMP_NUM_THREADS: "2"
+          OPENBLAS_NUM_THREADS: "2"
+        run: python scripts/verify_flat_repair.py

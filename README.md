@@ -521,6 +521,15 @@ cohort. SOL 2025 still fails combined log loss: a post-hoc decomposition isolate
 an adverse flat/moving component despite improved direction. No general solution
 is claimed; all nine cohorts and protected holdouts are preserved.
 
+The [flat-probability repair](reports/timestral-flat-repair-20261028/README.md)
+mixes frozen flat probabilities equally with the existing past-only frequency,
+adding no fitted parameter and preserving conditional direction exactly. All
+nine original gates now pass, including SOL 2025; its paired improvement also
+passes on the unchanged old selection. This is a historical gate repair, not
+universal superiority: overall log loss worsens significantly for BTC 2024 and
+BTC 2026, and the broader calibration/general-solution criteria remain false.
+Independent source reconstruction checks all 63 frequency windows and all scores.
+
 ## License
 
 [MIT](LICENSE)
