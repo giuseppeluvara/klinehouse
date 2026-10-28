@@ -559,6 +559,16 @@ ETH 2025 log loss significantly worsens for every variant, and all variants'
 Independent temporal-state and 12,000-block-bootstrap audits retain all results
 without opening protected holdouts or claiming the old global regret bound.
 
+The [traded perpetual lead-lag study](reports/timestral-lead-lag-20261028/README.md)
+introduces actual futures-minus-spot price changes over five and sixty minutes,
+with the frozen uniform-center baseline and unchanged flat probabilities.
+Two ridge coefficients are compared with a matched spot-only correction on all
+550,362 anchors. All nine original gates remain passed, but full Brier and log
+loss improve at point estimate in only two cohorts versus baseline, and neither
+control comparison passes a stable full-score or direction gate. Independent
+source, causal-feature, fit-gradient and score audits retain this negative result;
+protected holdouts remain unopened and no models or datasets were downloaded.
+
 ## License
 
 [MIT](LICENSE)

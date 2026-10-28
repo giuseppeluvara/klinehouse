@@ -172,3 +172,10 @@ jobs:
           OMP_NUM_THREADS: "2"
           OPENBLAS_NUM_THREADS: "2"
         run: python scripts/verify_temporal_adaptation.py
+      - name: Lint traded futures lead-lag experiment
+        run: ruff check --select E4,E7,E9,F research/timestral_lead_lag.py scripts/run_lead_lag.py scripts/verify_lead_lag.py
+      - name: Verify lead-lag features, ridge optima and incremental information
+        env:
+          OMP_NUM_THREADS: "2"
+          OPENBLAS_NUM_THREADS: "2"
+        run: python scripts/verify_lead_lag.py

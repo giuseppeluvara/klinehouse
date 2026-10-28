@@ -1,0 +1,1 @@
+{"anchors":550362,"original_passes":{"baseline":9,"lead_lag":9,"price_control":9},"paired_gates":{"lead_lag_vs_baseline":{"direction":0,"full":0,"selected":0},"lead_lag_vs_price_control":{"direction":0,"full":0,"selected":0},"price_control_vs_baseline":{"direction":0,"full":0,"selected":1}},"stable_improvement":false}

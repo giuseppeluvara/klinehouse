@@ -1,0 +1,1 @@
+{"arrays": 9, "at": "2026-10-28T18:47:57.040020+00:00", "command": "python scripts/verify_lead_lag.py --sources-only --raw", "executor": "independent reviewer agent", "protected_data_opened": false, "raw_redecoded": true, "source_rows": 3944160, "source_zip_files": 90, "verified": true}
