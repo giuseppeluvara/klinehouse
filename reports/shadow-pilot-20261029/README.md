@@ -5,6 +5,81 @@ The authorized pilot runs on BTCUSDT, ETHUSDT and SOLUSDT from **2026-10-29
 The collector allows two final minutes for delayed outcome receipts and exits.
 This is a technical commissioning period, not a completed statistical test.
 
+The first real cycle with all three correction contexts active was verified on
+**2026-10-29 at 12:31 UTC**. Forecasts were committed before the target began,
+copied independently before entry, and matched unchanged to later outcomes.
+The seven-day collection remains running.
+
+## First complete real cycle
+
+All times below are UTC (add one hour for Europe/Rome on this date):
+
+| Asset | Forecast commit observed | Target interval | Outcome recorded |
+| --- | --- | --- | --- |
+| BTCUSDT | 12:25:10.700186 | 12:26:00–12:31:00 | 12:31:09.132445 |
+| ETHUSDT | 12:25:10.707434 | 12:26:00–12:31:00 | 12:31:09.133052 |
+| SOLUSDT | 12:25:10.713983 | 12:26:00–12:31:00 | 12:31:09.133592 |
+
+Every commit preceded target entry by at least **49.286 seconds**. The separate
+pre-target copy was captured at 12:25:14.636108 and its write confirmed at
+12:25:14.639656, with zero outcomes for this anchor. Forecast sequences
+386/388/390 and acknowledgement sequences 387/389/391 matched the later journal
+byte-for-byte at the payload level and by hash. Outcome sequences were 427/428/429.
+
+Both independent auditors passed on a consistent, read-only SQLite backup.
+The first-cycle checker was committed as `a74e232` and passed CI before these
+forecasts were emitted. It imports neither the live forecaster nor the general
+auditor. A third calculation using 50-digit Decimal arithmetic checked 45 score
+values; the largest difference was **1.11e-16**.
+
+| Asset | Entry close | Exit close | Observed direction |
+| --- | ---: | ---: | --- |
+| BTCUSDT | 80098.00 | 80154.01 | Up |
+| ETHUSDT | 2323.80 | 2325.08 | Up |
+| SOLUSDT | 100.41 | 100.48 | Up |
+
+Scores for this single interval, one observation per asset:
+
+| Asset | Model | Three-class Brier | Natural log-loss | Direction correct |
+| --- | --- | ---: | ---: | --- |
+| BTCUSDT | Baseline | 0.483429480 | 0.678509403 | Yes |
+| BTCUSDT | Price control | 0.482390809 | 0.677468406 | Yes |
+| BTCUSDT | OI/positions | 0.482977004 | 0.678055918 | Yes |
+| ETHUSDT | Baseline | 0.483460724 | 0.679798052 | Yes |
+| ETHUSDT | Price control | 0.483240674 | 0.679577233 | Yes |
+| ETHUSDT | OI/positions | 0.482028661 | 0.678360954 | Yes |
+| SOLUSDT | Baseline | 0.487792108 | 0.726727292 | Yes |
+| SOLUSDT | Price control | 0.490999906 | 0.730098447 | Yes |
+| SOLUSDT | OI/positions | 0.485800205 | 0.724634056 | Yes |
+
+Brier is the sum of squared errors over down/flat/up; log-loss uses the natural
+logarithm. Moving-direction metrics condition on a non-flat realized outcome and
+normalize up probability by down+up, with ties predicted up. All three models
+predicted the observed upward direction. The OI/position arm has better point
+scores than baseline here; the price control scores better on BTC. These three
+correlated observations validate the live technical cycle and score arithmetic,
+not stability, general superiority or profitability.
+
+The checkpoint contains 429 events, 12 eligible forecasts and nine matured
+outcomes across three anchors. Its 39 missing emissions are all declared startup
+warmup. Three forecasts concern a still-unfinished target at capture time; there
+are no unaccounted anchors, overdue unobserved outcomes, late commits or missing
+commit acknowledgements.
+
+Evidence:
+
+- [First-cycle chronology, probabilities and metrics](first-real-cycle.json)
+- [Pre-target copy](first-real-cycle-pre-target.json) and [write receipt](first-real-cycle-pre-target-receipt.json)
+- [General journal and aggregate-score audit](first-real-cycle-general-audit.json)
+- [50-digit arithmetic cross-check](first-real-cycle-decimal-audit.json)
+- [Checkpoint hashes](first-real-cycle-checkpoint-manifest.json) and [verifier versions frozen before emission](first-real-cycle-verifiers.json)
+
+The original checkpoint database is retained locally under
+`research/out/shadow-pilot-20261029-v2/first-full-checkpoint/`. The live journal
+continues appending. `first-cycle-verified.json` in the live run records that this
+milestone has already been communicated; hourly supervision should avoid repeating
+the notification and continue checking new anomalies and final completion.
+
 ## Implemented and verified
 
 - Separate public GET-only collector, frozen inference runtime and append-only
@@ -114,9 +189,8 @@ is therefore expected around 12:15 UTC, with complete position contexts around
 records remain visible in coverage statistics. No pre-activation backfill is used
 to shorten this warmup.
 
-The first full **real** forecast/outcome cycle remains pending until those contexts
-and outcomes arrive. A green synthetic integration test does not replace that
-live evidence. The seven-day report must show all scheduled/missing forecasts,
+The first full **real** forecast/outcome cycle has now passed the checks above.
+The seven-day report remains pending and must show all scheduled/missing forecasts,
 eligible correction counts, fallback and unobserved outcomes, by asset.
 
 The runner retries public-source failures, using a bounded 67-minute spot and

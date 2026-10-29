@@ -1,0 +1,16 @@
+{
+  "anchor": 1793276700,
+  "chain_tip": "1483094d188b42750e12170994859d9db78975c98a6654de13f036c698b614a2",
+  "checkpoint_captured_at": 1793277092.732882,
+  "event_count": 429,
+  "files": {
+    "first-full-checkpoint/config.json": "6f0d1991ba4d9251c0d262e759ab5fcc35b6654c315c276128c674af4749230e",
+    "first-full-checkpoint/events.sqlite": "f9f72efc2b0289ce7e5fda918bbe5b42b5b5d52d6d12f374b1f4d87fd8ecf1fe",
+    "first-full-checkpoint/first-cycle.json": "0ada05e5db806b3a06f6f6c4a857b904c42951157f414781b326a4284b3a0e0f",
+    "first-full-checkpoint/general-audit.json": "dacb265136fd78ac8cb8d345d490c78d702aa211cd68ef7c68b1ab0ef468a5e4",
+    "first-full-checkpoint/model.json": "ebe081bc39f856f6f903f6ddd30568c5d41b5408235239c7a1b59da93a170e74",
+    "first-full-pre-target-receipt.json": "2fef100ecaa5d8b3f33e4abeb215e3d411e6c93c0785f051c7f9f5869d85539e",
+    "first-full-pre-target.json": "9d9eb7883f3c3e5c6657d3d68b240bd635503fd3df52fcd05cceef8935a55138"
+  },
+  "first_cycle_verified": true
+}

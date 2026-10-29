@@ -1,0 +1,9 @@
+{
+  "before_first_forecast": true,
+  "ci": "success",
+  "commit": "a74e232a1a698df08f4314e2b998d51331a390b4",
+  "files": {
+    "scripts/verify_shadow_first_cycle.py": "044af2edf506ada79a420631917e8fe06c67338abef38146cc7b8b1854a95d9e",
+    "scripts/verify_shadow_run.py": "8682a2febdfd9d1ccfd7722214cddf4e418de97a8be09f2bf9bbe7c0d7397083"
+  }
+}

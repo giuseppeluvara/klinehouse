@@ -1,0 +1,420 @@
+{
+  "aggregate_metrics": {
+    "BTCUSDT": {
+      "baseline": {
+        "brier": {
+          "mean": 0.5096859095449432,
+          "n": 3
+        },
+        "direction_accuracy": {
+          "mean": 0.3333333333333333,
+          "n": 3
+        },
+        "direction_brier": {
+          "mean": 0.25484974427193147,
+          "n": 3
+        },
+        "direction_log_loss": {
+          "mean": 0.7028495252631485,
+          "n": 3
+        },
+        "log_loss": {
+          "mean": 0.704824277268924,
+          "n": 3
+        }
+      },
+      "positions": {
+        "brier": {
+          "mean": 0.5095350841279248,
+          "n": 3
+        },
+        "direction_accuracy": {
+          "mean": 0.3333333333333333,
+          "n": 3
+        },
+        "direction_brier": {
+          "mean": 0.2547741852318191,
+          "n": 3
+        },
+        "direction_log_loss": {
+          "mean": 0.702698363599103,
+          "n": 3
+        },
+        "log_loss": {
+          "mean": 0.7046731156048786,
+          "n": 3
+        }
+      },
+      "price_control": {
+        "brier": {
+          "mean": 0.5093396859122478,
+          "n": 3
+        },
+        "direction_accuracy": {
+          "mean": 0.3333333333333333,
+          "n": 3
+        },
+        "direction_brier": {
+          "mean": 0.2546762966533689,
+          "n": 3
+        },
+        "direction_log_loss": {
+          "mean": 0.7025025263987034,
+          "n": 3
+        },
+        "log_loss": {
+          "mean": 0.7044772784044792,
+          "n": 3
+        }
+      }
+    },
+    "ETHUSDT": {
+      "baseline": {
+        "brier": {
+          "mean": 0.49070061245828517,
+          "n": 3
+        },
+        "direction_accuracy": {
+          "mean": 0.6666666666666666,
+          "n": 3
+        },
+        "direction_brier": {
+          "mean": 0.24532940716694565,
+          "n": 3
+        },
+        "direction_log_loss": {
+          "mean": 0.6838032715237903,
+          "n": 3
+        },
+        "log_loss": {
+          "mean": 0.6867923161187085,
+          "n": 3
+        }
+      },
+      "positions": {
+        "brier": {
+          "mean": 0.4902232580254627,
+          "n": 3
+        },
+        "direction_accuracy": {
+          "mean": 0.6666666666666666,
+          "n": 3
+        },
+        "direction_brier": {
+          "mean": 0.2450899641718264,
+          "n": 3
+        },
+        "direction_log_loss": {
+          "mean": 0.6833242390796735,
+          "n": 3
+        },
+        "log_loss": {
+          "mean": 0.6863132836745917,
+          "n": 3
+        }
+      },
+      "price_control": {
+        "brier": {
+          "mean": 0.4906272626237879,
+          "n": 3
+        },
+        "direction_accuracy": {
+          "mean": 0.6666666666666666,
+          "n": 3
+        },
+        "direction_brier": {
+          "mean": 0.24529261450411774,
+          "n": 3
+        },
+        "direction_log_loss": {
+          "mean": 0.6837296652712364,
+          "n": 3
+        },
+        "log_loss": {
+          "mean": 0.6867187098661546,
+          "n": 3
+        }
+      }
+    },
+    "SOLUSDT": {
+      "baseline": {
+        "brier": {
+          "mean": 0.48410206672943756,
+          "n": 3
+        },
+        "direction_accuracy": {
+          "mean": 1.0,
+          "n": 3
+        },
+        "direction_brier": {
+          "mean": 0.23980035140308567,
+          "n": 3
+        },
+        "direction_log_loss": {
+          "mean": 0.6727441339081368,
+          "n": 3
+        },
+        "log_loss": {
+          "mean": 0.722461962283607,
+          "n": 3
+        }
+      },
+      "positions": {
+        "brier": {
+          "mean": 0.4834380993150838,
+          "n": 3
+        },
+        "direction_accuracy": {
+          "mean": 1.0,
+          "n": 3
+        },
+        "direction_brier": {
+          "mean": 0.23945158970160785,
+          "n": 3
+        },
+        "direction_log_loss": {
+          "mean": 0.6720463888209246,
+          "n": 3
+        },
+        "log_loss": {
+          "mean": 0.7217642171963946,
+          "n": 3
+        }
+      },
+      "price_control": {
+        "brier": {
+          "mean": 0.48517133303404,
+          "n": 3
+        },
+        "direction_accuracy": {
+          "mean": 1.0,
+          "n": 3
+        },
+        "direction_brier": {
+          "mean": 0.24036208301054177,
+          "n": 3
+        },
+        "direction_log_loss": {
+          "mean": 0.6738678523110885,
+          "n": 3
+        },
+        "log_loss": {
+          "mean": 0.7235856806865586,
+          "n": 3
+        }
+      }
+    }
+  },
+  "as_of": 1793277092.80834,
+  "chain_tip": "1483094d188b42750e12170994859d9db78975c98a6654de13f036c698b614a2",
+  "database": "/Users/dev-luv/Sites/klinehouse/research/out/shadow-pilot-20261029-v2/first-full-checkpoint/events.sqlite",
+  "event_count": 429,
+  "first_cycle": {
+    "anchor": 1793276700,
+    "anchor_utc": "2026-10-29T12:25:00+00:00",
+    "return_end": 1793277060,
+    "return_end_utc": "2026-10-29T12:31:00+00:00",
+    "return_start": 1793276760,
+    "return_start_utc": "2026-10-29T12:26:00+00:00",
+    "symbols": {
+      "BTCUSDT": {
+        "commit_ack_seq": 387,
+        "commit_observed_at": 1793276710.700186,
+        "commit_observed_utc": "2026-10-29T12:25:10.700186+00:00",
+        "entry_price": "80098.00000000",
+        "exit_price": "80154.01000000",
+        "forecast_hash": "599f3994fc899c5b55682002d85b9def4ed7dcd7e8c2657bdc760ac04a992d08",
+        "forecast_issued_at": 1793276710.691282,
+        "forecast_issued_utc": "2026-10-29T12:25:10.691282+00:00",
+        "forecast_seq": 386,
+        "input_last_received_at": 1793276706.034482,
+        "label": 2,
+        "models": {
+          "baseline": {
+            "metrics": {
+              "brier": 0.48342947987190654,
+              "direction_accuracy": 1.0,
+              "direction_brier": 0.24169560050201236,
+              "direction_log_loss": 0.6765368347668796,
+              "log_loss": 0.6785094028920448
+            },
+            "probabilities_down_flat_up": [
+              0.4906566588187344,
+              0.0019706238912490185,
+              0.5073727172900167
+            ]
+          },
+          "positions": {
+            "metrics": {
+              "brier": 0.4829770036208511,
+              "direction_accuracy": 1.0,
+              "direction_brier": 0.2414689233816754,
+              "direction_log_loss": 0.6760833497747432,
+              "log_loss": 0.6780559178999083
+            },
+            "probabilities_down_flat_up": [
+              0.4904265207278826,
+              0.0019706238912490185,
+              0.5076028553808684
+            ]
+          },
+          "price_control": {
+            "metrics": {
+              "brier": 0.4823908089738201,
+              "direction_accuracy": 1.0,
+              "direction_brier": 0.2411752576463247,
+              "direction_log_loss": 0.6754958381735449,
+              "log_loss": 0.6774684062987101
+            },
+            "probabilities_down_flat_up": [
+              0.4901282105397775,
+              0.0019706238912490185,
+              0.5079011655689735
+            ]
+          }
+        },
+        "outcome_received_at": 1793277069.1324449,
+        "outcome_received_utc": "2026-10-29T12:31:09.132445+00:00",
+        "outcome_seq": 427,
+        "seconds_before_target_entry": 49.299813985824585
+      },
+      "ETHUSDT": {
+        "commit_ack_seq": 389,
+        "commit_observed_at": 1793276710.707434,
+        "commit_observed_utc": "2026-10-29T12:25:10.707434+00:00",
+        "entry_price": "2323.80000000",
+        "exit_price": "2325.08000000",
+        "forecast_hash": "270c80167d54553b06c3bc3276653c89ee50a613af8f7779c09544db0adc65b4",
+        "forecast_issued_at": 1793276710.700732,
+        "forecast_issued_utc": "2026-10-29T12:25:10.700732+00:00",
+        "forecast_seq": 388,
+        "input_last_received_at": 1793276706.034482,
+        "label": 2,
+        "models": {
+          "baseline": {
+            "metrics": {
+              "brier": 0.48346072384299826,
+              "direction_accuracy": 1.0,
+              "direction_brier": 0.24169560050201236,
+              "direction_log_loss": 0.6765368347668796,
+              "log_loss": 0.6797980515941671
+            },
+            "probabilities_down_flat_up": [
+              0.49002478197324045,
+              0.0032559048357777625,
+              0.5067193131909817
+            ]
+          },
+          "positions": {
+            "metrics": {
+              "brier": 0.482028660544531,
+              "direction_accuracy": 1.0,
+              "direction_brier": 0.2409772715166547,
+              "direction_log_loss": 0.6750997374345294,
+              "log_loss": 0.6783609542618168
+            },
+            "probabilities_down_flat_up": [
+              0.489296053498547,
+              0.0032559048357777625,
+              0.5074480416656753
+            ]
+          },
+          "price_control": {
+            "metrics": {
+              "brier": 0.48324067433950657,
+              "direction_accuracy": 1.0,
+              "direction_brier": 0.24158522251352854,
+              "direction_log_loss": 0.676316016009218,
+              "log_loss": 0.6795772328365053
+            },
+            "probabilities_down_flat_up": [
+              0.4899128764890582,
+              0.0032559048357777625,
+              0.5068312186751641
+            ]
+          }
+        },
+        "outcome_received_at": 1793277069.1330519,
+        "outcome_received_utc": "2026-10-29T12:31:09.133052+00:00",
+        "outcome_seq": 428,
+        "seconds_before_target_entry": 49.2925660610199
+      },
+      "SOLUSDT": {
+        "commit_ack_seq": 391,
+        "commit_observed_at": 1793276710.713983,
+        "commit_observed_utc": "2026-10-29T12:25:10.713983+00:00",
+        "entry_price": "100.41000000",
+        "exit_price": "100.48000000",
+        "forecast_hash": "a2d7b67449015f1fd7634d47d594a701bedacbf5c0d4a5cc92a8c0fb97276a7c",
+        "forecast_issued_at": 1793276710.707704,
+        "forecast_issued_utc": "2026-10-29T12:25:10.707704+00:00",
+        "forecast_seq": 390,
+        "input_last_received_at": 1793276706.034482,
+        "label": 2,
+        "models": {
+          "baseline": {
+            "metrics": {
+              "brier": 0.48779210755947033,
+              "direction_accuracy": 1.0,
+              "direction_brier": 0.24169560050201236,
+              "direction_log_loss": 0.6765368347668796,
+              "log_loss": 0.7267272917556102
+            },
+            "probabilities_down_flat_up": [
+              0.46755955225557416,
+              0.04895172653977988,
+              0.483488721204646
+            ]
+          },
+          "positions": {
+            "metrics": {
+              "brier": 0.4858002053164091,
+              "direction_accuracy": 1.0,
+              "direction_brier": 0.24064931539757883,
+              "direction_log_loss": 0.6744435995052427,
+              "log_loss": 0.7246340564939732
+            },
+            "probabilities_down_flat_up": [
+              0.46654643664100565,
+              0.04895172653977988,
+              0.4845018368192145
+            ]
+          },
+          "price_control": {
+            "metrics": {
+              "brier": 0.49099990647327746,
+              "direction_accuracy": 1.0,
+              "direction_brier": 0.24338079532438062,
+              "direction_log_loss": 0.6799079899757343,
+              "log_loss": 0.7300984469644648
+            },
+            "probabilities_down_flat_up": [
+              0.4691867235120331,
+              0.04895172653977988,
+              0.48186154994818703
+            ]
+          }
+        },
+        "outcome_received_at": 1793277069.1335921,
+        "outcome_received_utc": "2026-10-29T12:31:09.133592+00:00",
+        "outcome_seq": 429,
+        "seconds_before_target_entry": 49.28601694107056
+      }
+    }
+  },
+  "forecast_count": 12,
+  "full_context_anchors": [
+    1793276700,
+    1793277000
+  ],
+  "general_audit_compared": true,
+  "outcome_count": 9,
+  "pre_target_proof_captured_at": 1793276714.636108,
+  "pre_target_proof_sha256": "9d9eb7883f3c3e5c6657d3d68b240bd635503fd3df52fcd05cceef8935a55138",
+  "pre_target_proof_verified": true,
+  "protocol_sha256": "9cbda8bba800b3d2ebe5d2fa1c494959eafd906dee3ec03cea49c1f5e679dd4e",
+  "scope": "First complete real cycle chronology and independent score arithmetic; no inference replay or skill claim",
+  "snapshot_sha256": "ebe081bc39f856f6f903f6ddd30568c5d41b5408235239c7a1b59da93a170e74",
+  "statistical_superiority_verified": false,
+  "status": "verified"
+}

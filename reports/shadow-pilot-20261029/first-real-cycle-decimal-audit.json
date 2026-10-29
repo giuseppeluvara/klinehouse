@@ -1,0 +1,7 @@
+{
+  "checks": 45,
+  "input": "first-real-cycle.json",
+  "maximum_absolute_difference": 1.1102230246251565e-16,
+  "passed": true,
+  "precision_decimal_digits": 50
+}
