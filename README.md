@@ -580,6 +580,14 @@ loss is found; BTC 2025 probability scores significantly regress against baselin
 Independent raw-source, timestamp, feature, fit-gradient and score audits preserve
 the timing limitations, negative results and unopened protected holdouts.
 
+The [seven-day prospective shadow pilot](reports/shadow-pilot-20261029/README.md)
+records new public market receipts from its explicit activation, emits the three
+frozen July direction models before their five-minute targets begin, and adds
+outcomes only after maturity. A separate append-only journal, receipt/version
+audit and automatic expiry keep this engineering trial distinct from historical
+research. It places no orders and does not reopen protected holdouts. Live warmup,
+coverage and eventual results must be reported separately from passing tests.
+
 ## License
 
 [MIT](LICENSE)

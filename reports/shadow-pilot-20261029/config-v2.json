@@ -1,0 +1,43 @@
+{
+  "schema": "klinehouse-shadow-pilot-v2",
+  "start_at": 1793272200,
+  "end_at": 1793877000,
+  "start_utc": "2026-10-29T11:10:00+00:00",
+  "end_utc": "2026-11-05T11:10:00+00:00",
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT"
+  ],
+  "snapshot_sha256": "ebe081bc39f856f6f903f6ddd30568c5d41b5408235239c7a1b59da93a170e74",
+  "issuance_deadline_seconds": 30,
+  "require_commit_ack": true,
+  "decision_delay_seconds": 10,
+  "poll_seconds": 30,
+  "clock_probe_seconds": 300,
+  "max_clock_age_seconds": 600,
+  "max_storage_bytes": 536870912,
+  "min_free_bytes": 42949672960,
+  "metrics_lag_seconds": 900,
+  "spot_warmup_minutes": 63,
+  "target": "sign(spot close at anchor+360 minus spot close at anchor+60); flat iff exactly equal",
+  "models": [
+    "baseline",
+    "price_control",
+    "positions"
+  ],
+  "training": "Frozen July2026 coefficients, normalization and prior class frequency; no online fitting",
+  "availability": "Only received responses with content times >=activation; no preactivation backfill. Latest observed revision before issue is allowed. Forecasts are never regenerated.",
+  "positions_mapping": "Live REST sumOpenInterest and longShortRatio; archive-equivalent timing/semantics NOT certified. Fixed 15minute label lag plus actual receipt cutoff.",
+  "failures": "Missing spot context/clock outage/late issue => explicit missing. Missing any asset position context => both corrections equal baseline on all assets. Outcomes can arrive later, preserving receipt provenance.",
+  "evaluation": "Seven-day engineering pilot only. All scheduled anchors accounted for. Descriptive three-class Brier, natural logloss and moving direction accuracy. No significance, superiority, profitability or universal claim.",
+  "orders": false,
+  "historical_holdouts_opened": false,
+  "stop": "No anchors after end_at-360. Collect final outcomes through end_at+120, then exit successfully. Stop early on disk budget exhaustion; never delete evidence.",
+  "code": {
+    "research/shadow_ledger.py": "0c5da15c4955f9943de90ee50428375af8d164cc96e5e1b0f735afea988b3ce7",
+    "research/shadow_model.py": "598de2ef79037458e90d614a63da6a2288a31d982ab113c2a3f32c1c52a75f8b",
+    "research/shadow_sources.py": "31954e1d116c16c7d35ba801df0f7f2ca167e514bc9837132e879f6502601b84",
+    "scripts/run_shadow.py": "8ee597438efc0c734b23f59713a9ed19961098e590daf4a72e38e4e498aa4b50"
+  }
+}

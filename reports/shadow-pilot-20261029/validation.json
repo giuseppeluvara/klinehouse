@@ -1,0 +1,19 @@
+{
+  "initial_capture_withdrawn_before_any_forecast": true,
+  "live_full_cycle_pending": true,
+  "local_suite": "422 passed, 8 skipped in 16.47s",
+  "measured_at": 1793272277.765609,
+  "model_parity": "model-v2-verification.json",
+  "new_tests": 88,
+  "protected_user_files_unchanged": {
+    ".env": true,
+    "research/encoder_backtest.py": true,
+    "tests/test_encoder_backtest.py": true
+  },
+  "runtime_matches_checkout": {
+    "research/shadow_ledger.py": true,
+    "research/shadow_model.py": true,
+    "research/shadow_sources.py": true,
+    "scripts/run_shadow.py": true
+  }
+}

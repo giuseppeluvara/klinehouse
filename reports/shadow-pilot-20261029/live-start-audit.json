@@ -1,0 +1,42 @@
+{
+  "all_market_receipts_inside_prospective_window": true,
+  "as_of": 1793271611.481856,
+  "audit_scope": "Independent read-only ledger integrity, receipt/issuance/outcome causality and score arithmetic; not a replay of model inference or external timestamp attestation.",
+  "chain_tip": "0da865a352de22846308949cd4739d6a0db85cae6ed20e58682e9d1303b77c0c",
+  "event_count": 30,
+  "external_protocol_verified": true,
+  "external_snapshot_verified": true,
+  "forecast_count": 0,
+  "matured_pending_outcomes": [],
+  "metrics": {},
+  "missing_count": 6,
+  "missing_reasons": {
+    "incomplete_or_invalid_context: sorted unique minute timestamps and 63 closed minutes required": 6
+  },
+  "outcome_count": 0,
+  "paired_mean_gains": {},
+  "protocol_sha256": "f8379d7835a9d389ed1cd8a49c14046b0115e3ecc593885cbeea4ce33760d842",
+  "receipt_count": 21,
+  "snapshot_sha256": "ebe081bc39f856f6f903f6ddd30568c5d41b5408235239c7a1b59da93a170e74",
+  "source_age_seconds": {
+    "open_interest": {
+      "maximum": 306.70747590065,
+      "minimum": 6.693324089050293,
+      "rows": 6
+    },
+    "position_ratio": {
+      "maximum": 306.7045199871063,
+      "minimum": 6.692837953567505,
+      "rows": 6
+    },
+    "spot_klines": {
+      "maximum": 194.37955498695374,
+      "minimum": 66.81079387664795,
+      "rows": 36
+    }
+  },
+  "statistical_superiority_verified": false,
+  "technical_pipeline_observed": false,
+  "unaccounted_anchor_symbols": [],
+  "verified": true
+}
