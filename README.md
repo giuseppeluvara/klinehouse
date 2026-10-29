@@ -569,6 +569,17 @@ control comparison passes a stable full-score or direction gate. Independent
 source, causal-feature, fit-gradient and score audits retain this negative result;
 protected holdouts remain unopened and no models or datasets were downloaded.
 
+The [open-interest and position-information study](reports/timestral-position-information-20261029/README.md)
+first audits 2,730 daily metrics files and independent historical OI snapshots.
+Flow timing in the acquired archives changes in March 2024; sampled OI alignment
+also differs between January 2024 and later dates. Position measurement and archive
+publication times remain uncertified, so the two-feature model uses an explicit
+15-minute assumed lag and is reported as a conditional replay. All nine original
+gates remain passed, but no stable paired improvement in direction, Brier and log
+loss is found; BTC 2025 probability scores significantly regress against baseline.
+Independent raw-source, timestamp, feature, fit-gradient and score audits preserve
+the timing limitations, negative results and unopened protected holdouts.
+
 ## License
 
 [MIT](LICENSE)

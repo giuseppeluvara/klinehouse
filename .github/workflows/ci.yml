@@ -179,3 +179,10 @@ jobs:
           OMP_NUM_THREADS: "2"
           OPENBLAS_NUM_THREADS: "2"
         run: python scripts/verify_lead_lag.py
+      - name: Lint conditional position information and timestamp audits
+        run: ruff check --select E4,E7,E9,F research/timestral_position_information.py scripts/prepare_position_information.py scripts/run_position_information.py scripts/verify_position_information.py scripts/audit_open_interest_sample.py
+      - name: Verify metrics timestamps, conditional position features and scores
+        env:
+          OMP_NUM_THREADS: "2"
+          OPENBLAS_NUM_THREADS: "2"
+        run: python scripts/verify_position_information.py
