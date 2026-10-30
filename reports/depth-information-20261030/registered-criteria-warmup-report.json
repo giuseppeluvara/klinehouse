@@ -1,0 +1,417 @@
+{
+  "as_of": 1793378099.45682,
+  "as_of_utc": "2026-10-30T16:34:59.456820+00:00",
+  "assets": {
+    "BTCUSDT": {
+      "comparisons": {
+        "baseline": {
+          "delta_positive_is_better": null,
+          "jointly_improved": null,
+          "role": "registered_joint_comparator"
+        },
+        "positions": {
+          "delta_positive_is_better": null,
+          "jointly_improved": null,
+          "role": "descriptive_only"
+        },
+        "price_control": {
+          "delta_positive_is_better": null,
+          "jointly_improved": null,
+          "role": "registered_joint_comparator"
+        }
+      },
+      "flat_n": 0,
+      "metrics_available": false,
+      "metrics_available_by_arm": {
+        "baseline": false,
+        "depth": false,
+        "positions": false,
+        "price_control": false
+      },
+      "models": {
+        "baseline": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "depth": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "positions": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "price_control": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        }
+      },
+      "moving_n": 0,
+      "moving_target_end_utc_dates": [],
+      "n": 0,
+      "sample_requirement_met": false
+    },
+    "ETHUSDT": {
+      "comparisons": {
+        "baseline": {
+          "delta_positive_is_better": null,
+          "jointly_improved": null,
+          "role": "registered_joint_comparator"
+        },
+        "positions": {
+          "delta_positive_is_better": null,
+          "jointly_improved": null,
+          "role": "descriptive_only"
+        },
+        "price_control": {
+          "delta_positive_is_better": null,
+          "jointly_improved": null,
+          "role": "registered_joint_comparator"
+        }
+      },
+      "flat_n": 0,
+      "metrics_available": false,
+      "metrics_available_by_arm": {
+        "baseline": false,
+        "depth": false,
+        "positions": false,
+        "price_control": false
+      },
+      "models": {
+        "baseline": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "depth": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "positions": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "price_control": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        }
+      },
+      "moving_n": 0,
+      "moving_target_end_utc_dates": [],
+      "n": 0,
+      "sample_requirement_met": false
+    },
+    "SOLUSDT": {
+      "comparisons": {
+        "baseline": {
+          "delta_positive_is_better": null,
+          "jointly_improved": null,
+          "role": "registered_joint_comparator"
+        },
+        "positions": {
+          "delta_positive_is_better": null,
+          "jointly_improved": null,
+          "role": "descriptive_only"
+        },
+        "price_control": {
+          "delta_positive_is_better": null,
+          "jointly_improved": null,
+          "role": "registered_joint_comparator"
+        }
+      },
+      "flat_n": 0,
+      "metrics_available": false,
+      "metrics_available_by_arm": {
+        "baseline": false,
+        "depth": false,
+        "positions": false,
+        "price_control": false
+      },
+      "models": {
+        "baseline": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "depth": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "positions": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "price_control": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        }
+      },
+      "moving_n": 0,
+      "moving_target_end_utc_dates": [],
+      "n": 0,
+      "sample_requirement_met": false
+    }
+  },
+  "completion_verified": false,
+  "criterion_status": "insufficient_evaluation",
+  "descriptive_warnings": [
+    "BTCUSDT.positions: missing or nonfinite brier",
+    "BTCUSDT.positions: missing or nonfinite log_loss",
+    "ETHUSDT.positions: missing or nonfinite brier",
+    "ETHUSDT.positions: missing or nonfinite log_loss",
+    "SOLUSDT.positions: missing or nonfinite brier",
+    "SOLUSDT.positions: missing or nonfinite log_loss"
+  ],
+  "evaluation_stage": "interim",
+  "insufficient_evidence": [
+    "BTCUSDT.baseline: missing or nonfinite brier",
+    "BTCUSDT.baseline: missing or nonfinite log_loss",
+    "BTCUSDT.price_control: missing or nonfinite brier",
+    "BTCUSDT.price_control: missing or nonfinite log_loss",
+    "BTCUSDT.depth: missing or nonfinite brier",
+    "BTCUSDT.depth: missing or nonfinite log_loss",
+    "BTCUSDT: requires 288 moving outcomes across at least two UTC target-end dates",
+    "ETHUSDT.baseline: missing or nonfinite brier",
+    "ETHUSDT.baseline: missing or nonfinite log_loss",
+    "ETHUSDT.price_control: missing or nonfinite brier",
+    "ETHUSDT.price_control: missing or nonfinite log_loss",
+    "ETHUSDT.depth: missing or nonfinite brier",
+    "ETHUSDT.depth: missing or nonfinite log_loss",
+    "ETHUSDT: requires 288 moving outcomes across at least two UTC target-end dates",
+    "SOLUSDT.baseline: missing or nonfinite brier",
+    "SOLUSDT.baseline: missing or nonfinite log_loss",
+    "SOLUSDT.price_control: missing or nonfinite brier",
+    "SOLUSDT.price_control: missing or nonfinite log_loss",
+    "SOLUSDT.depth: missing or nonfinite brier",
+    "SOLUSDT.depth: missing or nonfinite log_loss",
+    "SOLUSDT: requires 288 moving outcomes across at least two UTC target-end dates"
+  ],
+  "interpretation": [
+    "Confronto preliminare dei valori osservati; non prova superiorit\u00e0 statistica, redditivit\u00e0 o validit\u00e0 universale.",
+    "Valutazione intermedia: il periodo e il modello registrati restano invariati.",
+    "Copertura, fallback, conferme tardive ed esiti mancanti restano integralmente visibili nell'audit; non costituiscono nuovi criteri di successo."
+  ],
+  "nonfinite_audit_values_represented_as_null": [],
+  "registered_requirements": {
+    "all_assets_required": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ],
+    "direction_excludes_flat": true,
+    "joint_comparators": [
+      "baseline",
+      "price_control"
+    ],
+    "minimum_distinct_utc_target_end_dates": 2,
+    "minimum_moving_per_asset": 288,
+    "proper_scores_include_flat": true,
+    "strict_improvements": [
+      "direction_correct",
+      "three_class_sum_brier",
+      "natural_log_loss"
+    ]
+  },
+  "schema": "depth-information-registered-criteria-report-v1",
+  "validated_audit": {
+    "all_forecast_files": 0,
+    "as_of": 1793378099.45682,
+    "as_of_utc": "2026-10-30T16:34:59.456820+00:00",
+    "candidate_forecasts": 0,
+    "clock_unhealthy_forecasts": [],
+    "coefficient_certificate": null,
+    "config_sha256": "94efad5c45e87f9a9e9d711b88936cc73022fdbf1e84574bd61db472d09ec5a1",
+    "end_at": 1793877000.0,
+    "fallback_missing_book": 0,
+    "fallback_zero_coefficient": 0,
+    "ineligible_forecasts": [],
+    "late_confirmations": [],
+    "mature_pending_outcomes": [],
+    "metrics": {
+      "BTCUSDT": {
+        "baseline": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "depth": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "positions": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "price_control": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        }
+      },
+      "ETHUSDT": {
+        "baseline": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "depth": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "positions": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "price_control": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        }
+      },
+      "SOLUSDT": {
+        "baseline": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "depth": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "positions": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        },
+        "price_control": {
+          "brier": null,
+          "direction_accuracy": null,
+          "direction_correct": 0,
+          "log_loss": null,
+          "moving_n": 0,
+          "n": 0
+        }
+      }
+    },
+    "missing_emissions": 0,
+    "missing_reasons": {},
+    "model_fitted": false,
+    "pending_outcomes": 0,
+    "phase": "warmup",
+    "schema": "independent-depth-information-audit-v1",
+    "scope": [
+      "Independent source-chain, membership, scalar-optimum, formula, timing and score checks; no inference replay.",
+      "Only post-acknowledgement-fsync observations sealed as eligible are scored; missing seals stay unconfirmed.",
+      "Seal records do not independently attest their own fsync completion; timestamps remain local evidence.",
+      "REST depth provides client availability, not a certified source event time or freshness guarantee.",
+      "Original pilot model internals are not refitted or replayed; saved controls and original source prices are checked.",
+      "No historical data, protected holdouts, credentials, orders or network access are used."
+    ],
+    "scored_cases": [],
+    "scored_outcomes": 0,
+    "source_snapshots": {
+      "depth": {
+        "chain_tip": "8bdac94f29273bcdab2da2e0d12211be0fbd5e4b734fcbc49025e0baa032c8da",
+        "event_count": 108,
+        "root": "/Users/dev-luv/Sites/klinehouse/research/out/depth-research-20261030"
+      },
+      "pilot": {
+        "chain_tip": "09cdf383ffea047803c1c5c53ee04f262506ba863e27dbc276d36c2e6e382da0",
+        "event_count": 10994,
+        "root": "/Users/dev-luv/Sites/klinehouse/research/out/shadow-pilot-20261029-v2"
+      }
+    },
+    "statistical_superiority_verified": false,
+    "training_cutoff": 1793460900,
+    "unaccounted_anchor_symbols": [],
+    "unconfirmed_forecasts": [],
+    "validated_original_outcomes": 33,
+    "validated_source_books": 39,
+    "verified": true
+  },
+  "validated_audit_sha256": "2a11b229a877ed2c4f8104b0fc2c7df8c2d5020553aef941b3651c4e9eb28ee3"
+}

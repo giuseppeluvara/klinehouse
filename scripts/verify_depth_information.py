@@ -1048,6 +1048,7 @@ def verify(root, *, now=None):
         fallback_zero += beta == 0
     metrics_rows = {s: {arm: [] for arm in ARMS} for s in SYMBOLS}
     outcomes = set()
+    scored_cases = []
     for path in paths["outcomes"]:
         value = load(path)
         key = (value["anchor"], value["symbol"])
@@ -1067,6 +1068,16 @@ def verify(root, *, now=None):
             "copied outcome differs from original price/receipt or chronology",
         )
         outcomes.add(key)
+        scored_cases.append(
+            dict(
+                symbol=key[1],
+                anchor=key[0],
+                label=observed_value["label"],
+                target_end=forecast["target_end"],
+                source_received_at=observed_value["received_at"],
+                forecast_sha256=digest,
+            )
+        )
         for arm in ARMS:
             metrics_rows[key[1]][arm].append(
                 score(forecast["models"][arm], value["label"])
@@ -1122,6 +1133,7 @@ def verify(root, *, now=None):
         "as_of_utc": datetime.fromtimestamp(now, timezone.utc).isoformat(),
         "config_sha256": sha(config),
         "training_cutoff": cutoff,
+        "end_at": config["end_at"],
         "phase": "warmup"
         if now < cutoff
         else "model_frozen"
@@ -1150,6 +1162,9 @@ def verify(root, *, now=None):
         "fallback_missing_book": fallback_book,
         "fallback_zero_coefficient": fallback_zero,
         "scored_outcomes": len(outcomes),
+        "scored_cases": sorted(
+            scored_cases, key=lambda item: (item["anchor"], item["symbol"])
+        ),
         "pending_outcomes": len(emissions) - len(outcomes),
         "mature_pending_outcomes": [
             list(k) for k in sorted(emissions.keys() - outcomes) if k[0] + 360 <= now

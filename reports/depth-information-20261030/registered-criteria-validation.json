@@ -1,0 +1,29 @@
+{
+  "auditor_tests": 17,
+  "candidate_forecasts": 0,
+  "checks": {
+    "core_unchanged": true,
+    "registered_plan_unchanged": true,
+    "runner_runtime_unchanged": true
+  },
+  "code_sha256": {
+    "scripts/report_depth_information.py": "fcb296251e6db99e949c3793f7ffe0d3f3030530250cf2cc4a3ac081baae2d84",
+    "scripts/verify_depth_information.py": "f323e9f700f45de18caceed669f828655dfd895011a349aefe1ba6e88a8d1f2f"
+  },
+  "criterion_status": "insufficient_evaluation",
+  "free_gib": 48.68645477294922,
+  "model_or_training_created": false,
+  "moving_denominators": {
+    "BTCUSDT": 0,
+    "ETHUSDT": 0,
+    "SOLUSDT": 0
+  },
+  "observed_utc": "2026-10-30T16:35:00.743193+00:00",
+  "predictive_efficacy_verified": false,
+  "report_path": "research/out/depth-information-20261030/reports/criteria-warmup-20261030T163459Z.json",
+  "report_tests": 26,
+  "ruff_and_diff_check_passed": true,
+  "schema": "depth-information-criteria-validation-v1",
+  "scored_outcomes": 0,
+  "tests_passed": 237
+}

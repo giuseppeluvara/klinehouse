@@ -119,12 +119,58 @@ The preceding diagnostic/capture suite passed **174 tests**, including 30 captur
 tests and nine one-coefficient depth-model tests. The separate runner adds **20
 passing synthetic tests**, including crash recovery, delayed fsync, forward clock
 jumps, fixed-cutoff membership, unavailable original controls and exact fallback.
-The independent auditor adds **16 passing tests**, using its own journal fixtures,
-known scalar optimum and tampering cases. The combined suite passed **210 tests**;
-Ruff and diff-whitespace checks also passed. CI explicitly runs these new tests.
+The independent auditor has **17 passing tests**, using its own journal fixtures,
+known scalar optimum and tampering cases. The registered-criteria report adds
+**26 tests** for sufficiency, paired denominators, flat outcomes and joint gains.
+The combined suite passed **237 tests**; Ruff and diff-whitespace checks also
+passed. CI explicitly runs these new tests.
 An independent review checked the corrected crash-publication and clock-progress
 guards before activation. Existing
 environments were reused; no historical book dataset or AI model was downloaded.
+
+## Applying the registered comparison
+
+The report consumes one fresh successful independent audit. The auditor exports
+only the exact scored cases, including symbol, anchor, label, target end, actual
+source receipt and saved forecast hash. No outcome file is reopened afterward;
+new appends cannot silently change the scored population between verification
+and reporting. All four models must retain the same total and moving denominators.
+
+The already registered minimum is **288 moving outcomes per asset**, covering
+at least **two UTC dates of moving target ends**. Direction excludes flats;
+three-class sum Brier and natural log-loss include them. The depth candidate must
+strictly improve correct direction counts, Brier and log-loss against **both**
+baseline and matched price control on **every** asset. Position-control results
+remain descriptive and cannot veto that registered joint criterion.
+
+The machine-readable states are `insufficient_evaluation`, `criteria_not_met`
+and `preliminary_criteria_met`. Missing or nonfinite required metrics cannot
+produce success. Coverage, missing outcomes, fallback, late confirmations and
+source prefixes remain fully visible; no new coverage threshold or selected
+period is introduced. A preliminary pass never ends the fixed experiment or
+authorizes refitting. Even after the scheduled end plus 120 seconds, the report
+only says `scheduled_window_elapsed`; actual process shutdown and full goal
+completion require separate verification.
+
+The [first real report](registered-criteria-warmup-report.json), generated on
+**2026-10-30 at 16:35 UTC**, correctly states `insufficient_evaluation`: zero
+candidate forecasts/outcomes, no fitted model and zero moving observations for
+all three assets. [Validation](registered-criteria-validation.json) confirms no
+model/training file was created and the frozen runner, core and plan hashes match.
+This is an engineering check, not a predictive result. A separate
+[input-integrity audit](source-integrity-audit-20261030T162240Z.json) checks all
+30 expected books at 16:22 UTC: no gaps, repeated bodies, decreasing update IDs,
+late client receipts or invalid primary confirmations. It does not certify source
+event age or event-by-event book continuity.
+
+```sh
+.venv-timestral/bin/python scripts/report_depth_information.py \
+  --root research/out/depth-information-20261030 \
+  --output research/out/depth-information-20261030/reports/new-criteria-report.json
+```
+
+Output is optional, exclusive and restricted to the run's dedicated `reports/`
+directory. It cannot write model, runtime, source journals or protected stores.
 
 ## Reproduce safely into a new directory
 

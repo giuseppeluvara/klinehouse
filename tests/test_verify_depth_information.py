@@ -630,6 +630,7 @@ def test_warmup_verifies_sources_without_fitting_or_emitting(tmp_path):
     result = verify(f["root"], now=f["now"])
     assert result["verified"] and result["phase"] == "warmup"
     assert not result["model_fitted"] and result["candidate_forecasts"] == 0
+    assert result["scored_cases"] == [] and result["end_at"] == CUTOFF + 3600
     assert (
         result["scored_outcomes"] == 0
         and result["metrics"]["BTCUSDT"]["depth"]["n"] == 0
@@ -676,11 +677,36 @@ def test_missing_book_uses_exact_baseline_and_remains_visible(tmp_path):
     )
 
 
+def test_scored_case_metadata_uses_exact_same_cases_and_retains_flats(tmp_path):
+    f = fixture(tmp_path, fitted=True)
+    result = verify(f["root"], now=f["now"])
+    cases = result["scored_cases"]
+    assert result["end_at"] == CUTOFF + 3600
+    assert len(cases) == result["scored_outcomes"] == 3
+    assert cases == sorted(cases, key=lambda item: (item["anchor"], item["symbol"]))
+    assert [case["label"] for case in cases] == [2, 0, 1]
+    for symbol in SYMBOLS:
+        selected = [case for case in cases if case["symbol"] == symbol]
+        assert len(selected) == 1
+        case = selected[0]
+        assert case["anchor"] == CUTOFF
+        assert case["target_end"] == CUTOFF + 360
+        assert case["source_received_at"] == CUTOFF + 361
+        assert case["forecast_sha256"] == file_sha(
+            f["root"] / "forecasts" / f"{CUTOFF}-{symbol}.json"
+        )
+        moving = sum(case["label"] != 1 for case in selected)
+        for metrics in result["metrics"][symbol].values():
+            assert metrics["n"] == len(selected)
+            assert metrics["moving_n"] == moving
+
+
 @pytest.mark.parametrize("late", [False, True])
 def test_absent_seal_or_late_confirmation_never_scores(tmp_path, late):
     f = fixture(tmp_path, fitted=True, omit_seal=not late, late=late)
     result = verify(f["root"], now=f["now"])
     assert result["candidate_forecasts"] == result["scored_outcomes"] == 0
+    assert result["scored_cases"] == []
     assert (
         len(result["late_confirmations"] if late else result["unconfirmed_forecasts"])
         == 3
