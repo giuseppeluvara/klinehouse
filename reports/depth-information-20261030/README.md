@@ -1,4 +1,6 @@
-# Separate prospective depth-information research: capture active, efficacy untested
+# Separate prospective depth-information research: capture and warmup active
+
+Status recorded on **2026-10-30**, after predictor activation at **16:02 UTC**.
 
 The preceding direction diagnosis found a short live regime in which the frozen
 hourly-center reversal signal ranked directions poorly. A causal orientation
@@ -54,7 +56,7 @@ autostart service; its status/process must be checked rather than assumed alive.
 The HTTP connect/read timeouts do not constitute an absolute total-response
 deadline, but a late or clock-unhealthy observation remains explicitly ineligible.
 
-## Registered future model and unfinished work
+## Registered future model and active warmup
 
 The first scheduled anchor fixes the training cutoff at **2026-10-31 15:35 UTC
 (16:35 Europe/Rome)**. Only the newly captured first 24 hours, eligible original
@@ -71,18 +73,57 @@ without extending the window. The coefficient must be durably frozen once before
 any future candidate emission. There is no post-evaluation refitting or threshold
 search.
 
-The pure model helper and its chronology/optimality tests are implemented. The
-durable model-freeze, separate prospective forecast and evaluation runner is
-**still being implemented**. Acquisition success is not model-validation success.
+The pure model helper, durable model-freeze, separate prospective forecast runner
+and independent audit are implemented. The runner is active in fixed warmup at
+`research/out/depth-information-20261030/`, from a frozen runtime copy. It has
+**no training snapshot, fitted coefficient, candidate forecast or efficacy result**.
+Its first-day cutoff remains unchanged. The runner performs no HTTP requests;
+it reads only the two authorized prospective journals, using read-only coherent
+transactions and incremental hash-chain verification. The collector and original
+pilot remain separate processes with unchanged configurations and runtime code.
+
+Before the one allowed fit, an immutable training-data file fixes every array and
+source reference. Private synced temporary files are published atomically without
+replacing existing artifacts. Model recovery synchronizes the existing bytes and
+directory before recording a new receipt; it never acknowledges an old forecast
+retroactively. Each future forecast has its own acknowledgement and a seal that
+records the observation after acknowledgement fsync. Forecast and acknowledgement
+must be durable by anchor+30. The seal does not independently attest when its own
+fsync completed; this limitation is explicit in the independent audit.
+
+An unhealthy UTC/monotonic clock stops progression before anchors can become
+permanently missing or the process can finish. Fitting and emission require a
+verified clock probe no older than 600 seconds. Only final outcome collection and
+shutdown after the last emission deadline allow 1,800 seconds, with the same clock
+continuity and two-second offset bound. This avoids requiring a new probe after
+capture has ended. The runner has a separate 128 MiB budget with a 4 MiB reserve
+and stops below 40 GiB free, without deleting evidence.
+
+The independent verifier imports neither runner, model core nor production
+scoring. It reconstructs source prices, QI20, complete first-day membership,
+the scalar ridge optimum, candidate vectors, timing and scores. A real warmup
+audit verifies the source chains and absence of premature model/forecast artifacts.
+At **16:09 UTC**, it verified 60 depth events, 10,833 original-pilot events,
+21 accepted books and 18 original outcomes after capture activation. The candidate
+still had zero models, forecasts and outcomes. Evidence: [predictor config](pipeline-config.json),
+[launch observation](pipeline-launch-observation.json),
+[independent warmup audit](pipeline-warmup-audit.json), and
+[preservation and local validation](pipeline-validation.json).
+Acquisition and engineering verification are not model-validation success.
 The original baseline, matched price control and OI/position control must be
 evaluated on identical future candidate emissions; missing/fallback/late cases
 stay visible in coverage. Any failed asset remains a failed criterion. Neither
 the warmup fit nor the already inspected orientation replay is confirmation.
 
-The complete local diagnostic/capture suite passed **174 tests**, including
-30 capture tests and nine one-coefficient depth-model tests. An independent
-review checked post-fsync UTC/monotonic clock guards, orphan restart behavior,
-missing records, API allowlists and resource limits before activation. Existing
+The preceding diagnostic/capture suite passed **174 tests**, including 30 capture
+tests and nine one-coefficient depth-model tests. The separate runner adds **20
+passing synthetic tests**, including crash recovery, delayed fsync, forward clock
+jumps, fixed-cutoff membership, unavailable original controls and exact fallback.
+The independent auditor adds **16 passing tests**, using its own journal fixtures,
+known scalar optimum and tampering cases. The combined suite passed **210 tests**;
+Ruff and diff-whitespace checks also passed. CI explicitly runs these new tests.
+An independent review checked the corrected crash-publication and clock-progress
+guards before activation. Existing
 environments were reused; no historical book dataset or AI model was downloaded.
 
 ## Reproduce safely into a new directory
@@ -97,6 +138,27 @@ environments were reused; no historical book dataset or AI model was downloaded.
 Each init refuses an existing directory. Do not replace the active run to repeat
 a test. Future data cannot backfill a past book. The active collector's local
 session/process details are retained separately in its runtime receipts.
+
+To start a separate predictor using already authorized prospective sources:
+
+```sh
+.venv-timestral/bin/python scripts/run_depth_information.py init \
+  --root research/out/depth-information-fresh \
+  --capture-root research/out/depth-research-20261030 \
+  --pilot-root research/out/shadow-pilot-20261029-v2
+PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 \
+.venv-timestral/bin/python \
+  research/out/depth-information-fresh/runtime/scripts/run_depth_information.py run \
+  --root research/out/depth-information-fresh
+.venv-timestral/bin/python scripts/verify_depth_information.py \
+  --root research/out/depth-information-fresh \
+  --output research/out/depth-information-fresh/new-audit.json
+```
+
+The active runner is a local process, not an autostart service. Its launch receipt,
+config and warmup audit are retained with the run. The first real freeze, future
+candidate cycle and predictive comparison remain to be verified after the cutoff;
+none are inferred from synthetic tests or from already inspected outcomes.
 
 ## Sources and limits
 

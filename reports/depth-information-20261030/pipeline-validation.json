@@ -1,0 +1,67 @@
+{
+  "candidate_training_cutoff": 1793460900,
+  "checks": {
+    "candidate_runtime_matches_reviewed_source": true,
+    "capture_runtime_unchanged": true,
+    "independent_warmup_verified": true,
+    "no_candidate_predictions": true,
+    "no_premature_model_or_training": true,
+    "original_audit_verified": true,
+    "original_config_unchanged": true,
+    "original_model_unchanged": true,
+    "original_runtime_unchanged": true,
+    "user_files_unchanged": true
+  },
+  "diff_check_passed": true,
+  "free_gib": 50.2593994140625,
+  "local_tests_passed": 210,
+  "note": "Original pilot/config/runtime/model and user files preserved. Separate capture and fixed-cutoff warmup only; no fitted real coefficient or candidate outcome.",
+  "observed_utc": "2026-10-30T16:09:02.364946+00:00",
+  "orders": false,
+  "original_pilot_audit": "heartbeat-audit-20261030T160900Z.json",
+  "predictive_efficacy_verified": false,
+  "ruff_passed": true,
+  "schema": "depth-information-pipeline-validation-v1",
+  "source_event_counts": {
+    "depth": 60,
+    "pilot": 10833
+  },
+  "statuses": {
+    "candidate": {
+      "accepted_books": null,
+      "candidate_forecasts": 0,
+      "forecasts": null,
+      "model_fitted": false,
+      "outcomes": null,
+      "phase": "warmup",
+      "pid": 87080,
+      "source_errors": null,
+      "updated_utc": "2026-10-30T16:08:45.670857+00:00"
+    },
+    "capture": {
+      "accepted_books": 21,
+      "candidate_forecasts": null,
+      "forecasts": null,
+      "model_fitted": null,
+      "outcomes": null,
+      "phase": "waiting",
+      "pid": 83298,
+      "source_errors": null,
+      "updated_utc": "2026-10-30T16:08:50.810783+00:00"
+    },
+    "pilot": {
+      "accepted_books": null,
+      "candidate_forecasts": null,
+      "forecasts": 1005,
+      "model_fitted": null,
+      "outcomes": 1002,
+      "phase": "running",
+      "pid": 64363,
+      "source_errors": {},
+      "updated_utc": "2026-10-30T16:09:01.636065+00:00"
+    }
+  },
+  "validated_original_outcomes": 18,
+  "validated_source_books": 21,
+  "warmup_audit": "warmup-audit-20261030T160900Z.json"
+}

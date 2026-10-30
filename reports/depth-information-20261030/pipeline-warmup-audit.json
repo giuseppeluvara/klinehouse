@@ -1,0 +1,152 @@
+{
+  "all_forecast_files": 0,
+  "as_of": 1793376540.79935,
+  "as_of_utc": "2026-10-30T16:09:00.799350+00:00",
+  "candidate_forecasts": 0,
+  "clock_unhealthy_forecasts": [],
+  "coefficient_certificate": null,
+  "config_sha256": "94efad5c45e87f9a9e9d711b88936cc73022fdbf1e84574bd61db472d09ec5a1",
+  "fallback_missing_book": 0,
+  "fallback_zero_coefficient": 0,
+  "ineligible_forecasts": [],
+  "late_confirmations": [],
+  "mature_pending_outcomes": [],
+  "metrics": {
+    "BTCUSDT": {
+      "baseline": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "depth": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "positions": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "price_control": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      }
+    },
+    "ETHUSDT": {
+      "baseline": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "depth": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "positions": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "price_control": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      }
+    },
+    "SOLUSDT": {
+      "baseline": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "depth": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "positions": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "price_control": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      }
+    }
+  },
+  "missing_emissions": 0,
+  "missing_reasons": {},
+  "model_fitted": false,
+  "pending_outcomes": 0,
+  "phase": "warmup",
+  "schema": "independent-depth-information-audit-v1",
+  "scope": [
+    "Independent source-chain, membership, scalar-optimum, formula, timing and score checks; no inference replay.",
+    "Only post-acknowledgement-fsync observations sealed as eligible are scored; missing seals stay unconfirmed.",
+    "Seal records do not independently attest their own fsync completion; timestamps remain local evidence.",
+    "REST depth provides client availability, not a certified source event time or freshness guarantee.",
+    "Original pilot model internals are not refitted or replayed; saved controls and original source prices are checked.",
+    "No historical data, protected holdouts, credentials, orders or network access are used."
+  ],
+  "scored_outcomes": 0,
+  "source_snapshots": {
+    "depth": {
+      "chain_tip": "1bdaea06802a565643a2b6df64085483c63f6e9b5dc5c1a54f4d593e8957a3af",
+      "event_count": 60,
+      "root": "/Users/dev-luv/Sites/klinehouse/research/out/depth-research-20261030"
+    },
+    "pilot": {
+      "chain_tip": "4fc806fa0f6d453eb14b4fe72b2eeb9b653a1bd0e7f4758f7b6166f71cc81d62",
+      "event_count": 10833,
+      "root": "/Users/dev-luv/Sites/klinehouse/research/out/shadow-pilot-20261029-v2"
+    }
+  },
+  "statistical_superiority_verified": false,
+  "training_cutoff": 1793460900,
+  "unaccounted_anchor_symbols": [],
+  "unconfirmed_forecasts": [],
+  "validated_original_outcomes": 18,
+  "validated_source_books": 21,
+  "verified": true
+}

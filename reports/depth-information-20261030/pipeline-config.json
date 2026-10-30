@@ -1,0 +1,38 @@
+{
+  "capture_config_sha256": "dd575129fe3a5be8029d506de585824754c1570202d15d70c27594356e12dbd7",
+  "capture_root": "/Users/dev-luv/Sites/klinehouse/research/out/depth-research-20261030",
+  "code": {
+    "core": "885cb8d67779b31440d3d8cc7ee43a69f6a3e2fd4819ae79cb2985a9728d6664",
+    "script": "c2a4c90c1507bba56350fbb97901103d19611e929a826dc31d66453a1aaa0c85"
+  },
+  "created_at": 1793376159.7164469,
+  "end_at": 1793877000.0,
+  "end_utc": "2026-11-05T11:10:00+00:00",
+  "first_anchor": 1793374500,
+  "limits": {
+    "clock_age": 600,
+    "clock_tolerance": 0.25,
+    "deadline": 30,
+    "max_bytes": 134217728,
+    "min_free_bytes": 42949672960,
+    "reserve_bytes": 4194304,
+    "terminal_clock_age": 1800
+  },
+  "network": false,
+  "orders": false,
+  "original_pilot_read_only": true,
+  "original_snapshot_sha256": "ebe081bc39f856f6f903f6ddd30568c5d41b5408235239c7a1b59da93a170e74",
+  "pilot_config_sha256": "9cbda8bba800b3d2ebe5d2fa1c494959eafd906dee3ec03cea49c1f5e679dd4e",
+  "pilot_root": "/Users/dev-luv/Sites/klinehouse/research/out/shadow-pilot-20261029-v2",
+  "plan_sha256": "2249959d530ec160a0dddfff51d783ec814656728a85f6dab7b4cd2c9006163a",
+  "rule": "One shared QI20 coefficient, fixed first 24h, one immutable fit; missing books fall back exactly to original baseline; no retro-emission or retro-ack.",
+  "schema": "klinehouse-depth-information-run-v1",
+  "source_identities_sha256": "664b9452bae220e6c8e98d0da1cf80668d976fe00b0ebd97af6f2bbb49d1ed94",
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT"
+  ],
+  "training_cutoff": 1793460900,
+  "training_cutoff_utc": "2026-10-31T15:35:00+00:00"
+}

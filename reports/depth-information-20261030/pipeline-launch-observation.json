@@ -1,0 +1,15 @@
+{
+  "candidate_forecast_files": 0,
+  "config_sha256": "94efad5c45e87f9a9e9d711b88936cc73022fdbf1e84574bd61db472d09ec5a1",
+  "exec_session": 70328,
+  "model_present": false,
+  "note": "Process observation during fixed warmup. No new coefficient, candidate prediction or efficacy result.",
+  "observed_at": 1793376257.258811,
+  "observed_utc": "2026-10-30T16:04:17.258811+00:00",
+  "phase": "warmup",
+  "pid": 87080,
+  "runtime_script_sha256": "c2a4c90c1507bba56350fbb97901103d19611e929a826dc31d66453a1aaa0c85",
+  "schema": "depth-information-launch-observation-v1",
+  "status_age_seconds": 1.6402199268341064,
+  "training_snapshot_present": false
+}
