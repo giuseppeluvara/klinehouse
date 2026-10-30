@@ -41,7 +41,7 @@ LIMITS = {
     "clock_skew_bound_seconds": 2,
     "wall_monotonic_tolerance_seconds": 0.25,
     "response_bytes": 100_000,
-    "max_storage_bytes": 32 * 1024**2,
+    "max_storage_bytes": 64 * 1024**2,
     # A complete failed trio can retain raw and decoded bodies plus SQLite
     # pages. Leave room for that evidence and a terminal stop without pruning.
     "storage_reserve_bytes": 4 * 1024**2,
@@ -49,6 +49,18 @@ LIMITS = {
     "max_run_seconds": 8 * 86400,
 }
 DEFAULT_END = "2026-11-05T11:10:00+00:00"
+LEGACY_CODE_SHA256 = "97e72f387e0f50b9c286a740142e009a6d2f489c10772098a4bbddb5d879c623"
+LEGACY_CONFIG_SHA256 = (
+    "dd575129fe3a5be8029d506de585824754c1570202d15d70c27594356e12dbd7"
+)
+LEGACY_LIMITS = {**LIMITS, "max_storage_bytes": 32 * 1024**2}
+AMENDMENT_SCHEMA = "klinehouse-depth-budget-amendment-v1"
+AMENDMENT_REASON = (
+    "SQLite measured 24-28 KiB per five-minute anchor including raw and decoded "
+    "bodies, acknowledgements and page/index overhead; 1674 anchors project "
+    "39-46 MiB, exceeding the original 28 MiB usable budget. Only raise storage "
+    "cap to 64 MiB; preserve all data, timing, model and selection rules."
+)
 
 
 def canonical(value):
@@ -150,16 +162,397 @@ def load_config(root):
     config = json.loads((root / "config.json").read_text())
     if (
         sha(config) != json.loads((root / "config-sha256.json").read_text())["sha256"]
-        or config.get("code_sha256") != code_sha256()
         or config.get("urls") != URLS
-        or config.get("limits") != LIMITS
         or config.get("symbols") != list(SYMBOLS)
         or config.get("capture_only") is not True
         or config.get("candidate_predictions") is not False
         or config.get("orders") is not False
     ):
         raise ValueError("frozen depth collector configuration/code changed")
+    if config.get("code_sha256") == code_sha256() and config.get("limits") == LIMITS:
+        if (root / "budget-amendment.json").exists():
+            raise ValueError("native 64 MiB runs cannot inherit a legacy amendment")
+    else:
+        load_budget_amendment(root, config, require_runtime=True)
     return config
+
+
+def file_sha256(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def immutable_bytes(path, encoded):
+    """Publish complete new bytes atomically; retain private crash evidence."""
+    path = Path(path)
+    temporary = path.with_name(f".{path.name}.pending-{os.getpid()}-{time.time_ns()}")
+    with temporary.open("xb") as handle:
+        handle.write(encoded)
+        handle.flush()
+        os.fsync(handle.fileno())
+    os.link(temporary, path)
+    sync_directory(path.parent)
+
+
+def sync_directory(path):
+    directory = os.open(path, os.O_RDONLY)
+    try:
+        os.fsync(directory)
+    finally:
+        os.close(directory)
+
+
+def legacy_identity(root, config):
+    """Only the already activated, exactly identified 32 MiB stream may migrate."""
+    root = root_path(root)
+    original = root / "runtime/capture_depth_research.py"
+    if (
+        root.name != "depth-research-20261030"
+        or sha(config) != LEGACY_CONFIG_SHA256
+        or config.get("code_sha256") != LEGACY_CODE_SHA256
+        or config.get("limits") != LEGACY_LIMITS
+        or config.get("urls") != URLS
+        or config.get("symbols") != list(SYMBOLS)
+        or config.get("capture_only") is not True
+        or config.get("candidate_predictions") is not False
+        or config.get("orders") is not False
+        or json.loads((root / "config-sha256.json").read_text())
+        != {"sha256": LEGACY_CONFIG_SHA256}
+        or (root / "runtime").is_symlink()
+        or original.is_symlink()
+        or file_sha256(original) != LEGACY_CODE_SHA256
+    ):
+        raise ValueError("only the known unchanged legacy capture can be amended")
+    return root
+
+
+@contextmanager
+def read_only_journal(root, config):
+    database = root / "depth-events.sqlite"
+    connection = sqlite3.connect(database.as_uri() + "?mode=ro", uri=True, timeout=5)
+    try:
+        connection.row_factory = sqlite3.Row
+        connection.execute("BEGIN")
+        if dict(connection.execute("SELECT key,value FROM meta")) != {
+            "config": canonical(config),
+            "config_sha256": sha(config),
+        }:
+            raise ValueError("amendment source journal identity differs")
+        yield connection
+    finally:
+        connection.close()
+
+
+def clock_reference_from_row(row):
+    if row is None:
+        raise ValueError("a recent committed healthy clock probe is required")
+    payload = json.loads(row["payload"])
+    receipt = payload["receipt"]
+    evidence = clock_evidence(receipt)
+    if (
+        payload.get("healthy") is not True
+        or evidence["healthy"] is not True
+        or evidence["absolute_offset_bound_seconds"]
+        != payload.get("absolute_offset_bound_seconds")
+        or receipt.get("source") != "time"
+        or receipt.get("url") != URLS["time"]
+        or receipt.get("params") != {}
+        or receipt.get("http_status") != 200
+    ):
+        raise ValueError("amendment clock probe is not healthy")
+    return {
+        "probe_seq": row["seq"],
+        "probe_digest": row["digest"],
+        "utc": receipt["received_at"],
+        "monotonic": receipt["received_monotonic"],
+        "absolute_offset_bound_seconds": evidence["absolute_offset_bound_seconds"],
+    }
+
+
+def amendment_clock_healthy(reference, now, mono):
+    values = (now, mono, reference["utc"], reference["monotonic"])
+    return all(type(v) in (int, float) and math.isfinite(v) for v in values) and (
+        0 <= now - reference["utc"] <= 600
+        and elapsed_healthy(
+            {
+                "requested_at": reference["utc"],
+                "requested_monotonic": reference["monotonic"],
+                "received_at": now,
+                "received_monotonic": mono,
+            }
+        )
+    )
+
+
+def load_budget_amendment(root, config, *, require_runtime=False):
+    root = legacy_identity(root, config)
+    path = root / "budget-amendment.json"
+    if path.is_symlink() or not path.is_file():
+        raise ValueError("legacy 32 MiB configuration requires its budget amendment")
+    document = json.loads(path.read_text())
+    body = {key: value for key, value in document.items() if key != "amendment_sha256"}
+    first = math.ceil(config["activation_at"] / 300) * 300
+    expected = {
+        "schema": AMENDMENT_SCHEMA,
+        "root": str(root),
+        "config_sha256": LEGACY_CONFIG_SHA256,
+        "original_code_sha256": LEGACY_CODE_SHA256,
+        "amended_code_sha256": code_sha256(),
+        "original_runtime_path": "runtime/capture_depth_research.py",
+        "amended_runtime_path": f"runtime-amendments/budget-64MiB-{code_sha256()}/capture_depth_research.py",
+        "old_limits": LEGACY_LIMITS,
+        "new_limits": LIMITS,
+        "first_anchor": first,
+        "training_cutoff": first + 86400,
+        "activation_at": config["activation_at"],
+        "end_at": config["end_at"],
+        "symbols": config["symbols"],
+        "urls": config["urls"],
+        "reason": AMENDMENT_REASON,
+        "data_selection_and_model_changes": False,
+    }
+    variable = {
+        "registered_at",
+        "registered_monotonic",
+        "registration_clock_reference",
+        "prepared_source_prefix",
+    }
+    if (
+        set(body) != set(expected) | variable
+        or any(body.get(key) != value for key, value in expected.items())
+        or document.get("amendment_sha256") != sha(body)
+        or not amendment_clock_healthy(
+            body["registration_clock_reference"],
+            body["registered_at"],
+            body["registered_monotonic"],
+        )
+        or not config["activation_at"] <= body["registered_at"] < first + 86400
+    ):
+        raise ValueError("budget amendment document/hash/limits/registration differs")
+    relative = Path(body["amended_runtime_path"])
+    runtime = root / relative
+    if (
+        any(
+            (root / Path(*relative.parts[:i])).is_symlink()
+            for i in range(1, len(relative.parts) + 1)
+        )
+        or file_sha256(runtime) != code_sha256()
+        or (require_runtime and Path(__file__).resolve() != runtime.resolve())
+    ):
+        raise ValueError("budget amendment runtime bytes/path differ")
+    with read_only_journal(root, config) as connection:
+        prefix = body["prepared_source_prefix"]
+        if (
+            set(prefix) != {"event_count", "chain_tip"}
+            or type(prefix["event_count"]) is not int
+            or prefix["event_count"] < 1
+        ):
+            raise ValueError("budget amendment source prefix differs")
+        row = connection.execute(
+            "SELECT digest FROM events WHERE seq=?", (prefix["event_count"],)
+        ).fetchone()
+        if row is None or row["digest"] != prefix["chain_tip"]:
+            raise ValueError("budget amendment source prefix differs")
+        reference = body["registration_clock_reference"]
+        probe = connection.execute(
+            "SELECT * FROM events WHERE seq=? AND kind='clock_probe'",
+            (reference["probe_seq"],),
+        ).fetchone()
+        if (
+            reference != clock_reference_from_row(probe)
+            or reference["probe_seq"] > prefix["event_count"]
+        ):
+            raise ValueError("budget amendment registration clock differs")
+    return document
+
+
+def prepare_budget_amendment(root, *, clock=time.time, monotonic=time.monotonic):
+    """Prepare new runtime/manifest only, while the unchanged legacy writer runs."""
+    root = root_path(root)
+    config = json.loads((root / "config.json").read_text())
+    legacy_identity(root, config)
+    if (root / "budget-amendment.json").exists() or (
+        root / "budget-amendment.json"
+    ).is_symlink():
+        raise FileExistsError("the immutable budget amendment already exists")
+    with read_only_journal(root, config) as connection:
+        head = connection.execute(
+            "SELECT seq,digest FROM events ORDER BY seq DESC LIMIT 1"
+        ).fetchone()
+        probe = connection.execute(
+            "SELECT * FROM events WHERE kind='clock_probe' ORDER BY seq DESC LIMIT 1"
+        ).fetchone()
+        reference = clock_reference_from_row(probe)
+        prefix = {"event_count": head["seq"], "chain_tip": head["digest"]}
+    first = math.ceil(config["activation_at"] / 300) * 300
+    now, mono = clock(), monotonic()
+    if not now < first + 86400 or not amendment_clock_healthy(reference, now, mono):
+        raise ValueError(
+            "budget amendment must be registered before cutoff with a healthy clock"
+        )
+    if shutil.disk_usage(root).free < LIMITS["min_free_bytes"]:
+        raise ValueError("insufficient free space before budget amendment")
+    relative = Path(
+        f"runtime-amendments/budget-64MiB-{code_sha256()}/capture_depth_research.py"
+    )
+    for parent in (root / "runtime-amendments", root / relative.parent):
+        if parent.is_symlink():
+            raise ValueError("budget amendment runtime directory must not be a symlink")
+        parent.mkdir(exist_ok=True)
+        sync_directory(parent.parent)
+    runtime = root / relative
+    if runtime.exists():
+        if runtime.is_symlink() or file_sha256(runtime) != code_sha256():
+            raise ValueError("prepared runtime bytes differ")
+    else:
+        immutable_bytes(runtime, Path(__file__).read_bytes())
+    with runtime.open("rb") as handle:
+        os.fsync(handle.fileno())
+    for parent in (runtime.parent, runtime.parent.parent, root):
+        sync_directory(parent)
+    now, mono = clock(), monotonic()
+    if not config[
+        "activation_at"
+    ] <= now < first + 86400 or not amendment_clock_healthy(reference, now, mono):
+        raise ValueError(
+            "budget amendment preparation exceeded its causal registration window"
+        )
+    body = {
+        "schema": AMENDMENT_SCHEMA,
+        "root": str(root),
+        "registered_at": now,
+        "registered_monotonic": mono,
+        "registration_clock_reference": reference,
+        "config_sha256": LEGACY_CONFIG_SHA256,
+        "original_code_sha256": LEGACY_CODE_SHA256,
+        "amended_code_sha256": code_sha256(),
+        "original_runtime_path": "runtime/capture_depth_research.py",
+        "amended_runtime_path": str(relative),
+        "old_limits": LEGACY_LIMITS,
+        "new_limits": LIMITS,
+        "first_anchor": first,
+        "training_cutoff": first + 86400,
+        "activation_at": config["activation_at"],
+        "end_at": config["end_at"],
+        "symbols": config["symbols"],
+        "urls": config["urls"],
+        "prepared_source_prefix": prefix,
+        "reason": AMENDMENT_REASON,
+        "data_selection_and_model_changes": False,
+    }
+    document = {**body, "amendment_sha256": sha(body)}
+    immutable_bytes(
+        root / "budget-amendment.json",
+        (
+            json.dumps(document, sort_keys=True, indent=2, allow_nan=False) + "\n"
+        ).encode(),
+    )
+    return load_budget_amendment(root, config)
+
+
+def activate_budget_amendment(journal):
+    """Observe one immutable amendment before any new producer/capture events."""
+    if (
+        journal.config.get("limits") == LIMITS
+        and journal.config.get("code_sha256") == code_sha256()
+    ):
+        return None
+    document = load_budget_amendment(journal.root, journal.config, require_runtime=True)
+    payload = {
+        "document": document,
+        "amendment_sha256": document["amendment_sha256"],
+        "document_sha256": file_sha256(journal.root / "budget-amendment.json"),
+    }
+    existing = list(
+        journal.connection.execute(
+            "SELECT * FROM events WHERE kind='resource_budget_amended' ORDER BY seq"
+        )
+    )
+    if len(existing) > 1:
+        raise ValueError("budget amendment event must occur once")
+    cutoff = document["training_cutoff"]
+    if not existing:
+        probe = journal.connection.execute(
+            "SELECT * FROM events WHERE kind='clock_probe' ORDER BY seq DESC LIMIT 1"
+        ).fetchone()
+        reference = clock_reference_from_row(probe)
+        if not document[
+            "registered_at"
+        ] <= journal.clock() < cutoff or not amendment_clock_healthy(
+            reference, journal.clock(), journal.monotonic()
+        ):
+            raise ValueError(
+                "budget amendment activation must precede cutoff with a healthy clock"
+            )
+        record = journal.append(
+            "resource_budget_amended",
+            payload,
+            clock_healthy=True,
+            clock_reference=[reference["utc"], reference["monotonic"]],
+        )
+        if (
+            not record["clock_healthy"]
+            or not record["ack_clock_healthy"]
+            or record["ack_commit_observed_at"] >= cutoff
+        ):
+            journal.append(
+                "invalidated",
+                {
+                    "record_seq": record["seq"],
+                    "ack_seq": record["ack_seq"],
+                    "reason": "resource_budget_amendment_confirmation_failed",
+                },
+            )
+            raise ValueError("budget amendment confirmation failed before acquisition")
+        existing = list(
+            journal.connection.execute(
+                "SELECT * FROM events WHERE kind='resource_budget_amended'"
+            )
+        )
+    event = existing[0]
+    matches = [
+        row
+        for row in journal.connection.execute(
+            "SELECT * FROM events WHERE kind='commit_ack'"
+        )
+        if json.loads(row["payload"])["record_seq"] == event["seq"]
+    ]
+    bad = any(
+        json.loads(row[0])["record_seq"] == event["seq"]
+        for row in journal.connection.execute(
+            "SELECT payload FROM events WHERE kind='invalidated'"
+        )
+    )
+    if (
+        len(matches) != 1
+        or bad
+        or json.loads(event["payload"]) != payload
+        or event["anchor"] is not None
+        or event["symbol"] is not None
+    ):
+        raise ValueError("budget amendment event/confirmation differs")
+    ack_row = matches[0]
+    ack = json.loads(ack_row["payload"])
+    probe = journal.connection.execute(
+        "SELECT * FROM events WHERE kind='clock_probe' AND seq<? ORDER BY seq DESC LIMIT 1",
+        (event["seq"],),
+    ).fetchone()
+    reference = clock_reference_from_row(probe)
+    if not (
+        document["registered_at"]
+        <= event["recorded_at"]
+        <= ack["committed_at"]
+        <= ack_row["recorded_at"]
+        < cutoff
+        and ack["clock_healthy"] is True
+        and ack["clock_reference"] == [reference["utc"], reference["monotonic"]]
+        and amendment_clock_healthy(
+            reference, ack["committed_at"], ack["committed_monotonic"]
+        )
+    ):
+        raise ValueError("budget amendment confirmation clock/cutoff differs")
+    journal.effective_limits = LIMITS
+    journal.budget_amendment = document["amendment_sha256"]
+    return document
 
 
 def request_spec(source, symbol=None):
@@ -323,6 +716,8 @@ class Journal:
     def __init__(self, root, config, *, clock=time.time, monotonic=time.monotonic):
         self.root, self.config = root_path(root), config
         self.clock, self.monotonic = clock, monotonic
+        self.effective_limits = config["limits"]
+        self.budget_amendment = None
         path = self.root / "depth-events.sqlite"
         exists = path.exists()
         self.connection = sqlite3.connect(path)
@@ -588,6 +983,8 @@ class Journal:
             "directory_bytes": directory_bytes(self.root),
             "capture_only": True,
             "candidate_predictions": False,
+            "effective_limits": self.effective_limits,
+            "budget_amendment_sha256": self.budget_amendment,
             **extra,
         }
         atomic_json(self.root / "status.json", value)
@@ -598,14 +995,15 @@ def directory_bytes(root):
     return sum(path.stat().st_size for path in Path(root).rglob("*") if path.is_file())
 
 
-def resource_reason(root, *, disk_usage=shutil.disk_usage):
-    if disk_usage(root).free < LIMITS["min_free_bytes"]:
+def resource_reason(root, *, disk_usage=shutil.disk_usage, limits=None):
+    limits = LIMITS if limits is None else limits
+    if disk_usage(root).free < limits["min_free_bytes"]:
         return "free_space_below_40_GiB"
     if (
-        directory_bytes(root) + LIMITS["storage_reserve_bytes"]
-        >= LIMITS["max_storage_bytes"]
+        directory_bytes(root) + limits["storage_reserve_bytes"]
+        >= limits["max_storage_bytes"]
     ):
-        return "32_MiB_budget_reserve_reached"
+        return f"{limits['max_storage_bytes'] // 1024**2}_MiB_budget_reserve_reached"
     return None
 
 
@@ -784,11 +1182,22 @@ def run(
         writer_lock(root),
         Journal(root, config, clock=clock, monotonic=monotonic) as journal,
     ):
-        journal.append("process_started", {"capture_only": True, "at": clock()})
+        amendment = activate_budget_amendment(journal)
+        journal.append(
+            "process_started",
+            {
+                "capture_only": True,
+                "at": clock(),
+                "producer_code_sha256": code_sha256(),
+                "amendment_sha256": None
+                if amendment is None
+                else amendment["amendment_sha256"],
+            },
+        )
         anchor = math.ceil(config["activation_at"] / 300) * 300
         last_anchor = math.floor((config["end_at"] - 360) / 300) * 300
         while True:
-            reason = resource_reason(root)
+            reason = resource_reason(root, limits=journal.effective_limits)
             if reason or clock() >= config["end_at"]:
                 phase = "resource_stopped" if reason else "finished"
                 journal.append(
@@ -827,7 +1236,12 @@ def main():
     run_parser = sub.add_parser("run")
     run_parser.add_argument("--root", type=Path, required=True)
     run_parser.add_argument("--once", action="store_true")
+    amendment_parser = sub.add_parser("prepare-budget-amendment")
+    amendment_parser.add_argument("--root", type=Path, required=True)
     args = parser.parse_args()
+    if args.command == "prepare-budget-amendment":
+        print(json.dumps(prepare_budget_amendment(args.root), sort_keys=True))
+        return 0
     if args.command == "init":
         config = initialize(args.root, end_at=parse_utc(args.end_utc))
         print(

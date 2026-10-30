@@ -1,0 +1,73 @@
+{
+  "all_immutable_bytes_preserved": true,
+  "amendments": [
+    {
+      "acknowledgement": {
+        "digest": "d1a919c5d4c2f4cd1343b433f9de4551dd7775ee6db0efbd85149e45fe7ca0fc",
+        "received_at": 1793379537.669607,
+        "seq": 142
+      },
+      "amendment_sha256": "13ca764a23f2b4143161250b73aac3c14674e60823fe9c5a6298247f0aa1374a",
+      "document_sha256": "c7b0a15e6369a593187758693f01917ba241882f0f5fe7b0e9c6abcb5facda6f",
+      "registration": {
+        "digest": "6b9a2e0d8647b11b7ea58529d5e004f5cd8ada434616412afd47398077320a48",
+        "received_at": 1793379537.66785,
+        "seq": 141
+      },
+      "runtime_sha256": "c0bc1e3813fc3c34fbcd1ce43e9c85213f69da54d9f2d05d9f87605e109b08e5",
+      "schema": "klinehouse-depth-budget-amendment-v1",
+      "source": "depth",
+      "status": "registered"
+    }
+  ],
+  "capture_exec_session": 41229,
+  "capture_tests": 54,
+  "free_gib": 54.77512741088867,
+  "independent_auditor_tests": 36,
+  "missing_source_snapshots": 0,
+  "new_candidate_forecasts": 0,
+  "new_model_fitted": false,
+  "new_registration_at": 1793379537.66785,
+  "observed_utc": "2026-10-30T17:03:22.669660+00:00",
+  "old_capture_exec_session": 95973,
+  "old_capture_exit_code": 130,
+  "old_stop_request_at": 1793379527.1361668,
+  "original_forecasts": 1038,
+  "original_outcomes": 1035,
+  "original_pilot_audit_verified": true,
+  "original_service_not_restarted": true,
+  "predictive_efficacy_verified": false,
+  "report_tests": 26,
+  "resource_budget": {
+    "depth": {
+      "configured_max_storage_bytes": 33554432,
+      "effective_max_storage_bytes": 67108864,
+      "storage_reserve_bytes": 4194304
+    }
+  },
+  "ruff_and_diff_check_passed": true,
+  "runtime_sha256": "c0bc1e3813fc3c34fbcd1ce43e9c85213f69da54d9f2d05d9f87605e109b08e5",
+  "schema": "depth-budget-amendment-validation-v1",
+  "seconds_stop_request_to_new_registration": 10.531683206558228,
+  "source_books_after_first_amended_trio": 54,
+  "statuses": {
+    "candidate": {
+      "phase": "warmup",
+      "pid": 87080,
+      "updated_at": 1793379801.628592
+    },
+    "capture": {
+      "phase": "waiting",
+      "pid": 89769,
+      "updated_at": 1793379801.106499
+    },
+    "original": {
+      "phase": "running",
+      "pid": 64363,
+      "updated_at": 1793379802.137123
+    }
+  },
+  "tests_passed": 280,
+  "training_cutoff": 1793460900,
+  "user_files_preserved": true
+}

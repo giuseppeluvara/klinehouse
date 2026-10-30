@@ -1,0 +1,181 @@
+{
+  "all_forecast_files": 0,
+  "amendments": [
+    {
+      "acknowledgement": {
+        "digest": "d1a919c5d4c2f4cd1343b433f9de4551dd7775ee6db0efbd85149e45fe7ca0fc",
+        "received_at": 1793379537.669607,
+        "seq": 142
+      },
+      "amendment_sha256": "13ca764a23f2b4143161250b73aac3c14674e60823fe9c5a6298247f0aa1374a",
+      "document_sha256": "c7b0a15e6369a593187758693f01917ba241882f0f5fe7b0e9c6abcb5facda6f",
+      "registration": {
+        "digest": "6b9a2e0d8647b11b7ea58529d5e004f5cd8ada434616412afd47398077320a48",
+        "received_at": 1793379537.66785,
+        "seq": 141
+      },
+      "runtime_sha256": "c0bc1e3813fc3c34fbcd1ce43e9c85213f69da54d9f2d05d9f87605e109b08e5",
+      "schema": "klinehouse-depth-budget-amendment-v1",
+      "source": "depth",
+      "status": "registered"
+    }
+  ],
+  "as_of": 1793379679.000402,
+  "as_of_utc": "2026-10-30T17:01:19.000402+00:00",
+  "candidate_forecasts": 0,
+  "clock_unhealthy_forecasts": [],
+  "coefficient_certificate": null,
+  "config_sha256": "94efad5c45e87f9a9e9d711b88936cc73022fdbf1e84574bd61db472d09ec5a1",
+  "end_at": 1793877000.0,
+  "fallback_missing_book": 0,
+  "fallback_zero_coefficient": 0,
+  "ineligible_forecasts": [],
+  "late_confirmations": [],
+  "mature_pending_outcomes": [],
+  "metrics": {
+    "BTCUSDT": {
+      "baseline": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "depth": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "positions": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "price_control": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      }
+    },
+    "ETHUSDT": {
+      "baseline": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "depth": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "positions": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "price_control": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      }
+    },
+    "SOLUSDT": {
+      "baseline": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "depth": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "positions": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      },
+      "price_control": {
+        "brier": null,
+        "direction_accuracy": null,
+        "direction_correct": 0,
+        "log_loss": null,
+        "moving_n": 0,
+        "n": 0
+      }
+    }
+  },
+  "missing_emissions": 0,
+  "missing_reasons": {},
+  "model_fitted": false,
+  "pending_outcomes": 0,
+  "phase": "warmup",
+  "schema": "independent-depth-information-audit-v1",
+  "scope": [
+    "Independent source-chain, membership, scalar-optimum, formula, timing and score checks; no inference replay.",
+    "Only post-acknowledgement-fsync observations sealed as eligible are scored; missing seals stay unconfirmed.",
+    "Seal records do not independently attest their own fsync completion; timestamps remain local evidence.",
+    "REST depth provides client availability, not a certified source event time or freshness guarantee.",
+    "Original pilot model internals are not refitted or replayed; saved controls and original source prices are checked.",
+    "No historical data, protected holdouts, credentials, orders or network access are used."
+  ],
+  "scored_cases": [],
+  "scored_outcomes": 0,
+  "source_resource_budgets": {
+    "depth": {
+      "configured_max_storage_bytes": 33554432,
+      "effective_max_storage_bytes": 67108864,
+      "storage_reserve_bytes": 4194304
+    }
+  },
+  "source_snapshots": {
+    "depth": {
+      "chain_tip": "87bef45587cc7029bc62058f5de9d3e69e2c88dca072c3d93dfaa421aa2d349a",
+      "event_count": 152,
+      "root": "/Users/dev-luv/Sites/klinehouse/research/out/depth-research-20261030"
+    },
+    "pilot": {
+      "chain_tip": "6ac138f5fa057e2075c26645959440ec42a002a3ed03d00c7250500c63f7ddba",
+      "event_count": 11172,
+      "root": "/Users/dev-luv/Sites/klinehouse/research/out/shadow-pilot-20261029-v2"
+    }
+  },
+  "statistical_superiority_verified": false,
+  "training_cutoff": 1793460900,
+  "unaccounted_anchor_symbols": [],
+  "unconfirmed_forecasts": [],
+  "validated_original_outcomes": 51,
+  "validated_source_books": 54,
+  "verified": true
+}

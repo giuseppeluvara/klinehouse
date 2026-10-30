@@ -1,0 +1,68 @@
+{
+  "activation_at": 1793374413.458949,
+  "amended_code_sha256": "c0bc1e3813fc3c34fbcd1ce43e9c85213f69da54d9f2d05d9f87605e109b08e5",
+  "amended_runtime_path": "runtime-amendments/budget-64MiB-c0bc1e3813fc3c34fbcd1ce43e9c85213f69da54d9f2d05d9f87605e109b08e5/capture_depth_research.py",
+  "amendment_sha256": "13ca764a23f2b4143161250b73aac3c14674e60823fe9c5a6298247f0aa1374a",
+  "config_sha256": "dd575129fe3a5be8029d506de585824754c1570202d15d70c27594356e12dbd7",
+  "data_selection_and_model_changes": false,
+  "end_at": 1793877000.0,
+  "first_anchor": 1793374500,
+  "new_limits": {
+    "clock_skew_bound_seconds": 2,
+    "commit_deadline_seconds": 30,
+    "grid_seconds": 300,
+    "lead_seconds": 10,
+    "levels": 20,
+    "max_run_seconds": 691200,
+    "max_storage_bytes": 67108864,
+    "min_free_bytes": 42949672960,
+    "response_bytes": 100000,
+    "storage_reserve_bytes": 4194304,
+    "target_end_seconds": 360,
+    "target_start_seconds": 60,
+    "wall_monotonic_tolerance_seconds": 0.25
+  },
+  "old_limits": {
+    "clock_skew_bound_seconds": 2,
+    "commit_deadline_seconds": 30,
+    "grid_seconds": 300,
+    "lead_seconds": 10,
+    "levels": 20,
+    "max_run_seconds": 691200,
+    "max_storage_bytes": 33554432,
+    "min_free_bytes": 42949672960,
+    "response_bytes": 100000,
+    "storage_reserve_bytes": 4194304,
+    "target_end_seconds": 360,
+    "target_start_seconds": 60,
+    "wall_monotonic_tolerance_seconds": 0.25
+  },
+  "original_code_sha256": "97e72f387e0f50b9c286a740142e009a6d2f489c10772098a4bbddb5d879c623",
+  "original_runtime_path": "runtime/capture_depth_research.py",
+  "prepared_source_prefix": {
+    "chain_tip": "3ed52fbd8eddf7bdcd2f7d0af83c23c22719baf6c8b7db05dcd092140d533f7c",
+    "event_count": 140
+  },
+  "reason": "SQLite measured 24-28 KiB per five-minute anchor including raw and decoded bodies, acknowledgements and page/index overhead; 1674 anchors project 39-46 MiB, exceeding the original 28 MiB usable budget. Only raise storage cap to 64 MiB; preserve all data, timing, model and selection rules.",
+  "registered_at": 1793379498.008785,
+  "registered_monotonic": 313176.266916958,
+  "registration_clock_reference": {
+    "absolute_offset_bound_seconds": 0.4499197006225586,
+    "monotonic": 312968.77378725,
+    "probe_digest": "63d18a6b75a541846e6ecf84e92a3e710a244d55cd4d62fd8b4c1aa5e7a0c165",
+    "probe_seq": 133,
+    "utc": 1793379290.516153
+  },
+  "root": "/Users/dev-luv/Sites/klinehouse/research/out/depth-research-20261030",
+  "schema": "klinehouse-depth-budget-amendment-v1",
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT"
+  ],
+  "training_cutoff": 1793460900,
+  "urls": {
+    "depth": "https://api.binance.com/api/v3/depth",
+    "time": "https://api.binance.com/api/v3/time"
+  }
+}

@@ -10,6 +10,7 @@ import sqlite3
 
 import pytest
 
+import scripts.verify_depth_information as auditor
 from scripts.verify_depth_information import verify
 
 
@@ -19,6 +20,21 @@ START = 1793272200
 FIRST = 1793374500
 CUTOFF = FIRST + 86400
 MONO_OFFSET = 1793000000
+CAPTURE_LIMITS = dict(
+    levels=20,
+    grid_seconds=300,
+    lead_seconds=10,
+    target_start_seconds=60,
+    target_end_seconds=360,
+    commit_deadline_seconds=30,
+    clock_skew_bound_seconds=2,
+    wall_monotonic_tolerance_seconds=0.25,
+    response_bytes=100_000,
+    max_storage_bytes=32 * 1024**2,
+    storage_reserve_bytes=4 * 1024**2,
+    min_free_bytes=40 * 1024**3,
+    max_run_seconds=8 * 86400,
+)
 
 
 def canonical(value):
@@ -348,13 +364,132 @@ def depth_observation(journal, anchor, symbol, clock):
     )
 
 
-def fixture(tmp_path, *, fitted=False, missing_book=False, omit_seal=False, late=False):
+def add_budget_amendment(
+    journal,
+    *,
+    prepared_only=False,
+    mutate=None,
+    early_marker=False,
+    invalidated=False,
+    event_at=None,
+):
+    root, config = journal.root, journal.config
+    runtime_bytes = b"synthetic independently pinned amended collector\n"
+    new_sha = hashlib.sha256(runtime_bytes).hexdigest()
+    runtime = f"runtime-amendments/budget-64MiB-{new_sha}/capture_depth_research.py"
+    (root / runtime).parent.mkdir(parents=True)
+    (root / runtime).write_bytes(runtime_bytes)
+    clock = depth_clock(journal, FIRST - 5)
+    probe = journal.events[-1]
+    registered_at = FIRST - 12
+    document = dict(
+        schema="klinehouse-depth-budget-amendment-v1",
+        root=str(root),
+        registered_at=registered_at,
+        registered_monotonic=registered_at - MONO_OFFSET,
+        registration_clock_reference=dict(
+            probe_seq=probe["seq"], probe_digest=probe["digest"], **clock
+        ),
+        config_sha256=sha(config),
+        original_code_sha256=config["code_sha256"],
+        amended_code_sha256=new_sha,
+        original_runtime_path="runtime/capture_depth_research.py",
+        amended_runtime_path=runtime,
+        old_limits=copy.deepcopy(CAPTURE_LIMITS),
+        new_limits={**CAPTURE_LIMITS, "max_storage_bytes": 64 * 1024**2},
+        first_anchor=FIRST,
+        training_cutoff=CUTOFF,
+        activation_at=config["activation_at"],
+        end_at=config["end_at"],
+        symbols=list(SYMBOLS),
+        urls=config["urls"],
+        prepared_source_prefix={
+            k: v for k, v in journal.proof().items() if k != "root"
+        },
+        reason=(
+            "SQLite measured 24-28 KiB per five-minute anchor including raw and decoded "
+            "bodies, acknowledgements and page/index overhead; 1674 anchors project 39-46 "
+            "MiB, exceeding the original 28 MiB usable budget. Only raise storage cap to "
+            "64 MiB; preserve all data, timing, model and selection rules."
+        ),
+        data_selection_and_model_changes=False,
+    )
+    if mutate:
+        mutate(document)
+    document["amendment_sha256"] = sha(document)
+    write(root / "budget-amendment.json", document)
+    marker = dict(
+        capture_only=True,
+        producer_code_sha256=new_sha,
+        amendment_sha256=document["amendment_sha256"],
+    )
+    if early_marker:
+        journal.add("process_started", FIRST - 11.6, marker)
+    if not prepared_only:
+        stamp = FIRST - 11.5 if event_at is None else event_at
+        primary = journal.add(
+            "resource_budget_amended",
+            stamp,
+            dict(
+                document=document,
+                amendment_sha256=document["amendment_sha256"],
+                document_sha256=file_sha(root / "budget-amendment.json"),
+            ),
+        )
+        journal.add(
+            "commit_ack",
+            stamp + 0.2,
+            dict(
+                record_seq=primary["seq"],
+                record_hash=primary["digest"],
+                record_started_monotonic=stamp - MONO_OFFSET,
+                committed_at=stamp + 0.1,
+                committed_monotonic=stamp + 0.1 - MONO_OFFSET,
+                deadline=None,
+                eligible=False,
+                clock_healthy=True,
+                commit_elapsed_clock_healthy=True,
+                clock_reference_healthy=True,
+                clock_reference=[clock["utc"], clock["monotonic"]],
+                durable_before_anchor=False,
+            ),
+        )
+        if invalidated:
+            journal.add(
+                "invalidated",
+                stamp + 0.3,
+                dict(
+                    record_seq=primary["seq"], reason="synthetic_post_ack_clock_failure"
+                ),
+            )
+        if not early_marker:
+            journal.add("process_started", stamp + 0.4, marker)
+    return new_sha
+
+
+def fixture(
+    tmp_path,
+    *,
+    fitted=False,
+    missing_book=False,
+    omit_seal=False,
+    late=False,
+    amendment=None,
+):
     root = tmp_path / "depth-information-fixture"
     capture = tmp_path / "depth-research-fixture"
     pilot = tmp_path / "shadow-pilot-20261029-v2"
     root.mkdir()
     capture.mkdir()
     pilot.mkdir()
+    (capture / "runtime").mkdir()
+    legacy_source = (
+        Path(__file__).resolve().parents[1]
+        / "reports/depth-information-20261030/frozen-source/capture_depth_research_v1.py"
+    )
+    (capture / "runtime/capture_depth_research.py").write_bytes(
+        legacy_source.read_bytes()
+    )
     write(
         pilot / "model.json", {"frozen": "original model identity only; no inference"}
     )
@@ -375,6 +510,8 @@ def fixture(tmp_path, *, fitted=False, missing_book=False, omit_seal=False, late
         capture_only=True,
         candidate_predictions=False,
         orders=False,
+        code_sha256=file_sha(capture / "runtime/capture_depth_research.py"),
+        limits=copy.deepcopy(CAPTURE_LIMITS),
         urls=dict(
             depth="https://api.binance.com/api/v3/depth",
             time="https://api.binance.com/api/v3/time",
@@ -446,10 +583,19 @@ def fixture(tmp_path, *, fitted=False, missing_book=False, omit_seal=False, late
     )
     write(root / "config.json", config)
     write(root / "config-sha256.json", {"sha256": sha(config)})
+    amendment_sha = (
+        add_budget_amendment(dj, **amendment) if amendment is not None else None
+    )
     if not fitted:
         dj.publish()
         pj.publish()
-        return dict(root=root, now=FIRST + 1, capture=capture, pilot=pilot)
+        return dict(
+            root=root,
+            now=FIRST + 1,
+            capture=capture,
+            pilot=pilot,
+            amendment_runtime_sha256=amendment_sha,
+        )
     data = dict(anchors=[], baseline=[], imbalance=[], labels=[], received=[])
     membership = []
     for i in range(120):
@@ -601,7 +747,13 @@ def fixture(tmp_path, *, fitted=False, missing_book=False, omit_seal=False, late
         )
     dj.publish()
     pj.publish()
-    return dict(root=root, now=CUTOFF + 370, capture=capture, pilot=pilot)
+    return dict(
+        root=root,
+        now=CUTOFF + 370,
+        capture=capture,
+        pilot=pilot,
+        amendment_runtime_sha256=amendment_sha,
+    )
 
 
 def change_forecast(root, symbol, mutate):
@@ -785,3 +937,152 @@ def test_source_chain_tampering_is_rejected(tmp_path):
     connection.close()
     with pytest.raises(ValueError, match="event hash"):
         verify(f["root"], now=f["now"])
+
+
+def pin_synthetic_amendment(monkeypatch, f):
+    monkeypatch.setattr(
+        auditor, "CAPTURE_AMENDED_CODE_SHA256", f["amendment_runtime_sha256"]
+    )
+    monkeypatch.setattr(
+        auditor,
+        "CAPTURE_LEGACY_CONFIG_SHA256",
+        sha(json.loads((f["capture"] / "config.json").read_text())),
+    )
+
+
+@pytest.mark.parametrize("prepared_only", [False, True])
+def test_budget_amendment_activates_only_after_registered_commit(
+    tmp_path, monkeypatch, prepared_only
+):
+    f = fixture(tmp_path, amendment=dict(prepared_only=prepared_only))
+    pin_synthetic_amendment(monkeypatch, f)
+    result = verify(f["root"], now=f["now"])
+    budget = result["source_resource_budgets"]["depth"]
+    assert budget["configured_max_storage_bytes"] == 32 * 1024**2
+    assert (
+        budget["effective_max_storage_bytes"] == (32 if prepared_only else 64) * 1024**2
+    )
+    assert budget["storage_reserve_bytes"] == 4 * 1024**2
+    assert result["amendments"][0]["status"] == (
+        "prepared" if prepared_only else "registered"
+    )
+    assert result["candidate_forecasts"] == result["scored_outcomes"] == 0
+    assert result["phase"] == "warmup"
+
+
+def test_budget_only_amendment_leaves_full_scoring_and_selection_unchanged(
+    tmp_path, monkeypatch
+):
+    (tmp_path / "legacy").mkdir()
+    (tmp_path / "amended").mkdir()
+    old = fixture(tmp_path / "legacy", fitted=True)
+    new = fixture(tmp_path / "amended", fitted=True, amendment={})
+    pin_synthetic_amendment(monkeypatch, new)
+    before = verify(old["root"], now=old["now"])
+    after = verify(new["root"], now=new["now"])
+    assert before["amendments"] == []
+    assert (
+        before["source_resource_budgets"]["depth"]["effective_max_storage_bytes"]
+        == 32 * 1024**2
+    )
+    assert after["metrics"] == before["metrics"]
+    assert after["coefficient_certificate"] == before["coefficient_certificate"]
+    for key in (
+        "candidate_forecasts",
+        "scored_outcomes",
+        "pending_outcomes",
+        "missing_emissions",
+        "fallback_missing_book",
+        "fallback_zero_coefficient",
+    ):
+        assert after[key] == before[key]
+    assert [
+        (c["anchor"], c["symbol"], c["label"], c["target_end"])
+        for c in after["scored_cases"]
+    ] == [
+        (c["anchor"], c["symbol"], c["label"], c["target_end"])
+        for c in before["scored_cases"]
+    ]
+
+
+@pytest.mark.parametrize(
+    "kind", ["parameter", "path", "cutoff", "config", "prefix", "clock", "schema"]
+)
+def test_self_consistently_hashed_unapproved_budget_amendments_fail(
+    tmp_path, monkeypatch, kind
+):
+    def mutate(document):
+        if kind == "parameter":
+            document["new_limits"]["lead_seconds"] = 9
+        elif kind == "path":
+            document["amended_runtime_path"] = "../outside.py"
+        elif kind == "cutoff":
+            document["registered_at"] = CUTOFF
+            document["registered_monotonic"] = CUTOFF - MONO_OFFSET
+        elif kind == "config":
+            document["config_sha256"] = "0" * 64
+        elif kind == "prefix":
+            document["prepared_source_prefix"]["chain_tip"] = "0" * 64
+        elif kind == "clock":
+            document["registered_monotonic"] += 1
+        else:
+            document["arbitrary_override"] = True
+
+    f = fixture(tmp_path, amendment=dict(mutate=mutate))
+    pin_synthetic_amendment(monkeypatch, f)
+    with pytest.raises(ValueError, match="amendment"):
+        verify(f["root"], now=f["now"])
+
+
+@pytest.mark.parametrize(
+    "kind",
+    [
+        "missing_document",
+        "mismatched_event",
+        "runtime_bytes",
+        "unapproved_code",
+        "legacy_bytes",
+        "manifest_symlink",
+    ],
+)
+def test_budget_amendment_requires_pinned_artifacts_and_ledger_document(
+    tmp_path, monkeypatch, kind
+):
+    f = fixture(tmp_path, amendment={})
+    pin_synthetic_amendment(monkeypatch, f)
+    manifest = f["capture"] / "budget-amendment.json"
+    document = json.loads(manifest.read_text())
+    if kind == "missing_document":
+        manifest.unlink()
+    elif kind == "manifest_symlink":
+        manifest.unlink()
+        manifest.symlink_to(tmp_path / "absent-document.json")
+    elif kind == "mismatched_event":
+        # Semantically identical JSON still must match the bytes bound in the chain.
+        manifest.write_text(canonical(document))
+    elif kind == "runtime_bytes":
+        (f["capture"] / document["amended_runtime_path"]).write_text("changed\n")
+    elif kind == "legacy_bytes":
+        (f["capture"] / document["original_runtime_path"]).write_text("changed\n")
+    else:
+        monkeypatch.setattr(auditor, "CAPTURE_AMENDED_CODE_SHA256", "0" * 64)
+    with pytest.raises(ValueError, match="amendment"):
+        verify(f["root"], now=f["now"])
+
+
+def test_new_producer_cannot_precede_budget_registration(tmp_path, monkeypatch):
+    f = fixture(tmp_path, amendment=dict(early_marker=True))
+    pin_synthetic_amendment(monkeypatch, f)
+    with pytest.raises(ValueError, match="producer"):
+        verify(f["root"], now=f["now"])
+
+
+@pytest.mark.parametrize("invalidated", [False, True])
+def test_budget_registration_needs_confirmation_before_cutoff_without_invalidation(
+    tmp_path, monkeypatch, invalidated
+):
+    options = {"invalidated": True} if invalidated else {"event_at": CUTOFF - 0.2}
+    f = fixture(tmp_path, amendment=options)
+    pin_synthetic_amendment(monkeypatch, f)
+    with pytest.raises(ValueError, match="amendment.*(ack|cutoff)"):
+        verify(f["root"], now=max(f["now"], CUTOFF + 1))

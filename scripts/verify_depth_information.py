@@ -33,6 +33,37 @@ LIMITS = dict(
     max_bytes=128 * 1024**2,
     reserve_bytes=4 * 1024**2,
 )
+CAPTURE_LEGACY_LIMITS = {
+    "levels": 20,
+    "grid_seconds": 300,
+    "lead_seconds": 10,
+    "target_start_seconds": 60,
+    "target_end_seconds": 360,
+    "commit_deadline_seconds": 30,
+    "clock_skew_bound_seconds": 2,
+    "wall_monotonic_tolerance_seconds": 0.25,
+    "response_bytes": 100_000,
+    "max_storage_bytes": 32 * 1024**2,
+    "storage_reserve_bytes": 4 * 1024**2,
+    "min_free_bytes": 40 * 1024**3,
+    "max_run_seconds": 8 * 86400,
+}
+CAPTURE_LEGACY_CODE_SHA256 = (
+    "97e72f387e0f50b9c286a740142e009a6d2f489c10772098a4bbddb5d879c623"
+)
+CAPTURE_LEGACY_CONFIG_SHA256 = (
+    "dd575129fe3a5be8029d506de585824754c1570202d15d70c27594356e12dbd7"
+)
+# Only this independently reviewed monofile migration may extend the resource cap.
+CAPTURE_AMENDED_CODE_SHA256 = (
+    "c0bc1e3813fc3c34fbcd1ce43e9c85213f69da54d9f2d05d9f87605e109b08e5"
+)
+CAPTURE_BUDGET_REASON = (
+    "SQLite measured 24-28 KiB per five-minute anchor including raw and decoded "
+    "bodies, acknowledgements and page/index overhead; 1674 anchors project 39-46 "
+    "MiB, exceeding the original 28 MiB usable budget. Only raise storage cap to "
+    "64 MiB; preserve all data, timing, model and selection rules."
+)
 
 
 def require(value, message):
@@ -586,6 +617,250 @@ def verify_clock_reference(source, reference, known_at):
     )
 
 
+def source_resource_budget(source):
+    """Recognize only the reviewed 32-to-64 MiB depth-capture amendment."""
+    root, config = source["root"], source["config"]
+    configured = config.get("limits", {}).get("max_storage_bytes")
+    budget = dict(
+        configured_max_storage_bytes=configured,
+        effective_max_storage_bytes=configured,
+        storage_reserve_bytes=config.get("limits", {}).get("storage_reserve_bytes"),
+    )
+    registrations = list(source["kinds"].get("resource_budget_amended", {}).values())
+    markers = [
+        e
+        for e in source["kinds"].get("process_started", {}).values()
+        if "producer_code_sha256" in e["payload"] or "amendment_sha256" in e["payload"]
+    ]
+    path = root / "budget-amendment.json"
+    require(not path.is_symlink(), "resource amendment document must stay in run")
+    if not path.exists():
+        require(
+            not registrations and not markers,
+            "registered resource amendment document is missing",
+        )
+        return budget, []
+    document = load(path)
+    require(
+        set(document)
+        == {
+            "schema",
+            "root",
+            "registered_at",
+            "registered_monotonic",
+            "registration_clock_reference",
+            "config_sha256",
+            "original_code_sha256",
+            "amended_code_sha256",
+            "original_runtime_path",
+            "amended_runtime_path",
+            "old_limits",
+            "new_limits",
+            "first_anchor",
+            "training_cutoff",
+            "activation_at",
+            "end_at",
+            "symbols",
+            "urls",
+            "prepared_source_prefix",
+            "reason",
+            "data_selection_and_model_changes",
+            "amendment_sha256",
+        }
+        and document["schema"] == "klinehouse-depth-budget-amendment-v1"
+        and document["root"] == str(root),
+        "resource amendment schema or root differs",
+    )
+    unsigned = {k: v for k, v in document.items() if k != "amendment_sha256"}
+    require(
+        sha(unsigned) == document["amendment_sha256"],
+        "resource amendment canonical hash differs",
+    )
+    effective = {**CAPTURE_LEGACY_LIMITS, "max_storage_bytes": 64 * 1024**2}
+    first = math.ceil(config["activation_at"] / 300) * 300
+    cutoff = first + 86400
+    require(
+        config.get("limits") == CAPTURE_LEGACY_LIMITS
+        and document["old_limits"] == CAPTURE_LEGACY_LIMITS
+        and document["new_limits"] == effective
+        and document["config_sha256"] == sha(config) == CAPTURE_LEGACY_CONFIG_SHA256
+        and config.get("code_sha256") == CAPTURE_LEGACY_CODE_SHA256
+        and document["original_code_sha256"] == CAPTURE_LEGACY_CODE_SHA256
+        and CAPTURE_AMENDED_CODE_SHA256 is not None
+        and document["amended_code_sha256"] == CAPTURE_AMENDED_CODE_SHA256
+        and document["data_selection_and_model_changes"] is False
+        and document["reason"] == CAPTURE_BUDGET_REASON,
+        "only the reviewed 32-to-64 MiB resource amendment is allowed",
+    )
+    require(
+        document["activation_at"] == config["activation_at"]
+        and document["end_at"] == config["end_at"]
+        and document["first_anchor"] == first
+        and document["training_cutoff"] == cutoff
+        and document["symbols"] == config["symbols"] == list(SYMBOLS)
+        and document["urls"]
+        == config["urls"]
+        == {
+            "depth": "https://api.binance.com/api/v3/depth",
+            "time": "https://api.binance.com/api/v3/time",
+        },
+        "resource amendment changes the prospective source or timing",
+    )
+    expected_runtime = (
+        "runtime-amendments/budget-64MiB-"
+        f"{CAPTURE_AMENDED_CODE_SHA256}/capture_depth_research.py"
+    )
+    require(
+        document["original_runtime_path"] == "runtime/capture_depth_research.py"
+        and document["amended_runtime_path"] == expected_runtime,
+        "resource amendment runtime path differs",
+    )
+    for relative, digest in (
+        (document["original_runtime_path"], CAPTURE_LEGACY_CODE_SHA256),
+        (document["amended_runtime_path"], CAPTURE_AMENDED_CODE_SHA256),
+    ):
+        artifact = root / relative
+        require(
+            artifact.is_file()
+            and not artifact.is_symlink()
+            and artifact.resolve() == artifact
+            and file_sha(artifact) == digest,
+            "resource amendment runtime artifact differs or escapes run",
+        )
+    proof = document["prepared_source_prefix"]
+    count = proof.get("event_count")
+    require(
+        set(proof) == {"event_count", "chain_tip"}
+        and type(count) is int
+        and 0 <= count <= source["event_count"]
+        and proof["chain_tip"]
+        == (source["events"][count]["digest"] if count else sha(config)),
+        "resource amendment prepared source prefix differs",
+    )
+    reference = document["registration_clock_reference"]
+    probe = source["events"].get(reference.get("probe_seq"))
+    require(
+        set(reference)
+        == {
+            "probe_seq",
+            "probe_digest",
+            "utc",
+            "monotonic",
+            "absolute_offset_bound_seconds",
+        }
+        and probe is not None
+        and probe["kind"] == "clock_probe"
+        and probe["seq"] <= count
+        and probe["digest"] == reference["probe_digest"],
+        "resource amendment registration clock probe differs",
+    )
+    clock = clock_probe(source, probe)
+    moment = (document["registered_at"], document["registered_monotonic"])
+    require(
+        clock is not None
+        and clock == {k: reference[k] for k in clock}
+        and healthy(moment, clock)
+        and config["activation_at"] <= moment[0] < cutoff
+        and probe["received_at"] <= moment[0],
+        "resource amendment registration is unhealthy or after training cutoff",
+    )
+    require(len(registrations) <= 1, "duplicate resource amendment registration")
+    receipt = dict(
+        source="depth",
+        status="prepared",
+        schema=document["schema"],
+        amendment_sha256=document["amendment_sha256"],
+        document_sha256=file_sha(path),
+        runtime_sha256=document["amended_code_sha256"],
+        registration=None,
+    )
+    if not registrations:
+        require(not markers, "new resource producer ran before amendment registration")
+        return budget, [receipt]
+    event = registrations[0]
+    require(
+        event["payload"]
+        == {
+            "document": document,
+            "amendment_sha256": document["amendment_sha256"],
+            "document_sha256": file_sha(path),
+        }
+        and event["anchor"] is None
+        and event["symbol"] is None
+        and count < event["seq"]
+        and moment[0] <= event["received_at"] < cutoff,
+        "resource amendment registration differs from frozen document or cutoff",
+    )
+    acknowledgements = [
+        e
+        for e in source["kinds"].get("commit_ack", {}).values()
+        if e["payload"].get("record_seq") == event["seq"]
+    ]
+    require(
+        len(acknowledgements) == 1
+        and not any(
+            e["payload"].get("record_seq") == event["seq"]
+            for e in source["kinds"].get("invalidated", {}).values()
+        ),
+        "resource amendment lacks unique valid commit ack",
+    )
+    acknowledgement = acknowledgements[0]
+    a = acknowledgement["payload"]
+    require(
+        acknowledgement["seq"] == event["seq"] + 1
+        and acknowledgement["anchor"] is None
+        and acknowledgement["symbol"] is None
+        and a["record_hash"] == event["digest"]
+        and a["eligible"] is False
+        and a["deadline"] is None
+        and a["clock_healthy"] is True
+        and a["commit_elapsed_clock_healthy"] is True
+        and a["clock_reference_healthy"] is True
+        and event["received_at"]
+        <= a["committed_at"]
+        <= acknowledgement["received_at"]
+        < cutoff
+        and elapsed(
+            (event["received_at"], a["record_started_monotonic"]),
+            (a["committed_at"], a["committed_monotonic"]),
+        ),
+        "resource amendment commit acknowledgement or cutoff differs",
+    )
+    source_reference = a.get("clock_reference")
+    probes = [
+        e
+        for e in source["kinds"].get("clock_probe", {}).values()
+        if e["seq"] < event["seq"]
+        and e["payload"].get("healthy") is True
+        and [
+            e["payload"]["receipt"]["received_at"],
+            e["payload"]["receipt"]["received_monotonic"],
+        ]
+        == source_reference
+    ]
+    require(len(probes) == 1, "resource amendment commit clock probe is unavailable")
+    require(
+        healthy(
+            (a["committed_at"], a["committed_monotonic"]),
+            clock_probe(source, probes[0]),
+        )
+        and all(
+            e["seq"] > acknowledgement["seq"]
+            and e["payload"].get("producer_code_sha256") == CAPTURE_AMENDED_CODE_SHA256
+            and e["payload"].get("amendment_sha256") == document["amendment_sha256"]
+            for e in markers
+        ),
+        "new resource producer or commit clock precedes valid registration",
+    )
+    budget["effective_max_storage_bytes"] = effective["max_storage_bytes"]
+    receipt.update(
+        status="registered",
+        registration=ref(event),
+        acknowledgement=ref(acknowledgement),
+    )
+    return budget, [receipt]
+
+
 def expected_training(config, depth, pilot):
     data = dict(anchors=[], baseline=[], imbalance=[], labels=[], received=[])
     membership = []
@@ -774,6 +1049,7 @@ def verify(root, *, now=None):
     config = verify_config(root)
     depth = source_snapshot(config["capture_root"], "depth")
     pilot = source_snapshot(config["pilot_root"], "pilot")
+    resource_budget, amendments = source_resource_budget(depth)
     identities = load(root / "source-identities.json")
     for name, source, identity_name in (
         ("capture", depth, "capture"),
@@ -1149,6 +1425,8 @@ def verify(root, *, now=None):
             )
             for name, source in (("depth", depth), ("pilot", pilot))
         },
+        "source_resource_budgets": {"depth": resource_budget},
+        "amendments": amendments,
         "validated_source_books": validated_books,
         "validated_original_outcomes": validated_original_outcomes,
         "candidate_forecasts": len(emissions),

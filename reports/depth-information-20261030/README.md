@@ -48,13 +48,50 @@ not trade flow, event-level order-flow imbalance or open interest. The REST
 response has no event timestamp: client receipt proves availability, not the
 freshness of the exchange's internal book. `lastUpdateId` is a sequence identifier.
 
-The fixed resource budget is 32 MiB with a 4 MiB reserve and a stop below 40 GiB
-free; nothing is deleted. The end is **2026-11-05 11:10 UTC**. The original pilot's
+The initial resource budget was 32 MiB with a 4 MiB reserve. A pre-fit operational
+amendment below raises only the effective maximum to **64 MiB**; the reserve and
+stop below 40 GiB free remain unchanged. Nothing is deleted. The end remains
+**2026-11-05 11:10 UTC**. The original pilot's
 service, runtime, model, protocol and journal remain unchanged. No order endpoint
 or account access exists. The capture is a local process, not an installed
 autostart service; its status/process must be checked rather than assumed alive.
 The HTTP connect/read timeouts do not constitute an absolute total-response
 deadline, but a late or clock-unhealthy observation remains explicitly ineligible.
+
+## Capacity correction before fitting
+
+Measured SQLite growth was **24–28 KiB per five-minute anchor**, including the
+three raw/decoded books, clock evidence, acknowledgements and database overhead.
+The registered 1,674-anchor capture therefore projects **39–46 MiB**, exceeding
+the initial 28 MiB available after reserve. The extra audit files were only about
+64 KiB and did not explain the deficit. This was a resource-planning defect, not
+a predictive finding. [Measurements and assumptions](capture-storage-projection-20261030.json)
+are retained; projections are not guarantees against further errors or restarts.
+
+At **2026-10-30 16:58 UTC**, before any fitting, the collector registered an
+[immutable budget amendment](budget-amendment-20261030.json). The original config,
+sidecar and runtime remain byte-identical. The new monofile runtime is separately
+versioned and pinned to SHA256 `c0bc1e3813fc3c34fbcd1ce43e9c85213f69da54d9f2d05d9f87605e109b08e5`;
+the [legacy source](frozen-source/capture_depth_research_v1.py) remains available.
+Only maximum storage changes from 32 to 64 MiB. Requests, features, clock bounds,
+deadlines, minimum free space, activation, model, training cutoff and end are
+unchanged. The manifest and one `resource_budget_amended` event bind the exact
+legacy identity, reviewed new code, source prefix and clock evidence. An arbitrary
+override or a new first activation after the cutoff is refused.
+
+The old capture alone was interrupted during its waiting phase. The observed
+interval from stop request to new registration was **10.53 seconds**, entirely
+between scheduled collections. The original pilot service was never restarted;
+the predictor stayed in warmup. The first amended trio at **17:00 UTC** brought
+coverage to **54/54 expected books**, with zero missed anchor/asset pairs.
+[Preservation and switch validation](budget-amendment-validation-20261030.json)
+and the [independent run audit](post-budget-independent-run-audit-20261030T1700Z.json)
+retain the evidence and effective budget separately from the legacy configured
+budget. The [first amended trio audit](post-budget-first-trio-audit-20261030T1700Z.json)
+validates client receipts and recorded primary commits before the anchor. Its
+independent read occurred at 17:01:19 UTC, after the deadline; it does not itself
+attest acknowledgement fsync before that deadline. No candidate forecast or new
+coefficient exists in this source-only check.
 
 ## Registered future model and active warmup
 
@@ -80,7 +117,8 @@ and independent audit are implemented. The runner is active in fixed warmup at
 Its first-day cutoff remains unchanged. The runner performs no HTTP requests;
 it reads only the two authorized prospective journals, using read-only coherent
 transactions and incremental hash-chain verification. The collector and original
-pilot remain separate processes with unchanged configurations and runtime code.
+pilot remain separate processes. The pilot's configuration and runtime are
+unchanged; the collector's explicit resource-only amendment is documented above.
 
 Before the one allowed fit, an immutable training-data file fixes every array and
 source reference. Private synced temporary files are published atomically without
@@ -115,15 +153,15 @@ evaluated on identical future candidate emissions; missing/fallback/late cases
 stay visible in coverage. Any failed asset remains a failed criterion. Neither
 the warmup fit nor the already inspected orientation replay is confirmation.
 
-The preceding diagnostic/capture suite passed **174 tests**, including 30 capture
-tests and nine one-coefficient depth-model tests. The separate runner adds **20
-passing synthetic tests**, including crash recovery, delayed fsync, forward clock
+The complete suite passed **280 tests**, including **54 capture tests**, nine
+one-coefficient depth-model tests and **20 separate-runner tests**. These include
+crash recovery, delayed fsync, forward clock
 jumps, fixed-cutoff membership, unavailable original controls and exact fallback.
-The independent auditor has **17 passing tests**, using its own journal fixtures,
-known scalar optimum and tampering cases. The registered-criteria report adds
-**26 tests** for sufficiency, paired denominators, flat outcomes and joint gains.
-The combined suite passed **237 tests**; Ruff and diff-whitespace checks also
-passed. CI explicitly runs these new tests.
+The independent auditor has **36 passing tests**, using its own journal fixtures,
+known scalar optimum, amendment identity checks and tampering cases. The
+registered-criteria report has **26 tests** for sufficiency, paired denominators,
+flat outcomes and joint gains. Ruff and diff-whitespace checks also passed.
+CI explicitly runs these tests.
 An independent review checked the corrected crash-publication and clock-progress
 guards before activation. Existing
 environments were reused; no historical book dataset or AI model was downloaded.
@@ -151,6 +189,11 @@ period is introduced. A preliminary pass never ends the fixed experiment or
 authorizes refitting. Even after the scheduled end plus 120 seconds, the report
 only says `scheduled_window_elapsed`; actual process shutdown and full goal
 completion require separate verification.
+
+These incremental point criteria can be met while absolute directional accuracy
+still falls below 50%. Such a result alone would not resolve the user's
+directional-prediction objective. Absolute accuracy, realized class balance and
+the limits of the prospective sample must remain explicit in the interpretation.
 
 The [first real report](registered-criteria-warmup-report.json), generated on
 **2026-10-30 at 16:35 UTC**, correctly states `insufficient_evaluation`: zero

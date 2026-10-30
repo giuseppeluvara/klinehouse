@@ -1,0 +1,32 @@
+{
+  "allowed_operational_changes": [
+    "Maximum storage64MiB; minimumfree40GiB and reserve4MiB preserved.",
+    "Known-identity immutable manifest and append-only activation under writer lock.",
+    "Initialization/status/process metadata expose effective budget and producer identity."
+  ],
+  "amended_sha256": "c0bc1e3813fc3c34fbcd1ce43e9c85213f69da54d9f2d05d9f87605e109b08e5",
+  "critical_functions_ast_identical": {
+    "Journal.__enter__": true,
+    "Journal.__exit__": true,
+    "Journal._commit": true,
+    "Journal._write": true,
+    "Journal.append": true,
+    "Journal.completed": true,
+    "Journal.reference_healthy": true,
+    "Journal.verify": true,
+    "book_features": true,
+    "capture_cycle": true,
+    "clock_evidence": true,
+    "decimal_positive": true,
+    "elapsed_healthy": true,
+    "fetch": true,
+    "request_spec": true,
+    "writer_lock": true
+  },
+  "end_at": 1793877000,
+  "legacy_sha256": "97e72f387e0f50b9c286a740142e009a6d2f489c10772098a4bbddb5d879c623",
+  "model_core_sha256": "885cb8d67779b31440d3d8cc7ee43a69f6a3e2fd4819ae79cb2985a9728d6664",
+  "schema": "depth-budget-code-invariants-v1",
+  "source_selection_model_and_target_changes": false,
+  "training_cutoff": 1793460900
+}

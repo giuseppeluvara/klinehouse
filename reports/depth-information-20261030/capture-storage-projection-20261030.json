@@ -1,0 +1,76 @@
+{
+  "conclusion": "The original capture budget is projected to stop acquisition before the fixed end; an append-only pre-fit resource amendment is required. Model, training cutoff, source timing and eligibility remain unchanged.",
+  "config_sha256": "dd575129fe3a5be8029d506de585824754c1570202d15d70c27594356e12dbd7",
+  "limits": "Projection, not guaranteed final size. Error bodies, restarts and added reports can consume additional space. No deletion, inference or outcome inspection used.",
+  "measured_growth_bytes_for_one_anchor": 28672,
+  "measured_successive_samples": [
+    {
+      "completed_anchors": 13,
+      "page_count": 88
+    },
+    {
+      "completed_anchors": 14,
+      "page_count": 95
+    }
+  ],
+  "observed_utc": "2026-10-30T16:51:07.207244+00:00",
+  "original_max_mib": 32,
+  "original_usable_mib": 28,
+  "planned_effective_max_mib": 64,
+  "planned_usable_mib": 60,
+  "prefix": {
+    "chain_tip": "5c75089efd780d79ebdc4dd5b6536c1b1547a29f3596ca2b7f5ba76d537b6f3c",
+    "event_count": 132
+  },
+  "projected_database_mib": [
+    39.234375,
+    45.7734375
+  ],
+  "projection_assumption_bytes_per_anchor": [
+    24576,
+    28672
+  ],
+  "registered_total_anchors": 1674,
+  "registered_total_books": 5022,
+  "reserve_mib": 4,
+  "schema": "depth-capture-storage-projection-v1",
+  "sqlite": {
+    "completed_anchors": 16,
+    "freelist_count": 0,
+    "logical_bytes": 438272,
+    "page_count": 107,
+    "page_size": 4096,
+    "payloads": [
+      {
+        "average_payload_bytes": 21.0,
+        "kind": "activated",
+        "max_payload_bytes": 21,
+        "n": 1
+      },
+      {
+        "average_payload_bytes": 3784.9375,
+        "kind": "book_receipt",
+        "max_payload_bytes": 3843,
+        "n": 48
+      },
+      {
+        "average_payload_bytes": 666.6875,
+        "kind": "clock_probe",
+        "max_payload_bytes": 669,
+        "n": 16
+      },
+      {
+        "average_payload_bytes": 415.40909090909093,
+        "kind": "commit_ack",
+        "max_payload_bytes": 427,
+        "n": 66
+      },
+      {
+        "average_payload_bytes": 45.0,
+        "kind": "process_started",
+        "max_payload_bytes": 45,
+        "n": 1
+      }
+    ]
+  }
+}

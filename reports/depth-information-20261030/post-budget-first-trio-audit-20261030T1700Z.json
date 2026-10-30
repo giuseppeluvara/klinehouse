@@ -1,0 +1,82 @@
+{
+  "amendments": [
+    {
+      "acknowledgement": {
+        "digest": "d1a919c5d4c2f4cd1343b433f9de4551dd7775ee6db0efbd85149e45fe7ca0fc",
+        "received_at": 1793379537.669607,
+        "seq": 142
+      },
+      "amendment_sha256": "13ca764a23f2b4143161250b73aac3c14674e60823fe9c5a6298247f0aa1374a",
+      "document_sha256": "c7b0a15e6369a593187758693f01917ba241882f0f5fe7b0e9c6abcb5facda6f",
+      "registration": {
+        "digest": "6b9a2e0d8647b11b7ea58529d5e004f5cd8ada434616412afd47398077320a48",
+        "received_at": 1793379537.66785,
+        "seq": 141
+      },
+      "runtime_sha256": "c0bc1e3813fc3c34fbcd1ce43e9c85213f69da54d9f2d05d9f87605e109b08e5",
+      "schema": "klinehouse-depth-budget-amendment-v1",
+      "source": "depth",
+      "status": "registered"
+    }
+  ],
+  "anchor": 1793379600,
+  "anchor_utc": "2026-10-30T17:00:00+00:00",
+  "candidate_forecasts": 0,
+  "candidate_model_fitted": false,
+  "effective_budget": {
+    "depth": {
+      "configured_max_storage_bytes": 33554432,
+      "effective_max_storage_bytes": 67108864,
+      "storage_reserve_bytes": 4194304
+    }
+  },
+  "expected_books_to_anchor": 54,
+  "members": [
+    {
+      "ack_hash": "253f7ab744dfdf09a04efefd9afc0c241a60e03a0a9e23bffc6c59791e0ae47f",
+      "ack_seq": 148,
+      "body_received_at": 1793379590.920164,
+      "client_receipt_lead_seconds": 9.079835891723633,
+      "primary_commit_lead_seconds": 9.06988000869751,
+      "primary_committed_at": 1793379590.93012,
+      "source_hash": "4c0c5997ba7f054d40eb7e50a8e4b9c5f15f2d457d5bced8155b42fe755cdffb",
+      "source_seq": 147,
+      "symbol": "BTCUSDT"
+    },
+    {
+      "ack_hash": "224bafa4298c481162879823f608ce65789a28dc5346e1bcde63e456b62388a7",
+      "ack_seq": 150,
+      "body_received_at": 1793379590.9205172,
+      "client_receipt_lead_seconds": 9.079482793807983,
+      "primary_commit_lead_seconds": 9.067101955413818,
+      "primary_committed_at": 1793379590.932898,
+      "source_hash": "57cb86c593af3ac3c2613e92f699e06b3955c9e3ff85987af11c24120face1ae",
+      "source_seq": 149,
+      "symbol": "ETHUSDT"
+    },
+    {
+      "ack_hash": "87bef45587cc7029bc62058f5de9d3e69e2c88dca072c3d93dfaa421aa2d349a",
+      "ack_seq": 152,
+      "body_received_at": 1793379590.925827,
+      "client_receipt_lead_seconds": 9.074172973632812,
+      "primary_commit_lead_seconds": 9.064504146575928,
+      "primary_committed_at": 1793379590.9354959,
+      "source_hash": "eca71eed7879556cb96b39ec84b0db4c67a810a9f0c0df62eb3888d5edbc66ea",
+      "source_seq": 151,
+      "symbol": "SOLUSDT"
+    }
+  ],
+  "missing_anchor_symbols": [],
+  "note": "Source acquisition evidence only. Client bodies and recorded primary commits precede anchor; this independent read occurred after anchor+30, so it does not independently attest acknowledgement fsync by that deadline.",
+  "observed_books_to_anchor": 54,
+  "observed_utc": "2026-10-30T17:01:19.248256+00:00",
+  "read_before_forecast_deadline": false,
+  "read_before_target_start": false,
+  "read_completed_at": 1793379679.248266,
+  "read_started_at": 1793379679.000366,
+  "schema": "depth-post-budget-first-trio-audit-v1",
+  "source_prefix": {
+    "chain_tip": "87bef45587cc7029bc62058f5de9d3e69e2c88dca072c3d93dfaa421aa2d349a",
+    "event_count": 152
+  }
+}
