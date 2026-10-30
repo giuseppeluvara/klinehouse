@@ -1,0 +1,40 @@
+{
+  "code": {
+    "research/direction_orientation.py": "4621ecd353545f1e758782cc67cd738420e978d2a697b6d23016af475f197625",
+    "scripts/run_direction_orientation.py": "d6af2eab4da2ef66928a8040fb4a1ed2af4dc2e69b9825883bf910c0ebf7afa0",
+    "tests/test_direction_orientation.py": "fdaafaef25ebb55b7965be003936af50d903c267681b845e01091a1c18fd8ec7"
+  },
+  "controls": "unchanged baseline, price_control, positions; neutral q=.5 and static mirrored q as diagnostic controls only. Neutral ties conventionally predict up but do not constitute a directional signal. Mirrored is not promoted from hindsight.",
+  "evaluation": "All eligible moving cases: direction numerator/denominator, conditional Brier and natural logloss. All realized cases: full three-class sum Brier and natural logloss. Original selection max(pdown,pup)>=.52 reported with flat errors and coverage. Paired comparison also on the fixed baseline selection, identical cases. No threshold search or dropped cohort.",
+  "historical": "January-July forecast anchors in 2024,2025,2026; existing saved monthly out-of-sample probabilities. Preserve original 2024/25 July31 23:55 targets ending August1 00:01; these are not protected dates. ALL targets must end before the protected 2026-08-01 boundary, including 2026. Issue at anchor (conservative), label availability assumed at target end anchor+360. Publication timing remains conditional. Equal initial priors per asset/year; all coldstart cases retained. Earlier registration stopped on an overly strict year-local target guard before scoring, and is preserved separately.",
+  "inputs": {
+    "reports/timestral-position-information-20261029/2024-BTCUSDT-predictions.npz": "ea43108a8c51becdff9c21a279640d66077d5f24b153a93737ca22e091b737a1",
+    "reports/timestral-position-information-20261029/2024-ETHUSDT-predictions.npz": "d630f7cc7196a47f26f8fc0c377ae21ae1b733f9f60232a037521c9663a0615e",
+    "reports/timestral-position-information-20261029/2024-SOLUSDT-predictions.npz": "5b08c95043eb055f588fbf33947acf5f38c154dd86c139be78aa75fabc187554",
+    "reports/timestral-position-information-20261029/2025-BTCUSDT-predictions.npz": "f4f41897b3b51be79599e444b6cce3d1643b2d5d6d46060218860d555d6220bf",
+    "reports/timestral-position-information-20261029/2025-ETHUSDT-predictions.npz": "543a1c0cf6099121ed65c2a222c720eb23db2d1f8e217db726a431f95b152d63",
+    "reports/timestral-position-information-20261029/2025-SOLUSDT-predictions.npz": "5c83805f25f84228fac0080dbd7acea46fc2b92088101afa932bb8856b8f1a11",
+    "reports/timestral-position-information-20261029/2026-BTCUSDT-predictions.npz": "193e4c6133fd0a2e97f948ed3d37f286f80377e686479629a86537be8a7cb411",
+    "reports/timestral-position-information-20261029/2026-ETHUSDT-predictions.npz": "180c77914e5acdb68919df3a72eb8b0769fe19daeeb527842ef518dc29898198",
+    "reports/timestral-position-information-20261029/2026-SOLUSDT-predictions.npz": "612b2672f422561c468bc29e96ebdf553c7f32e369e515b8c46b7cb24f2d3613",
+    "reports/timestral-universal-20261027/BTCUSDT-outcomes.npz": "23c85d6fad27b72ed3a2e686abe103fd59c93ced7465e72a503c1da3f34a2a18",
+    "reports/timestral-universal-20261027/ETHUSDT-outcomes.npz": "add50638d68a5ebfb23201bcb2f3c9c104812c833b1b8335429a566f914e1a67",
+    "reports/timestral-universal-20261027/SOLUSDT-outcomes.npz": "070f2bf7c45258bb705c59c13d5c8e764721499045dc9b8ffc82c284a7756f46",
+    "reports/timestral-universal-20261027/history/2024-BTCUSDT-outcomes.npz": "c5bf508f9953f4b608037d258ab7abc3e28cb9452d8375040d0b9c949b006354",
+    "reports/timestral-universal-20261027/history/2024-ETHUSDT-outcomes.npz": "2144ac92b3ca08fc5d1a5db5a792336f31ff47a2bb86de44d049c8a147901e3f",
+    "reports/timestral-universal-20261027/history/2024-SOLUSDT-outcomes.npz": "a098abced3d321403dc6d5fd252c853927fd7f0a3f99f6009da178fe16dc7e91",
+    "reports/timestral-universal-20261027/history/2025-BTCUSDT-outcomes.npz": "f8340ce46e0ebe583f46bcc1a3388a4eae2d912fdbbfb25e8d5e2296163c3076",
+    "reports/timestral-universal-20261027/history/2025-ETHUSDT-outcomes.npz": "a3674ed8bd481bb987a30b8c1750a22da2d60346764b3a047591eabe714ba531",
+    "reports/timestral-universal-20261027/history/2025-SOLUSDT-outcomes.npz": "24c4bb811a7dd510acdd8bf2fb4bc716ccf354a4de8175d2f8e7444f26031bc5",
+    "research/out/direction-diagnosis-20261030/live-checkpoint/config.json": "6f0d1991ba4d9251c0d262e759ab5fcc35b6654c315c276128c674af4749230e",
+    "research/out/direction-diagnosis-20261030/live-checkpoint/events.sqlite": "b2fd1a4fabcdea02da90da96b05a7e70462c883491d2b7ec17c956c15fb28260",
+    "research/out/direction-diagnosis-20261030/live-checkpoint/general-audit.json": "01c7df7f5f5eecfc5f04468f7b25bb8a6cda8a2ee6d58f7f5fb0d92fc94dd696",
+    "research/out/direction-diagnosis-20261030/live-checkpoint/model.json": "ebe081bc39f856f6f903f6ddd30568c5d41b5408235239c7a1b59da93a170e74"
+  },
+  "live": "Immutable checkpoint captured 2026-10-30 14:57:45UTC. Actual issued/ack/outcome receipt chronology. OFFLINE POST-HOC REPLAY informed by already inspected outcomes, not prospectively emitted new predictions or independent confirmation. Pending outcomes remain unscored.",
+  "primary": "adaptive: equal-prior conditional Bayesian mixture of q,1-q,0.5; identical issued flat probability. Use q_new=.5+(w_reversal-w_continuation)*(q-.5) for exact neutral ties. The earlier v2 probability-sum roundoff, results and source bytes are preserved. Two index-parity lanes per asset/cohort. Update only from earlier same-lane non-flat outcomes actually available by issue. Retain late pending feedback, consume each exactly once. No forgetting, window, learned hyperparameters or per-cohort model choice.",
+  "protected": "No protected historical data from 2026-08-01 onward; only named previously explored saved historical arrays and the explicitly authorized new prospective checkpoint. No changes to pilot runtime/model/config/service/env/credentials or existing frozen artifacts.",
+  "purpose": "Test causal orientation of the same hourly center after the live contrarian ranking failure; never tune the running pilot.",
+  "registered_at": 1793373019.3092768,
+  "success": "Empirical stable improvement requires strictly better all-moving direction and all-case Brier/logloss than both baseline and price_control in every one of nine historical cohorts. Report all controls/negative results. Even a pass is sequential retrospective evidence, not prospective success or profitability. Live replay success cannot establish a general solution."
+}

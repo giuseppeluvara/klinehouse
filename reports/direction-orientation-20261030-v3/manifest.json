@@ -1,0 +1,17 @@
+{
+  "2024-BTCUSDT-predictions.npz": "2377553040e6277cf9e4a5c606525277e74f71ce891e60a7d981cfadacc4aa70",
+  "2024-ETHUSDT-predictions.npz": "9b9c1c4dbb508ef064e571bd6244f02082e6731c8310bd5aea1bc3ff28fa4cc2",
+  "2024-SOLUSDT-predictions.npz": "98b3b40789f43db73126578d570565e6953cb8c08fc6c55ec1627ca2031d4cc7",
+  "2025-BTCUSDT-predictions.npz": "7dacba5d2e321e766561aea4858ebd7c544c1d808b06877eed9e20c57c7f6a20",
+  "2025-ETHUSDT-predictions.npz": "0c4c81fff3173b2c404b0652089d4dc8ecd249de8fb05c12c2dbf11440bad751",
+  "2025-SOLUSDT-predictions.npz": "d3fb9fb5b4fa6f3d9ef17d4cb03ef49e1ba937c0ae502dd2c88303b5b8af29f7",
+  "2026-BTCUSDT-predictions.npz": "f1e96d1cbce1831ec9e819e90928bb53c4f64e1bcac24cacfa0d1d86cdbbd5e7",
+  "2026-ETHUSDT-predictions.npz": "61973e04bf2b92fb0478d604ff3df4121784f2f1007b17f5f3c00c3970364158",
+  "2026-SOLUSDT-predictions.npz": "16a3e56b37542149533f3d9e3d49ed959c2570561b8c7d6b46037312f37d5afb",
+  "live-BTCUSDT-predictions.npz": "a3a1acd50d1b5f5a61872e5584d76881bb867e373693c99dc8c492466f1773a7",
+  "live-ETHUSDT-predictions.npz": "b51e123f4851ed723482d4ec895b822d6076854bfa35728bae6bfadc8875812d",
+  "live-SOLUSDT-predictions.npz": "4a3119e2215b0e5cb0edff7c4cebcd4c7958572855d1c5acd8372e8267f1d862",
+  "protocol.json": "cb7c1218aa3eab1d60895c2b47ed660f84888887c1135fe61263e6bacea470d6",
+  "protocol.sha256.json": "2a38536e631f213d9c102d95ebe1f44bf8c2a0a71d042f409bf527cbb6fb9867",
+  "results.json": "ad0aea35aa9f5490200018ad9bc18255a37c3a25c6a0411bb010bc8072ef2ee1"
+}

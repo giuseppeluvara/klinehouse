@@ -1,0 +1,2989 @@
+{
+  "cohorts": {
+    "2024-BTCUSDT": {
+      "adaptive_gains": {
+        "baseline": {
+          "accuracy_change": 0.00021257808156460722,
+          "brier_gain": -3.577571881396846e-05,
+          "logloss_gain": -3.581808451436075e-05
+        },
+        "neutral": {
+          "accuracy_change": 0.011691794486051621,
+          "brier_gain": 0.0008798024073869426,
+          "logloss_gain": 0.000882463944782863
+        },
+        "positions": {
+          "accuracy_change": 0.00021257808156460722,
+          "brier_gain": -3.491694903778875e-05,
+          "logloss_gain": -3.4981132998490594e-05
+        },
+        "price_control": {
+          "accuracy_change": 0.0014226379304705938,
+          "brier_gain": -5.6896485859714296e-05,
+          "logloss_gain": -5.7115960068521154e-05
+        }
+      },
+      "last_weights": [
+        0.9999999996326296,
+        6.974791971437638e-35,
+        3.673704243215679e-10
+      ],
+      "models": {
+        "adaptive": {
+          "all": {
+            "brier": 0.5021906686183869,
+            "direction_accuracy": 0.5180691369329888,
+            "direction_brier": 0.24955766027955337,
+            "direction_correct": 31682,
+            "direction_log_loss": 0.6922619748787346,
+            "flat_n": 190,
+            "log_loss": 0.7099952563598271,
+            "moving_n": 61154,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.49870580359310046,
+            "direction_accuracy": 0.5378442304443318,
+            "direction_brier": 0.2486755088584669,
+            "direction_correct": 6367,
+            "direction_log_loss": 0.6904960164041767,
+            "flat_n": 16,
+            "log_loss": 0.6998366758900426,
+            "moving_n": 11838,
+            "n": 11854
+          },
+          "own_selection": {
+            "brier": 0.49847320680948665,
+            "coverage": 0.16259128847157017,
+            "direction_accuracy": 0.5412189978913545,
+            "direction_brier": 0.2484824085771261,
+            "direction_correct": 5390,
+            "direction_log_loss": 0.6901094217531527,
+            "flat_n": 15,
+            "log_loss": 0.7001605676764412,
+            "moving_n": 9959,
+            "n": 9974,
+            "original_accuracy_flat_errors": 0.5404050531381592
+          }
+        },
+        "baseline": {
+          "all": {
+            "brier": 0.5021548928995729,
+            "direction_accuracy": 0.5178565588514242,
+            "direction_brier": 0.2495397003161082,
+            "direction_correct": 31669,
+            "direction_log_loss": 0.6922260455106402,
+            "flat_n": 190,
+            "log_loss": 0.7099594382753127,
+            "moving_n": 61154,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.49864742657632055,
+            "direction_accuracy": 0.5381821253590133,
+            "direction_brier": 0.24864637229168968,
+            "direction_correct": 6371,
+            "direction_log_loss": 0.690437776747524,
+            "flat_n": 16,
+            "log_loss": 0.6997785148426785,
+            "moving_n": 11838,
+            "n": 11854
+          },
+          "own_selection": {
+            "brier": 0.49864742657632055,
+            "coverage": 0.19323813249869587,
+            "direction_accuracy": 0.5381821253590133,
+            "direction_brier": 0.24864637229168968,
+            "direction_correct": 6371,
+            "direction_log_loss": 0.690437776747524,
+            "flat_n": 16,
+            "log_loss": 0.6997785148426785,
+            "moving_n": 11838,
+            "n": 11854,
+            "original_accuracy_flat_errors": 0.5374557111523537
+          }
+        },
+        "mirrored": {
+          "all": {
+            "brier": 0.505128177850955,
+            "direction_accuracy": 0.4821434411485757,
+            "direction_brier": 0.2510350795592944,
+            "direction_correct": 29485,
+            "direction_log_loss": 0.6952203981137003,
+            "flat_n": 190,
+            "log_loss": 0.7129445165076994,
+            "moving_n": 61154,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5081811147815513,
+            "direction_accuracy": 0.46181787464098667,
+            "direction_brier": 0.2534322119069945,
+            "direction_correct": 5467,
+            "direction_log_loss": 0.700025917781734,
+            "flat_n": 16,
+            "log_loss": 0.7093537142321654,
+            "moving_n": 11838,
+            "n": 11854
+          },
+          "own_selection": {
+            "brier": 0.5081811147815513,
+            "coverage": 0.19323813249869587,
+            "direction_accuracy": 0.46181787464098667,
+            "direction_brier": 0.2534322119069945,
+            "direction_correct": 5467,
+            "direction_log_loss": 0.700025917781734,
+            "flat_n": 16,
+            "log_loss": 0.7093537142321654,
+            "moving_n": 11838,
+            "n": 11854,
+            "original_accuracy_flat_errors": 0.4611945334908048
+          }
+        },
+        "neutral": {
+          "all": {
+            "brier": 0.5030704710257738,
+            "direction_accuracy": 0.5063773424469372,
+            "direction_brier": 0.25,
+            "direction_correct": 30967,
+            "direction_log_loss": 0.6931471805599454,
+            "flat_n": 190,
+            "log_loss": 0.7108777203046099,
+            "moving_n": 61154,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.501346682617932,
+            "direction_accuracy": 0.5070957932083122,
+            "direction_brier": 0.25,
+            "direction_correct": 6003,
+            "direction_log_loss": 0.6931471805599453,
+            "flat_n": 16,
+            "log_loss": 0.7024842616227901,
+            "moving_n": 11838,
+            "n": 11854
+          },
+          "own_selection": {
+            "coverage": 0.0,
+            "flat_n": 0,
+            "moving_n": 0,
+            "n": 0
+          }
+        },
+        "positions": {
+          "all": {
+            "brier": 0.5021557516693491,
+            "direction_accuracy": 0.5178565588514242,
+            "direction_brier": 0.24954012925515062,
+            "direction_correct": 31669,
+            "direction_log_loss": 0.6922268850624894,
+            "flat_n": 190,
+            "log_loss": 0.7099602752268286,
+            "moving_n": 61154,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.4986421359208143,
+            "direction_accuracy": 0.5381821253590133,
+            "direction_brier": 0.2486437021165977,
+            "direction_correct": 6371,
+            "direction_log_loss": 0.6904323225049074,
+            "flat_n": 16,
+            "log_loss": 0.699773067961955,
+            "moving_n": 11838,
+            "n": 11854
+          },
+          "own_selection": {
+            "brier": 0.49872401213019796,
+            "coverage": 0.19302621283255086,
+            "direction_accuracy": 0.5371670190274841,
+            "direction_brier": 0.24868399495855756,
+            "direction_correct": 6352,
+            "direction_log_loss": 0.6905129506862899,
+            "flat_n": 16,
+            "log_loss": 0.6998629729472031,
+            "moving_n": 11825,
+            "n": 11841,
+            "original_accuracy_flat_errors": 0.5364411789544802
+          }
+        },
+        "price_control": {
+          "all": {
+            "brier": 0.5021337721325272,
+            "direction_accuracy": 0.5166464990025182,
+            "direction_brier": 0.24952905964019492,
+            "direction_correct": 31595,
+            "direction_log_loss": 0.6922046814644944,
+            "flat_n": 190,
+            "log_loss": 0.7099381403997586,
+            "moving_n": 61154,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.49853831228990303,
+            "direction_accuracy": 0.5381821253590133,
+            "direction_brier": 0.2485916794366722,
+            "direction_correct": 6371,
+            "direction_log_loss": 0.6903280110278948,
+            "flat_n": 16,
+            "log_loss": 0.6996688972799172,
+            "moving_n": 11838,
+            "n": 11854
+          },
+          "own_selection": {
+            "brier": 0.4990332051893958,
+            "coverage": 0.21938575899843504,
+            "direction_accuracy": 0.5369557126907332,
+            "direction_brier": 0.2486614880280793,
+            "direction_correct": 7214,
+            "direction_log_loss": 0.6904678008005921,
+            "flat_n": 23,
+            "log_loss": 0.7014947192223199,
+            "moving_n": 13435,
+            "n": 13458,
+            "original_accuracy_flat_errors": 0.5360380442859266
+          }
+        }
+      },
+      "pending": 0,
+      "scored": 61344,
+      "strict_point_improvement": false
+    },
+    "2024-ETHUSDT": {
+      "adaptive_gains": {
+        "baseline": {
+          "accuracy_change": 0.00031045244358751667,
+          "brier_gain": -3.553305186565492e-05,
+          "logloss_gain": -3.5818084354155566e-05
+        },
+        "neutral": {
+          "accuracy_change": 0.011486740412738339,
+          "brier_gain": 0.0007427466781978476,
+          "logloss_gain": 0.0007446583717094502
+        },
+        "positions": {
+          "accuracy_change": 0.0003921504550579158,
+          "brier_gain": -3.0204204234607346e-05,
+          "logloss_gain": -3.045853164873602e-05
+        },
+        "price_control": {
+          "accuracy_change": 0.001209130569761907,
+          "brier_gain": -3.4276328410243195e-05,
+          "logloss_gain": -3.4319031329332894e-05
+        }
+      },
+      "last_weights": [
+        0.9999999896895347,
+        5.326199117484807e-32,
+        1.0310465168750925e-08
+      ],
+      "models": {
+        "adaptive": {
+          "all": {
+            "brier": 0.5015800992900749,
+            "direction_accuracy": 0.5170503749938726,
+            "direction_brier": 0.2496269891379419,
+            "direction_correct": 31644,
+            "direction_log_loss": 0.6924007822469416,
+            "flat_n": 143,
+            "log_loss": 0.7072359112894782,
+            "moving_n": 61201,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5000213333508794,
+            "direction_accuracy": 0.5341999651020765,
+            "direction_brier": 0.24887879321665718,
+            "direction_correct": 6123,
+            "direction_log_loss": 0.6909031600766287,
+            "flat_n": 26,
+            "log_loss": 0.7052786732123489,
+            "moving_n": 11462,
+            "n": 11488
+          },
+          "own_selection": {
+            "brier": 0.4997648743170867,
+            "coverage": 0.17277973395931143,
+            "direction_accuracy": 0.5358358547655068,
+            "direction_brier": 0.24879632468926904,
+            "direction_correct": 5667,
+            "direction_log_loss": 0.6907380848855256,
+            "flat_n": 23,
+            "log_loss": 0.7046619395017244,
+            "moving_n": 10576,
+            "n": 10599,
+            "original_accuracy_flat_errors": 0.534673082366261
+          }
+        },
+        "baseline": {
+          "all": {
+            "brier": 0.5015445662382092,
+            "direction_accuracy": 0.5167399225502851,
+            "direction_brier": 0.24960906480707923,
+            "direction_correct": 31625,
+            "direction_log_loss": 0.6923648804713721,
+            "flat_n": 143,
+            "log_loss": 0.707200093205124,
+            "moving_n": 61201,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.49986333160489166,
+            "direction_accuracy": 0.5353341476182167,
+            "direction_brier": 0.24879892227596948,
+            "direction_correct": 6136,
+            "direction_log_loss": 0.6907431648071769,
+            "flat_n": 26,
+            "log_loss": 0.7051190400491825,
+            "moving_n": 11462,
+            "n": 11488
+          },
+          "own_selection": {
+            "brier": 0.49986333160489166,
+            "coverage": 0.1872717788210746,
+            "direction_accuracy": 0.5353341476182167,
+            "direction_brier": 0.24879892227596948,
+            "direction_correct": 6136,
+            "direction_log_loss": 0.6907431648071769,
+            "flat_n": 26,
+            "log_loss": 0.7051190400491825,
+            "moving_n": 11462,
+            "n": 11488,
+            "original_accuracy_flat_errors": 0.5341225626740947
+          }
+        },
+        "mirrored": {
+          "all": {
+            "brier": 0.5042429187079934,
+            "direction_accuracy": 0.4832600774497149,
+            "direction_brier": 0.2509656030506915,
+            "direction_correct": 29576,
+            "direction_log_loss": 0.695081337636544,
+            "flat_n": 143,
+            "log_loss": 0.7099102179926449,
+            "moving_n": 61201,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5088527481766988,
+            "direction_accuracy": 0.46466585238178326,
+            "direction_brier": 0.2533169387501382,
+            "direction_correct": 5326,
+            "direction_log_loss": 0.6997954247805505,
+            "flat_n": 26,
+            "log_loss": 0.7141508126653741,
+            "moving_n": 11462,
+            "n": 11488
+          },
+          "own_selection": {
+            "brier": 0.5088527481766988,
+            "coverage": 0.1872717788210746,
+            "direction_accuracy": 0.46466585238178326,
+            "direction_brier": 0.2533169387501382,
+            "direction_correct": 5326,
+            "direction_log_loss": 0.6997954247805505,
+            "flat_n": 26,
+            "log_loss": 0.7141508126653741,
+            "moving_n": 11462,
+            "n": 11488,
+            "original_accuracy_flat_errors": 0.4636142061281337
+          }
+        },
+        "neutral": {
+          "all": {
+            "brier": 0.5023228459682727,
+            "direction_accuracy": 0.5055636345811343,
+            "direction_brier": 0.25,
+            "direction_correct": 30941,
+            "direction_log_loss": 0.6931471805599453,
+            "flat_n": 143,
+            "log_loss": 0.7079805696611876,
+            "moving_n": 61201,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5022552873998278,
+            "direction_accuracy": 0.5111673355435351,
+            "direction_brier": 0.25,
+            "direction_correct": 5859,
+            "direction_log_loss": 0.6931471805599453,
+            "flat_n": 26,
+            "log_loss": 0.7075176149584993,
+            "moving_n": 11462,
+            "n": 11488
+          },
+          "own_selection": {
+            "coverage": 0.0,
+            "flat_n": 0,
+            "moving_n": 0,
+            "n": 0
+          }
+        },
+        "positions": {
+          "all": {
+            "brier": 0.5015498950858402,
+            "direction_accuracy": 0.5166582245388147,
+            "direction_brier": 0.24961174601095076,
+            "direction_correct": 31620,
+            "direction_log_loss": 0.6923702525470108,
+            "flat_n": 143,
+            "log_loss": 0.7072054527578294,
+            "moving_n": 61201,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.49986551509428007,
+            "direction_accuracy": 0.5353341476182167,
+            "direction_brier": 0.24880002769130713,
+            "direction_correct": 6136,
+            "direction_log_loss": 0.6907454084158451,
+            "flat_n": 26,
+            "log_loss": 0.7051212785800455,
+            "moving_n": 11462,
+            "n": 11488
+          },
+          "own_selection": {
+            "brier": 0.49995845631011165,
+            "coverage": 0.18839658320292124,
+            "direction_accuracy": 0.5341254010927066,
+            "direction_brier": 0.24885331191045948,
+            "direction_correct": 6159,
+            "direction_log_loss": 0.6908520442607635,
+            "flat_n": 26,
+            "log_loss": 0.7051638978483549,
+            "moving_n": 11531,
+            "n": 11557,
+            "original_accuracy_flat_errors": 0.5329237691442416
+          }
+        },
+        "price_control": {
+          "all": {
+            "brier": 0.5015458229616646,
+            "direction_accuracy": 0.5158412444241107,
+            "direction_brier": 0.24960980461166032,
+            "direction_correct": 31570,
+            "direction_log_loss": 0.6923663830270291,
+            "flat_n": 143,
+            "log_loss": 0.7072015922581488,
+            "moving_n": 61201,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.49977860278115355,
+            "direction_accuracy": 0.5353341476182167,
+            "direction_brier": 0.24875666944450245,
+            "direction_correct": 6136,
+            "direction_log_loss": 0.6906587669051514,
+            "flat_n": 26,
+            "log_loss": 0.7050348331591217,
+            "moving_n": 11462,
+            "n": 11488
+          },
+          "own_selection": {
+            "brier": 0.4995769650928792,
+            "coverage": 0.21214788732394366,
+            "direction_accuracy": 0.5348783492454573,
+            "direction_brier": 0.24878727468405892,
+            "direction_correct": 6947,
+            "direction_log_loss": 0.690720028089074,
+            "flat_n": 26,
+            "log_loss": 0.7037896748554557,
+            "moving_n": 12988,
+            "n": 13014,
+            "original_accuracy_flat_errors": 0.5338097433533118
+          }
+        }
+      },
+      "pending": 0,
+      "scored": 61344,
+      "strict_point_improvement": false
+    },
+    "2024-SOLUSDT": {
+      "adaptive_gains": {
+        "baseline": {
+          "accuracy_change": -0.00034729687267431864,
+          "brier_gain": -3.562894637954006e-05,
+          "logloss_gain": -3.5817617068722996e-05
+        },
+        "neutral": {
+          "accuracy_change": 0.007177468701936585,
+          "brier_gain": 0.00034224848064212665,
+          "logloss_gain": 0.0003462531316067441
+        },
+        "positions": {
+          "accuracy_change": -6.61517852712512e-05,
+          "brier_gain": -3.449364597518656e-05,
+          "logloss_gain": -3.465839559901873e-05
+        },
+        "price_control": {
+          "accuracy_change": -0.0007276696379843184,
+          "brier_gain": -8.501542404060203e-06,
+          "logloss_gain": -8.233503778209972e-06
+        }
+      },
+      "last_weights": [
+        0.9999975543056141,
+        5.899312117867592e-27,
+        2.4456943858790665e-06
+      ],
+      "models": {
+        "adaptive": {
+          "all": {
+            "brier": 0.513672123732424,
+            "direction_accuracy": 0.5094679742669556,
+            "direction_brier": 0.2498244184176517,
+            "direction_correct": 30806,
+            "direction_log_loss": 0.6927959054494672,
+            "flat_n": 877,
+            "log_loss": 0.757980594471886,
+            "moving_n": 60467,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5090398920574285,
+            "direction_accuracy": 0.5277226210478082,
+            "direction_brier": 0.24922228036165686,
+            "direction_correct": 3455,
+            "direction_log_loss": 0.6915912481637475,
+            "flat_n": 71,
+            "log_loss": 0.7434819857984728,
+            "moving_n": 6547,
+            "n": 6618
+          },
+          "own_selection": {
+            "brier": 0.508886266041443,
+            "coverage": 0.09487480438184663,
+            "direction_accuracy": 0.5283084404307051,
+            "direction_brier": 0.24919352984665064,
+            "direction_correct": 3042,
+            "direction_log_loss": 0.6915337191689714,
+            "flat_n": 62,
+            "log_loss": 0.7427222753584319,
+            "moving_n": 5758,
+            "n": 5820,
+            "original_accuracy_flat_errors": 0.522680412371134
+          }
+        },
+        "baseline": {
+          "all": {
+            "brier": 0.5136364947860445,
+            "direction_accuracy": 0.5098152711396299,
+            "direction_brier": 0.24980625951649926,
+            "direction_correct": 30827,
+            "direction_log_loss": 0.6927595683415989,
+            "flat_n": 877,
+            "log_loss": 0.7579447768548173,
+            "moving_n": 60467,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5088535313870569,
+            "direction_accuracy": 0.5292500381854285,
+            "direction_brier": 0.2491268993607191,
+            "direction_correct": 3465,
+            "direction_log_loss": 0.6914003335783475,
+            "flat_n": 71,
+            "log_loss": 0.7432931194052098,
+            "moving_n": 6547,
+            "n": 6618
+          },
+          "own_selection": {
+            "brier": 0.5088535313870569,
+            "coverage": 0.10788341158059468,
+            "direction_accuracy": 0.5292500381854285,
+            "direction_brier": 0.2491268993607191,
+            "direction_correct": 3465,
+            "direction_log_loss": 0.6914003335783475,
+            "flat_n": 71,
+            "log_loss": 0.7432931194052098,
+            "moving_n": 6547,
+            "n": 6618,
+            "original_accuracy_flat_errors": 0.5235720761559384
+          }
+        },
+        "mirrored": {
+          "all": {
+            "brier": 0.5154998668793874,
+            "direction_accuracy": 0.4901847288603701,
+            "direction_brier": 0.2507651730035869,
+            "direction_correct": 29640,
+            "direction_log_loss": 0.694680173934574,
+            "flat_n": 877,
+            "log_loss": 0.7598379246506967,
+            "moving_n": 60467,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.517641124754375,
+            "direction_accuracy": 0.47074996181457157,
+            "direction_brier": 0.25362279163951146,
+            "direction_correct": 3082,
+            "direction_log_loss": 0.7004126551970243,
+            "flat_n": 71,
+            "log_loss": 0.7522087539832513,
+            "moving_n": 6547,
+            "n": 6618
+          },
+          "own_selection": {
+            "brier": 0.517641124754375,
+            "coverage": 0.10788341158059468,
+            "direction_accuracy": 0.47074996181457157,
+            "direction_brier": 0.25362279163951146,
+            "direction_correct": 3082,
+            "direction_log_loss": 0.7004126551970243,
+            "flat_n": 71,
+            "log_loss": 0.7522087539832513,
+            "moving_n": 6547,
+            "n": 6618,
+            "original_accuracy_flat_errors": 0.46569960713206404
+          }
+        },
+        "neutral": {
+          "all": {
+            "brier": 0.5140143722130661,
+            "direction_accuracy": 0.502290505565019,
+            "direction_brier": 0.25,
+            "direction_correct": 30372,
+            "direction_log_loss": 0.6931471805599452,
+            "flat_n": 877,
+            "log_loss": 0.7583268476034928,
+            "moving_n": 60467,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5105674745260584,
+            "direction_accuracy": 0.5187108599358485,
+            "direction_brier": 0.25,
+            "direction_correct": 3396,
+            "direction_log_loss": 0.6931471805599452,
+            "flat_n": 71,
+            "log_loss": 0.7450212256591418,
+            "moving_n": 6547,
+            "n": 6618
+          },
+          "own_selection": {
+            "coverage": 0.0,
+            "flat_n": 0,
+            "moving_n": 0,
+            "n": 0
+          }
+        },
+        "positions": {
+          "all": {
+            "brier": 0.5136376300864488,
+            "direction_accuracy": 0.5095341260522268,
+            "direction_brier": 0.2498068490739143,
+            "direction_correct": 30810,
+            "direction_log_loss": 0.6927607443761608,
+            "flat_n": 877,
+            "log_loss": 0.757945936076287,
+            "moving_n": 60467,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5088540270059696,
+            "direction_accuracy": 0.5292500381854285,
+            "direction_brier": 0.24912723847830753,
+            "direction_correct": 3465,
+            "direction_log_loss": 0.691401010468131,
+            "flat_n": 71,
+            "log_loss": 0.7432937890331055,
+            "moving_n": 6547,
+            "n": 6618
+          },
+          "own_selection": {
+            "brier": 0.5082230312432539,
+            "coverage": 0.10788341158059468,
+            "direction_accuracy": 0.529690123645245,
+            "direction_brier": 0.24910573675062228,
+            "direction_correct": 3470,
+            "direction_log_loss": 0.6913579820548668,
+            "flat_n": 67,
+            "log_loss": 0.7408851302762623,
+            "moving_n": 6551,
+            "n": 6618,
+            "original_accuracy_flat_errors": 0.5243275914173466
+          }
+        },
+        "price_control": {
+          "all": {
+            "brier": 0.5136636221900199,
+            "direction_accuracy": 0.5101956439049399,
+            "direction_brier": 0.24982018896890168,
+            "direction_correct": 30850,
+            "direction_log_loss": 0.6927875525287706,
+            "flat_n": 877,
+            "log_loss": 0.7579723609681078,
+            "moving_n": 60467,
+            "n": 61344
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5089926926929872,
+            "direction_accuracy": 0.5292500381854285,
+            "direction_brier": 0.24919816584306417,
+            "direction_correct": 3465,
+            "direction_log_loss": 0.6915440661678164,
+            "flat_n": 71,
+            "log_loss": 0.743435309985937,
+            "moving_n": 6547,
+            "n": 6618
+          },
+          "own_selection": {
+            "brier": 0.5085975178777034,
+            "coverage": 0.12775495565988523,
+            "direction_accuracy": 0.5304964539007092,
+            "direction_brier": 0.24912693359194488,
+            "direction_correct": 4114,
+            "direction_log_loss": 0.6914012555060229,
+            "flat_n": 82,
+            "log_loss": 0.7423512996038434,
+            "moving_n": 7755,
+            "n": 7837,
+            "original_accuracy_flat_errors": 0.5249457700650759
+          }
+        }
+      },
+      "pending": 0,
+      "scored": 61344,
+      "strict_point_improvement": false
+    },
+    "2025-BTCUSDT": {
+      "adaptive_gains": {
+        "baseline": {
+          "accuracy_change": -0.0011331165632081364,
+          "brier_gain": -3.59234060022251e-05,
+          "logloss_gain": -3.598718420072533e-05
+        },
+        "neutral": {
+          "accuracy_change": 0.008572273130357688,
+          "brier_gain": 0.0003317232424613348,
+          "logloss_gain": 0.00033207598636897373
+        },
+        "positions": {
+          "accuracy_change": -0.0003777055210694158,
+          "brier_gain": -1.3866193920741843e-05,
+          "logloss_gain": -1.3878261447386464e-05
+        },
+        "price_control": {
+          "accuracy_change": -0.00011495385423854199,
+          "brier_gain": -3.3225672122827454e-05,
+          "logloss_gain": -3.32199216006579e-05
+        }
+      },
+      "last_weights": [
+        0.999989743956566,
+        6.993158565551044e-28,
+        1.0256043434072999e-05
+      ],
+      "models": {
+        "adaptive": {
+          "all": {
+            "brier": 0.5022502601764214,
+            "direction_accuracy": 0.5065687916707722,
+            "direction_brier": 0.24983368813524406,
+            "direction_correct": 30847,
+            "direction_log_loss": 0.692814226585042,
+            "flat_n": 161,
+            "log_loss": 0.7069467253727802,
+            "moving_n": 60894,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.49929251004318104,
+            "direction_accuracy": 0.534272997032641,
+            "direction_brier": 0.2488366939586251,
+            "direction_correct": 7202,
+            "direction_log_loss": 0.6908186332918897,
+            "flat_n": 22,
+            "log_loss": 0.7007183268366933,
+            "moving_n": 13480,
+            "n": 13502
+          },
+          "own_selection": {
+            "brier": 0.4993371328834236,
+            "coverage": 0.19885349275243633,
+            "direction_accuracy": 0.5345325521907748,
+            "direction_brier": 0.24876841426581217,
+            "direction_correct": 6478,
+            "direction_log_loss": 0.690681894981038,
+            "flat_n": 22,
+            "log_loss": 0.701523671907602,
+            "moving_n": 12119,
+            "n": 12141,
+            "original_accuracy_flat_errors": 0.533563956840458
+          }
+        },
+        "baseline": {
+          "all": {
+            "brier": 0.5022143367704192,
+            "direction_accuracy": 0.5077019082339803,
+            "direction_brier": 0.24981567302198412,
+            "direction_correct": 30916,
+            "direction_log_loss": 0.6927781442529342,
+            "flat_n": 161,
+            "log_loss": 0.7069107381885795,
+            "moving_n": 60894,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.4991595021509779,
+            "direction_accuracy": 0.5345697329376855,
+            "direction_brier": 0.24877008060803754,
+            "direction_correct": 7206,
+            "direction_log_loss": 0.6906852218334144,
+            "flat_n": 22,
+            "log_loss": 0.7005851327572794,
+            "moving_n": 13480,
+            "n": 13502
+          },
+          "own_selection": {
+            "brier": 0.4991595021509779,
+            "coverage": 0.22114486938006717,
+            "direction_accuracy": 0.5345697329376855,
+            "direction_brier": 0.24877008060803754,
+            "direction_correct": 7206,
+            "direction_log_loss": 0.6906852218334144,
+            "flat_n": 22,
+            "log_loss": 0.7005851327572794,
+            "moving_n": 13480,
+            "n": 13502,
+            "original_accuracy_flat_errors": 0.5336987113020293
+          }
+        },
+        "mirrored": {
+          "all": {
+            "brier": 0.5042343274445131,
+            "direction_accuracy": 0.49229809176601963,
+            "direction_brier": 0.2508300850454662,
+            "direction_correct": 29978,
+            "direction_log_loss": 0.6948108735136872,
+            "flat_n": 161,
+            "log_loss": 0.7089381072100238,
+            "moving_n": 60894,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5083335858793929,
+            "direction_accuracy": 0.46543026706231455,
+            "direction_brier": 0.253374552507717,
+            "direction_correct": 6274,
+            "direction_log_loss": 0.6999118112894696,
+            "flat_n": 22,
+            "log_loss": 0.7097966885169908,
+            "moving_n": 13480,
+            "n": 13502
+          },
+          "own_selection": {
+            "brier": 0.5083335858793929,
+            "coverage": 0.22114486938006717,
+            "direction_accuracy": 0.46543026706231455,
+            "direction_brier": 0.253374552507717,
+            "direction_correct": 6274,
+            "direction_log_loss": 0.6999118112894696,
+            "flat_n": 22,
+            "log_loss": 0.7097966885169908,
+            "moving_n": 13480,
+            "n": 13502,
+            "original_accuracy_flat_errors": 0.4646719004591912
+          }
+        },
+        "neutral": {
+          "all": {
+            "brier": 0.5025819834188827,
+            "direction_accuracy": 0.4979965185404145,
+            "direction_brier": 0.25,
+            "direction_correct": 30325,
+            "direction_log_loss": 0.6931471805599454,
+            "flat_n": 161,
+            "log_loss": 0.7072788013591492,
+            "moving_n": 60894,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.501611343843377,
+            "direction_accuracy": 0.4964391691394659,
+            "direction_brier": 0.25,
+            "direction_correct": 6692,
+            "direction_log_loss": 0.6931471805599453,
+            "flat_n": 22,
+            "log_loss": 0.7030430799972167,
+            "moving_n": 13480,
+            "n": 13502
+          },
+          "own_selection": {
+            "coverage": 0.0,
+            "flat_n": 0,
+            "moving_n": 0,
+            "n": 0
+          }
+        },
+        "positions": {
+          "all": {
+            "brier": 0.5022363939825006,
+            "direction_accuracy": 0.5069464971918416,
+            "direction_brier": 0.24982675121695408,
+            "direction_correct": 30870,
+            "direction_log_loss": 0.6928003116303229,
+            "flat_n": 161,
+            "log_loss": 0.7069328471113329,
+            "moving_n": 60894,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.4991646980729691,
+            "direction_accuracy": 0.5345697329376855,
+            "direction_brier": 0.2487726829393116,
+            "direction_correct": 7206,
+            "direction_log_loss": 0.6906904395862247,
+            "flat_n": 22,
+            "log_loss": 0.7005903420083446,
+            "moving_n": 13480,
+            "n": 13502
+          },
+          "own_selection": {
+            "brier": 0.499134676743343,
+            "coverage": 0.22216034722790926,
+            "direction_accuracy": 0.5349283709939447,
+            "direction_brier": 0.24876137549349234,
+            "direction_correct": 7244,
+            "direction_log_loss": 0.6906678225584164,
+            "flat_n": 22,
+            "log_loss": 0.7005324814880393,
+            "moving_n": 13542,
+            "n": 13564,
+            "original_accuracy_flat_errors": 0.5340607490415806
+          }
+        },
+        "price_control": {
+          "all": {
+            "brier": 0.5022170345042986,
+            "direction_accuracy": 0.5066837455250107,
+            "direction_brier": 0.24981707806977982,
+            "direction_correct": 30854,
+            "direction_log_loss": 0.6927809188320067,
+            "flat_n": 161,
+            "log_loss": 0.7069135054511796,
+            "moving_n": 60894,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.4990899946966012,
+            "direction_accuracy": 0.5345697329376855,
+            "direction_brier": 0.2487352530972025,
+            "direction_correct": 7206,
+            "direction_log_loss": 0.6906153197280867,
+            "flat_n": 22,
+            "log_loss": 0.7005153445496198,
+            "moving_n": 13480,
+            "n": 13502
+          },
+          "own_selection": {
+            "brier": 0.4995053820577369,
+            "coverage": 0.24399312095651463,
+            "direction_accuracy": 0.5301553150003362,
+            "direction_brier": 0.24895253968852454,
+            "direction_correct": 7885,
+            "direction_log_loss": 0.6910502883885892,
+            "flat_n": 24,
+            "log_loss": 0.7008807378455763,
+            "moving_n": 14873,
+            "n": 14897,
+            "original_accuracy_flat_errors": 0.5293012015842116
+          }
+        }
+      },
+      "pending": 0,
+      "scored": 61055,
+      "strict_point_improvement": false
+    },
+    "2025-ETHUSDT": {
+      "adaptive_gains": {
+        "baseline": {
+          "accuracy_change": 6.562218029704248e-05,
+          "brier_gain": -3.5873863162505515e-05,
+          "logloss_gain": -3.598762717749171e-05
+        },
+        "neutral": {
+          "accuracy_change": 0.01638913952916088,
+          "brier_gain": 0.001120867607944942,
+          "logloss_gain": 0.0011243292580948028
+        },
+        "positions": {
+          "accuracy_change": 0.0006890328931179468,
+          "brier_gain": -3.6823698363996904e-05,
+          "logloss_gain": -3.692948814293384e-05
+        },
+        "price_control": {
+          "accuracy_change": -0.00014764990566806802,
+          "brier_gain": -6.57926794553898e-05,
+          "logloss_gain": -6.6060028902859e-05
+        }
+      },
+      "last_weights": [
+        0.9999999999999998,
+        1.2109921805402554e-49,
+        1.4134237020577154e-16
+      ],
+      "models": {
+        "adaptive": {
+          "all": {
+            "brier": 0.5005151102896993,
+            "direction_accuracy": 0.5175293249118202,
+            "direction_brier": 0.24943758609053818,
+            "direction_correct": 31546,
+            "direction_log_loss": 0.6920210067784185,
+            "flat_n": 100,
+            "log_loss": 0.703231680383534,
+            "moving_n": 60955,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.4975118689236899,
+            "direction_accuracy": 0.5474843478916799,
+            "direction_brier": 0.24792217510206374,
+            "direction_correct": 7258,
+            "direction_log_loss": 0.6889855131503735,
+            "flat_n": 22,
+            "log_loss": 0.7001546149287813,
+            "moving_n": 13257,
+            "n": 13279
+          },
+          "own_selection": {
+            "brier": 0.4975574255452557,
+            "coverage": 0.21064613872737695,
+            "direction_accuracy": 0.5467715554170886,
+            "direction_brier": 0.24791816536055555,
+            "direction_correct": 7020,
+            "direction_log_loss": 0.6889773519659137,
+            "flat_n": 22,
+            "log_loss": 0.7004294462018407,
+            "moving_n": 12839,
+            "n": 12861,
+            "original_accuracy_flat_errors": 0.5458362491252624
+          }
+        },
+        "baseline": {
+          "all": {
+            "brier": 0.5004792364265368,
+            "direction_accuracy": 0.5174637027315232,
+            "direction_brier": 0.24941957914484364,
+            "direction_correct": 31542,
+            "direction_log_loss": 0.691984960111577,
+            "flat_n": 100,
+            "log_loss": 0.7031956927563565,
+            "moving_n": 60955,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.49745471483144665,
+            "direction_accuracy": 0.5475597797390058,
+            "direction_brier": 0.2478935135147978,
+            "direction_correct": 7259,
+            "direction_log_loss": 0.688928112441377,
+            "flat_n": 22,
+            "log_loss": 0.7000973093184817,
+            "moving_n": 13257,
+            "n": 13279
+          },
+          "own_selection": {
+            "brier": 0.49745471483144665,
+            "coverage": 0.2174924248628286,
+            "direction_accuracy": 0.5475597797390058,
+            "direction_brier": 0.2478935135147978,
+            "direction_correct": 7259,
+            "direction_log_loss": 0.688928112441377,
+            "flat_n": 22,
+            "log_loss": 0.7000973093184817,
+            "moving_n": 13257,
+            "n": 13279,
+            "original_accuracy_flat_errors": 0.5466526093832367
+          }
+        },
+        "mirrored": {
+          "all": {
+            "brier": 0.5040801560113936,
+            "direction_accuracy": 0.48253629726847674,
+            "direction_brier": 0.2512273369753959,
+            "direction_correct": 29413,
+            "direction_log_loss": 0.6956063764412538,
+            "flat_n": 100,
+            "log_loss": 0.7068111776859358,
+            "moving_n": 60955,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5101812838494706,
+            "direction_accuracy": 0.4524402202609942,
+            "direction_brier": 0.25428179692515207,
+            "direction_correct": 5998,
+            "direction_log_loss": 0.7017305309849574,
+            "flat_n": 22,
+            "log_loss": 0.7128785174389912,
+            "moving_n": 13257,
+            "n": 13279
+          },
+          "own_selection": {
+            "brier": 0.5101812838494706,
+            "coverage": 0.2174924248628286,
+            "direction_accuracy": 0.4524402202609942,
+            "direction_brier": 0.25428179692515207,
+            "direction_correct": 5998,
+            "direction_log_loss": 0.7017305309849574,
+            "flat_n": 22,
+            "log_loss": 0.7128785174389912,
+            "moving_n": 13257,
+            "n": 13279,
+            "original_accuracy_flat_errors": 0.4516906393553731
+          }
+        },
+        "neutral": {
+          "all": {
+            "brier": 0.5016359778976442,
+            "direction_accuracy": 0.5011401853826594,
+            "direction_brier": 0.25,
+            "direction_correct": 30547,
+            "direction_log_loss": 0.6931471805599453,
+            "flat_n": 100,
+            "log_loss": 0.7043560096416288,
+            "moving_n": 60955,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5016530751047465,
+            "direction_accuracy": 0.4972467375726031,
+            "direction_brier": 0.25,
+            "direction_correct": 6592,
+            "direction_log_loss": 0.6931471805599453,
+            "flat_n": 22,
+            "log_loss": 0.7043093874906227,
+            "moving_n": 13257,
+            "n": 13279
+          },
+          "own_selection": {
+            "coverage": 0.0,
+            "flat_n": 0,
+            "moving_n": 0,
+            "n": 0
+          }
+        },
+        "positions": {
+          "all": {
+            "brier": 0.5004782865913353,
+            "direction_accuracy": 0.5168402920187023,
+            "direction_brier": 0.24941909960981298,
+            "direction_correct": 31504,
+            "direction_log_loss": 0.6919840167054372,
+            "flat_n": 100,
+            "log_loss": 0.7031947508953911,
+            "moving_n": 60955,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.4974465221471139,
+            "direction_accuracy": 0.5475597797390058,
+            "direction_brier": 0.24788943062193716,
+            "direction_correct": 7259,
+            "direction_log_loss": 0.6889199790874276,
+            "flat_n": 22,
+            "log_loss": 0.7000891894394768,
+            "moving_n": 13257,
+            "n": 13279
+          },
+          "own_selection": {
+            "brier": 0.4975966152196398,
+            "coverage": 0.21911391368438293,
+            "direction_accuracy": 0.5466866342193935,
+            "direction_brier": 0.24793351050351195,
+            "direction_correct": 7301,
+            "direction_log_loss": 0.6890082262875127,
+            "flat_n": 23,
+            "log_loss": 0.7004976454097412,
+            "moving_n": 13355,
+            "n": 13378,
+            "original_accuracy_flat_errors": 0.5457467483928838
+          }
+        },
+        "price_control": {
+          "all": {
+            "brier": 0.5004493176102439,
+            "direction_accuracy": 0.5176769748174883,
+            "direction_brier": 0.2494046148905177,
+            "direction_correct": 31555,
+            "direction_log_loss": 0.6919548383744375,
+            "flat_n": 100,
+            "log_loss": 0.7031656203546311,
+            "moving_n": 60955,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.4972954875110095,
+            "direction_accuracy": 0.5475597797390058,
+            "direction_brier": 0.24781374529739905,
+            "direction_correct": 7259,
+            "direction_log_loss": 0.688767675830562,
+            "flat_n": 22,
+            "log_loss": 0.6999371385112241,
+            "moving_n": 13257,
+            "n": 13279
+          },
+          "own_selection": {
+            "brier": 0.4976003370613419,
+            "coverage": 0.2401605110146589,
+            "direction_accuracy": 0.5443306010928962,
+            "direction_brier": 0.24801080890998078,
+            "direction_correct": 7969,
+            "direction_log_loss": 0.6891624825398928,
+            "flat_n": 23,
+            "log_loss": 0.699847721082756,
+            "moving_n": 14640,
+            "n": 14663,
+            "original_accuracy_flat_errors": 0.5434767782854805
+          }
+        }
+      },
+      "pending": 0,
+      "scored": 61055,
+      "strict_point_improvement": false
+    },
+    "2025-SOLUSDT": {
+      "adaptive_gains": {
+        "baseline": {
+          "accuracy_change": 8.305923784845959e-05,
+          "brier_gain": -3.553563104474744e-05,
+          "logloss_gain": -3.5987602223896964e-05
+        },
+        "neutral": {
+          "accuracy_change": 0.0088873384497824,
+          "brier_gain": 0.0004297909209832751,
+          "logloss_gain": 0.0004359156417051979
+        },
+        "positions": {
+          "accuracy_change": 0.0002990132562543657,
+          "brier_gain": -4.7938822354209876e-05,
+          "logloss_gain": -4.848321500994235e-05
+        },
+        "price_control": {
+          "accuracy_change": 0.00034884879896346366,
+          "brier_gain": -4.6892272334897456e-05,
+          "logloss_gain": -4.74701726673743e-05
+        }
+      },
+      "last_weights": [
+        0.999999754537298,
+        6.233631782998003e-31,
+        2.454627020393145e-07
+      ],
+      "models": {
+        "adaptive": {
+          "all": {
+            "brier": 0.5133066919635175,
+            "direction_accuracy": 0.5111631615668295,
+            "direction_brier": 0.2497791004101276,
+            "direction_correct": 30771,
+            "direction_log_loss": 0.6927050590691264,
+            "flat_n": 857,
+            "log_loss": 0.756708570807833,
+            "moving_n": 60198,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5109032248335146,
+            "direction_accuracy": 0.532325397720862,
+            "direction_brier": 0.2488776342709026,
+            "direction_correct": 4718,
+            "direction_log_loss": 0.6909002721469032,
+            "flat_n": 120,
+            "log_loss": 0.7525463950722727,
+            "moving_n": 8863,
+            "n": 8983
+          },
+          "own_selection": {
+            "brier": 0.5111187875742706,
+            "coverage": 0.13879289165506511,
+            "direction_accuracy": 0.5317621725086733,
+            "direction_brier": 0.24888297164993423,
+            "direction_correct": 4445,
+            "direction_log_loss": 0.6909108886466975,
+            "flat_n": 115,
+            "log_loss": 0.7533358331087515,
+            "moving_n": 8359,
+            "n": 8474,
+            "original_accuracy_flat_errors": 0.5245456691054992
+          }
+        },
+        "baseline": {
+          "all": {
+            "brier": 0.5132711563324728,
+            "direction_accuracy": 0.511080102328981,
+            "direction_brier": 0.2497608637057426,
+            "direction_correct": 30766,
+            "direction_log_loss": 0.6926685591346804,
+            "flat_n": 857,
+            "log_loss": 0.7566725832056092,
+            "moving_n": 60198,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5108827702586494,
+            "direction_accuracy": 0.532325397720862,
+            "direction_brier": 0.24886729484867484,
+            "direction_correct": 4718,
+            "direction_log_loss": 0.6908795466012582,
+            "flat_n": 120,
+            "log_loss": 0.7525259463902009,
+            "moving_n": 8863,
+            "n": 8983
+          },
+          "own_selection": {
+            "brier": 0.5108827702586494,
+            "coverage": 0.14712963721234953,
+            "direction_accuracy": 0.532325397720862,
+            "direction_brier": 0.24886729484867484,
+            "direction_correct": 4718,
+            "direction_log_loss": 0.6908795466012582,
+            "flat_n": 120,
+            "log_loss": 0.7525259463902009,
+            "moving_n": 8863,
+            "n": 8983,
+            "original_accuracy_flat_errors": 0.5252142936658132
+          }
+        },
+        "mirrored": {
+          "all": {
+            "brier": 0.5154627338168459,
+            "direction_accuracy": 0.48891989767101895,
+            "direction_brier": 0.25088367637276543,
+            "direction_correct": 29432,
+            "direction_log_loss": 0.6949180167386185,
+            "flat_n": 857,
+            "log_loss": 0.7588904662429011,
+            "moving_n": 60198,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.520534593059355,
+            "direction_accuracy": 0.467674602279138,
+            "direction_brier": 0.2538082859483631,
+            "direction_correct": 4145,
+            "direction_log_loss": 0.7007848846274072,
+            "flat_n": 120,
+            "log_loss": 0.7622989633027868,
+            "moving_n": 8863,
+            "n": 8983
+          },
+          "own_selection": {
+            "brier": 0.520534593059355,
+            "coverage": 0.14712963721234953,
+            "direction_accuracy": 0.467674602279138,
+            "direction_brier": 0.2538082859483631,
+            "direction_correct": 4145,
+            "direction_log_loss": 0.7007848846274072,
+            "flat_n": 120,
+            "log_loss": 0.7622989633027868,
+            "moving_n": 8863,
+            "n": 8983,
+            "original_accuracy_flat_errors": 0.4614271401536235
+          }
+        },
+        "neutral": {
+          "all": {
+            "brier": 0.5137364828845008,
+            "direction_accuracy": 0.5022758231170471,
+            "direction_brier": 0.25,
+            "direction_correct": 30236,
+            "direction_log_loss": 0.6931471805599452,
+            "flat_n": 857,
+            "log_loss": 0.7571444864495382,
+            "moving_n": 60198,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5130888153595794,
+            "direction_accuracy": 0.49904095678664107,
+            "direction_brier": 0.25,
+            "direction_correct": 4423,
+            "direction_log_loss": 0.6931471805599453,
+            "flat_n": 120,
+            "log_loss": 0.7547632880105777,
+            "moving_n": 8863,
+            "n": 8983
+          },
+          "own_selection": {
+            "coverage": 0.0,
+            "flat_n": 0,
+            "moving_n": 0,
+            "n": 0
+          }
+        },
+        "positions": {
+          "all": {
+            "brier": 0.5132587531411633,
+            "direction_accuracy": 0.5108641483105751,
+            "direction_brier": 0.2497545494978352,
+            "direction_correct": 30753,
+            "direction_log_loss": 0.6926558856299353,
+            "flat_n": 857,
+            "log_loss": 0.7566600875928231,
+            "moving_n": 60198,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5108310104882836,
+            "direction_accuracy": 0.532325397720862,
+            "direction_brier": 0.24884104482336514,
+            "direction_correct": 4718,
+            "direction_log_loss": 0.690826775473967,
+            "flat_n": 120,
+            "log_loss": 0.7524738802095061,
+            "moving_n": 8863,
+            "n": 8983
+          },
+          "own_selection": {
+            "brier": 0.5107070145296183,
+            "coverage": 0.14730980263696666,
+            "direction_accuracy": 0.5335812485913906,
+            "direction_brier": 0.2487837672773376,
+            "direction_correct": 4735,
+            "direction_log_loss": 0.690712148322734,
+            "flat_n": 120,
+            "log_loss": 0.7524399014177556,
+            "moving_n": 8874,
+            "n": 8994,
+            "original_accuracy_flat_errors": 0.5264620858350011
+          }
+        },
+        "price_control": {
+          "all": {
+            "brier": 0.5132597996911826,
+            "direction_accuracy": 0.510814312767866,
+            "direction_brier": 0.24975504508230215,
+            "direction_correct": 30750,
+            "direction_log_loss": 0.6926569130943068,
+            "flat_n": 857,
+            "log_loss": 0.7566611006351657,
+            "moving_n": 60198,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5108411245917795,
+            "direction_accuracy": 0.532325397720862,
+            "direction_brier": 0.24884601682599425,
+            "direction_correct": 4718,
+            "direction_log_loss": 0.6908369348381642,
+            "flat_n": 120,
+            "log_loss": 0.7524839038591644,
+            "moving_n": 8863,
+            "n": 8983
+          },
+          "own_selection": {
+            "brier": 0.5097107920347369,
+            "coverage": 0.16689869789534026,
+            "direction_accuracy": 0.5333333333333333,
+            "direction_brier": 0.24881006659047022,
+            "direction_correct": 5368,
+            "direction_log_loss": 0.6907650461831243,
+            "flat_n": 125,
+            "log_loss": 0.7482247823038065,
+            "moving_n": 10065,
+            "n": 10190,
+            "original_accuracy_flat_errors": 0.5267909715407262
+          }
+        }
+      },
+      "pending": 0,
+      "scored": 61055,
+      "strict_point_improvement": false
+    },
+    "2026-BTCUSDT": {
+      "adaptive_gains": {
+        "baseline": {
+          "accuracy_change": -6.565772627287192e-05,
+          "brier_gain": -3.575524761179061e-05,
+          "logloss_gain": -3.598762717615944e-05
+        },
+        "neutral": {
+          "accuracy_change": 0.017809658251534743,
+          "brier_gain": 0.0008775488815064847,
+          "logloss_gain": 0.00087950361325706
+        },
+        "positions": {
+          "accuracy_change": -0.0005252618101835305,
+          "brier_gain": -3.475520466977855e-05,
+          "logloss_gain": -3.4974764326789476e-05
+        },
+        "price_control": {
+          "accuracy_change": -0.0013295689570269609,
+          "brier_gain": -4.546640260483237e-05,
+          "logloss_gain": -4.546862404053442e-05
+        }
+      },
+      "last_weights": [
+        0.999999999979724,
+        1.4145421505105996e-53,
+        2.027597718101303e-11
+      ],
+      "models": {
+        "adaptive": {
+          "all": {
+            "brier": 0.5012849487178209,
+            "direction_accuracy": 0.5146745018220019,
+            "direction_brier": 0.24955965819843254,
+            "direction_correct": 31355,
+            "direction_log_loss": 0.6922657568852892,
+            "flat_n": 133,
+            "log_loss": 0.7055393880117509,
+            "moving_n": 60922,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.49868972524147875,
+            "direction_accuracy": 0.5344332190193716,
+            "direction_brier": 0.24878671550688436,
+            "direction_correct": 11532,
+            "direction_log_loss": 0.6907185469072779,
+            "flat_n": 24,
+            "log_loss": 0.6988512820098287,
+            "moving_n": 21578,
+            "n": 21602
+          },
+          "own_selection": {
+            "brier": 0.49862102409495157,
+            "coverage": 0.3348620096634182,
+            "direction_accuracy": 0.5335879357618488,
+            "direction_brier": 0.24879398733505823,
+            "direction_correct": 10898,
+            "direction_log_loss": 0.6907330373443765,
+            "flat_n": 21,
+            "log_loss": 0.6984831539791713,
+            "moving_n": 20424,
+            "n": 20445,
+            "original_accuracy_flat_errors": 0.5330398630471999
+          }
+        },
+        "baseline": {
+          "all": {
+            "brier": 0.5012491934702091,
+            "direction_accuracy": 0.5147401595482748,
+            "direction_brier": 0.2495416669745228,
+            "direction_correct": 31359,
+            "direction_log_loss": 0.6922296906928259,
+            "flat_n": 133,
+            "log_loss": 0.7055034003845747,
+            "moving_n": 60922,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.498580428904554,
+            "direction_accuracy": 0.5344795625173788,
+            "direction_brier": 0.24873191628202482,
+            "direction_correct": 11533,
+            "direction_log_loss": 0.6906086930702681,
+            "flat_n": 24,
+            "log_loss": 0.6987415502213371,
+            "moving_n": 21578,
+            "n": 21602
+          },
+          "own_selection": {
+            "brier": 0.498580428904554,
+            "coverage": 0.3538121365981492,
+            "direction_accuracy": 0.5344795625173788,
+            "direction_brier": 0.24873191628202482,
+            "direction_correct": 11533,
+            "direction_log_loss": 0.6906086930702681,
+            "flat_n": 24,
+            "log_loss": 0.6987415502213371,
+            "moving_n": 21578,
+            "n": 21602,
+            "original_accuracy_flat_errors": 0.5338857513193223
+          }
+        },
+        "mirrored": {
+          "all": {
+            "brier": 0.5054493209746946,
+            "direction_accuracy": 0.48525984045172516,
+            "direction_brier": 0.25165201113744595,
+            "direction_correct": 29563,
+            "direction_log_loss": 0.6964622761182699,
+            "flat_n": 133,
+            "log_loss": 0.7097267656992728,
+            "moving_n": 60922,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5094610798667564,
+            "direction_accuracy": 0.4655204374826212,
+            "direction_brier": 0.25419294269653425,
+            "direction_correct": 10045,
+            "direction_log_loss": 0.7015638663916871,
+            "flat_n": 24,
+            "log_loss": 0.7096845522549257,
+            "moving_n": 21578,
+            "n": 21602
+          },
+          "own_selection": {
+            "brier": 0.5094610798667564,
+            "coverage": 0.3538121365981492,
+            "direction_accuracy": 0.4655204374826212,
+            "direction_brier": 0.25419294269653425,
+            "direction_correct": 10045,
+            "direction_log_loss": 0.7015638663916871,
+            "flat_n": 24,
+            "log_loss": 0.7096845522549257,
+            "moving_n": 21578,
+            "n": 21602,
+            "original_accuracy_flat_errors": 0.46500324044069996
+          }
+        },
+        "neutral": {
+          "all": {
+            "brier": 0.5021624975993274,
+            "direction_accuracy": 0.4968648435704672,
+            "direction_brier": 0.25,
+            "direction_correct": 30270,
+            "direction_log_loss": 0.6931471805599452,
+            "flat_n": 133,
+            "log_loss": 0.7064188916250079,
+            "moving_n": 60922,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5011102284579528,
+            "direction_accuracy": 0.49745110760960237,
+            "direction_brier": 0.25,
+            "direction_correct": 10734,
+            "direction_log_loss": 0.6931471805599453,
+            "flat_n": 24,
+            "log_loss": 0.7012772174304962,
+            "moving_n": 21578,
+            "n": 21602
+          },
+          "own_selection": {
+            "coverage": 0.0,
+            "flat_n": 0,
+            "moving_n": 0,
+            "n": 0
+          }
+        },
+        "positions": {
+          "all": {
+            "brier": 0.5012501935131511,
+            "direction_accuracy": 0.5151997636321854,
+            "direction_brier": 0.2495421647151316,
+            "direction_correct": 31387,
+            "direction_log_loss": 0.6922307057668757,
+            "flat_n": 133,
+            "log_loss": 0.7055044132474241,
+            "moving_n": 60922,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.4985822849534554,
+            "direction_accuracy": 0.5344795625173788,
+            "direction_brier": 0.24873284542222454,
+            "direction_correct": 11533,
+            "direction_log_loss": 0.6906106049938858,
+            "flat_n": 24,
+            "log_loss": 0.6987434600207919,
+            "moving_n": 21578,
+            "n": 21602
+          },
+          "own_selection": {
+            "brier": 0.49869184602388683,
+            "coverage": 0.3534681844238801,
+            "direction_accuracy": 0.533726108740026,
+            "direction_brier": 0.248764111084289,
+            "direction_correct": 11505,
+            "direction_log_loss": 0.6906731721318828,
+            "flat_n": 25,
+            "log_loss": 0.6990641945064908,
+            "moving_n": 21556,
+            "n": 21581,
+            "original_accuracy_flat_errors": 0.5331078263287151
+          }
+        },
+        "price_control": {
+          "all": {
+            "brier": 0.5012394823152161,
+            "direction_accuracy": 0.5160040707790289,
+            "direction_brier": 0.24953685737834905,
+            "direction_correct": 31436,
+            "direction_log_loss": 0.6922201889978132,
+            "flat_n": 133,
+            "log_loss": 0.7054939193877103,
+            "moving_n": 60922,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.49860640137497136,
+            "direction_accuracy": 0.5344795625173788,
+            "direction_brier": 0.24874510121022897,
+            "direction_correct": 11533,
+            "direction_log_loss": 0.6906354089497442,
+            "flat_n": 24,
+            "log_loss": 0.6987682364192509,
+            "moving_n": 21578,
+            "n": 21602
+          },
+          "own_selection": {
+            "brier": 0.4987732101480631,
+            "coverage": 0.35635083121775446,
+            "direction_accuracy": 0.5330388367384502,
+            "direction_brier": 0.2488099007574131,
+            "direction_correct": 11584,
+            "direction_log_loss": 0.6907650966658702,
+            "flat_n": 25,
+            "log_loss": 0.699102121434981,
+            "moving_n": 21732,
+            "n": 21757,
+            "original_accuracy_flat_errors": 0.5324263455439628
+          }
+        }
+      },
+      "pending": 0,
+      "scored": 61055,
+      "strict_point_improvement": false
+    },
+    "2026-ETHUSDT": {
+      "adaptive_gains": {
+        "baseline": {
+          "accuracy_change": -9.852378528385497e-05,
+          "brier_gain": -3.581504837457672e-05,
+          "logloss_gain": -3.598762717804682e-05
+        },
+        "neutral": {
+          "accuracy_change": 0.021593129608039552,
+          "brier_gain": 0.0014938449632081463,
+          "logloss_gain": 0.0014988840083646204
+        },
+        "positions": {
+          "accuracy_change": -0.0009031346984351707,
+          "brier_gain": -3.1875211623511035e-05,
+          "logloss_gain": -3.203887374991776e-05
+        },
+        "price_control": {
+          "accuracy_change": -0.0002955713558514539,
+          "brier_gain": -6.254706009323208e-05,
+          "logloss_gain": -6.264847207015922e-05
+        }
+      },
+      "last_weights": [
+        0.9999999999999969,
+        3.0777224098183352e-61,
+        3.0002498795871337e-15
+      ],
+      "models": {
+        "adaptive": {
+          "all": {
+            "brier": 0.5010471818243117,
+            "direction_accuracy": 0.5193845547545937,
+            "direction_brier": 0.24924953528602753,
+            "direction_correct": 31630,
+            "direction_log_loss": 0.6916444569826994,
+            "flat_n": 156,
+            "log_loss": 0.7073297559853706,
+            "moving_n": 60899,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.49834782025376934,
+            "direction_accuracy": 0.5423633553463538,
+            "direction_brier": 0.24816496356337558,
+            "direction_correct": 11580,
+            "direction_log_loss": 0.6894722182596676,
+            "flat_n": 43,
+            "log_loss": 0.7024952963614058,
+            "moving_n": 21351,
+            "n": 21394
+          },
+          "own_selection": {
+            "brier": 0.49837066232261185,
+            "coverage": 0.34445991319302266,
+            "direction_accuracy": 0.5421193062702496,
+            "direction_brier": 0.2481590848590019,
+            "direction_correct": 11378,
+            "direction_log_loss": 0.6894603971150388,
+            "flat_n": 43,
+            "log_loss": 0.7026723726384311,
+            "moving_n": 20988,
+            "n": 21031,
+            "original_accuracy_flat_errors": 0.5410108886881271
+          }
+        },
+        "baseline": {
+          "all": {
+            "brier": 0.5010113667759372,
+            "direction_accuracy": 0.5194830785398775,
+            "direction_brier": 0.24923154282051677,
+            "direction_correct": 31636,
+            "direction_log_loss": 0.6916083771689528,
+            "flat_n": 156,
+            "log_loss": 0.7072937683581926,
+            "moving_n": 60899,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.4982583184073445,
+            "direction_accuracy": 0.5426443726289166,
+            "direction_brier": 0.24812005663761752,
+            "direction_correct": 11586,
+            "direction_log_loss": 0.689382139925585,
+            "flat_n": 43,
+            "log_loss": 0.7024053990766064,
+            "moving_n": 21351,
+            "n": 21394
+          },
+          "own_selection": {
+            "brier": 0.4982583184073445,
+            "coverage": 0.3504053722053886,
+            "direction_accuracy": 0.5426443726289166,
+            "direction_brier": 0.24812005663761752,
+            "direction_correct": 11586,
+            "direction_log_loss": 0.689382139925585,
+            "flat_n": 43,
+            "log_loss": 0.7024053990766064,
+            "moving_n": 21351,
+            "n": 21394,
+            "original_accuracy_flat_errors": 0.5415537066467234
+          }
+        },
+        "mirrored": {
+          "all": {
+            "brier": 0.5064433469327603,
+            "direction_accuracy": 0.4805169214601225,
+            "direction_brier": 0.25196237076564054,
+            "direction_correct": 29263,
+            "direction_log_loss": 0.6970840642213272,
+            "flat_n": 156,
+            "log_loss": 0.7127554646288101,
+            "moving_n": 60899,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5116056864040947,
+            "direction_accuracy": 0.4573556273710833,
+            "direction_brier": 0.254825922155973,
+            "direction_correct": 9765,
+            "direction_log_loss": 0.7028329429607691,
+            "flat_n": 43,
+            "log_loss": 0.7158291672174038,
+            "moving_n": 21351,
+            "n": 21394
+          },
+          "own_selection": {
+            "brier": 0.5116056864040947,
+            "coverage": 0.3504053722053886,
+            "direction_accuracy": 0.4573556273710833,
+            "direction_brier": 0.254825922155973,
+            "direction_correct": 9765,
+            "direction_log_loss": 0.7028329429607691,
+            "flat_n": 43,
+            "log_loss": 0.7158291672174038,
+            "moving_n": 21351,
+            "n": 21394,
+            "original_accuracy_flat_errors": 0.45643638403290643
+          }
+        },
+        "neutral": {
+          "all": {
+            "brier": 0.5025410267875199,
+            "direction_accuracy": 0.4977914251465541,
+            "direction_brier": 0.25,
+            "direction_correct": 30315,
+            "direction_log_loss": 0.6931471805599453,
+            "flat_n": 156,
+            "log_loss": 0.7088286399937352,
+            "moving_n": 60899,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5020034496462433,
+            "direction_accuracy": 0.49908669383167065,
+            "direction_brier": 0.25,
+            "direction_correct": 10656,
+            "direction_log_loss": 0.6931471805599454,
+            "flat_n": 43,
+            "log_loss": 0.7061628723207042,
+            "moving_n": 21351,
+            "n": 21394
+          },
+          "own_selection": {
+            "coverage": 0.0,
+            "flat_n": 0,
+            "moving_n": 0,
+            "n": 0
+          }
+        },
+        "positions": {
+          "all": {
+            "brier": 0.5010153066126882,
+            "direction_accuracy": 0.5202876894530288,
+            "direction_brier": 0.2492335226140205,
+            "direction_correct": 31685,
+            "direction_log_loss": 0.6916123360375803,
+            "flat_n": 156,
+            "log_loss": 0.7072977171116207,
+            "moving_n": 60899,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.4982684858150922,
+            "direction_accuracy": 0.5426443726289166,
+            "direction_brier": 0.2481251690811704,
+            "direction_correct": 11586,
+            "direction_log_loss": 0.6893923590135842,
+            "flat_n": 43,
+            "log_loss": 0.7024155976251654,
+            "moving_n": 21351,
+            "n": 21394
+          },
+          "own_selection": {
+            "brier": 0.4981849565701671,
+            "coverage": 0.35009417738104986,
+            "direction_accuracy": 0.5425142964282366,
+            "direction_brier": 0.24812916121439652,
+            "direction_correct": 11574,
+            "direction_log_loss": 0.6894003427622197,
+            "flat_n": 41,
+            "log_loss": 0.7019436959285853,
+            "moving_n": 21334,
+            "n": 21375,
+            "original_accuracy_flat_errors": 0.5414736842105263
+          }
+        },
+        "price_control": {
+          "all": {
+            "brier": 0.5009846347642185,
+            "direction_accuracy": 0.5196801261104451,
+            "direction_brier": 0.249218161290442,
+            "direction_correct": 31648,
+            "direction_log_loss": 0.6915816480291495,
+            "flat_n": 156,
+            "log_loss": 0.7072671075133005,
+            "moving_n": 60899,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.4982541567473005,
+            "direction_accuracy": 0.5426443726289166,
+            "direction_brier": 0.248118057082725,
+            "direction_correct": 11586,
+            "direction_log_loss": 0.6893782734230621,
+            "flat_n": 43,
+            "log_loss": 0.702401540345403,
+            "moving_n": 21351,
+            "n": 21394
+          },
+          "own_selection": {
+            "brier": 0.4980945918133674,
+            "coverage": 0.352452706576038,
+            "direction_accuracy": 0.5427161413473626,
+            "direction_brier": 0.24811326337915177,
+            "direction_correct": 11657,
+            "direction_log_loss": 0.6893686850315464,
+            "flat_n": 40,
+            "log_loss": 0.7016409162121497,
+            "moving_n": 21479,
+            "n": 21519,
+            "original_accuracy_flat_errors": 0.5417073284074538
+          }
+        }
+      },
+      "pending": 0,
+      "scored": 61055,
+      "strict_point_improvement": false
+    },
+    "2026-SOLUSDT": {
+      "adaptive_gains": {
+        "baseline": {
+          "accuracy_change": -1.703577512768284e-05,
+          "brier_gain": -3.521402220196812e-05,
+          "logloss_gain": -3.598762717782478e-05
+        },
+        "neutral": {
+          "accuracy_change": 0.020306643952299863,
+          "brier_gain": 0.0009761632660675312,
+          "logloss_gain": 0.001012446954354762
+        },
+        "positions": {
+          "accuracy_change": -0.0007495741056218197,
+          "brier_gain": -3.340052825795414e-05,
+          "logloss_gain": -3.398811358934495e-05
+        },
+        "price_control": {
+          "accuracy_change": -0.0006303236797273737,
+          "brier_gain": -7.166422812820983e-05,
+          "logloss_gain": -7.355213686011108e-05
+        }
+      },
+      "last_weights": [
+        0.9999999999834581,
+        1.3056004560739226e-52,
+        1.6541883734960637e-11
+      ],
+      "models": {
+        "adaptive": {
+          "all": {
+            "brier": 0.5350384505653126,
+            "direction_accuracy": 0.5194207836456559,
+            "direction_brier": 0.24947371091650228,
+            "direction_correct": 30490,
+            "direction_log_loss": 0.6920941149926859,
+            "flat_n": 2355,
+            "log_loss": 0.8259276457082909,
+            "moving_n": 58700,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5198222482700308,
+            "direction_accuracy": 0.5448666127728375,
+            "direction_brier": 0.24801130027450993,
+            "direction_correct": 4044,
+            "direction_log_loss": 0.6891675629069193,
+            "flat_n": 187,
+            "log_loss": 0.7864395503299494,
+            "moving_n": 7422,
+            "n": 7609
+          },
+          "own_selection": {
+            "brier": 0.5201451800621681,
+            "coverage": 0.11786094504954549,
+            "direction_accuracy": 0.547255880256593,
+            "direction_brier": 0.24789497160685717,
+            "direction_correct": 3839,
+            "direction_log_loss": 0.6889346883883634,
+            "flat_n": 181,
+            "log_loss": 0.7880689840127043,
+            "moving_n": 7015,
+            "n": 7196,
+            "original_accuracy_flat_errors": 0.5334908282379099
+          }
+        },
+        "baseline": {
+          "all": {
+            "brier": 0.5350032365431107,
+            "direction_accuracy": 0.5194378194207836,
+            "direction_brier": 0.2494550340273241,
+            "direction_correct": 30491,
+            "direction_log_loss": 0.692056683568881,
+            "flat_n": 2355,
+            "log_loss": 0.8258916580811131,
+            "moving_n": 58700,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5197231652302664,
+            "direction_accuracy": 0.5459444893559687,
+            "direction_brier": 0.2479601144744197,
+            "direction_correct": 4052,
+            "direction_log_loss": 0.6890646719437139,
+            "flat_n": 187,
+            "log_loss": 0.7863391880314986,
+            "moving_n": 7422,
+            "n": 7609
+          },
+          "own_selection": {
+            "brier": 0.5197231652302664,
+            "coverage": 0.12462533781017116,
+            "direction_accuracy": 0.5459444893559687,
+            "direction_brier": 0.2479601144744197,
+            "direction_correct": 4052,
+            "direction_log_loss": 0.6890646719437139,
+            "flat_n": 187,
+            "log_loss": 0.7863391880314986,
+            "moving_n": 7422,
+            "n": 7609,
+            "original_accuracy_flat_errors": 0.5325272703377579
+          }
+        },
+        "mirrored": {
+          "all": {
+            "brier": 0.5392374337114475,
+            "direction_accuracy": 0.48056218057921635,
+            "direction_brier": 0.25173843049404554,
+            "direction_correct": 28209,
+            "direction_log_loss": 0.6966349350226865,
+            "flat_n": 2355,
+            "log_loss": 0.8302933182291498,
+            "moving_n": 58700,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5370193924014174,
+            "direction_accuracy": 0.45405551064403127,
+            "direction_brier": 0.257102676313076,
+            "direction_correct": 3370,
+            "direction_log_loss": 0.7074224599676924,
+            "flat_n": 187,
+            "log_loss": 0.804245812123228,
+            "moving_n": 7422,
+            "n": 7609
+          },
+          "own_selection": {
+            "brier": 0.5370193924014174,
+            "coverage": 0.12462533781017116,
+            "direction_accuracy": 0.45405551064403127,
+            "direction_brier": 0.257102676313076,
+            "direction_correct": 3370,
+            "direction_log_loss": 0.7074224599676924,
+            "flat_n": 187,
+            "log_loss": 0.804245812123228,
+            "moving_n": 7422,
+            "n": 7609,
+            "original_accuracy_flat_errors": 0.4428965698514917
+          }
+        },
+        "neutral": {
+          "all": {
+            "brier": 0.5360146138313802,
+            "direction_accuracy": 0.49911413969335605,
+            "direction_brier": 0.25,
+            "direction_correct": 29298,
+            "direction_log_loss": 0.6931471805599452,
+            "flat_n": 2355,
+            "log_loss": 0.8269400926626457,
+            "moving_n": 58700,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5236093168635532,
+            "direction_accuracy": 0.5086230126650498,
+            "direction_brier": 0.25,
+            "direction_correct": 3775,
+            "direction_log_loss": 0.6931471805599452,
+            "flat_n": 187,
+            "log_loss": 0.7903213642635488,
+            "moving_n": 7422,
+            "n": 7609
+          },
+          "own_selection": {
+            "coverage": 0.0,
+            "flat_n": 0,
+            "moving_n": 0,
+            "n": 0
+          }
+        },
+        "positions": {
+          "all": {
+            "brier": 0.5350050500370547,
+            "direction_accuracy": 0.5201703577512777,
+            "direction_brier": 0.24945607044495324,
+            "direction_correct": 30534,
+            "direction_log_loss": 0.6920587633014558,
+            "flat_n": 2355,
+            "log_loss": 0.8258936575947016,
+            "moving_n": 58700,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5197320258419562,
+            "direction_accuracy": 0.5459444893559687,
+            "direction_brier": 0.24796483589434684,
+            "direction_correct": 4052,
+            "direction_log_loss": 0.6890741372473038,
+            "flat_n": 187,
+            "log_loss": 0.7863484207142749,
+            "moving_n": 7422,
+            "n": 7609
+          },
+          "own_selection": {
+            "brier": 0.5196653069896622,
+            "coverage": 0.1241503562361805,
+            "direction_accuracy": 0.546388964024885,
+            "direction_brier": 0.2479509722153338,
+            "direction_correct": 4040,
+            "direction_log_loss": 0.6890464830029585,
+            "flat_n": 186,
+            "log_loss": 0.7861798115571679,
+            "moving_n": 7394,
+            "n": 7580,
+            "original_accuracy_flat_errors": 0.5329815303430079
+          }
+        },
+        "price_control": {
+          "all": {
+            "brier": 0.5349667863371844,
+            "direction_accuracy": 0.5200511073253833,
+            "direction_brier": 0.24943548499031717,
+            "direction_correct": 30527,
+            "direction_log_loss": 0.6920176119992276,
+            "flat_n": 2355,
+            "log_loss": 0.8258540935714308,
+            "moving_n": 58700,
+            "n": 61055
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5196894344114045,
+            "direction_accuracy": 0.5459444893559687,
+            "direction_brier": 0.24794193185964564,
+            "direction_correct": 4052,
+            "direction_log_loss": 0.6890287423880148,
+            "flat_n": 187,
+            "log_loss": 0.7863041414863025,
+            "moving_n": 7422,
+            "n": 7609
+          },
+          "own_selection": {
+            "brier": 0.5188417819787184,
+            "coverage": 0.1286708705265744,
+            "direction_accuracy": 0.5466162472291042,
+            "direction_brier": 0.2478736793494878,
+            "direction_correct": 4192,
+            "direction_log_loss": 0.6888918093501059,
+            "flat_n": 187,
+            "log_loss": 0.7838350775275588,
+            "moving_n": 7669,
+            "n": 7856,
+            "original_accuracy_flat_errors": 0.5336048879837068
+          }
+        }
+      },
+      "pending": 0,
+      "scored": 61055,
+      "strict_point_improvement": false
+    },
+    "live-BTCUSDT": {
+      "adaptive_gains": {
+        "baseline": {
+          "accuracy_change": 0.08437500000000003,
+          "brier_gain": 0.006644860004743902,
+          "logloss_gain": 0.006673355986888674
+        },
+        "neutral": {
+          "accuracy_change": 0.06875000000000003,
+          "brier_gain": 0.0005653244150510273,
+          "logloss_gain": 0.0005661727203369882
+        },
+        "positions": {
+          "accuracy_change": 0.08125000000000004,
+          "brier_gain": 0.0064925871893139475,
+          "logloss_gain": 0.006520864092452561
+        },
+        "price_control": {
+          "accuracy_change": 0.07812500000000006,
+          "brier_gain": 0.006406326346181268,
+          "logloss_gain": 0.006435742556147095
+        }
+      },
+      "last_weights": [
+        0.13749765250168147,
+        0.5383055781065487,
+        0.32419676939176983
+      ],
+      "models": {
+        "adaptive": {
+          "all": {
+            "brier": 0.4994383051579588,
+            "direction_accuracy": 0.534375,
+            "direction_brier": 0.24971701317122913,
+            "direction_correct": 171,
+            "direction_log_loss": 0.6925810078396084,
+            "flat_n": 0,
+            "log_loss": 0.69412177760351,
+            "moving_n": 320,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.49832762993422464,
+            "direction_accuracy": 0.5462962962962963,
+            "direction_brier": 0.2491610623621663,
+            "direction_correct": 59,
+            "direction_log_loss": 0.6914686691127543,
+            "flat_n": 0,
+            "log_loss": 0.6929633318028591,
+            "moving_n": 108,
+            "n": 108
+          },
+          "own_selection": {
+            "brier": 0.47098010978008564,
+            "coverage": 0.01875,
+            "direction_accuracy": 0.8333333333333334,
+            "direction_brier": 0.23546924531888483,
+            "direction_correct": 5,
+            "direction_log_loss": 0.6640653528520633,
+            "flat_n": 0,
+            "log_loss": 0.665461983469081,
+            "moving_n": 6,
+            "n": 6,
+            "original_accuracy_flat_errors": 0.8333333333333334
+          }
+        },
+        "baseline": {
+          "all": {
+            "brier": 0.5060831651627027,
+            "direction_accuracy": 0.45,
+            "direction_brier": 0.2530449723915943,
+            "direction_correct": 144,
+            "direction_log_loss": 0.699254363826497,
+            "flat_n": 0,
+            "log_loss": 0.7007951335903987,
+            "moving_n": 320,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5149736570911573,
+            "direction_accuracy": 0.4166666666666667,
+            "direction_brier": 0.25749796067311137,
+            "direction_correct": 45,
+            "direction_log_loss": 0.7081928469279029,
+            "flat_n": 0,
+            "log_loss": 0.7096875096180078,
+            "moving_n": 108,
+            "n": 108
+          },
+          "own_selection": {
+            "brier": 0.5149736570911573,
+            "coverage": 0.3375,
+            "direction_accuracy": 0.4166666666666667,
+            "direction_brier": 0.25749796067311137,
+            "direction_correct": 45,
+            "direction_log_loss": 0.7081928469279029,
+            "flat_n": 0,
+            "log_loss": 0.7096875096180078,
+            "moving_n": 108,
+            "n": 108,
+            "original_accuracy_flat_errors": 0.4166666666666667
+          }
+        },
+        "mirrored": {
+          "all": {
+            "brier": 0.4960216000865921,
+            "direction_accuracy": 0.55,
+            "direction_brier": 0.2480068869584109,
+            "direction_correct": 176,
+            "direction_log_loss": 0.6891512186243445,
+            "flat_n": 0,
+            "log_loss": 0.6906919883882461,
+            "moving_n": 320,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.49020189322612634,
+            "direction_accuracy": 0.5833333333333334,
+            "direction_brier": 0.2450939897574592,
+            "direction_correct": 63,
+            "direction_log_loss": 0.6833070872275081,
+            "flat_n": 0,
+            "log_loss": 0.6848017499176129,
+            "moving_n": 108,
+            "n": 108
+          },
+          "own_selection": {
+            "brier": 0.49020189322612634,
+            "coverage": 0.3375,
+            "direction_accuracy": 0.5833333333333334,
+            "direction_brier": 0.2450939897574592,
+            "direction_correct": 63,
+            "direction_log_loss": 0.6833070872275081,
+            "flat_n": 0,
+            "log_loss": 0.6848017499176129,
+            "moving_n": 108,
+            "n": 108,
+            "original_accuracy_flat_errors": 0.5833333333333334
+          }
+        },
+        "neutral": {
+          "all": {
+            "brier": 0.5000036295730098,
+            "direction_accuracy": 0.465625,
+            "direction_brier": 0.25,
+            "direction_correct": 149,
+            "direction_log_loss": 0.6931471805599453,
+            "flat_n": 0,
+            "log_loss": 0.694687950323847,
+            "moving_n": 320,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5000034080920356,
+            "direction_accuracy": 0.46296296296296297,
+            "direction_brier": 0.25,
+            "direction_correct": 50,
+            "direction_log_loss": 0.6931471805599453,
+            "flat_n": 0,
+            "log_loss": 0.6946418432500501,
+            "moving_n": 108,
+            "n": 108
+          },
+          "own_selection": {
+            "coverage": 0.0,
+            "flat_n": 0,
+            "moving_n": 0,
+            "n": 0
+          }
+        },
+        "positions": {
+          "all": {
+            "brier": 0.5059308923472727,
+            "direction_accuracy": 0.453125,
+            "direction_brier": 0.2529686982793614,
+            "direction_correct": 145,
+            "direction_log_loss": 0.6991018719320607,
+            "flat_n": 0,
+            "log_loss": 0.7006426416959626,
+            "moving_n": 320,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5148401362500462,
+            "direction_accuracy": 0.4166666666666667,
+            "direction_brier": 0.2574310639169253,
+            "direction_correct": 45,
+            "direction_log_loss": 0.7080591626595288,
+            "flat_n": 0,
+            "log_loss": 0.7095538253496337,
+            "moving_n": 108,
+            "n": 108
+          },
+          "own_selection": {
+            "brier": 0.5162778080564796,
+            "coverage": 0.325,
+            "direction_accuracy": 0.40384615384615385,
+            "direction_brier": 0.2581508767973015,
+            "direction_correct": 42,
+            "direction_log_loss": 0.7095013137660151,
+            "flat_n": 0,
+            "log_loss": 0.7109939139950305,
+            "moving_n": 104,
+            "n": 104,
+            "original_accuracy_flat_errors": 0.40384615384615385
+          }
+        },
+        "price_control": {
+          "all": {
+            "brier": 0.50584463150414,
+            "direction_accuracy": 0.45625,
+            "direction_brier": 0.25292552014991726,
+            "direction_correct": 146,
+            "direction_log_loss": 0.6990167503957554,
+            "flat_n": 0,
+            "log_loss": 0.7005575201596571,
+            "moving_n": 320,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5154308180468051,
+            "direction_accuracy": 0.4166666666666667,
+            "direction_brier": 0.2577268677455106,
+            "direction_correct": 45,
+            "direction_log_loss": 0.7086551240609241,
+            "flat_n": 0,
+            "log_loss": 0.7101497867510289,
+            "moving_n": 108,
+            "n": 108
+          },
+          "own_selection": {
+            "brier": 0.5158884693144081,
+            "coverage": 0.321875,
+            "direction_accuracy": 0.4174757281553398,
+            "direction_brier": 0.2579560741087558,
+            "direction_correct": 43,
+            "direction_log_loss": 0.7091161637008486,
+            "flat_n": 0,
+            "log_loss": 0.7106031008092553,
+            "moving_n": 103,
+            "n": 103,
+            "original_accuracy_flat_errors": 0.4174757281553398
+          }
+        }
+      },
+      "pending": 1,
+      "scored": 320,
+      "strict_point_improvement": true
+    },
+    "live-ETHUSDT": {
+      "adaptive_gains": {
+        "baseline": {
+          "accuracy_change": 0.003124999999999989,
+          "brier_gain": 0.0023265798973599594,
+          "logloss_gain": 0.002339519810091617
+        },
+        "neutral": {
+          "accuracy_change": -0.03125,
+          "brier_gain": -0.00027798651169175237,
+          "logloss_gain": -0.00027875996356097055
+        },
+        "positions": {
+          "accuracy_change": -0.012500000000000011,
+          "brier_gain": 0.002371604517023229,
+          "logloss_gain": 0.0023844617213020225
+        },
+        "price_control": {
+          "accuracy_change": -0.012500000000000011,
+          "brier_gain": 0.0021447946297056264,
+          "logloss_gain": 0.0021578427659720845
+        }
+      },
+      "last_weights": [
+        0.36050018197333167,
+        0.2682447029758682,
+        0.37125511505080006
+      ],
+      "models": {
+        "adaptive": {
+          "all": {
+            "brier": 0.5002924373841815,
+            "direction_accuracy": 0.465625,
+            "direction_brier": 0.250139340687764,
+            "direction_correct": 149,
+            "direction_log_loss": 0.6934259405235064,
+            "flat_n": 0,
+            "log_loss": 0.6964732047957574,
+            "moving_n": 320,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5008787729018687,
+            "direction_accuracy": 0.4339622641509434,
+            "direction_brier": 0.25043417774413124,
+            "direction_correct": 46,
+            "direction_log_loss": 0.6940157633382845,
+            "flat_n": 0,
+            "log_loss": 0.6969051255972979,
+            "moving_n": 106,
+            "n": 106
+          },
+          "own_selection": {
+            "coverage": 0.0,
+            "flat_n": 0,
+            "moving_n": 0,
+            "n": 0
+          }
+        },
+        "baseline": {
+          "all": {
+            "brier": 0.5026190172815415,
+            "direction_accuracy": 0.4625,
+            "direction_brier": 0.2513072678895666,
+            "direction_correct": 148,
+            "direction_log_loss": 0.6957654603335979,
+            "flat_n": 0,
+            "log_loss": 0.698812724605849,
+            "moving_n": 320,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5037704550138029,
+            "direction_accuracy": 0.4811320754716981,
+            "direction_brier": 0.2518875118525558,
+            "direction_correct": 51,
+            "direction_log_loss": 0.6969315648965655,
+            "flat_n": 0,
+            "log_loss": 0.6998209271555791,
+            "moving_n": 106,
+            "n": 106
+          },
+          "own_selection": {
+            "brier": 0.5037704550138029,
+            "coverage": 0.33125,
+            "direction_accuracy": 0.4811320754716981,
+            "direction_brier": 0.2518875118525558,
+            "direction_correct": 51,
+            "direction_log_loss": 0.6969315648965655,
+            "flat_n": 0,
+            "log_loss": 0.6998209271555791,
+            "moving_n": 106,
+            "n": 106,
+            "original_accuracy_flat_errors": 0.4811320754716981
+          }
+        },
+        "mirrored": {
+          "all": {
+            "brier": 0.499534492780469,
+            "direction_accuracy": 0.5375,
+            "direction_brier": 0.24976117896678734,
+            "direction_correct": 172,
+            "direction_log_loss": 0.6926733740231006,
+            "flat_n": 0,
+            "log_loss": 0.6957206382953517,
+            "moving_n": 320,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5015309434026871,
+            "direction_accuracy": 0.5188679245283019,
+            "direction_brier": 0.25076541720587847,
+            "direction_correct": 55,
+            "direction_log_loss": 0.6946908891926784,
+            "flat_n": 0,
+            "log_loss": 0.697580251451692,
+            "moving_n": 106,
+            "n": 106
+          },
+          "own_selection": {
+            "brier": 0.5015309434026871,
+            "coverage": 0.33125,
+            "direction_accuracy": 0.5188679245283019,
+            "direction_brier": 0.25076541720587847,
+            "direction_correct": 55,
+            "direction_log_loss": 0.6946908891926784,
+            "flat_n": 0,
+            "log_loss": 0.697580251451692,
+            "moving_n": 106,
+            "n": 106,
+            "original_accuracy_flat_errors": 0.5188679245283019
+          }
+        },
+        "neutral": {
+          "all": {
+            "brier": 0.5000144508724897,
+            "direction_accuracy": 0.496875,
+            "direction_brier": 0.25,
+            "direction_correct": 159,
+            "direction_log_loss": 0.6931471805599453,
+            "flat_n": 0,
+            "log_loss": 0.6961944448321964,
+            "moving_n": 320,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5000128636889094,
+            "direction_accuracy": 0.5,
+            "direction_brier": 0.25,
+            "direction_correct": 53,
+            "direction_log_loss": 0.6931471805599453,
+            "flat_n": 0,
+            "log_loss": 0.696036542818959,
+            "moving_n": 106,
+            "n": 106
+          },
+          "own_selection": {
+            "coverage": 0.0,
+            "flat_n": 0,
+            "moving_n": 0,
+            "n": 0
+          }
+        },
+        "positions": {
+          "all": {
+            "brier": 0.5026640419012047,
+            "direction_accuracy": 0.478125,
+            "direction_brier": 0.2513297852350495,
+            "direction_correct": 153,
+            "direction_log_loss": 0.6958104022448083,
+            "flat_n": 0,
+            "log_loss": 0.6988576665170594,
+            "moving_n": 320,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5038173878501802,
+            "direction_accuracy": 0.4811320754716981,
+            "direction_brier": 0.2519109800659408,
+            "direction_correct": 51,
+            "direction_log_loss": 0.6969780809303889,
+            "flat_n": 0,
+            "log_loss": 0.6998674431894025,
+            "moving_n": 106,
+            "n": 106
+          },
+          "own_selection": {
+            "brier": 0.5041105768411906,
+            "coverage": 0.340625,
+            "direction_accuracy": 0.47706422018348627,
+            "direction_brier": 0.252057496564349,
+            "direction_correct": 52,
+            "direction_log_loss": 0.6972710957486118,
+            "flat_n": 0,
+            "log_loss": 0.7001498873666341,
+            "moving_n": 109,
+            "n": 109,
+            "original_accuracy_flat_errors": 0.47706422018348627
+          }
+        },
+        "price_control": {
+          "all": {
+            "brier": 0.5024372320138871,
+            "direction_accuracy": 0.478125,
+            "direction_brier": 0.25121620251200477,
+            "direction_correct": 153,
+            "direction_log_loss": 0.6955837832894785,
+            "flat_n": 0,
+            "log_loss": 0.6986310475617294,
+            "moving_n": 320,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5039210710003,
+            "direction_accuracy": 0.4811320754716981,
+            "direction_brier": 0.25196315478651576,
+            "direction_correct": 51,
+            "direction_log_loss": 0.6970846942135488,
+            "flat_n": 0,
+            "log_loss": 0.6999740564725622,
+            "moving_n": 106,
+            "n": 106
+          },
+          "own_selection": {
+            "brier": 0.5042090880203274,
+            "coverage": 0.31875,
+            "direction_accuracy": 0.4803921568627451,
+            "direction_brier": 0.2521077605855959,
+            "direction_correct": 49,
+            "direction_log_loss": 0.697374608146185,
+            "flat_n": 0,
+            "log_loss": 0.7002446786947616,
+            "moving_n": 102,
+            "n": 102,
+            "original_accuracy_flat_errors": 0.4803921568627451
+          }
+        }
+      },
+      "pending": 1,
+      "scored": 320,
+      "strict_point_improvement": false
+    },
+    "live-SOLUSDT": {
+      "adaptive_gains": {
+        "baseline": {
+          "accuracy_change": 0.06730769230769235,
+          "brier_gain": 0.005224130990404197,
+          "logloss_gain": 0.005416790808156491
+        },
+        "neutral": {
+          "accuracy_change": 0.054487179487179516,
+          "brier_gain": 0.0003079999815918111,
+          "logloss_gain": 0.0003133193552969926
+        },
+        "positions": {
+          "accuracy_change": 0.06089743589743596,
+          "brier_gain": 0.00565895457049348,
+          "logloss_gain": 0.00586726895569023
+        },
+        "price_control": {
+          "accuracy_change": 0.054487179487179516,
+          "brier_gain": 0.005231635775990284,
+          "logloss_gain": 0.005426051068872506
+        }
+      },
+      "last_weights": [
+        0.22619001756024967,
+        0.41038165519062986,
+        0.3634283272491205
+      ],
+      "models": {
+        "adaptive": {
+          "all": {
+            "brier": 0.523960923203149,
+            "direction_accuracy": 0.5192307692307693,
+            "direction_brier": 0.24983944189839796,
+            "direction_correct": 162,
+            "direction_log_loss": 0.6928258273750253,
+            "flat_n": 8,
+            "log_loss": 0.7941504243750804,
+            "moving_n": 312,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5007555024166062,
+            "direction_accuracy": 0.4722222222222222,
+            "direction_brier": 0.24967764070490212,
+            "direction_correct": 17,
+            "direction_log_loss": 0.6925004653653019,
+            "flat_n": 0,
+            "log_loss": 0.7231573909099824,
+            "moving_n": 36,
+            "n": 36
+          },
+          "own_selection": {
+            "brier": 0.43276615089255477,
+            "coverage": 0.003125,
+            "direction_accuracy": 1.0,
+            "direction_brier": 0.21464004354271296,
+            "direction_correct": 1,
+            "direction_log_loss": 0.6223022326987654,
+            "flat_n": 0,
+            "log_loss": 0.6533636409513389,
+            "moving_n": 1,
+            "n": 1,
+            "original_accuracy_flat_errors": 1.0
+          }
+        },
+        "baseline": {
+          "all": {
+            "brier": 0.5291850541935532,
+            "direction_accuracy": 0.4519230769230769,
+            "direction_brier": 0.2526094787792076,
+            "direction_correct": 141,
+            "direction_log_loss": 0.6983815102551858,
+            "flat_n": 8,
+            "log_loss": 0.7995672151832369,
+            "moving_n": 312,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5235961956516628,
+            "direction_accuracy": 0.4166666666666667,
+            "direction_brier": 0.26152162026232206,
+            "direction_correct": 15,
+            "direction_log_loss": 0.7163062266024128,
+            "flat_n": 0,
+            "log_loss": 0.7469631521470935,
+            "moving_n": 36,
+            "n": 36
+          },
+          "own_selection": {
+            "brier": 0.5235961956516628,
+            "coverage": 0.1125,
+            "direction_accuracy": 0.4166666666666667,
+            "direction_brier": 0.26152162026232206,
+            "direction_correct": 15,
+            "direction_log_loss": 0.7163062266024128,
+            "flat_n": 0,
+            "log_loss": 0.7469631521470935,
+            "moving_n": 36,
+            "n": 36,
+            "original_accuracy_flat_errors": 0.4166666666666667
+          }
+        },
+        "mirrored": {
+          "all": {
+            "brier": 0.5213507026369866,
+            "direction_accuracy": 0.5480769230769231,
+            "direction_brier": 0.24847292794720502,
+            "direction_correct": 171,
+            "direction_log_loss": 0.6900854127878759,
+            "flat_n": 8,
+            "log_loss": 0.7914785201526099,
+            "moving_n": 312,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.4882140307434067,
+            "direction_accuracy": 0.5833333333333334,
+            "direction_brier": 0.24328074471458797,
+            "direction_correct": 21,
+            "direction_log_loss": 0.6796479471081756,
+            "flat_n": 0,
+            "log_loss": 0.7103048726528561,
+            "moving_n": 36,
+            "n": 36
+          },
+          "own_selection": {
+            "brier": 0.4882140307434067,
+            "coverage": 0.1125,
+            "direction_accuracy": 0.5833333333333334,
+            "direction_brier": 0.24328074471458797,
+            "direction_correct": 21,
+            "direction_log_loss": 0.6796479471081756,
+            "flat_n": 0,
+            "log_loss": 0.7103048726528561,
+            "moving_n": 36,
+            "n": 36,
+            "original_accuracy_flat_errors": 0.5833333333333334
+          }
+        },
+        "neutral": {
+          "all": {
+            "brier": 0.5242689231847408,
+            "direction_accuracy": 0.46474358974358976,
+            "direction_brier": 0.25,
+            "direction_correct": 145,
+            "direction_log_loss": 0.6931471805599454,
+            "flat_n": 8,
+            "log_loss": 0.7944637437303774,
+            "moving_n": 312,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5013913826018723,
+            "direction_accuracy": 0.4444444444444444,
+            "direction_brier": 0.25,
+            "direction_correct": 16,
+            "direction_log_loss": 0.6931471805599451,
+            "flat_n": 0,
+            "log_loss": 0.723804106104626,
+            "moving_n": 36,
+            "n": 36
+          },
+          "own_selection": {
+            "coverage": 0.0,
+            "flat_n": 0,
+            "moving_n": 0,
+            "n": 0
+          }
+        },
+        "positions": {
+          "all": {
+            "brier": 0.5296198777736425,
+            "direction_accuracy": 0.4583333333333333,
+            "direction_brier": 0.25283976480105014,
+            "direction_correct": 143,
+            "direction_log_loss": 0.6988435391244511,
+            "flat_n": 8,
+            "log_loss": 0.8000176933307707,
+            "moving_n": 312,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5240777554764691,
+            "direction_accuracy": 0.4166666666666667,
+            "direction_brier": 0.26177269710788453,
+            "direction_correct": 15,
+            "direction_log_loss": 0.7168163587599486,
+            "flat_n": 0,
+            "log_loss": 0.7474732843046294,
+            "moving_n": 36,
+            "n": 36
+          },
+          "own_selection": {
+            "brier": 0.532020768944631,
+            "coverage": 0.1125,
+            "direction_accuracy": 0.3611111111111111,
+            "direction_brier": 0.26587312420565057,
+            "direction_correct": 13,
+            "direction_log_loss": 0.72503241031738,
+            "flat_n": 0,
+            "log_loss": 0.7556969802027074,
+            "moving_n": 36,
+            "n": 36,
+            "original_accuracy_flat_errors": 0.3611111111111111
+          }
+        },
+        "price_control": {
+          "all": {
+            "brier": 0.5291925589791393,
+            "direction_accuracy": 0.46474358974358976,
+            "direction_brier": 0.252613506054757,
+            "direction_correct": 145,
+            "direction_log_loss": 0.6983910079584843,
+            "flat_n": 8,
+            "log_loss": 0.7995764754439529,
+            "moving_n": 312,
+            "n": 320
+          },
+          "fixed_baseline_selection": {
+            "brier": 0.5242819865797443,
+            "direction_accuracy": 0.4166666666666667,
+            "direction_brier": 0.2618772961927321,
+            "direction_correct": 15,
+            "direction_log_loss": 0.7170254767259805,
+            "flat_n": 0,
+            "log_loss": 0.747682402270661,
+            "moving_n": 36,
+            "n": 36
+          },
+          "own_selection": {
+            "brier": 0.5291700403169219,
+            "coverage": 0.115625,
+            "direction_accuracy": 0.3783783783783784,
+            "direction_brier": 0.26438942849632346,
+            "direction_correct": 14,
+            "direction_log_loss": 0.722055522392529,
+            "flat_n": 0,
+            "log_loss": 0.7526542818351071,
+            "moving_n": 37,
+            "n": 37,
+            "original_accuracy_flat_errors": 0.3783783783783784
+          }
+        }
+      },
+      "pending": 1,
+      "scored": 320,
+      "strict_point_improvement": true
+    }
+  },
+  "historical_pass_count": 0,
+  "historical_stable_point_improvement": false,
+  "live_replay_is_prospective_evidence": false,
+  "seconds": 4.930744886398315
+}

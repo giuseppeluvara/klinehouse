@@ -1,0 +1,21 @@
+{
+  "captured_at": 1793372265.007544,
+  "captured_utc": "2026-10-30T14:57:45.007544+00:00",
+  "chain_tip": "9b043cf12bf8db4ff0b62bb1de14ff492138460e07935e30b87e90ff4c0451f5",
+  "event_count": 10393,
+  "files": {
+    "config.json": "6f0d1991ba4d9251c0d262e759ab5fcc35b6654c315c276128c674af4749230e",
+    "events.sqlite": "b2fd1a4fabcdea02da90da96b05a7e70462c883491d2b7ec17c956c15fb28260",
+    "events.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "events.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "general-audit.json": "01c7df7f5f5eecfc5f04468f7b25bb8a6cda8a2ee6d58f7f5fb0d92fc94dd696",
+    "model.json": "ebe081bc39f856f6f903f6ddd30568c5d41b5408235239c7a1b59da93a170e74",
+    "status.json": "da9655c672f8ba17ad01d5ba02cc5bf0f251fcd87c99aebe97f01d6b8abd107d"
+  },
+  "forecast_count": 963,
+  "outcome_count": 960,
+  "preservation_note": "Exact user-file hashes are retained only in the local original receipt; public evidence omits environment-file and unrelated user-file digests.",
+  "source_run": "research/out/shadow-pilot-20261029-v2",
+  "user_files_preserved": true,
+  "verified": true
+}

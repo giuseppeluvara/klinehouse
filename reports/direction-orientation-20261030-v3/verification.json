@@ -1,0 +1,108 @@
+{
+  "bound_claimed": false,
+  "cohorts": {
+    "2024-BTCUSDT": {
+      "emissions": 61344,
+      "exactly_neutral_adaptive": 2,
+      "pending": 0,
+      "scored": 61344,
+      "strict_point_improvement": false
+    },
+    "2024-ETHUSDT": {
+      "emissions": 61344,
+      "exactly_neutral_adaptive": 2,
+      "pending": 0,
+      "scored": 61344,
+      "strict_point_improvement": false
+    },
+    "2024-SOLUSDT": {
+      "emissions": 61344,
+      "exactly_neutral_adaptive": 2,
+      "pending": 0,
+      "scored": 61344,
+      "strict_point_improvement": false
+    },
+    "2025-BTCUSDT": {
+      "emissions": 61055,
+      "exactly_neutral_adaptive": 2,
+      "pending": 0,
+      "scored": 61055,
+      "strict_point_improvement": false
+    },
+    "2025-ETHUSDT": {
+      "emissions": 61055,
+      "exactly_neutral_adaptive": 2,
+      "pending": 0,
+      "scored": 61055,
+      "strict_point_improvement": false
+    },
+    "2025-SOLUSDT": {
+      "emissions": 61055,
+      "exactly_neutral_adaptive": 2,
+      "pending": 0,
+      "scored": 61055,
+      "strict_point_improvement": false
+    },
+    "2026-BTCUSDT": {
+      "emissions": 61055,
+      "exactly_neutral_adaptive": 2,
+      "pending": 0,
+      "scored": 61055,
+      "strict_point_improvement": false
+    },
+    "2026-ETHUSDT": {
+      "emissions": 61055,
+      "exactly_neutral_adaptive": 2,
+      "pending": 0,
+      "scored": 61055,
+      "strict_point_improvement": false
+    },
+    "2026-SOLUSDT": {
+      "emissions": 61055,
+      "exactly_neutral_adaptive": 2,
+      "pending": 0,
+      "scored": 61055,
+      "strict_point_improvement": false
+    },
+    "live-BTCUSDT": {
+      "emissions": 321,
+      "exactly_neutral_adaptive": 2,
+      "pending": 1,
+      "scored": 320,
+      "strict_point_improvement": true
+    },
+    "live-ETHUSDT": {
+      "emissions": 321,
+      "exactly_neutral_adaptive": 2,
+      "pending": 1,
+      "scored": 320,
+      "strict_point_improvement": false
+    },
+    "live-SOLUSDT": {
+      "emissions": 321,
+      "exactly_neutral_adaptive": 2,
+      "pending": 1,
+      "scored": 320,
+      "strict_point_improvement": true
+    }
+  },
+  "historical_cohorts": 9,
+  "historical_pass_count": 0,
+  "historical_stable_point_improvement": false,
+  "live_replay_cohorts": 3,
+  "live_replay_is_prospective_evidence": false,
+  "manifest_sha256": "146d5dd2e56f7fbb40e36b3e35c4b14198fa496b47d05786bf145a929eace231",
+  "maximum_absolute_reconstruction_errors": {
+    "adaptive": 2.0865142946746573e-11,
+    "mirrored": 0.0,
+    "neutral": 0.0,
+    "weights": 4.070924708443613e-10
+  },
+  "probability_tolerance": 2e-09,
+  "protected_historical_outcomes_opened": false,
+  "protocol_sha256": "cb7c1218aa3eab1d60895c2b47ed660f84888887c1135fe61263e6bacea470d6",
+  "scope": "Independent frozen-source membership, live acknowledgement/receipt chronology, likelihood-ratio posterior reconstruction and all saved scores/selections. No learner imports or inference rerun.",
+  "verified": true,
+  "verified_at": "2026-10-30T15:12:37.960878+00:00",
+  "verifier_sha256": "748b54306868ea207b639503f60d69b585a1581b953fe7edf57b5eb8832877b9"
+}
