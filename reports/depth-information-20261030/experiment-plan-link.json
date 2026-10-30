@@ -1,0 +1,18 @@
+{
+  "activation_note": "Separate public data acquisition; original pilot untouched.",
+  "candidate_forecasts": false,
+  "capture_only": true,
+  "first_scheduled_anchor": 1793374500,
+  "first_scheduled_anchor_utc": "2026-10-30T15:35:00+00:00",
+  "fitted_real_model": false,
+  "future_pipeline_remaining": [
+    "join first-day complete book/eligible original baseline/outcomes before training cutoff",
+    "freeze one coefficient with actual postcommit evidence",
+    "emit new candidate probabilities and controls prospectively in a separate ledger before deadlines",
+    "audit future performance without retuning"
+  ],
+  "plan_path": "reports/depth-information-20261030/protocol-plan.json",
+  "plan_sha256": "2249959d530ec160a0dddfff51d783ec814656728a85f6dab7b4cd2c9006163a",
+  "training_cutoff": 1793460900,
+  "training_cutoff_utc": "2026-10-31T15:35:00+00:00"
+}

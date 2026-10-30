@@ -1,0 +1,44 @@
+{
+  "activation_at": 1793374413.458949,
+  "activation_utc": "2026-10-30T15:33:33.458949+00:00",
+  "availability": "Request no earlier than activation. Start at anchor-10 seconds; full body must arrive before anchor. Durable primary receipt commit must complete by anchor+30 seconds. Preserve late, invalid, missing and unacknowledged observations; never backfill books.",
+  "candidate_predictions": false,
+  "capture_only": true,
+  "code_sha256": "97e72f387e0f50b9c286a740142e009a6d2f489c10772098a4bbddb5d879c623",
+  "end_at": 1793877000.0,
+  "end_utc": "2026-11-05T11:10:00+00:00",
+  "features": "QI1, QI20 and spread from the SAME depth body; Decimal arithmetic. QI20 is the only proposed new predictor. No mixing asynchronous REST bookTicker fields.",
+  "future_hypothesis_not_executed": {
+    "feature": "QI20",
+    "model": "One shared offset-logistic coefficient on the frozen baseline, ridge 0.25, beta in [-8,8].",
+    "target": "Existing five-minute spot return anchor+60 to anchor+360 seconds; this collector neither reads outcomes nor emits predictions.",
+    "training": "First 24 hours of newly captured books and only subsequently matured authorized outcomes; then freeze before future evaluation through this capture's end. No retuning."
+  },
+  "limits": {
+    "clock_skew_bound_seconds": 2,
+    "commit_deadline_seconds": 30,
+    "grid_seconds": 300,
+    "lead_seconds": 10,
+    "levels": 20,
+    "max_run_seconds": 691200,
+    "max_storage_bytes": 33554432,
+    "min_free_bytes": 42949672960,
+    "response_bytes": 100000,
+    "storage_reserve_bytes": 4194304,
+    "target_end_seconds": 360,
+    "target_start_seconds": 60,
+    "wall_monotonic_tolerance_seconds": 0.25
+  },
+  "orders": false,
+  "schema": "klinehouse-depth-research-v1",
+  "source_semantics": "Aggregated visible resting depth, not trades, OI, positions or event-level OFI. REST lastUpdateId is a sequence, not an event timestamp. HTTP receipt time does not certify source freshness.",
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT"
+  ],
+  "urls": {
+    "depth": "https://api.binance.com/api/v3/depth",
+    "time": "https://api.binance.com/api/v3/time"
+  }
+}

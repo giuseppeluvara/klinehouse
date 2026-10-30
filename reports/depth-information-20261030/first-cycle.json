@@ -1,0 +1,67 @@
+{
+  "all_ack_commits_before_anchor": true,
+  "all_body_receipts_before_anchor": true,
+  "all_primary_commits_before_anchor": true,
+  "anchor": 1793374500,
+  "anchor_utc": "2026-10-30T15:35:00+00:00",
+  "books": [
+    {
+      "ack_clock_healthy": true,
+      "ack_commit_observed_at": 1793374490.8971279,
+      "ack_hash": "7af86ebd7a2930384faa90a5d6407c83a176ea52d795c27241d724689681c24d",
+      "ack_seq": 8,
+      "clock_healthy": true,
+      "commit_clock_healthy": true,
+      "committed_at": 1793374490.8958342,
+      "committed_monotonic": 308169.156513416,
+      "digest": "a3983f1a71e0064f7cc958d01ebfbdc2c6b684aee9b7d4852bdb81560a0f8d61",
+      "eligible": true,
+      "received_at": 1793374490.882752,
+      "recorded_at": 1793374490.894229,
+      "recorded_monotonic": 308169.154907958,
+      "seq": 7,
+      "symbol": "BTCUSDT"
+    },
+    {
+      "ack_clock_healthy": true,
+      "ack_commit_observed_at": 1793374490.8987908,
+      "ack_hash": "67c9df70a12a1c923aeef55151ffa72f090177a82bce58329a1339d926d28dfd",
+      "ack_seq": 10,
+      "clock_healthy": true,
+      "commit_clock_healthy": true,
+      "committed_at": 1793374490.89799,
+      "committed_monotonic": 308169.158669166,
+      "digest": "63eeb226676086053f08d305df74e7786eb8a2c54f3b78ca7de311897e36bd0d",
+      "eligible": true,
+      "received_at": 1793374490.885906,
+      "recorded_at": 1793374490.8972318,
+      "recorded_monotonic": 308169.157910541,
+      "seq": 9,
+      "symbol": "ETHUSDT"
+    },
+    {
+      "ack_clock_healthy": true,
+      "ack_commit_observed_at": 1793374490.901452,
+      "ack_hash": "c1f6063d0a2927df5491ca6acca5e6427eb466072987a21bbb9e4f0a58c64554",
+      "ack_seq": 12,
+      "clock_healthy": true,
+      "commit_clock_healthy": true,
+      "committed_at": 1793374490.900691,
+      "committed_monotonic": 308169.161369791,
+      "digest": "e55857786b9b1381f77a6a98fbc2912952cd4d31d3dfecc58df5c96b218f508f",
+      "eligible": true,
+      "received_at": 1793374490.8907251,
+      "recorded_at": 1793374490.899631,
+      "recorded_monotonic": 308169.16030975,
+      "seq": 11,
+      "symbol": "SOLUSDT"
+    }
+  ],
+  "candidate_predictions": false,
+  "capture_only": true,
+  "captured_at": 1793374490.901578,
+  "journal_head": {
+    "chain_tip": "c1f6063d0a2927df5491ca6acca5e6427eb466072987a21bbb9e4f0a58c64554",
+    "events": 12
+  }
+}

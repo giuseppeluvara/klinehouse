@@ -1,0 +1,34 @@
+{
+  "controls": [
+    "original baseline",
+    "matched price_control",
+    "positions",
+    "QI20 model"
+  ],
+  "core_code": {
+    "research/depth_information.py": "885cb8d67779b31440d3d8cc7ee43a69f6a3e2fd4819ae79cb2985a9728d6664",
+    "tests/test_depth_information.py": "c0e5487a83e329604836fa3d4655d98213845c71f7ac4ac873c3a8b1e3b4604f"
+  },
+  "evaluation": "Prospective future emissions only after fixed cutoff through2026-11-05T11:10Z. Issue and postcommit confirmation byanchor+30, beforetargetstart. Same asset/anchor realized cases for all controls. Direction on moving outcomes; full three-class sum Brier and natural log-loss on all outcomes. Retain missing, fallback, late and unavailable outcomes in coverage; no hindsight sign/threshold/asset exceptions.",
+  "historical_data": "No historical order-book dataset opened or downloaded. Do not infer that equity next-tick evidence proves five-minute crypto predictability.",
+  "model": "q_new=sigmoid(logit(q_frozen_baseline)+beta*QI20), one beta shared across all assets, fixed ridge0.25,beta in[-8,8]. Fit weighted conditional natural log-loss, equal total weight per moving anchor, flat labels excluded. Preserve original issued flat probability exactly. Freeze once after training cutoff before future candidate emission; actual durable-model/forecast timestamp evidence required. No real beta has been fitted at plan registration.",
+  "primary_information": "Only QI20=(sum_bid_quantity20-sum_ask_quantity20)/(sum_bid_quantity20+sum_ask_quantity20). QI1 and spread recorded as diagnostics, not extra selected predictor variants.",
+  "references": [
+    "https://developers.binance.com/en/docs/catalog/core-trading-spot-trading/api/rest-api/market",
+    "https://developers.binance.com/en/docs/catalog/core-trading-spot-trading/api/rest-api/general",
+    "https://arxiv.org/abs/1011.6402",
+    "https://arxiv.org/abs/1512.03492"
+  ],
+  "registered_at": 1793374257.491976,
+  "schema": "depth-information-research-plan-v1",
+  "scope": "Separate prospective research. Never change the ongoing shadow-pilot model, runtime, configuration, service, ledger or protected historical holdouts. No orders or credentials.",
+  "source_caveats": "REST depth has no event timestamp. Actual before-anchor reception establishes client availability, not certified exchange freshness. Compute all BBO,spread,QI1,QI20 from the SAME body. QI20 is visible passive quantity imbalance, not OI, trades or event-level OFI.",
+  "sources": [
+    "https://api.binance.com/api/v3/depth limit=20 for BTCUSDT,ETHUSDT,SOLUSDT",
+    "https://api.binance.com/api/v3/time for client UTC clock bounds"
+  ],
+  "status": "New-data capture and future hypothesis, NOT a fitted or validated predictor. Candidate forecast persistence and live evaluation runner remain to implement.",
+  "success": "A promising prospective incremental result requires positive point changes in direction and full Brier/log-loss against BOTH baseline and matched price_control on EACH asset, >=288 moving outcomes per asset spanning>=2 evaluation UTC days, all coverage/fallback reported. A failure on any asset remains a failure. This short pilot cannot establish statistical superiority, profitability or cross-year generality.",
+  "target": "Original spot close-to-close sign from anchor+60 to anchor+360 seconds, exact flat retained. Source books fully received before the five-minute anchor.",
+  "training": "First scheduled anchor from capture activation defines fixed cutoff first_anchor+86400, even if initial captures fail. Only complete three-asset book/eligible-original-baseline anchors whose outcomes mature AND are received by cutoff. No book backfill. At least300 moving labels pooled and100 per asset; otherwise freeze beta=0 with insufficient-data status, never extend or tune the window."
+}

@@ -1,0 +1,13 @@
+{
+  "at": 1793374829.133454,
+  "candidate_predictions": 0,
+  "capture_tests": 30,
+  "core_depth_tests": 9,
+  "free_gib": 61.89697265625,
+  "independent_first_capture_audit": "passed",
+  "pilot_unchanged": true,
+  "protected_holdouts_opened": false,
+  "real_candidate_fitted": false,
+  "ruff": "passed",
+  "tests_passed": 174
+}
