@@ -1,0 +1,616 @@
+{
+  "actions_taken": [
+    "Read-only diagnostics and evidence preservation. No cleanup, update interruption, threshold change or trial restart below40GiB."
+  ],
+  "as_of": 1793386614.4232152,
+  "depth_books_preserved": 60,
+  "depth_effective_budget": {
+    "depth": {
+      "configured_max_storage_bytes": 33554432,
+      "effective_max_storage_bytes": 67108864,
+      "storage_reserve_bytes": 4194304
+    }
+  },
+  "depth_missing_anchor_symbols": [
+    [
+      1793380500,
+      "BTCUSDT"
+    ],
+    [
+      1793380500,
+      "ETHUSDT"
+    ],
+    [
+      1793380500,
+      "SOLUSDT"
+    ],
+    [
+      1793380800,
+      "BTCUSDT"
+    ],
+    [
+      1793380800,
+      "ETHUSDT"
+    ],
+    [
+      1793380800,
+      "SOLUSDT"
+    ],
+    [
+      1793381100,
+      "BTCUSDT"
+    ],
+    [
+      1793381100,
+      "ETHUSDT"
+    ],
+    [
+      1793381100,
+      "SOLUSDT"
+    ],
+    [
+      1793381400,
+      "BTCUSDT"
+    ],
+    [
+      1793381400,
+      "ETHUSDT"
+    ],
+    [
+      1793381400,
+      "SOLUSDT"
+    ],
+    [
+      1793381700,
+      "BTCUSDT"
+    ],
+    [
+      1793381700,
+      "ETHUSDT"
+    ],
+    [
+      1793381700,
+      "SOLUSDT"
+    ],
+    [
+      1793382000,
+      "BTCUSDT"
+    ],
+    [
+      1793382000,
+      "ETHUSDT"
+    ],
+    [
+      1793382000,
+      "SOLUSDT"
+    ],
+    [
+      1793382300,
+      "BTCUSDT"
+    ],
+    [
+      1793382300,
+      "ETHUSDT"
+    ],
+    [
+      1793382300,
+      "SOLUSDT"
+    ],
+    [
+      1793382600,
+      "BTCUSDT"
+    ],
+    [
+      1793382600,
+      "ETHUSDT"
+    ],
+    [
+      1793382600,
+      "SOLUSDT"
+    ],
+    [
+      1793382900,
+      "BTCUSDT"
+    ],
+    [
+      1793382900,
+      "ETHUSDT"
+    ],
+    [
+      1793382900,
+      "SOLUSDT"
+    ],
+    [
+      1793383200,
+      "BTCUSDT"
+    ],
+    [
+      1793383200,
+      "ETHUSDT"
+    ],
+    [
+      1793383200,
+      "SOLUSDT"
+    ],
+    [
+      1793383500,
+      "BTCUSDT"
+    ],
+    [
+      1793383500,
+      "ETHUSDT"
+    ],
+    [
+      1793383500,
+      "SOLUSDT"
+    ],
+    [
+      1793383800,
+      "BTCUSDT"
+    ],
+    [
+      1793383800,
+      "ETHUSDT"
+    ],
+    [
+      1793383800,
+      "SOLUSDT"
+    ],
+    [
+      1793384100,
+      "BTCUSDT"
+    ],
+    [
+      1793384100,
+      "ETHUSDT"
+    ],
+    [
+      1793384100,
+      "SOLUSDT"
+    ],
+    [
+      1793384400,
+      "BTCUSDT"
+    ],
+    [
+      1793384400,
+      "ETHUSDT"
+    ],
+    [
+      1793384400,
+      "SOLUSDT"
+    ],
+    [
+      1793384700,
+      "BTCUSDT"
+    ],
+    [
+      1793384700,
+      "ETHUSDT"
+    ],
+    [
+      1793384700,
+      "SOLUSDT"
+    ],
+    [
+      1793385000,
+      "BTCUSDT"
+    ],
+    [
+      1793385000,
+      "ETHUSDT"
+    ],
+    [
+      1793385000,
+      "SOLUSDT"
+    ],
+    [
+      1793385300,
+      "BTCUSDT"
+    ],
+    [
+      1793385300,
+      "ETHUSDT"
+    ],
+    [
+      1793385300,
+      "SOLUSDT"
+    ],
+    [
+      1793385600,
+      "BTCUSDT"
+    ],
+    [
+      1793385600,
+      "ETHUSDT"
+    ],
+    [
+      1793385600,
+      "SOLUSDT"
+    ],
+    [
+      1793385900,
+      "BTCUSDT"
+    ],
+    [
+      1793385900,
+      "ETHUSDT"
+    ],
+    [
+      1793385900,
+      "SOLUSDT"
+    ],
+    [
+      1793386200,
+      "BTCUSDT"
+    ],
+    [
+      1793386200,
+      "ETHUSDT"
+    ],
+    [
+      1793386200,
+      "SOLUSDT"
+    ],
+    [
+      1793386500,
+      "BTCUSDT"
+    ],
+    [
+      1793386500,
+      "ETHUSDT"
+    ],
+    [
+      1793386500,
+      "SOLUSDT"
+    ]
+  ],
+  "depth_missing_first_anchor": 1793380500,
+  "depth_missing_last_anchor": 1793386500,
+  "depth_missing_scheduled_books_as_of": 63,
+  "free_gib": 21.716796875,
+  "goal_complete": false,
+  "incident_first_stop_utc": "2026-10-30T17:10:20.736107Z",
+  "minimum_free_gib": 40,
+  "model_or_protocol_changes_to_bypass_guard": false,
+  "observed_utc": "2026-10-30T18:56:55.827844+00:00",
+  "operating_system_update": {
+    "caveat": "Do not add APFS staging/clone sizes as independent physical increments. Asset file metadata17:03\u201317:06 coincides with updater17:03:36 and space decline.",
+    "process_metadata": "89995 01:53:19 340.1 /System/Volumes/Update/MobileAsset/AssetsV2/com_apple_MobileAsset_MobileSoftwareUpdate_MacUpdateBrain/9de19bd36910dbe3faf7af8d11741b690a451d60.asset/AssetData/com.apple.MobileSoftwareUpdate.UpdateBrainService.xpc/Contents/MacOS/com.apple.MobileSoftwareUpdate.UpdateBrainService",
+    "process_observed_live": true,
+    "software_update_assets_allocated_gib": 9.451,
+    "staging_update_volume_reported_allocated_gib": 11.472
+  },
+  "original_commit_confirmations_missing": [],
+  "original_late_commits": [],
+  "original_mature_pending_outcomes": [
+    [
+      1793379900,
+      "BTCUSDT"
+    ],
+    [
+      1793379900,
+      "ETHUSDT"
+    ],
+    [
+      1793379900,
+      "SOLUSDT"
+    ],
+    [
+      1793380200,
+      "BTCUSDT"
+    ],
+    [
+      1793380200,
+      "ETHUSDT"
+    ],
+    [
+      1793380200,
+      "SOLUSDT"
+    ]
+  ],
+  "original_outcomes": 1038,
+  "original_pilot_stop_utc": "2026-10-30T17:10:31.464655+00:00",
+  "original_unaccounted_anchor_symbols": [
+    [
+      1793380500,
+      "BTCUSDT"
+    ],
+    [
+      1793380500,
+      "ETHUSDT"
+    ],
+    [
+      1793380500,
+      "SOLUSDT"
+    ],
+    [
+      1793380800,
+      "BTCUSDT"
+    ],
+    [
+      1793380800,
+      "ETHUSDT"
+    ],
+    [
+      1793380800,
+      "SOLUSDT"
+    ],
+    [
+      1793381100,
+      "BTCUSDT"
+    ],
+    [
+      1793381100,
+      "ETHUSDT"
+    ],
+    [
+      1793381100,
+      "SOLUSDT"
+    ],
+    [
+      1793381400,
+      "BTCUSDT"
+    ],
+    [
+      1793381400,
+      "ETHUSDT"
+    ],
+    [
+      1793381400,
+      "SOLUSDT"
+    ],
+    [
+      1793381700,
+      "BTCUSDT"
+    ],
+    [
+      1793381700,
+      "ETHUSDT"
+    ],
+    [
+      1793381700,
+      "SOLUSDT"
+    ],
+    [
+      1793382000,
+      "BTCUSDT"
+    ],
+    [
+      1793382000,
+      "ETHUSDT"
+    ],
+    [
+      1793382000,
+      "SOLUSDT"
+    ],
+    [
+      1793382300,
+      "BTCUSDT"
+    ],
+    [
+      1793382300,
+      "ETHUSDT"
+    ],
+    [
+      1793382300,
+      "SOLUSDT"
+    ],
+    [
+      1793382600,
+      "BTCUSDT"
+    ],
+    [
+      1793382600,
+      "ETHUSDT"
+    ],
+    [
+      1793382600,
+      "SOLUSDT"
+    ],
+    [
+      1793382900,
+      "BTCUSDT"
+    ],
+    [
+      1793382900,
+      "ETHUSDT"
+    ],
+    [
+      1793382900,
+      "SOLUSDT"
+    ],
+    [
+      1793383200,
+      "BTCUSDT"
+    ],
+    [
+      1793383200,
+      "ETHUSDT"
+    ],
+    [
+      1793383200,
+      "SOLUSDT"
+    ],
+    [
+      1793383500,
+      "BTCUSDT"
+    ],
+    [
+      1793383500,
+      "ETHUSDT"
+    ],
+    [
+      1793383500,
+      "SOLUSDT"
+    ],
+    [
+      1793383800,
+      "BTCUSDT"
+    ],
+    [
+      1793383800,
+      "ETHUSDT"
+    ],
+    [
+      1793383800,
+      "SOLUSDT"
+    ],
+    [
+      1793384100,
+      "BTCUSDT"
+    ],
+    [
+      1793384100,
+      "ETHUSDT"
+    ],
+    [
+      1793384100,
+      "SOLUSDT"
+    ],
+    [
+      1793384400,
+      "BTCUSDT"
+    ],
+    [
+      1793384400,
+      "ETHUSDT"
+    ],
+    [
+      1793384400,
+      "SOLUSDT"
+    ],
+    [
+      1793384700,
+      "BTCUSDT"
+    ],
+    [
+      1793384700,
+      "ETHUSDT"
+    ],
+    [
+      1793384700,
+      "SOLUSDT"
+    ],
+    [
+      1793385000,
+      "BTCUSDT"
+    ],
+    [
+      1793385000,
+      "ETHUSDT"
+    ],
+    [
+      1793385000,
+      "SOLUSDT"
+    ],
+    [
+      1793385300,
+      "BTCUSDT"
+    ],
+    [
+      1793385300,
+      "ETHUSDT"
+    ],
+    [
+      1793385300,
+      "SOLUSDT"
+    ],
+    [
+      1793385600,
+      "BTCUSDT"
+    ],
+    [
+      1793385600,
+      "ETHUSDT"
+    ],
+    [
+      1793385600,
+      "SOLUSDT"
+    ],
+    [
+      1793385900,
+      "BTCUSDT"
+    ],
+    [
+      1793385900,
+      "ETHUSDT"
+    ],
+    [
+      1793385900,
+      "SOLUSDT"
+    ],
+    [
+      1793386200,
+      "BTCUSDT"
+    ],
+    [
+      1793386200,
+      "ETHUSDT"
+    ],
+    [
+      1793386200,
+      "SOLUSDT"
+    ],
+    [
+      1793386500,
+      "BTCUSDT"
+    ],
+    [
+      1793386500,
+      "ETHUSDT"
+    ],
+    [
+      1793386500,
+      "SOLUSDT"
+    ]
+  ],
+  "original_valid_forecasts": 1044,
+  "reason": "free_space_below_40_GiB",
+  "resume_requirements": [
+    "Verify at least40GiB available before restarting any unchanged runtime.",
+    "Original pilot: only com.klinehouse.shadow.1793272200, never the disabled old service.",
+    "Depth capture: only pinned amended runtime c0bc1e... in budget-amendment.json; legacy process/session have terminated.",
+    "Predictor: frozen c2a4c90c... runtime; no model reset, window extension or pre-cutoff fit.",
+    "Declare all forecast/book gaps; never backdate or recapture missed books."
+  ],
+  "runtime_processes_confirmed_absent": true,
+  "runtime_statuses": {
+    "depth_capture": {
+      "candidate_forecasts": null,
+      "forecasts": null,
+      "free_bytes": 42804158464,
+      "model_fitted": null,
+      "outcomes": null,
+      "pending_outcomes": null,
+      "phase": "resource_stopped",
+      "pid": 89769,
+      "updated_utc": "2026-10-30T17:10:20.736107+00:00"
+    },
+    "depth_predictor": {
+      "candidate_forecasts": 0,
+      "forecasts": null,
+      "free_bytes": null,
+      "model_fitted": false,
+      "outcomes": null,
+      "pending_outcomes": 0,
+      "phase": "resource_stopped",
+      "pid": 87080,
+      "updated_utc": "2026-10-30T17:10:21.793542+00:00"
+    },
+    "original_pilot": {
+      "candidate_forecasts": null,
+      "forecasts": 1044,
+      "free_bytes": 42746683392,
+      "model_fitted": null,
+      "outcomes": 1038,
+      "pending_outcomes": 6,
+      "phase": "resource_stopped",
+      "pid": 64363,
+      "updated_utc": "2026-10-30T17:10:31.464655+00:00"
+    }
+  },
+  "schema": "shadow-resource-incident-v1",
+  "shortfall_gib": 18.283203125,
+  "user_files_preserved": true
+}

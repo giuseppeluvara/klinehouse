@@ -8,7 +8,34 @@ This is a technical commissioning period, not a completed statistical test.
 The first real cycle with all three correction contexts active was verified on
 **2026-10-29 at 12:31 UTC**. Forecasts were committed before the target began,
 copied independently before entry, and matched unchanged to later outcomes.
-The seven-day collection remains running.
+The collection automatically stopped on **2026-10-30 at 17:10:31 UTC** because
+available SSD space crossed the unchanged 40 GiB guard. See the incident below.
+
+## Resource interruption on October 30
+
+At **18:56:55 UTC**, the service was confirmed stopped: **1,044 valid forecasts**
+and **1,038 outcomes** remain preserved, with six matured outcomes pending. There
+were 63 additional unrecorded asset/anchor emissions from 17:15 through 18:55 UTC;
+the ongoing gap must remain visible and must never be filled with retrospective
+forecasts. The original 39 declared startup misses are separate from this gap.
+
+The original service, frozen runtime, model and protocol were not changed or
+restarted. Its recorded stop reason is insufficient free space. A macOS update
+preparation process was active, with about 9.45 GiB allocated in its update assets
+and concurrent APFS staging activity. Available space was **21.72 GiB** at this
+incident observation. APFS clone/staging sizes must not be summed as independent
+physical increments. No system files were deleted and the update was not stopped.
+
+[Incident evidence](resource-incident-20261030.json) binds the stop records,
+current coverage, missing outcomes, absent runtime processes and read-only space
+diagnostics. Both separate depth-research processes also stopped on the same
+40 GiB guard, without fitting a model. Their own storage budgets were not full.
+
+Before resuming, verify at least 40 GiB free and actual process/service state.
+Only the unchanged service `com.klinehouse.shadow.1793272200` may resume this
+pilot; the old disabled service must stay disabled. Preserve all gaps and actual
+receipt times. Do not lower resource thresholds, alter models or protocols, access
+protected holdouts, execute orders or restart simply on an observation timeout.
 
 ## First complete real cycle
 
@@ -75,8 +102,8 @@ Evidence:
 - [Checkpoint hashes](first-real-cycle-checkpoint-manifest.json) and [verifier versions frozen before emission](first-real-cycle-verifiers.json)
 
 The original checkpoint database is retained locally under
-`research/out/shadow-pilot-20261029-v2/first-full-checkpoint/`. The live journal
-continues appending. `first-cycle-verified.json` in the live run records that this
+`research/out/shadow-pilot-20261029-v2/first-full-checkpoint/`. The operational
+journal remains preserved during the resource interruption. `first-cycle-verified.json` records that this
 milestone has already been communicated; hourly supervision should avoid repeating
 the notification and continue checking new anomalies and final completion.
 

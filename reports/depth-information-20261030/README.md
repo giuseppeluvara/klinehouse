@@ -1,6 +1,15 @@
-# Separate prospective depth-information research: capture and warmup active
+# Separate prospective depth-information research
 
-Status recorded on **2026-10-30**, after predictor activation at **16:02 UTC**.
+**Operational status at 2026-10-30 18:56 UTC: stopped by the 40 GiB free-space
+guard.** The original pilot and both separate research processes stopped around
+17:10 UTC while a macOS update was preparing. Available SSD space subsequently
+fell to 21.72 GiB. See the [shared incident](../shadow-pilot-20261029/resource-incident-20261030.json).
+No real coefficient was fitted and no candidate forecast exists. The original
+training cutoff and end remain unchanged. Restart requires sufficient free space,
+the pinned amended collector runtime and the frozen predictor; preserve every gap.
+
+Initial predictor activation was **2026-10-30 16:02 UTC**. The engineering evidence
+below records events before the subsequent resource interruption.
 
 The preceding direction diagnosis found a short live regime in which the frozen
 hourly-center reversal signal ranked directions poorly. A causal orientation
@@ -14,7 +23,7 @@ model or candidate forecast has yet been produced.**
 
 ## Acquisition actually executed
 
-A bounded, anonymous GET-only collector is running locally from an immutable
+A bounded, anonymous GET-only collector was activated locally from an immutable
 runtime copy in `research/out/depth-research-20261030/`. It reads neither the
 original pilot nor historical archives, models, environment files or credentials.
 It collects three depth20 snapshots every five minutes, beginning ten seconds
@@ -111,9 +120,10 @@ any future candidate emission. There is no post-evaluation refitting or threshol
 search.
 
 The pure model helper, durable model-freeze, separate prospective forecast runner
-and independent audit are implemented. The runner is active in fixed warmup at
+and independent audit are implemented. The runner was activated in fixed warmup at
 `research/out/depth-information-20261030/`, from a frozen runtime copy. It has
 **no training snapshot, fitted coefficient, candidate forecast or efficacy result**.
+Its process is currently stopped by the shared free-space guard above.
 Its first-day cutoff remains unchanged. The runner performs no HTTP requests;
 it reads only the two authorized prospective journals, using read-only coherent
 transactions and incremental hash-chain verification. The collector and original
