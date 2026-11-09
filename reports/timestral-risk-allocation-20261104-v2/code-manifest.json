@@ -1,0 +1,5 @@
+{
+  "research/spot_portfolio.py": "e250d52967a075ac55cbe0be9bfb5a350714496537a51310dceee9ea82b4354b",
+  "scripts/run_timestral_risk_allocation.py": "6d5bfe495debc4135c2b066e736a2bdc3326d6511a52f14c33a540c393b1f8d1",
+  "tests/test_spot_portfolio.py": "f948d802be4848e6a1b73a6790e7a0f006b5358472ab85be01355db818550f3f"
+}

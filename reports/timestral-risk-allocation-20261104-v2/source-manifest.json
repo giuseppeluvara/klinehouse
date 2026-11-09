@@ -1,0 +1,50 @@
+[
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1503014400000&endTime=1785542399999&limit=1000",
+    "file": "raw-000.json",
+    "sha256": "c5303cc583d5f60471cb264eaae7808b8b72a6ff900c404ce5524c3dfa667d9d",
+    "received_at": "2026-11-04T18:56:57.344397+00:00"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1589414400000&endTime=1785542399999&limit=1000",
+    "file": "raw-001.json",
+    "sha256": "09c0aee0b795940f13cd5482f01143ffabc9c2c865ffb09cdcfa0d74c9d277b3",
+    "received_at": "2026-11-04T18:56:58.078877+00:00"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1675814400000&endTime=1785542399999&limit=1000",
+    "file": "raw-002.json",
+    "sha256": "2d4fe6a1b7d3067d76e46a66c84395366c97131aed37d87b7e7d428f96cd60fc",
+    "received_at": "2026-11-04T18:56:58.473183+00:00"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1762214400000&endTime=1785542399999&limit=1000",
+    "file": "raw-003.json",
+    "sha256": "571c14112e36de3aa560ad25e8e7e89a576c2fc1b847bca5bb4050b5f4854e3e",
+    "received_at": "2026-11-04T18:56:58.833486+00:00"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1d&startTime=1503014400000&endTime=1785542399999&limit=1000",
+    "file": "raw-004.json",
+    "sha256": "384ba932a9ae6db7f78d65055849c664e2fa59cb48d1ab7dbcf20d6bcc41afb3",
+    "received_at": "2026-11-04T18:56:59.206666+00:00"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1d&startTime=1589414400000&endTime=1785542399999&limit=1000",
+    "file": "raw-005.json",
+    "sha256": "1c5db285dc4ef5fe1b182109db83538e4c82ad9dce6a498a668fd9ac6d5bc049",
+    "received_at": "2026-11-04T18:56:59.712049+00:00"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1d&startTime=1675814400000&endTime=1785542399999&limit=1000",
+    "file": "raw-006.json",
+    "sha256": "64d0d53321f2832d19f62b37c6ce67431d76b89221e4c5d5100177fd91f50639",
+    "received_at": "2026-11-04T18:57:00.158940+00:00"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1d&startTime=1762214400000&endTime=1785542399999&limit=1000",
+    "file": "raw-007.json",
+    "sha256": "a7293e09c6f2cb68337dc1cc932e88d58db3c9c31a58afa3f15e1fe4dfc70d7a",
+    "received_at": "2026-11-04T18:57:00.503592+00:00"
+  }
+]

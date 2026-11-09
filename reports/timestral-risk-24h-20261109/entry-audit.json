@@ -1,0 +1,47 @@
+{
+  "status": "entry_verified",
+  "entry_ms": 1794213896734,
+  "due_ms": 1794300296734,
+  "events": 12,
+  "head": "8c997c2248b4bf7df7131838b4d46fdf1ac1f19297904c22345e03262317f465",
+  "weights": {
+    "ewma": [
+      0.213399197750464,
+      0.14334553776848633
+    ],
+    "timestral": [
+      0.25634692232652107,
+      0.14990304832411605
+    ]
+  },
+  "accounting": {
+    "status": "passed",
+    "paper_entries_checked": 1,
+    "marks_or_final_exits_checked": 1,
+    "individual_paper_fills_checked": 4,
+    "arms": {
+      "timestral": {
+        "cash": 5934.604483055941,
+        "units": [
+          0.03446437038796989,
+          0.7086520012403135
+        ],
+        "halted": false,
+        "cumulative_simulated_fees": 4.061334182761297,
+        "latest_derived_liquidation_nav": 9990.247324764165
+      },
+      "ewma": {
+        "cash": 6429.7973557689065,
+        "units": [
+          0.028692000120772002,
+          0.6776922701033276
+        ],
+        "halted": false,
+        "cumulative_simulated_fees": 3.5666360082228707,
+        "latest_derived_liquidation_nav": 9991.434729855717
+      }
+    },
+    "interpretation": "independent paper-accounting reconstruction; no actual fills or prospective profit certification"
+  },
+  "protocol_metadata_note": "The inherited model.variance_rule text describes the weekly pilot. The rapid protocol forecast field and pinned runner both use the first six four-hour steps."
+}

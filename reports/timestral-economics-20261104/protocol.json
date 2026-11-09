@@ -1,0 +1,40 @@
+{
+  "registered_at": "2026-11-04T18:49:19.711649+00:00",
+  "source": "reports/timestral-capacity-20261026/run/forecasts.jsonl.gz",
+  "source_sha256": "403aabdc3f91895111b62f7385da16e72d75a5378cb697d3cd62fac029474f1d",
+  "condition": "5m_256",
+  "horizons_hours": [
+    4,
+    24
+  ],
+  "new_policy_count": 6,
+  "policies": [
+    "median_positive",
+    "lower_quartile_above_cost",
+    "median_positive_vol_target"
+  ],
+  "rule_details": {
+    "median_positive": "long iff forecast median return > 0",
+    "lower_quartile_above_cost": "long iff forecast q25 > log(1.0012/0.9988)",
+    "median_positive_vol_target": "median-positive direction; exposure=min(1,0.10*sqrt(horizon/8760)/((q95-q05)/3.2897072539))"
+  },
+  "execution": "buy spot at open(anchor+1h); sell at open(anchor+horizon); one-hour inference/receipt delay; no overlapping holdings; cash otherwise",
+  "costs": {
+    "fee_each_fill": ".001",
+    "slippage_each_fill": ".0002",
+    "capital_opportunity_rate": ".05",
+    "leverage": false
+  },
+  "benchmark": "same delayed entry and exit windows always-long; also continuous buy-and-hold over first entry to last exit",
+  "gate": "research nomination only: >=30 trades, net trading return >0, excess vs matched always-long >0, 99.1667% block-bootstrap lower bound of mean weekly net return >0 and lower bound excess >0, positive trading PnL in at least 5 months; no real-money or prospective success claim",
+  "bootstrap": {
+    "block": "calendar UTC week; jointly retain policies and horizons",
+    "replicates": 10000,
+    "seed": 20261104,
+    "family_size": 6
+  },
+  "data": "native Binance BTCUSDT 1h; [2026-01-01,2026-08-01) only; exit anchors at/after Aug1 excluded; no protected experiment artifacts read",
+  "historical_status": "post-hoc economic study of previously explored forecasts; neither untouched nor prospective",
+  "scope": "Spot long/flat only. Model is actual pinned Timestral-5M, not a Gamma or logistic substitute.",
+  "pre_execution_amendment": "Restricted final boundary to exclude any new August bar before requesting prices or computing economics; preceding hash bf0f0967434b77b7c95a37ad1deb4ad8f8ced332d4a1369f8cad060bc19c03ea"
+}

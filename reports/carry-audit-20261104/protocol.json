@@ -1,0 +1,17 @@
+{
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT"
+  ],
+  "start_ms": 1785974400000,
+  "end_ms": 1793750400000,
+  "window_days": 30,
+  "spot_notional": "10000",
+  "capital": "20000",
+  "spot_fee": ".001",
+  "perp_fee": ".0005",
+  "slippage_bps_each_fill": "2",
+  "annual_capital_rate": ".05",
+  "interpretation": "historical diagnostic only; candle-open proxies; no liquidation model"
+}

@@ -1,0 +1,157 @@
+[
+  {
+    "url": "https://api.binance.com/api/v3/time?",
+    "file": "raw-0000.json",
+    "sha256": "6a812f6b736acceeb67cfa63b8fca9707c9c969085f845a9d72898ac102423fd"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&startTime=1785974400000&endTime=1793750399999&limit=1000",
+    "file": "raw-0001.json",
+    "sha256": "dbf31a745c310b2aa502b8cff70bca7fc4d1eb403a179d9266db7b3a852a8378"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&startTime=1793721600002&endTime=1793750399999&limit=1000",
+    "file": "raw-0002.json",
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1m&startTime=1785974400000&endTime=1785974459999&limit=1",
+    "file": "raw-0003.json",
+    "sha256": "87ddcee113db5ba11c73156925dfe65901337046e1822e11ca9dcf20b32809da"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=1m&startTime=1785974400000&endTime=1785974459999&limit=1",
+    "file": "raw-0004.json",
+    "sha256": "078d2f78bfb89b0da14a4dc5cf6b62237738163e833a13741f91dd2616cc94b5"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1m&startTime=1788566400000&endTime=1788566459999&limit=1",
+    "file": "raw-0005.json",
+    "sha256": "e158a28c46254e974d94a8fa10b0fc2d62ce3b52b1fa52712598d1dc9a1bc44c"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=1m&startTime=1788566400000&endTime=1788566459999&limit=1",
+    "file": "raw-0006.json",
+    "sha256": "f5f84af523966fee3d197de1edf49eb8036cba2225f6147900733a24800de2fe"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1m&startTime=1791158400000&endTime=1791158459999&limit=1",
+    "file": "raw-0007.json",
+    "sha256": "f24cf734b9f6b5edf70e7cb045f0403f6b4ab9244837606872b31cdc05fe4ca3"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=1m&startTime=1791158400000&endTime=1791158459999&limit=1",
+    "file": "raw-0008.json",
+    "sha256": "79f2e7ac8f048a38af7fc7f88700c8e618f361a036346917453cfc79153448ec"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1m&startTime=1793750400000&endTime=1793750459999&limit=1",
+    "file": "raw-0009.json",
+    "sha256": "c11c15faa1620c5b1ba02a24e8195c747b4185541c9e1b0b3f8edf0889f9245f"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=1m&startTime=1793750400000&endTime=1793750459999&limit=1",
+    "file": "raw-0010.json",
+    "sha256": "0418688e2d36f0e596ad981e9d87b822b2c4792edd55816168cc88a7f31f8734"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1785974400000&endTime=1793750399999&limit=1000",
+    "file": "raw-0011.json",
+    "sha256": "64f1053ae82ae77804cd1fb4898a1288db6e760c6b3e3cb6e3c90a40dde62076"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1793721600002&endTime=1793750399999&limit=1000",
+    "file": "raw-0012.json",
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1m&startTime=1785974400000&endTime=1785974459999&limit=1",
+    "file": "raw-0013.json",
+    "sha256": "4785d3fde2ade0ceaed83addd4535450f017e376ae9d9ed32a7cbdf2dc465619"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=ETHUSDT&interval=1m&startTime=1785974400000&endTime=1785974459999&limit=1",
+    "file": "raw-0014.json",
+    "sha256": "dfbd42e092ea248a29695a81912f965f2df570995645349edce6df4fe13c8c06"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1m&startTime=1788566400000&endTime=1788566459999&limit=1",
+    "file": "raw-0015.json",
+    "sha256": "25f90b90e513ed15ed83850fb3c63d2d1f0b02d4b363e2b526bc2c18b5aa67df"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=ETHUSDT&interval=1m&startTime=1788566400000&endTime=1788566459999&limit=1",
+    "file": "raw-0016.json",
+    "sha256": "8256dbd013b1d014b578fb4b7d38874565598f919b0941f0e789cf407d81c3e4"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1m&startTime=1791158400000&endTime=1791158459999&limit=1",
+    "file": "raw-0017.json",
+    "sha256": "339bc48e42e545e55dd72f23528beaa8ca131509b5e573f652017250cbc0ef3f"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=ETHUSDT&interval=1m&startTime=1791158400000&endTime=1791158459999&limit=1",
+    "file": "raw-0018.json",
+    "sha256": "e7130e84545cf9c6d1216fcb7aa074f41d507a5677bd1112edcfccb53b5c0dbe"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1m&startTime=1793750400000&endTime=1793750459999&limit=1",
+    "file": "raw-0019.json",
+    "sha256": "88149a8026cbd77d0abfb1cdb269a791d43f557550f1f0100df8a8a9a6c26cc0"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=ETHUSDT&interval=1m&startTime=1793750400000&endTime=1793750459999&limit=1",
+    "file": "raw-0020.json",
+    "sha256": "51e9c09195af73f7adf66d74c03344b5666992c869e1bc4c25c273c1ef803246"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=SOLUSDT&startTime=1785974400000&endTime=1793750399999&limit=1000",
+    "file": "raw-0021.json",
+    "sha256": "115945c03ce7f333c1add90ed153c25b5c0dfc1369400aae4aeecbe38c13ec0b"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=SOLUSDT&startTime=1793721600002&endTime=1793750399999&limit=1000",
+    "file": "raw-0022.json",
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=SOLUSDT&interval=1m&startTime=1785974400000&endTime=1785974459999&limit=1",
+    "file": "raw-0023.json",
+    "sha256": "13cbc16248c039be2ff5761a37ba35375055988865ca5a00cc2c237f78c64328"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=SOLUSDT&interval=1m&startTime=1785974400000&endTime=1785974459999&limit=1",
+    "file": "raw-0024.json",
+    "sha256": "26fbaab0a1cb25257777deda68322d07f6ae550b67a38422e008da774a7bac24"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=SOLUSDT&interval=1m&startTime=1788566400000&endTime=1788566459999&limit=1",
+    "file": "raw-0025.json",
+    "sha256": "e1e9efe4ae0b12d4e48bb22618cb5da814323c657f6e8abbea205814ab2906ed"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=SOLUSDT&interval=1m&startTime=1788566400000&endTime=1788566459999&limit=1",
+    "file": "raw-0026.json",
+    "sha256": "654aac335f30420d9a952f73fe0edde440a955fc46dc1bbb7688a8566f80acb8"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=SOLUSDT&interval=1m&startTime=1791158400000&endTime=1791158459999&limit=1",
+    "file": "raw-0027.json",
+    "sha256": "eaab65ac75f5efb135e8cf8c4bfdb1035ffc32b6ca9ef148d8f7facc72d6b227"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=SOLUSDT&interval=1m&startTime=1791158400000&endTime=1791158459999&limit=1",
+    "file": "raw-0028.json",
+    "sha256": "bc31ba26e9914adcef0bbe41f1794531d3edd974986ea889d99082f00e61e656"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=SOLUSDT&interval=1m&startTime=1793750400000&endTime=1793750459999&limit=1",
+    "file": "raw-0029.json",
+    "sha256": "2c2d3145f411d78a05a270fd08276e22afb241e23749df940fde4eb94c66fd99"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=SOLUSDT&interval=1m&startTime=1793750400000&endTime=1793750459999&limit=1",
+    "file": "raw-0030.json",
+    "sha256": "0b47b7ebd94e0d31dc92318f8fbc1e23213a1ac8cc309cad2aafba231cccb7cd"
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "scripts/stress_timestral_risk.py": "e68d52a04ea91677e104895ed42e325c0c6719cf843d2f101526d1ea7e2961be",
+  "research/spot_portfolio.py": "e250d52967a075ac55cbe0be9bfb5a350714496537a51310dceee9ea82b4354b",
+  "reports/timestral-risk-allocation-20261104-v2/forecasts.jsonl": "c49a3f630c79644d3e51a513262ecb8c2f10c3b5aec9ccd01643cb4f9c6b8630",
+  "reports/timestral-risk-allocation-20261104-v2/portfolio-journal.jsonl": "be2f3f177fb04e6806941c035255b937d14d7dd5cca7849cd55947e0a56249c8",
+  "reports/timestral-risk-allocation-20261104-v2/results.json": "851472a4d9daec35d0a2a2e837a873538ab164ac5256dc47dfe1efd0ffae3114"
+}

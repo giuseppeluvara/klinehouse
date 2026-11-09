@@ -1,0 +1,7 @@
+{
+  "research/carry_accounting.py": "50386f7010bc594bfffc63241e7f84ad8507515a4b4825084e0ba76bc93cfcda",
+  "scripts/audit_carry_history.py": "18c91be776d615988eebffaf36a4a056d9bf7de81878a88e6ce3dc738a56c598",
+  "research/funding_scanner.py": "9876050aa1e7799059d1f356f6afe302708231455bba998a767839abab50917a",
+  "tests/test_carry_accounting.py": "542f3df48d4b27f8ffb457f8fb23e5b0947e039a60ac8668a9a625138b94b685",
+  "tests/test_funding_scanner.py": "85a6d526e93e47fa9f88f3e04fe3382b65fa9b2d82fdf075c1771cde42392d0b"
+}

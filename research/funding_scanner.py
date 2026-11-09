@@ -1,35 +1,15 @@
-"""Funding-carry scanner — the one genuinely positive-expectancy, market-neutral,
-retail-accessible money-maker this project's research could actually defend.
+"""Exploratory public funding scanner, not a validated strategy or forward yield.
 
-There is no directional or stat-arb edge in BTC/ETH/SOL second-scale data that
-survives fees (see ``research/README.md``): those markets are too efficient.
-What *does* pay is harvesting a **structural risk premium** — the perpetual-swap
-*funding rate*. When traders crowd into leveraged longs, longs pay shorts a
-funding fee every 8h. You can collect it **delta-neutrally**:
-
-    long the spot asset  +  short the same-size perpetual   →  no price exposure,
-    you just earn (positive) funding for as long as you hold.
-
-This is not free money — it is payment for taking the *short side of leverage
-demand*. The risks are real (a violent pump can liquidate the perp short before
-funding compensates; thin spot makes entry/exit costly; funding can flip). So
-this scanner ranks opportunities by **risk-adjusted net carry**, not headline
-funding: it requires a liquid spot market (to build the long leg cleanly),
-measures funding **persistence** from history (not just the current print), and
-subtracts realistic round-trip fees.
-
-CLI
----
-    python -m research.funding_scanner                      # liquid, carryable, ranked
-    python -m research.funding_scanner --min-spot-vol 5e6 --hold 30 --top 25
-    python -m research.funding_scanner --include-illiquid   # also show risky high-yield alts
-
-Data: Binance public REST (spot + USDⓈ-M futures). No API key, no orders placed.
+Current rates use configured settlement intervals and historical rates use
+elapsed time. Fee-only projections omit basis PnL, capital, slippage and
+liquidation. Historical persistence does not establish future persistence.
+No keys or orders. CLI: python -m research.funding_scanner --top 10
 """
 from __future__ import annotations
 
 import argparse
 import json
+import math
 import ssl
 import time
 import urllib.request
@@ -68,6 +48,8 @@ def fetch_universe() -> dict[str, dict]:
                 for x in _get(f"{SPOT}/api/v3/ticker/24hr") if x["symbol"].endswith("USDT")}
     perp_vol = {x["symbol"]: float(x["quoteVolume"])
                 for x in _get(f"{FUT}/fapi/v1/ticker/24hr") if x["symbol"].endswith("USDT")}
+    intervals = {x['symbol']: float(x['fundingIntervalHours'])
+                 for x in _get(f"{FUT}/fapi/v1/fundingInfo")}
     uni = {}
     for s, p in prem.items():
         if s not in spot_vol:
@@ -80,7 +62,8 @@ def fetch_universe() -> dict[str, dict]:
             continue
         uni[s] = {
             "funding_8h": fr,
-            "funding_ann": fr * 3 * 365 * 100,
+            "funding_interval_hours": intervals.get(s, 8.0),
+            "funding_ann": fr * (24 / intervals.get(s, 8.0)) * 365 * 100,
             "basis_pct": (mark / index - 1) * 100 if index else 0.0,
             "spot_vol": spot_vol.get(s, 0.0),
             "perp_vol": perp_vol.get(s, 0.0),
@@ -88,21 +71,35 @@ def fetch_universe() -> dict[str, dict]:
     return uni
 
 
-def funding_history(symbol: str, limit: int = 90) -> list[float]:
+def funding_history(symbol: str, limit: int = 90) -> list[tuple[int, float]]:
     rows = _get(f"{FUT}/fapi/v1/fundingRate?symbol={symbol}&limit={limit}")
-    return [float(r["fundingRate"]) for r in rows]
+    return [(int(r['fundingTime']), float(r['fundingRate'])) for r in rows]
+
+
+def historical_summary(history: list[tuple[int, float]]) -> dict[str, float | int]:
+    """Time-weighted annualization over (first receipt, last receipt].
+
+    Exclude the first rate: its accrual interval is outside the observed span.
+    Missing history is not replaced with the current projected rate.
+    """
+    if len(history) < 2:
+        return dict(hist_ann=0.0, pct_positive=0.0, n_hist=0)
+    times = [t for t, _ in history]
+    if times != sorted(set(times)):
+        raise ValueError('funding history must be unique and ordered')
+    if any(type(t) is not int or t < 0 or not math.isfinite(r) for t, r in history):
+        raise ValueError('invalid funding timestamp or rate')
+    rates = [r for _, r in history[1:]]
+    days = (times[-1] - times[0]) / 86400000
+    return dict(hist_ann=sum(rates) / days * 365 * 100,
+                pct_positive=100 * sum(r > 0 for r in rates) / len(rates),
+                n_hist=len(rates))
 
 
 def enrich_persistence(symbol: str, d: dict) -> dict:
     """Add mean/%-positive/stability of funding from history (the persistence test)."""
     h = funding_history(symbol)
-    if not h:
-        d.update(hist_ann=d["funding_ann"], pct_positive=0.0, n_hist=0)
-        return d
-    mean = sum(h) / len(h)
-    d["hist_ann"] = mean * 3 * 365 * 100
-    d["pct_positive"] = 100 * sum(1 for r in h if r > 0) / len(h)
-    d["n_hist"] = len(h)
+    d.update(historical_summary(h))
     return d
 
 
@@ -121,12 +118,14 @@ def main() -> None:
     ap.add_argument("--min-spot-vol", type=float, default=2e6, help="min spot 24h quote volume ($)")
     ap.add_argument("--min-perp-vol", type=float, default=5e6, help="min perp 24h quote volume ($)")
     ap.add_argument("--hold", type=float, default=30.0, help="assumed holding period (days)")
-    ap.add_argument("--fee-roundtrip", type=float, default=0.24,
-                    help="round-trip cost %% (spot+perp, in+out); default 0.24%% with fee discounts")
+    ap.add_argument("--fee-roundtrip", type=float, default=0.30,
+                    help="assumed round-trip fee %% (spot+perp, in+out); default 0.30%%")
     ap.add_argument("--top", type=int, default=20)
     ap.add_argument("--include-illiquid", action="store_true",
                     help="also show high-funding but thin/risky alts")
     args = ap.parse_args()
+    if args.hold <= 0 or args.top <= 0 or args.fee_roundtrip < 0:
+        ap.error('hold/top must be positive; costs must be nonnegative')
 
     print("Scanning Binance funding × liquidity …", flush=True)
     uni = fetch_universe()
@@ -141,6 +140,8 @@ def main() -> None:
     enriched = []
     for s, d in top_by_now:
         enrich_persistence(s, d)
+        if d['n_hist'] == 0:
+            continue
         d["net_ann"] = net_yield(d["hist_ann"], args.hold, args.fee_roundtrip)
         d["be_days"] = breakeven_days(d["hist_ann"], args.fee_roundtrip)
         enriched.append((s, d))
@@ -151,7 +152,7 @@ def main() -> None:
 
     print(f"\nDelta-neutral funding carry  (long spot + short perp), hold={args.hold:.0f}d, "
           f"round-trip cost={args.fee_roundtrip:.2f}%\n")
-    print(f"  {'symbol':<13}{'fund now':>9}{'fund 30d':>9}{'%pos':>6}{'net/yr':>8}"
+    print(f"  {'symbol':<13}{'fund now':>9}{'fund hist':>9}{'%pos':>6}{'fee-net':>8}"
           f"{'b/e days':>9}{'spot$M':>8}{'perp$M':>8}  flags")
     shown = 0
     for s, d in enriched:
@@ -171,14 +172,16 @@ def main() -> None:
               f"  {','.join(flags) if flags else 'OK'}")
         shown += 1
 
-    print("\nHow to harvest one line above (delta-neutral, no price view):")
+    print("\nExploratory funding-only projection: excludes basis, capital and liquidation.")
+    print("History is annualized by elapsed time; the displayed window varies by settlement frequency.")
+    print("\nCarry structure (requires separate execution and margin validation):")
     print("  1. Buy the asset on SPOT for notional N.")
-    print("  2. Open a SHORT PERP of the same notional N (1× — keep low leverage for liquidation buffer).")
-    print("  3. Collect funding every 8h while it stays positive; unwind both legs when funding")
+    print("  2. Match the spot BASE QUANTITY with a short linear perpetual; allocate margin separately.")
+    print("  3. Funding settles at the symbol's configured interval and can change sign; unwind when funding")
     print("     decays below your cost hurdle or '%pos' / basis turns against you.")
     print("\n⚠️  Risks: a sharp pump can liquidate an over-levered short before funding pays; thin")
     print("    spot raises entry/exit slippage; funding can flip negative. Size for survival, keep")
-    print("    the perp margin well above maintenance, and prefer rows flagged 'OK'. Not advice.")
+    print("    the perp margin well above maintenance. 'OK' only means no scanner flag, not trade approval.")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,115 @@
+{
+  "status": "historical_exploration_only",
+  "protocol_sha256": "ffdc81afa12613e487fbf1797ddae2d718e8e218966ee340b225c3876b58ca17",
+  "evaluation_weeks": 342,
+  "total_model_forecasts": 404,
+  "source_responses": 8,
+  "first_entry_ms": 1578355200000,
+  "last_exit_ms": 1785196800000,
+  "arms": {
+    "timestral": {
+      "final_nav": 22054.320715833725,
+      "net_return": 1.2054320715833726,
+      "net_cagr": 0.12815972429562228,
+      "explicit_cost_sum": 307.547564247951,
+      "weekly_exit_max_drawdown": 0.17786387566866368,
+      "yearly_returns": {
+        "2020": 0.5407200854725249,
+        "2021": 0.14598707173162007,
+        "2022": -0.07902998839942799,
+        "2023": 0.17115042457943797,
+        "2024": 0.21886123731219564,
+        "2025": -0.04988146932195392,
+        "2026": 0.0
+      },
+      "weekly_mean_ci99": [
+        -0.0005434012166485436,
+        0.006031198624450872
+      ],
+      "passes_profit_risk_screen": false
+    },
+    "ewma": {
+      "final_nav": 22668.16155448121,
+      "net_return": 1.266816155448121,
+      "net_cagr": 0.13289162543314226,
+      "explicit_cost_sum": 275.480759898227,
+      "weekly_exit_max_drawdown": 0.18180676353785885,
+      "yearly_returns": {
+        "2020": 0.5309751759050534,
+        "2021": 0.17984769310818183,
+        "2022": -0.08166053514763416,
+        "2023": 0.1965929343381776,
+        "2024": 0.22459660369899148,
+        "2025": -0.06743423177299901,
+        "2026": 0.0
+      },
+      "weekly_mean_ci99": [
+        -0.0006009022910303907,
+        0.006355257932449304
+      ],
+      "passes_profit_risk_screen": false
+    },
+    "fixed": {
+      "final_nav": 119267.90314041087,
+      "net_return": 10.926790314041087,
+      "net_cagr": 0.4592564584866379,
+      "explicit_cost_sum": 2740.3406216312947,
+      "weekly_exit_max_drawdown": 0.5080834137229122,
+      "yearly_returns": {
+        "2020": 3.5294014512297123,
+        "2021": 1.1744375258596969,
+        "2022": -0.25747681021364166,
+        "2023": 0.4980577043525456,
+        "2024": 0.4271886176331088,
+        "2025": -0.23719084420526704,
+        "2026": 0.0
+      },
+      "weekly_mean_ci99": [
+        -0.0021168349199260045,
+        0.024516409915331855
+      ],
+      "passes_profit_risk_screen": false
+    },
+    "buy_hold": {
+      "final_nav": 106478.79639197461,
+      "net_return": 9.64787963919746,
+      "net_cagr": 0.43423776719764673,
+      "explicit_cost_sum": 139.89433486413387,
+      "weekly_exit_max_drawdown": 0.7689846531108859,
+      "yearly_returns": {
+        "2020": 4.667319087464169,
+        "2021": 1.8297584518824945,
+        "2022": -0.6708115813563745,
+        "2023": 1.0822569551254215,
+        "2024": 0.7608190193746935,
+        "2025": -0.11062900157404287,
+        "2026": -0.38147173686057223
+      },
+      "weekly_mean_ci99": [
+        -0.0029940097799891034,
+        0.028572636464695052
+      ],
+      "passes_profit_risk_screen": false
+    }
+  },
+  "paired_timestral_minus_ewma_weekly_utility_ci99": [
+    -0.0004617829961773652,
+    0.00034305732788348275
+  ],
+  "timestral_incremental_value_screen": false,
+  "versions": {
+    "timestral": "1.0.0",
+    "torch": "2.15.0",
+    "numpy": "2.5.4",
+    "huggingface_hub": "2.4.0"
+  },
+  "limitations": [
+    "Historical zero-shot pretraining overlap cannot be ruled out",
+    "Previously researched universe; not untouched validation",
+    "Spot book and actual fills unavailable in this replay",
+    "Weekly risk forecast remains uncalibrated in future regimes",
+    "Fractional quantities and historical daily-open execution proxies",
+    "Drawdown is marked weekly, not intraday",
+    "No real orders or prospective returns"
+  ]
+}

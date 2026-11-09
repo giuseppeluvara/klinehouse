@@ -1,0 +1,46 @@
+{
+  "registered_at": "2026-11-04T19:15:38.050599+00:00",
+  "classification": "prospective paper engineering/research trial, not deployment of a validated profitable strategy",
+  "reason": "Historical Timestral portfolio was profitable under its assumptions and within the user risk limit, but both statistical and incremental-value gates failed. This trial obtains genuinely future evidence with no money or orders.",
+  "historical_protocol_sha256": "ffdc81afa12613e487fbf1797ddae2d718e8e218966ee340b225c3876b58ca17",
+  "first_anchor_ms": 1794182400000,
+  "last_exit_ms": 1799107200000,
+  "forecast_deadline_ms": 600000,
+  "entry_deadline_ms": 60000,
+  "anchors": 8,
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT"
+  ],
+  "arms": [
+    "timestral",
+    "ewma",
+    "fixed"
+  ],
+  "initial_paper_capital_per_arm": 10000,
+  "maximum_observed_drawdown": 0.25,
+  "model": {
+    "id": "mistralai/Timestral-5M",
+    "code_revision": "a534bdbd244d64f3d9d743f46c7bf6fc330ed4ff",
+    "weight_revision": "bdd20cfc15a3fea0e4cb5ccef37f8d3ca7aa335f",
+    "weights_sha256": "7ace108c4987e7f2a99a75a445240019d1d31c2117139d1bd05ffdfd25aca738",
+    "context_days": 256,
+    "target": "log(daily close-to-close return squared + 1e-8), two jointly forecast variates",
+    "forecast_days": 8,
+    "variance_rule": "sum(exp(median forecast days 2..8)), no subtracting epsilon (conservative floor)",
+    "device": "cpu",
+    "threads": 2
+  },
+  "policy": "unchanged 126-day trend, 256-day risk context, 8-day model forecast using days 2..8, 52 matured forecast calibration rows, 20% target volatility, maximum 50% per asset, no leverage",
+  "execution": "paper only: consume public displayed bid/ask depth with fractional quantities; 10bp fee and additional adverse 2bp reserve; self-financing. No actual fills or simultaneous executability claimed.",
+  "risk_monitor": "daily observed liquidation NAV; when drawdown >=25%, paper-liquidate at available bids and halt that arm. Gaps, latency and exchange outages can cause loss beyond25%; no guaranteed drawdown cap.",
+  "source_policy": "Public GET-only Binance spot endpoints; retain raw bodies and request/receipt times; RTT<=3s and cross-source collection span<=10s. Check exchange clock offset<=2s before timed decisions.",
+  "warmup": "52 most recent historical weekly forecasts with target_end<=activation time, explicitly warmup only. Public prices after July2026 are allowed solely in this NEW trial; old experiment artifacts are not opened. Calendar overlap means old date ranges cannot be called unseen for the overall research programme.",
+  "missingness": "No retrospective forecasts or entry fills. Late slots recorded missing; prior paper holdings continue until a later valid rebalance or risk liquidation. Any missing primary slot prevents a complete-coverage result.",
+  "outcomes": "Weekly realized variance added only after target_end using observed daily opening prices; provisional book marks separately labelled. Last exit liquidated using current quotes at actual receipt, with any lateness retained.",
+  "reporting": "Report Timestral, EWMA and fixed arms together. Paper net trading PnL separate from capital opportunity cost5% annual. Eight weeks are insufficient to establish stable profitability; no threshold or parameter tuning after outcomes.",
+  "resource_guard": "stop new acquisition on <40GiB available or frozen-code/model mismatch; do not restart legacy services or modify their journals",
+  "lifetime": "8 weeks of portfolio exposure; automatic expiry after final exit plus10min; supervision is a bounded local process, not a system service",
+  "orders": false,
+  "preactivation_revision": "Before any prospective slot/activation: share CLI writer lock, retry transient public source errors, record computations that miss deadlines instead of retroactive decisions, and inspect drawdown before new paper exposure. Old bundle preserved unactivated; strategy and all parameters unchanged."
+}

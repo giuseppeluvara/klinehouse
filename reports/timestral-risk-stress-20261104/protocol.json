@@ -1,0 +1,33 @@
+{
+  "registered_at": "2026-11-04T19:21:26.543512+00:00",
+  "classification": "post-hoc robustness diagnostics, not new strategy selection or untouched validation",
+  "source": "reports/timestral-risk-allocation-20261104-v2",
+  "source_protocol_sha256": "ffdc81afa12613e487fbf1797ddae2d718e8e218966ee340b225c3876b58ca17",
+  "signals": "Use the identical saved Timestral/EWMA/fixed weights and original entry/exit times; no refitting or new markets",
+  "cost_multipliers": [
+    0,
+    1,
+    2,
+    5,
+    10
+  ],
+  "cost_base": {
+    "fee_each_fill": 0.001,
+    "adverse_slippage_each_fill": 0.0002
+  },
+  "initial_capital": 10000,
+  "diagnostics": [
+    "CAGR and daily-close drawdown across all cost scenarios",
+    "net wealth and drawdown for every contiguous 52-week and156-week window, restarted in cash with unchanged frozen decisions",
+    "multiplicative contribution by calendar year and return without2020, descriptive attribution only"
+  ],
+  "non_changes": "Do not modify the running prospective bundle, its decisions, schedule or parameters. Do not select a new policy from these diagnostics.",
+  "comparison_arms": [
+    "timestral",
+    "ewma",
+    "fixed",
+    "buy_hold"
+  ],
+  "risk_limit": 0.25,
+  "capital_hurdle": 0.05
+}

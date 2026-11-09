@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "historical_decisions_compared": 377,
+  "max_weight_error": 3.552713678800501e-15,
+  "scope": "new prospective core matches old historical weights without parameter changes"
+}

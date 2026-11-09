@@ -1,0 +1,26 @@
+{
+  "stopped_at": "2026-11-09T08:54:29.109007+00:00",
+  "reason": "user requested project shutdown",
+  "pilots": {
+    "timestral-risk-prospective-20261104-v2": {
+      "head": "e405cf7a298a2dd23cfda28c0f38c27cec573ba213b64d5a6dbaa8039e202749",
+      "events_by_kind": {
+        "source": 1,
+        "activation": 1,
+        "missing_forecast": 1
+      },
+      "status": "stopped_before_scheduled_exit"
+    },
+    "timestral-risk-24h-20261109": {
+      "head": "8c997c2248b4bf7df7131838b4d46fdf1ac1f19297904c22345e03262317f465",
+      "events_by_kind": {
+        "activation": 1,
+        "source": 8,
+        "rapid_forecast": 1,
+        "rapid_entry": 1,
+        "mark": 1
+      },
+      "status": "stopped_before_scheduled_exit"
+    }
+  }
+}

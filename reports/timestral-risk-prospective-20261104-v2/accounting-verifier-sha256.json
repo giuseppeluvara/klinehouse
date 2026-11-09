@@ -1,0 +1,5 @@
+{
+  "scripts/verify_risk_pilot.py": "0d1a9e839ea76deb1da9618e55b474b23474a1e0cde6f84fdd4146f89057c8c2",
+  "scripts/audit_risk_pilot_accounting.py": "e5f1fc2204cb636726412e746f21e17e394507097d84c9adeefd77b29a5204a7",
+  "tests/test_audit_risk_pilot_accounting.py": "010f2845d311b3339b3436f59f7741bbd5568bfd3806e0dfe1acb78ed9393686"
+}

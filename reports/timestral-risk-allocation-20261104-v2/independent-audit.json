@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "raw_response_hashes_verified": 8,
+  "causal_forecast_rows_verified": 404,
+  "portfolio_rows_verified": 1368,
+  "actual_model_inferences_reproduced": 3,
+  "max_inference_error": 0.0,
+  "portfolio_audits": {
+    "timestral": {
+      "final_nav_verified": 22054.320715833324,
+      "daily_close_max_drawdown": 0.1813051862736852,
+      "conservative_daily_range_drawdown_bound": 0.18943286467860976,
+      "interpretation": "range bound assumes simultaneous asset extremes and adverse intraday ordering; it is not an observed drawdown"
+    },
+    "ewma": {
+      "final_nav_verified": 22668.161554480732,
+      "daily_close_max_drawdown": 0.18307006539378534,
+      "conservative_daily_range_drawdown_bound": 0.19257227911707142,
+      "interpretation": "range bound assumes simultaneous asset extremes and adverse intraday ordering; it is not an observed drawdown"
+    },
+    "fixed": {
+      "final_nav_verified": 119267.90314040922,
+      "daily_close_max_drawdown": 0.5169585123630832,
+      "conservative_daily_range_drawdown_bound": 0.5341483207657884,
+      "interpretation": "range bound assumes simultaneous asset extremes and adverse intraday ordering; it is not an observed drawdown"
+    },
+    "buy_hold": {
+      "final_nav_verified": 106478.7963919746,
+      "daily_close_max_drawdown": 0.777720008335522,
+      "conservative_daily_range_drawdown_bound": 0.8034207839430716,
+      "interpretation": "range bound assumes simultaneous asset extremes and adverse intraday ordering; it is not an observed drawdown"
+    }
+  },
+  "verified_at": "2026-11-04T19:00:29.865984+00:00"
+}

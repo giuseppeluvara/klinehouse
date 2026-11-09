@@ -25,7 +25,7 @@ Real-time Binance OHLCV kline collector that streams closed candlesticks via Web
 - **Honest signal harness**: information coefficient, decile monotonicity, **cost-aware backtests** that always show the breakeven fee.
 - **Execution-alpha engine**: causal, order-aware child-order scheduler that beats TWAP on short windows (validated, ~+0.1 bps).
 - **Grafana radar**: provisioned order-flow & volatility dashboard.
-- **💰 Funding-carry tools**: a scanner that ranks live delta-neutral carry opportunities (the one genuinely profitable, market-neutral strategy found) and a paper carry book validated on real funding settlements.
+- **Funding-carry research tools**: an exploratory scanner, a funding-only paper illustration and explicit two-leg accounting. Profitability remains unvalidated.
 
 See **[`research/README.md`](research/README.md)** for the full, honest "can this make money?" write-up.
 
@@ -281,18 +281,18 @@ python -m research.report --symbol BTCUSDT          # -> research/out/report.md 
 # Execution-alpha engine (causal, order-aware) — beats TWAP on short windows
 python -m research.execution_engine --symbol BTCUSDT --side buy --qty 10 --window 60s
 
-# 💰 The money-maker: rank live delta-neutral funding-carry opportunities
+# Exploratory ranking; funding alone does not establish profitability
 python -m research.funding_scanner --top 15
 python -m research.carry_book simulate DEXEUSDT --days 14 --notional 10000
 ```
 
-**The honest verdict** (full detail in [`research/README.md`](research/README.md)):
+**Historical research status** (full detail in [`research/README.md`](research/README.md)):
 
 - Directional scalping, cross-asset stat-arb and retail market-making **do not
   beat fees** on these efficient markets — proven, not assumed.
-- What *does* pay is **delta-neutral funding-carry** (long spot + short perp,
-  collect funding, no price view): a real, market-neutral risk premium, ~8 %/yr
-  net on liquid names in calm markets and far higher in leverage-frenzy regimes.
+- **Funding carry** remains a research candidate. The November 4 two-leg audit
+  found negative results in all nine BTC/ETH/SOL windows after its declared
+  execution and capital costs. See `reports/carry-audit-20261104/results.json`.
 - Plus two operational edges: **execution-cost reduction** (~+0.1 bps on flow you
   already trade) and the **proprietary 1-second order-flow dataset** itself.
 
@@ -389,6 +389,24 @@ docker compose start collector
 ---
 
 ## Reproducible Timestral pilot
+
+The [November 4 Timestral economic replay](reports/timestral-risk-allocation-20261104-v2/README.md)
+uses the actual pinned 5M model to size a weekly BTC/ETH spot trend portfolio.
+On January 2020–July 2026 history, 10,000 USDT grows to 22,054 after assumed
+execution costs, with 12.82% CAGR and 18.13% daily-close drawdown. Its statistical
+gate fails and the EWMA control earns more: neither prospective profitability
+nor incremental value from Timestral is established. An independent audit
+reconstructs all 404 causal forecasts and 1,368 portfolio records and reproduces
+three actual model inferences exactly. The separate
+[high-frequency economic replay](reports/timestral-economics-20261104/README.md)
+retains all six failed rules rather than selecting only the positive study.
+
+The [weekly paper trial](reports/timestral-risk-prospective-20261104-v2/README.md)
+missed its first forecast window and stopped on November 9, 2026, before any
+paper entry. A separate 24-hour trial recorded a paper entry for Timestral and
+EWMA and stopped the same day before the scheduled exit. Both trials used public
+quotes and simulated capital. The [closure record](reports/klinehouse-closeout-20261109.json)
+lists the last verified journal state for each trial.
 
 The separate [Timestral experiment](docs/timestral.md) compares zero-shot price
 and past-covariate forecasts against simple baselines. The

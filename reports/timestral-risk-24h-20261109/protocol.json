@@ -1,0 +1,36 @@
+{
+  "registered_at": "2026-11-09T08:44:49.751000+00:00",
+  "classification": "One prospective 24-hour BTC/ETH paper comparison with separately initialized portfolios.",
+  "activation_ms": 1794213889751,
+  "entry_deadline_ms": 1794214489751,
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT"
+  ],
+  "arms": [
+    "timestral",
+    "ewma"
+  ],
+  "model": {
+    "id": "mistralai/Timestral-5M",
+    "code_revision": "a534bdbd244d64f3d9d743f46c7bf6fc330ed4ff",
+    "weight_revision": "bdd20cfc15a3fea0e4cb5ccef37f8d3ca7aa335f",
+    "weights_sha256": "7ace108c4987e7f2a99a75a445240019d1d31c2117139d1bd05ffdfd25aca738",
+    "context_days": 256,
+    "target": "log(squared four-hour log return + 1e-8)",
+    "variance_rule": "sum(exp(median forecast days 2..8)), no subtracting epsilon (conservative floor)",
+    "device": "cpu",
+    "threads": 2,
+    "context_interval": "4h",
+    "forecast_steps_used": 6
+  },
+  "initial_paper_capital_per_arm": 10000,
+  "maximum_observed_drawdown": 0.25,
+  "orders": false,
+  "forecast": "Use the latest 257 fully closed four-hour candles. Timestral sums the first six forecast medians in variance space. EWMA sums six equal expected steps with a 20-day half-life. Each model is scaled using 28 fully matured, non-overlapping 24-hour historical intervals. The forecast horizon starts at the last closed bar. The paper holding period starts at live entry.",
+  "policy": "Shared 126-day trend filter, nominal aggregate annualized volatility target 20%, maximum 50% per asset, no leverage. Inactive assets leave cash.",
+  "execution": "Forecast committed before live public depth requests for both portfolios. Fractional paper fills against displayed bids and asks, 10 bp fee and 2 bp adverse reserve per side.",
+  "risk": "Use liquidation NAV immediately after entry, 23 hourly checks and exit. On observed drawdown of at least 25% liquidate and halt the affected portfolio. Hourly windows allow ten minutes. Record observed mark coverage.",
+  "exit": "Request current public depth once the durable entry is 24 hours old. Preserve actual timing. Report exit as late past ten minutes, continue seeking a public quote, and distinguish that from an on-time 24-hour result.",
+  "scope": "One forward paper observation. No market order or private endpoint. No changes to weekly data or trading rules."
+}

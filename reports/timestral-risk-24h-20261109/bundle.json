@@ -1,0 +1,23 @@
+{
+  "frozen_at": "2026-11-09T08:44:49.751000+00:00",
+  "files": {
+    "protocol.json": "7c5796419408e7182ee60ee57ebb35c0758702ed0b21dbecba89dc597f06cafc"
+  },
+  "runtime": {
+    "research/risk_pilot.py": "fad94d3d5a2faeda643defbd38be519db02d8b4b50de8bd1e2ea3f591794bc84",
+    "scripts/run_risk_pilot.py": "7e9d1ee45d00dd7f870d795fb994c5643326e32cbd4e1225d6bd6ef28d84e7f9",
+    "scripts/run_rapid_risk_pilot.py": "1889c3980afb976b6edd8523f62dbf35450f7a516de289ea9a9323d2330f864d",
+    "scripts/audit_risk_pilot_accounting.py": "da3b14c0989a3ff11b24edd21a46fd6e326b7ed14e345f0a4f4d77920826e1bf",
+    "scripts/watch_risk_pilot.py": "295e32eab5b47e6521b2817620df50d02ef62ebb55d0febb0cab7368dc313b6a",
+    "scripts/watch_rapid_risk_pilot.py": "afc910fe9055190335d0ad090dffdf996bef9a5eadb2da1c0ff8e89f1aa6d17c"
+  },
+  "model_hashes": {
+    "model.safetensors": "7ace108c4987e7f2a99a75a445240019d1d31c2117139d1bd05ffdfd25aca738",
+    "config.json": "b5f27f61513f8fd1a3aa996f3720d3679cb40bce5bcb08eb3dc320ce726e7c2f"
+  },
+  "versions": {
+    "timestral": "1.0.0",
+    "numpy": "2.5.4",
+    "torch": "2.15.0"
+  }
+}

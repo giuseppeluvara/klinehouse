@@ -1,0 +1,44 @@
+[
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1767225600000&endTime=1785542399999&limit=1000",
+    "file": "prices-000.json",
+    "requested_ms": 1793818263848,
+    "received_ms": 1793818264440,
+    "sha256": "67b39cd6bbfb15398f953b0fad7d74ba36ee5d69ff1c65d9c1a0031f0e731253"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1770825600000&endTime=1785542399999&limit=1000",
+    "file": "prices-001.json",
+    "requested_ms": 1793818264444,
+    "received_ms": 1793818264806,
+    "sha256": "6a814f57aaa6268cbc4828a5f7bb45a21e98c276709e2e10dfdcac962d0cf2e7"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1774425600000&endTime=1785542399999&limit=1000",
+    "file": "prices-002.json",
+    "requested_ms": 1793818264810,
+    "received_ms": 1793818265273,
+    "sha256": "cac16d654c81ae01f5388ef57615c61bc10eaa2c41107011d9afe0eba249e5b2"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1778025600000&endTime=1785542399999&limit=1000",
+    "file": "prices-003.json",
+    "requested_ms": 1793818265277,
+    "received_ms": 1793818265763,
+    "sha256": "f206f521515cdc35bf286f122f03cc30716dd4ab099b24705b41af267a34247a"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1781625600000&endTime=1785542399999&limit=1000",
+    "file": "prices-004.json",
+    "requested_ms": 1793818265766,
+    "received_ms": 1793818266300,
+    "sha256": "affcbbd958064dd4246ffeda5439100021ba0be1c926173b073dcaca6784a72d"
+  },
+  {
+    "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1785225600000&endTime=1785542399999&limit=1000",
+    "file": "prices-005.json",
+    "requested_ms": 1793818266305,
+    "received_ms": 1793818266614,
+    "sha256": "1e478145b165efe66eb16e37b3445f7e709af85f5a1ab30cf45e369d6689bf79"
+  }
+]

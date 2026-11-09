@@ -1,24 +1,11 @@
-"""Paper carry book — forward, out-of-sample validation of the funding-harvest
-strategy, plus an instant historical what-if from real funding settlements.
+"""Legacy funding-only illustration, not complete strategy accounting.
 
-A delta-neutral carry position (long spot + short perp, equal notional) has no
-first-order price exposure, so its PnL is essentially:
+Uses fixed funding notional and a roundtrip cost allowance. Omits basis PnL,
+settlement mark changes, capital costs, fills and liquidation. Its ``net``
+field must not be interpreted as a validated strategy return. For explicit
+matched-quantity accounting use research.carry_accounting.
 
-    funding collected at each 8h settlement   −   round-trip trading cost
-    (+ small basis convergence, ignored here as second-order)
-
-This tool tracks paper positions using the **actual funding payments** Binance
-publishes, so over days it shows real money accruing — honestly, with no price
-guessing. ``simulate`` does the same over a past window for an immediate demo.
-
-State persists to ``research/out/carry_book.json``. No API key; no real orders.
-
-CLI
----
-    python -m research.carry_book simulate DEXEUSDT --days 14 --notional 10000
-    python -m research.carry_book open DEXEUSDT --notional 10000
-    python -m research.carry_book status
-    python -m research.carry_book close DEXEUSDT
+No API key; no orders. Existing paper state format is retained.
 """
 from __future__ import annotations
 
@@ -126,6 +113,7 @@ def main() -> None:
     c.add_argument("symbol")
 
     args = ap.parse_args()
+    print("Funding-only illustration: excludes basis, capital and liquidation; not full strategy PnL.")
 
     if args.cmd == "simulate":
         start = int(time.time() * 1000) - int(args.days * 86_400_000)

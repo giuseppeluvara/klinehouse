@@ -1,0 +1,22 @@
+{
+  "frozen_at": "2026-11-04T19:16:16.692101+00:00",
+  "files": {
+    "protocol.json": "00d11c8261be500f451aeaadf5a9f1686219c98a8d5d242dc7721214f94658b9",
+    "warmup-history.json": "ade539fef8054a351fea85318186e51610bbc963ac3e45341e3c59ffae911e50",
+    "warmup-predictions.json": "93dba3b7fb0f2aa47a4d26e08c040c4e00fad76a0ebd328f4f6c70556ee5cb1c",
+    "warmup-source-receipts.json": "31592e49a323ebbb0f6063b8cb5dda66cc308f64221d3b07071e0e141225c039"
+  },
+  "runtime": {
+    "research/risk_pilot.py": "fad94d3d5a2faeda643defbd38be519db02d8b4b50de8bd1e2ea3f591794bc84",
+    "scripts/run_risk_pilot.py": "7e9d1ee45d00dd7f870d795fb994c5643326e32cbd4e1225d6bd6ef28d84e7f9"
+  },
+  "model_hashes": {
+    "model.safetensors": "7ace108c4987e7f2a99a75a445240019d1d31c2117139d1bd05ffdfd25aca738",
+    "config.json": "b5f27f61513f8fd1a3aa996f3720d3679cb40bce5bcb08eb3dc320ce726e7c2f"
+  },
+  "versions": {
+    "timestral": "1.0.0",
+    "numpy": "2.5.4",
+    "torch": "2.15.0"
+  }
+}

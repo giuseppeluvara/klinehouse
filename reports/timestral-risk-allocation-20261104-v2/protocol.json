@@ -1,0 +1,62 @@
+{
+  "registered_at": "2026-11-04T18:56:56.266688+00:00",
+  "hypothesis": "A weekly long/flat trend portfolio may retain an economic edge after costs; Timestral forecasts squared-return risk rather than direction and must be compared with the same strategy using EWMA risk.",
+  "universe": [
+    "BTCUSDT",
+    "ETHUSDT"
+  ],
+  "source_interval": "1d",
+  "source_start": "2017-08-18T00:00:00Z",
+  "source_end_exclusive": "2026-08-01T00:00:00Z",
+  "evaluation_start": "2020-01-01T00:00:00Z",
+  "model": {
+    "id": "mistralai/Timestral-5M",
+    "code_revision": "a534bdbd244d64f3d9d743f46c7bf6fc330ed4ff",
+    "weight_revision": "bdd20cfc15a3fea0e4cb5ccef37f8d3ca7aa335f",
+    "weights_sha256": "7ace108c4987e7f2a99a75a445240019d1d31c2117139d1bd05ffdfd25aca738",
+    "context_days": 256,
+    "target": "log(daily close-to-close return squared + 1e-8), two jointly forecast variates",
+    "forecast_days": 8,
+    "variance_rule": "sum(exp(median forecast days 2..8)), no subtracting epsilon (conservative floor)",
+    "device": "cpu",
+    "threads": 2
+  },
+  "rules": {
+    "schedule": "Monday 00 UTC uses closed days through Sunday; weights executed Tuesday open, held to following Tuesday open; exclude trades whose exit is at/after source end",
+    "trend": "positive trailing 126 daily close-to-close log return; otherwise asset weight zero",
+    "annual_vol_target": 0.2,
+    "weights": "per asset min(0.5,0.5*target_vol/sqrt(calibrated_weekly_variance*365/7)); no leverage; remainder cash earns zero",
+    "calibration": "mean(realized/predicted weekly variance) over latest 52 fully matured weekly forecasts per asset and risk method; exclude outcome_end > current Monday anchor; minimum 26 observations",
+    "comparators": [
+      "same trend rule with EWMA risk, 20-day half-life over last 256 daily squared log returns",
+      "same trend rule with fixed 0.5 asset weights",
+      "continuous equal initial allocation buy-and-hold, no rebalancing"
+    ],
+    "costs": {
+      "fee_each_fill": 0.001,
+      "adverse_slippage_each_fill": 0.0002,
+      "initial_capital": 10000,
+      "annual_capital_opportunity_cost": 0.05
+    },
+    "accounting": "self-financing cash/units portfolio; transaction costs only on changed holdings; solve post-cost target NAV; unwind all holdings at last exit; allow fractional quantities; no fills claim"
+  },
+  "gate": "historical candidate only: net CAGR >5%, weekly net mean lower 99% stationary-block CI >0, exit-marked max drawdown <=25%; Timestral incremental value requires positive lower 99% CI on paired weekly utility gain over EWMA, utility=r-3*r*r/2. No prospective success claim.",
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20261104,
+    "expected_block_weeks": 13
+  },
+  "trial_count": {
+    "new_primary_rules": 1,
+    "new_risk_arms": 3,
+    "old_trials": "unknown; extensive prior research; no global significance claim"
+  },
+  "protected_data": "Do not request source dates >=2026-08-01; do not read original protected artifacts.",
+  "limitations": [
+    "Historical zero-shot pretraining overlap cannot be ruled out",
+    "Previously researched universe; not untouched validation",
+    "Spot book and actual fills unavailable in this replay",
+    "Weekly risk forecast remains uncalibrated in future regimes"
+  ],
+  "source_validation_amendment": "Keep raw malformed candles as evidence. Flag any bar with close_time != day_end; invalidate daily close returns touching flagged bars. Exclude forecast contexts and label intervals touching flagged bars. No interpolation or forward fill. Prior attempt stopped before any model inference or strategy results."
+}

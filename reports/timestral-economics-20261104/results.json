@@ -1,0 +1,208 @@
+{
+  "status": "historical_exploration_only",
+  "protocol_sha256": "4dd3d282082a6cee8eb38d92a6b82aa4afead624a1986156e134768fa05afbe4",
+  "hourly_bars": 5088,
+  "source_response_count": 6,
+  "results": [
+    {
+      "policy": "median_positive",
+      "horizon": 4,
+      "samples": 1271,
+      "excluded_boundary_samples": 1,
+      "trades": 620,
+      "net_trading_return": -0.8242624621763062,
+      "max_drawdown_at_trade_exits": 0.8242624621763062,
+      "matched_always_long_return": -0.9692024537577542,
+      "continuous_buy_hold_return": -0.28457360099980633,
+      "capital_cost_fraction": 0.02901255707762557,
+      "economic_return": -0.8532750192539318,
+      "mean_exposure": 0.4878048780487805,
+      "monthly_returns": {
+        "2026-01": -0.2094530801566722,
+        "2026-02": -0.2614645157399461,
+        "2026-03": -0.18171849287811181,
+        "2026-04": -0.21304521982402624,
+        "2026-05": -0.29037086447515625,
+        "2026-06": -0.2502179903659595,
+        "2026-07": -0.12149031858075743
+      },
+      "weekly_net_ci_familywise": [
+        -0.07522664420180854,
+        -0.033158232272025565
+      ],
+      "weekly_excess_ci_familywise": [
+        0.038941437822008325,
+        0.06482910989396191
+      ],
+      "passes_historical_nomination_gate": false
+    },
+    {
+      "policy": "lower_quartile_above_cost",
+      "horizon": 4,
+      "samples": 1271,
+      "excluded_boundary_samples": 1,
+      "trades": 0,
+      "net_trading_return": 0.0,
+      "max_drawdown_at_trade_exits": 0.0,
+      "matched_always_long_return": -0.9692024537577542,
+      "continuous_buy_hold_return": -0.28457360099980633,
+      "capital_cost_fraction": 0.02901255707762557,
+      "economic_return": -0.02901255707762557,
+      "mean_exposure": 0.0,
+      "monthly_returns": {
+        "2026-01": 0.0,
+        "2026-02": 0.0,
+        "2026-03": 0.0,
+        "2026-04": 0.0,
+        "2026-05": 0.0,
+        "2026-06": 0.0,
+        "2026-07": 0.0
+      },
+      "weekly_net_ci_familywise": [
+        0.0,
+        0.0
+      ],
+      "weekly_excess_ci_familywise": [
+        0.08256115943520285,
+        0.12999077847260176
+      ],
+      "passes_historical_nomination_gate": false
+    },
+    {
+      "policy": "median_positive_vol_target",
+      "horizon": 4,
+      "samples": 1271,
+      "excluded_boundary_samples": 1,
+      "trades": 620,
+      "net_trading_return": -0.3698769855087295,
+      "max_drawdown_at_trade_exits": 0.3698769855087295,
+      "matched_always_long_return": -0.9692024537577542,
+      "continuous_buy_hold_return": -0.28457360099980633,
+      "capital_cost_fraction": 0.02901255707762557,
+      "economic_return": -0.39888954258635506,
+      "mean_exposure": 0.13212854546992078,
+      "monthly_returns": {
+        "2026-01": -0.061100154257979766,
+        "2026-02": -0.05269859741369021,
+        "2026-03": -0.04704696816337295,
+        "2026-04": -0.06466003356367678,
+        "2026-05": -0.10448306950594555,
+        "2026-06": -0.0684777067616984,
+        "2026-07": -0.04718222120791837
+      },
+      "weekly_net_ci_familywise": [
+        -0.01970652128800985,
+        -0.010047339152552006
+      ],
+      "weekly_excess_ci_familywise": [
+        0.07061591022182928,
+        0.11255562566131692
+      ],
+      "passes_historical_nomination_gate": false
+    },
+    {
+      "policy": "median_positive",
+      "horizon": 24,
+      "samples": 211,
+      "excluded_boundary_samples": 1,
+      "trades": 94,
+      "net_trading_return": -0.41164073862295447,
+      "max_drawdown_at_trade_exits": 0.4465296987163603,
+      "matched_always_long_return": -0.589736388509805,
+      "continuous_buy_hold_return": -0.26403252890134477,
+      "capital_cost_fraction": 0.02889840182648402,
+      "economic_return": -0.4405391404494385,
+      "mean_exposure": 0.44549763033175355,
+      "monthly_returns": {
+        "2026-01": -0.09731217582478835,
+        "2026-02": -0.2247753268331636,
+        "2026-03": -0.031706758000114466,
+        "2026-04": 0.007694581862278893,
+        "2026-05": -0.05910607488053299,
+        "2026-06": -0.09480720812805965,
+        "2026-07": 0.011718862743940406
+      },
+      "weekly_net_ci_familywise": [
+        -0.041411021020470624,
+        0.0038837941332220405
+      ],
+      "weekly_excess_ci_familywise": [
+        -0.006538500320684617,
+        0.03326930072290706
+      ],
+      "passes_historical_nomination_gate": false
+    },
+    {
+      "policy": "lower_quartile_above_cost",
+      "horizon": 24,
+      "samples": 211,
+      "excluded_boundary_samples": 1,
+      "trades": 0,
+      "net_trading_return": 0.0,
+      "max_drawdown_at_trade_exits": 0.0,
+      "matched_always_long_return": -0.589736388509805,
+      "continuous_buy_hold_return": -0.26403252890134477,
+      "capital_cost_fraction": 0.02889840182648402,
+      "economic_return": -0.02889840182648402,
+      "mean_exposure": 0.0,
+      "monthly_returns": {
+        "2026-01": 0.0,
+        "2026-02": 0.0,
+        "2026-03": 0.0,
+        "2026-04": 0.0,
+        "2026-05": 0.0,
+        "2026-06": 0.0,
+        "2026-07": 0.0
+      },
+      "weekly_net_ci_familywise": [
+        0.0,
+        0.0
+      ],
+      "weekly_excess_ci_familywise": [
+        0.002496271473956258,
+        0.053697743152414254
+      ],
+      "passes_historical_nomination_gate": false
+    },
+    {
+      "policy": "median_positive_vol_target",
+      "horizon": 24,
+      "samples": 211,
+      "excluded_boundary_samples": 1,
+      "trades": 94,
+      "net_trading_return": -0.10692506082485298,
+      "max_drawdown_at_trade_exits": 0.12844045821516836,
+      "matched_always_long_return": -0.589736388509805,
+      "continuous_buy_hold_return": -0.26403252890134477,
+      "capital_cost_fraction": 0.02889840182648402,
+      "economic_return": -0.135823462651337,
+      "mean_exposure": 0.11804918939973684,
+      "monthly_returns": {
+        "2026-01": -0.028900384112664934,
+        "2026-02": -0.03667449987842808,
+        "2026-03": -0.009872684254551456,
+        "2026-04": 0.0037664514888471334,
+        "2026-05": -0.018897656218787806,
+        "2026-06": -0.024974407057462455,
+        "2026-07": 0.0041463563630914635
+      },
+      "weekly_net_ci_familywise": [
+        -0.008818539581401224,
+        0.0011538918863084181
+      ],
+      "weekly_excess_ci_familywise": [
+        0.00218058006854776,
+        0.04734306882033541
+      ],
+      "passes_historical_nomination_gate": false
+    }
+  ],
+  "limitations": [
+    "Quantiles not certified calibrated probabilities",
+    "Delayed hourly opens are proxies, not measured fills",
+    "Spread/slippage is assumed; no historical L2",
+    "Drawdown observed at exits understates intratrade risk",
+    "Previously explored forecasts; pretraining overlap cannot be excluded",
+    "Separate horizons share returns; bootstrap is descriptive, not untouched evidence"
+  ]
+}

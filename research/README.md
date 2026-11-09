@@ -30,36 +30,31 @@ caveat below):
 
 ## Making money — the honest verdict
 
-The search was exhaustive and the negative results matter as much as the positive one:
+The historical experiments do not establish a currently profitable strategy.
+The carry claim below was revised after a full two-leg accounting audit on
+2026-11-04; see `reports/carry-audit-20261104/results.json`.
 
-| Approach | Verdict |
+| Approach | Observed limit |
 |---|---|
-| Directional scalping on order-flow | ❌ edge (~0.1 bps) ≪ fees (2–10 bps). Structural, not fixable by tuning. |
-| Cross-asset stat-arb (BTC/ETH/SOL pairs) | ❌ negative in- *and* out-of-sample, every pair, every frequency. Reversion too weak; majors too efficient. |
-| Retail market-making | ❌ on liquid pairs the half-spread (~0.15 bps on BTC) is below the maker fee (~1 bp); needs HFT infra + rebates. |
-| **Funding-rate carry (delta-neutral)** | ✅ **the one that works.** Long spot + short perp earns funding with no price exposure. |
+| Directional scalping on order-flow | Measured gross edge is smaller than modeled fees. |
+| Cross-asset stat-arb | Existing experiments do not establish net profitability. |
+| Retail market-making | Fill probability, adverse selection and fees remain binding. |
+| Funding carry | A research candidate. Positive funding alone is insufficient: basis, fees, slippage, capital and margin matter. |
 
-**The money-maker: delta-neutral funding harvesting.** When traders crowd into
-leverage, longs pay shorts funding every 8h. Collect it by holding *long spot +
-short perp* of equal size — market-neutral, no prediction required. It is not
-free money; it is payment for taking the short side of leverage demand, and the
-risk is a pump liquidating an over-levered short. Sized conservatively on liquid
-assets it is a real, positive-expectancy yield.
+`funding_scanner.py` is an exploratory ranking of historical/current funding,
+not a forward yield estimate. Current rates use the configured settlement
+interval; historical rates use elapsed time between actual settlements.
+`carry_book.py` is a funding-only illustration using fixed notional; it omits
+basis PnL, mark-dependent settlement notional, capital and liquidation risk.
+Its `net` field is not a complete strategy PnL or a validated return on capital.
 
-Two tools make it actionable:
-
-- **`funding_scanner.py`** ranks live opportunities by *risk-adjusted* net carry
-  (funding × spot liquidity × 30-day persistence − fees), with risk flags. A
-  typical calm-market scan surfaces liquid names at **~8–20 % net/yr** (e.g.
-  DEXEUSDT: 30-day funding 100 % positive, ~+8 %/yr net after costs); in
-  leverage-frenzy regimes liquid carries reach **50–200 %/yr**.
-- **`carry_book.py`** validates it on **real funding settlements** — forward
-  (paper) and as an instant historical what-if. Example (real Binance data, last
-  14 days, $10k, price-neutral): DEXEUSDT **+$64 net (+16.7 %/yr)**, KITEUSDT
-  **+$86 (+22.3 %/yr)**, both 100 % positive funding.
-
-This scales with capital, compounds every 8h, and the scanner pounces when
-funding gets rich. It is the defensible answer to "make money" from this stack.
+`carry_accounting.py` separately accounts for fixed matched base quantities,
+spot and short-perp PnL, actual settlement marks, four fill costs and capital
+cost. `scripts/audit_carry_history.py` preserves raw responses and hashes for
+three fixed 30-day windows on BTC/ETH/SOL. All nine windows lost money under
+the declared assumptions. Candle opens remain price proxies; intraperiod
+liquidation and funding completeness are not certified. These are historical
+diagnostics, not prospective validation.
 
 ### The three further places real value lives
 

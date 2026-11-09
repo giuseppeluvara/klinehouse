@@ -1,0 +1,67 @@
+{
+  "warmup_rows_verified": 52,
+  "warmup_source_hashes_verified": 2,
+  "warmup_inferences_reproduced": 3,
+  "max_warmup_inference_error": 0.0,
+  "classification": "historical warmup; not prospective observations",
+  "journal_state": "activated",
+  "events": 3,
+  "head": "e405cf7a298a2dd23cfda28c0f38c27cec573ba213b64d5a6dbaa8039e202749",
+  "forecasts": 0,
+  "paper_entries": 0,
+  "outcomes": 0,
+  "missing_slots": [
+    {
+      "kind": "missing_forecast",
+      "payload": {
+        "actual_observation_ms": 1794212742207,
+        "anchor_ms": 1794182400000,
+        "reason": "forecast deadline missed; no retrospective reconstruction"
+      }
+    }
+  ],
+  "local_hash_chain_limitation": "does not detect replacement of entire database without an external head receipt",
+  "independent_paper_accounting": {
+    "status": "passed",
+    "paper_entries_checked": 0,
+    "marks_or_final_exits_checked": 0,
+    "individual_paper_fills_checked": 0,
+    "arms": {
+      "timestral": {
+        "cash": 10000.0,
+        "units": [
+          0.0,
+          0.0
+        ],
+        "halted": false,
+        "cumulative_simulated_fees": 0.0,
+        "latest_derived_liquidation_nav": 10000.0
+      },
+      "ewma": {
+        "cash": 10000.0,
+        "units": [
+          0.0,
+          0.0
+        ],
+        "halted": false,
+        "cumulative_simulated_fees": 0.0,
+        "latest_derived_liquidation_nav": 10000.0
+      },
+      "fixed": {
+        "cash": 10000.0,
+        "units": [
+          0.0,
+          0.0
+        ],
+        "halted": false,
+        "cumulative_simulated_fees": 0.0,
+        "latest_derived_liquidation_nav": 10000.0
+      }
+    },
+    "interpretation": "independent paper-accounting reconstruction; no actual fills or prospective profit certification",
+    "first_week": {
+      "status": "awaiting_outcome",
+      "boundary_ms": 1794873600000
+    }
+  }
+}

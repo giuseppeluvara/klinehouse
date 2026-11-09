@@ -1,0 +1,12 @@
+{
+  "warmup_rows_verified": 52,
+  "warmup_source_hashes_verified": 2,
+  "warmup_inferences_reproduced": 3,
+  "max_warmup_inference_error": 0.0,
+  "classification": "historical warmup; not prospective observations",
+  "journal_state": "not activated",
+  "events": 0,
+  "forecasts": 0,
+  "paper_entries": 0,
+  "outcomes": 0
+}

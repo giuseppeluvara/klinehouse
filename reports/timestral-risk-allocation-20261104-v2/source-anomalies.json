@@ -1,0 +1,14 @@
+[
+  {
+    "symbol": "BTCUSDT",
+    "open_time": 1518048000000,
+    "close_time": 1518049694788,
+    "reason": "partial daily candle; excluded without imputation"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "open_time": 1518048000000,
+    "close_time": 1518049694799,
+    "reason": "partial daily candle; excluded without imputation"
+  }
+]
